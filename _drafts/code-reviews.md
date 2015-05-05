@@ -51,6 +51,10 @@ one might expect. I usually apply this to methods too.  If we have to use "and"
 to finish describing what a method is capable of doing, it might be at the wrong
 level of abstraction.
 
+* **[Open/Closed Principle](http://en.wikipedia.org/wiki/Open/closed_principle):**
+If the language is object-oriented, are the objects open for extension but not
+modification? What happens if we need to add another one of `x`?
+
 * **Code duplication:**
 I go by the "three strikes" rule.  If code is copied once, it's usually okay
 although I don't like it.  If it's copied a third time, it should be refactored
@@ -88,11 +92,11 @@ the size of a file goes up, the discoverability in that file goes down.
 
 * **Efficiency:**
 If there's an algorithm in the code, is it using an efficient implementation?
-For example, iterating over a list of keys in a dictionary is an inefficient way to find the one you want.
-For example:
+For example, iterating over a list of keys in a dictionary is an inefficient way
+to find the one you want.
 
 {% highlight python %}
-for key, value in mydict.iteritems():
+for key, value in data.iteritems():
     if key == expected:
         return value
 {% endhighlight %}
@@ -100,15 +104,16 @@ for key, value in mydict.iteritems():
 Could be rewritten as:
 
 {% highlight python %}
-return mydict[key]
+return data[key]
 {% endhighlight %}
 
 The original implementation is O(n) and the newer, simpler one is O(1), which
-may or may not matter depending on big `mydict` is. The second has the added
+may or may not matter depending on big `data` is. The second has the added
 benefit of readability.
 
 * **Test coverage:**
-I like to see tests for new features. Generally I will ask quesitons like: Are the tests thoughtful? Do they cover the failure conditions? 
+I like to see tests for new features. Generally I will ask quesitons like: Are
+the tests thoughtful? Do they cover the failure conditions? 
 Are they easy to read? How fragile are they? How big are the tests? Are they slow?
 
 * **Testing at the right level:**
@@ -147,7 +152,8 @@ to pause during the review to consider what each method is doing?
 * **Code left in a better state than found:**
 If I'm changing an area of the code that's messy, it's tempting to add in a few
 lines and leave. I often urge myself and others to go one step further and leave
-the code nicer than we found it. If we don't, it becomes an unmaintable.
+the code nicer than we found it. If we don't, it becomes less maintainable over
+time.
 
 * **Error handling:**
 In Python: Are errors handled gracefully and explicitly where necessary? Are
@@ -166,12 +172,30 @@ that way.
 How to handle code reviews
 -------------------
 
-I'll be honest - this is still something I'm learning.
+I find that the human parts of the code review offer as many challenges as
+review in the first place. To be honest, this is something I am still learning
+too. 
 
-* Ask questions
-* Compliment / reinforce good practices
-* Discuss in person for more detailed points
-* Explain reasoning
+Here are some approaches that have worked for me when discussing code:
+
+* **Ask questions:** 
+    How does this method work? If this requirement changes, what
+    else would have to change? How could we make this more maintainable? 
+* **Compliment / reinforce good practices:**
+    One of the most important parts of the code review is to reward developers
+    for growing. Few things feel better than getting praise from a peer.
+    I try to offer as many positive comments about code as negative.
+* **Discuss in person for more detailed points:**
+    On occasion, a recommended architectural change might be large enough that
+    it's easier to discuss it in person rather than in the comments. Similarly,
+    if I'm discussing a point and it goes back and forth, I'll often pick it 
+    up in person and finish out the discussion. It's easier.
+* **Explain reasoning:**
+    I find it's best both to suggest that there's a better alternative and
+    justify why I think it's worth doing. Sometimes it can feel like the 
+    changes suggested are nit-picky and I think that anecdotes or longer-form
+    explanation can help reduce that feeling.
+
 
  Addressing suggested changes
 --------------------
@@ -192,34 +216,22 @@ fewer of these than I might like (but I'm working to change that and grow).
 * Clean Code
 * Refactoring
 
-**Articles I've found helpful:**
-
-* Squint test (as above): http://robertheaton.com/2014/06/20/code-review-without-your-eyes/
-
 **Some useful, related talks**
-I'm a big fan of talks (link to talks).
+I'm a big fan of talks so here's a few that I thought of while writing this:
 
 * [All the Small Things by Sandi Metz](https://www.youtube.com/watch?v=8bZh5LMaSmE&index=1&list=LLlt4ZSW8NUcXLWiB3NMnK_w)
-- Covers the topic well, particularly
+: Covers the topic well, particularly
 from a perspective of writing clean, reusable code.
 
 **Tooling:**
 
-* Pylint
-
+* **Pylint:**
 Great for pointing out many of the architectural flaws above. I feel it can be
 a bit opinionated and the signal to noise ratio can be high for my taste.
-
-* pep8 / flake8
-
+* **pep8 / flake8:**
 Awesome. I have these set up to run automatically every time I save a file
 in vim. That way if there's a syntax error or other stylistic flaw, I can
 catch and address it righaway, even before my tests run.
-
-* yapf
-
+* **yapf:**
 Interesting tool sort-of by Google. It automatically reformats your code.
 https://github.com/google/yapf
-
-Some Tools:
-Pylint, pep8, pep8 vim plugin
