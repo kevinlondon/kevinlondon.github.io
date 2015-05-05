@@ -1,0 +1,13 @@
+*Potential Topics*
+
+Unit Testing Django Rest Framework
+* Viewset.as_view
+* Permissions classes
+* Serializer directly
+* How Tom Christie unit tests DRF
+
+
+Custom exceptions in Django Rest Framework
+* Why?
+* How?
+* Link to the docs
