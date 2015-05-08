@@ -2,7 +2,6 @@
 layout: post
 title:  "Code review best practices"
 date:   2015-05-05 15:54:08
-categories: code-reviews wiredrive maintainability
 ---
 
 At Wiredrive, we do a fair amount of code reviews.  I had never done one before
