@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Code review best practices"
+title:  "Code Review Best Practices"
 date:   2015-05-05 15:54:08
 ---
 
