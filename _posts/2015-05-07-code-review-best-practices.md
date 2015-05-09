@@ -242,3 +242,6 @@ reusable code.
 API, in this sense, meaning the way in which the application is constructed
 and how we interact with it. Many of the points in the video talk about similar
 themes to those discussed here.
+
+
+[Discussion on Hacker News](https://news.ycombinator.com/item?id=9517892)
