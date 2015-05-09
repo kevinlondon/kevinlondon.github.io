@@ -150,7 +150,6 @@ other people to it. It also stings less to get notes from yourself than
 from others :p
 
 
-
 How to handle code reviews
 -------------------
 
@@ -161,29 +160,57 @@ Here are some approaches that have worked for me when discussing code:
 * **Ask questions:** 
     How does this method work? If this requirement changes, what
     else would have to change? How could we make this more maintainable? 
+
 * **Compliment / reinforce good practices:**
     One of the most important parts of the code review is to reward developers
     for growth and effort. Few things feel better than getting praise 
     from a peer. I try to offer as many positive comments as possible.
+
 * **Discuss in person for more detailed points:**
     On occasion, a recommended architectural change might be large enough that
     it's easier to discuss it in person rather than in the comments. Similarly,
     if I'm discussing a point and it goes back and forth, I'll often pick it 
     up in person and finish out the discussion. 
+
 * **Explain reasoning:**
     I find it's best both to ask if there's a better alternative and
     justify why I think it's worth fixing. Sometimes it can feel like the 
     changes suggested can seem nit-picky without context or explanation. 
+
 * **Make it about the code:**
     It's easy to take notes from code reviews personally, especially if we
     take pride in our work. It's best, I find, to make discussions about the
     code than about the developer. It lowers resistance and it's not about
     the developer anyway, it's about improving the quality of the code.
+
 * **Suggest importance of fixes:**
     I tend to offer many suggestions, not all of which need to be acted upon.
     Clarifying if an item is important to fix before it can be considered done
     is useful both for the reviewer and the reviewee. It makes the results of 
     a review clear and actionable.
+
+On mindset
+----------
+
+As developers, we are responsible for making both working and maintable code.
+It can be easy to defer the second part and because of pressure to deliver working code. 
+Refactoring does not change functionality by design, so don't let suggested
+changes discourage you. 
+Improving the maintainability of the code can be just as 
+important as fixing the line of code that caused the bug. 
+
+In addition, please keep an open mind during code reviews. This is something
+I think everyone struggles with. I can get defensive in code reviews too,
+because it can feel personal when someone says code you wrote could be better.
+
+If the reviewer makes a suggestion, and the I don't have a clear answer
+as to why the suggestion should not be implemented, I'll usually make the 
+change.  If the reviewer is asking a question about a line of code, it
+may mean that it would confuse others in the future. 
+In addition, making the changes can help reveal larger 
+architectural issues or bugs.
+
+(Thanks to Zach Schipono for recommending this section be added)
 
 
 Addressing suggested changes
