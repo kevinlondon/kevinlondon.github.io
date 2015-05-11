@@ -4,13 +4,14 @@ title:  "Code Review Best Practices"
 date:   2015-05-05 15:54:08
 ---
 
-At Wiredrive, we do a fair amount of code reviews.  I had never done one before
+At [Wiredrive](http://www.wiredrive.com/?utm_source=kevinlondon.com&utm_medium=blog&utm_campaign=code-review), 
+we do a fair amount of code reviews.  I had never done one before
 I started here so it was a new experience for me. I think it's a good idea to crystalize some of
 the things I look for when I'm doing code reviews and talk about the best way
 I've found to approach them.
 
 Briefly, a code review is a discussion between two or more developers
-about the suggested changes to the code to address an issue. Many articles 
+about suggested code changes to address an issue. Many articles 
 talk about the benefits of code reviews, including knowledge sharing, code
 quality, and developer growth. I've found fewer that talk about what to look
 for in a review and how to discuss code under review.
@@ -68,7 +69,7 @@ something completely different like sanitizing HTML from the input,
 then that's an inaccurate method name. And probably a misleading function.
 
 * **Variable names:**
-`foo` or `bar` are probably not useful method names for data structures. 
+`foo` or `bar` are probably not useful names for data structures. 
 `e` is similarly not useful when compared to `exception`. 
 Be as verbose as you need (depending on the language). Expressive variable names
 make it easier to understand code when we have to revisit it later.
@@ -192,8 +193,8 @@ Here are some approaches that have worked for me when discussing code:
 On mindset
 ----------
 
-As developers, we are responsible for making both working and maintable code.
-It can be easy to defer the second part and because of pressure to deliver working code. 
+As developers, we are responsible for making both working and maintainable code.
+It can be easy to defer the second part because of pressure to deliver working code. 
 Refactoring does not change functionality by design, so don't let suggested
 changes discourage you. 
 Improving the maintainability of the code can be just as 
@@ -203,7 +204,7 @@ In addition, please keep an open mind during code reviews. This is something
 I think everyone struggles with. I can get defensive in code reviews too,
 because it can feel personal when someone says code you wrote could be better.
 
-If the reviewer makes a suggestion, and the I don't have a clear answer
+If the reviewer makes a suggestion, and I don't have a clear answer
 as to why the suggestion should not be implemented, I'll usually make the 
 change.  If the reviewer is asking a question about a line of code, it
 may mean that it would confuse others in the future. 
