@@ -32,10 +32,10 @@ If the language is object-oriented, are the objects open for extension but close
 for modification? What happens if we need to add another one of `x`?
 
 * **Code duplication:**
-I go by the ["three strikes"](http://c2.com/cgi/wiki?ThreeStrikesAndYouRefactor) rule.
-If code is copied once, it's usually okay although I don't like it.  
-If it's copied again, it should be refactored so that the common 
-functionality is split out. 
+I go by the ["three strikes"](http://c2.com/cgi/wiki?ThreeStrikesAndYouRefactor)
+rule.  If code is copied once, it's usually okay although I don't like it. If
+it's copied again, it should be refactored so that the common functionality is
+split out. 
 
 * **[Squint-test offenses](http://robertheaton.com/2014/06/20/code-review-without-your-eyes/):**
 If I squint my eyes, does the shape of this code look identical to other shapes?
