@@ -11,7 +11,7 @@ the things I look for when I'm doing code reviews and talk about the best way
 I've found to approach them.
 
 Briefly, a code review is a discussion between two or more developers
-about code changes to the code to address an issue. Many articles 
+about changes to the code to address an issue. Many articles 
 talk about the benefits of code reviews, including knowledge sharing, code
 quality, and developer growth. I've found fewer that talk about what to look
 for in a review and how to discuss code under review.
