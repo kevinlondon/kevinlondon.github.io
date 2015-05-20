@@ -1,13 +1,22 @@
 *Potential Topics*
 
-Unit Testing Django Rest Framework
-* Viewset.as_view
-* Permissions classes
-* Serializer directly
-* How Tom Christie unit tests DRF
-
-
 Custom exceptions in Django Rest Framework
 * Why?
 * How?
 * Link to the docs
+
+CR Anti Patterns
+* Checklists
+* Meetings
+* More than 2 people in discussion - only when impasse reached
+* Taking a long time
+* Too much code
+* Long delays
+* Immediate reactions
+* Blindly accepting fixes
+* Consult comments for more things
+
+*Structure*
+* Style
+* Add opt-in email form
+* Rename

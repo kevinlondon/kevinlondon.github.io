@@ -15,6 +15,11 @@ DRF projects below an integration level. This post will cover how to get started
 writing unit tests to cover custom functionality and recommending some tips 
 about testing, in general, as we go.
 
+What are unit tests?
+--------------------
+
+Go into a basic explanation
+
 Why bother?
 -----------
 
@@ -79,6 +84,9 @@ Testing Recommendations
 -----------------------
 
 This is, by its nature, an incomplete list.
+Please note, this is current as of 3.1. I cannot speak for whether or not newer
+versions will work the same way.
+
 
 ### Serializers
 
@@ -132,3 +140,4 @@ Additional References
 * Test-Driven Development in Django
 * Gary Bernhardt's Fast Test, Slow Test
 * Hypothesis library
+* http://blog.celerity.com/how-to-write-speedy-unit-tests-in-django-part-1-the-basics
