@@ -143,4 +143,4 @@ If you're feeling overwhelmed, or scared, or worried that you're not good enough
 be patient. Be kind to yourself. It takes time and effort to learn and the process
 is not instant, as much as we might like it to be when we're feeling outmatched.
 
-[Discussion on Hacker News](https://news.ycombinator.com/item?id=9616050)
+[Discussion on Hacker News](https://news.ycombinator.com/item?id=9616052)
