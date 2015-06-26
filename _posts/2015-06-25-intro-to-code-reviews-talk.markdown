@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "'Intro to Code Reviews' talk"
+title:  "Intro to Code Reviews talk"
 date:   2015-06-25 15:54:08
 ---
 
@@ -27,6 +27,7 @@ Referenced Resources
 * [Expectations, Outcomes, and Challenges Of Modern Code Review](http://bit.ly/ms-code-reviews)
 * [Steve Losh - Teach Don't Tell](http://bit.ly/teach-dont-tell)
 * [Peter Norvig - Teach Yourself Programming in Ten Years](http://norvig.com/21-days.html)
-* [OWASP Top 10](http://bit.ly/owasp-10)
+* [OWASP Code Review Top 9](http://bit.ly/owasp-review-top-9)
 * [Raymond Hettinger - Beyond PEP8](http://bit.ly/beyond-pep8)
+* [11 Best Practices for Peer Code Review](http://bit.ly/smartbear-best-practices)
 * [Sasha Laundy - Your Brain's API: Giving and Getting Technical Help](http://blog.sashalaundy.com/talks/asking-helping/)
