@@ -144,52 +144,17 @@ to how many purchases I make. Is it still a deal if I'm purchasing more
 things than I need? Am I still "saving money" if I'm spending it more often?
 And yet, I still check it from time to time.
 
-How this applies to Software Engineering
-----------------------------------------
-
-I think the same principles apply to software engineering. This is a bit more
-of a stretch, so bear with me.
-
-In Thinking Fast and Slow, Kahneman mentions that using a less contrasty
-font means that the reader has to spend more cognitive energy to read and
-understand the text. I think that this means that we could apply the same
-kind of thinking to stylistic consistency. 
-
-[FACT CHECK]
-
-If we keep code stylistically consistent, then it allows us to use more of the
-System 1 thinking - which is good at processing information quickly and
-subconsciously. The upside of this is readability. It's much simpler to
-understand what code is doing if it all kind of looks the same because the form
-will get out of the way for the most part.  I think this is what makes thinks
-like Pep8 and gofmt so great. 
-
-One unexpected downside of this, and something that Kahneman also mentions, is
-that because we're using System 1 thought, we might miss flaws. For example, in
-Kahneman's example, he mentions that if there was an incorrect fact in the "dim"
-typeface, readers were about 65% likely [FACT CHECK] to determine that there was
-a problem. Conversely, when it was the normal amount of contrast, it was 30%
-likely to be detected. As such, keeping it the same stylistically means that
-we're paying less close attention. In a sense, it's like speed-reading the code
-instead of reading it like it's a textbook. That's not to say that we can't find
-bugs, but rather that our default mode when reading the code won't be to look
-for bugs. 
-
-Raymond Hettinger recently gave an excellent talk on clean code and pep8 at 
-Pycon as well. In it, he says that a foolish emphasis on style guidelines can
-get in the way. We want to 'pep8' everything as opposed to actually reading it
-and making sure it does what it's supposed to do. 
-
-One of my coworkers, Zach, was doing a refactoring in our tests last month.  We
-were also simultaneously evaluating automatic code formatting tools (in this
-case, yapf). I suggested he use one to help speed up his process and he wisely
-said no. He said that the fact that the modules were not pep8-compliant meant
-that there was more that could be done to improve them. He was absolutely right.
+Kahneman also brings up the idea of anchoring. In some studies that they did,
+they found that if they started with a higher number, participants were more
+likely to believe the number and use it (consciously or otherwise) as the 
+starting point for their bargaining. As such, by anchoring high on the 
+sunglasses, customers used it as their starting point. The cheaper sunglasses,
+by comparison, looked like a great deal.
 
 Anyway, let's wrap this all up here shall we?
 
 Kahneman's Thinking Fast and Slow is an interesting journey into the way that we
 think.  The next time you find yourself looking at a deal and thinking about
-whether or not to buy it -- consider. Am I using system 1 or system 2? And if
-you see a pair of sunglasses for sale in Ragnarok Online, I would humbly suggest
-you move on (and probably stop playing Ragnarok Online because it is ancient).
+whether or not to buy it -- consider if you're really getting a good deal or not.
+If you see a pair of sunglasses for sale in Ragnarok Online, I would humbly 
+suggest you move on (and probably stop playing Ragnarok Online because it is ancient).
