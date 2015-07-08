@@ -4,96 +4,96 @@ title:  "Ragnarok Online and the Sunglasses Scam"
 date:   2015-05-05 15:54:08
 ---
 
-About 10 years ago, I pulled off one of my favorite scams in a game called
-Ragnarok Online. 
+I've only been banned once in an internet game. According to the Game Master, I
+scammed some of the other users by selling them sunglasses in Ragnarok Online.
+Sunglasses? Yes. Sunglasses. To understand why it was a big deal and why I think
+it's interesting, let's first provide a little backstory.
 
 About Ragnarok
 --------------
 
-Ragnarok Online, if you are not familiar, is an anime-styled MMO game that had
-a brief moment of popularity in the US. I think it's more popular in Korea,
-where the game is from, as kRO (the Korean Ragnarok Online servers) are the
-canonical ones. 
+A company called Gravity released Ragnarok Online in Korea and later ported it
+to the United States. It had a brief moment of popularity in the US around 2003.
+There's a pretty good 
+[Wikipedia article](https://en.wikipedia.org/wiki/Ragnarok_Online) on it.
 
-As with most Korean MMOs, it's primary built around killing the 
-same monsters until you receive a particular rare item ("grinding").
-In Ragnarok's case, the rare item you'd want is usually a hat, some kind of 
-facial wear, or a card, which could be inserted into another item.
+As with most Korean MMOs I've played, Ragnarok is built around killing the same
+monsters until you receive a particular rare item.  In Ragnarok's case, the rare
+item you'd want is usually a hat, some kind of facial wear, or a card, which
+could be inserted into another item to make it better.
 
-In the game, you control a figure that walks around and stabs things or casts 
-spells. The characters in Ragnarok can be customized in small ways. You can
-color your character's armor in a broad sense, you can change your headgear,
-or you can change your facial wear. Those are the only visible changes. 
-As such, hats and facial wear held positions of great importance to the players.
+Your character in Ragnarok can be customized in small ways. You can color your
+character's armor, change your headgear, or you change your facial wear. Those
+are the only visible changes.  As such, hats and facial wear held positions of
+great importance.
 
-10 years ago, I played the game with some friends on an unofficial, third-party
-server. The server made some changes to parts of the game, such as the item
-drop rate and experience, so it felt less "grindy", which
-is great when some of the items only dropped with a 0.01% chance from a 
-monster. That's not a typo, they genuinely expected you to kill 10k of the
-same monster to get an item on the official servers.
+[PICTURE OF RAGNAROK CHARACTER]
 
 In the game, you could sell items to other players using a Vending mode.
 You'd put a number of items in your virtual inventory to sell with a set
-price and open your store. Usually you'd log off after opening your store
-because it could take a long time to sell out an inventory.
+price and open your store. Usually you'd turn off your monitor after 
+opening the store because it could take a long time to sell out an inventory.
 There was basically one main store-front in the
 game in the main town, Prontera. Everyone lined up to sell their wares. 
 
-I sold mine too, though poorly. I'd frequently load up a full inventory
-worth of items, price them competitively, and then
-log on the next day to find that nothing had sold. It was rare to clean out
-a full inventory over even a period of a week unless you were way under market.
+![Prontera Vendors](/assets/prontera_vendors.jpg)
 
-Everything changed when I discovered The Sunglasses.
+I sold mine too, though poorly. I'd load up a full inventory worth of items,
+price them competitively, and then log on the next day to find that nothing had
+sold. It was rare to clean out a full inventory over even a period of a week
+unless you priced your goods well under market.
+
+That is, until I started selling sunglasses.
+
 
 The Sunglasses Scam
 ------------------
 
+![The Sunglasses](/assets/ragnarok_sunglasses.jpg)
 
 One day, I listed my usual inventory and, at the bottom, added a pair of plain
 old sunglasses that you could buy from a vendor in a distant town. I had picked
 up a pair just because I thought they'd be interesting and they only ran
-10,000 Zeny (the in-game currency) from the non-player merchant. 
-I added them to the bottom of my inventory with the same margin as all 
-the other items, so I expected to make a profit of maybe 10-20%. 
+5000 Zeny (the in-game currency) from the non-player merchant. 
+I priced them with the same margin as all the other items, so I expected to make
+a profit of maybe 1-2K Zeny.
 
 The sunglasses sold before I even logged off.
 
 "That's interesting." I said.
 
-I went back to the distant town, picked up another couple of pairs of sunglasses
-and listed them a little more expensively. Originally I had listed them
-at 8000 Z, so this time I listed them all at 11K Z, which would be about
-a 30% profit. I opened my store and logged out.
+I went back to the distant town, picked up another few pairs 
+and listed them at a more expensive price. Originally I had listed them
+at 6K Zeny so this time I priced them at 10K Z, so I'd make a nice little 
+profit. I opened my store and walked away.
 
-20 minutes later, I checked my store and found it completely cleaned out again.
-I didn't get it. These sunglasses could be purchased an in-game vendor. Why
-were people buying them from me at these prices?
+20 minutes later, I checked my store. Both pairs had sold.  I didn't get it.
+These sunglasses could be purchased an in-game vendor. Why were people buying
+them from me at these prices?
 
 I loaded up another inventory full of sunglasses. This time, I wanted to 
 experiment. What would happen if I listed them at a higher price?
-I opened my store again, this time I sold them for 12K, 13K, 14K, etc, all 
+I opened my store again, this time I sold them for 13K, 14K, 15K, etc, all 
 the way up to 20K and opened the store. I got up and went to get a snack.
 By the time I came back, again, they were all gone.
 
 Okay, let's see how far we can take this. I opened my store front again and
 listed the glasses at prices ranging from 20K to 40K. 
 
-They didn't sell. At least, not at first. This time, it took 2 hours to sell
+They didn't sell. At least, not at first. This time, it took a few hours to sell
 them out. Of course, the lowest priced glasses sold the quickest, followed
 by the next lowest. Eventually, some sad soul purchased the 40K pair. He
 probably didn't know that he had missed out on a comparative deal, though.
 He was probably still excited by the sunglasses.
 
-I continued like this for a little while. I slowly inched my way up to and over
-the 50K Z mark over the next few days. I continued to raise prices and 
-show them in a gradiation of pricing. At one point, I sold a pair for 80K Z.
+I continued to raise prices and show them in a gradiation of pricing. 
+At one point, I think I sold a pair for 50K Z.
 
-The next day, I logged in and found myself in in-game jail. The game master
+The next day, I logged in and found myself in in-game jail 
+(which I did not know existed!). The game master
 had stuck me there as punishment for what he called scamming. If I continued,
 he said, I would be banned permanently. Instead, I was stuck in in-game jail
-for about 3 hours. 
+for about 3 hours.
 
 I still feel it's not quite scamming so much as the advantage of having
 additional information.  Perhaps I knew that these were sold in another city and

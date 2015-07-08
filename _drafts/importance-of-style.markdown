@@ -19,7 +19,7 @@ will get out of the way for the most part.  I think this is what makes thinks
 like Pep8 and gofmt so great. 
 
 
-
+Hettinger gave a talk at 
 Pycon as well. In it, he says that a foolish emphasis on style guidelines can
 get in the way. We want to 'pep8' everything as opposed to actually reading it
 and making sure it does what it's supposed to do. 
