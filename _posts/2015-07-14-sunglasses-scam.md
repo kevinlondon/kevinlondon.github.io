@@ -3,9 +3,9 @@ layout: post
 title:  "The Sunglasses Scam"
 date:   2015-07-14 21:09:00
 ---
-
 I've only been banned once in an internet game. According to the Game Master,
 I scammed some of the other users by selling them sunglasses in Ragnarok Online.
+<!--more-->
 I have some ideas about why the scam worked in the first place, based on
 information I found in the book  _Thinking Fast and Slow_ by Daniel Kahneman.
 Before we get into that, though, I think I need to provide a little backstory.
