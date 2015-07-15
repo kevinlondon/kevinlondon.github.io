@@ -10,5 +10,7 @@ url: "http://kevinlondon.com" # the base hostname & protocol for your site
 twitter_username: kevin_london
 github_username:  kevinlondon
 
+fb_admins: https://www.facebook.com/klond
+
 # Build settings
 markdown: kramdown
