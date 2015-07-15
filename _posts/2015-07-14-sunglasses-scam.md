@@ -181,3 +181,5 @@ It's easy to short-circuit our normal thought processes, especially if we're not
 aware that we're being manipulated. I'd recommend that you think critically
 if you think you're getting a great deal. It's possible that it's not so
 wonderful.
+
+Discussion on [Hacker News](https://news.ycombinator.com/item?id=9889789)
