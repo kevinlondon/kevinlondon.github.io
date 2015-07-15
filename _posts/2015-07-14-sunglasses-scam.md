@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Ragnarok Online and the Sunglasses Scam"
-date:   2015-05-05 15:54:08
+title:  "The Sunglasses Scam"
+date:   2015-07-14 21:09:00
 ---
 
 I've only been banned once in an internet game. According to the Game Master,
@@ -11,7 +11,7 @@ information I found in the book  _Thinking Fast and Slow_ by Daniel Kahneman.
 Before we get into that, though, I think I need to provide a little backstory.
 
 About Ragnarok
---------------
+==============
 
 Ragnarok Online is an [MMORPG](https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game) 
 that debuted in Korea and had a brief moment of popularity in the US around
@@ -33,7 +33,7 @@ opening the store because it could take a long time to sell out an inventory.
 There was basically one main store-front in the
 game in the main town, Prontera where everyone lined up to sell their wares. 
 
-![Prontera Vendors](/assets/prontera_vendors.jpg)
+![Prontera Vendors](/assets/ragnarok_vendors.jpg)
 
 I sold mine too, though poorly. I'd load up a full inventory worth of items,
 price them competitively, and then log on the next day to find that nothing had
@@ -43,15 +43,15 @@ unless you priced your goods well under market.
 That is, until I started selling sunglasses.
 
 
-The Sunglasses Scam
-------------------
+The Sunglasses
+--------------
 
 One day, I listed my usual inventory and, at the bottom, added a pair of plain
 old sunglasses that you could buy from a vendor in a distant town. I had picked
 up a pair just because I thought they'd be interesting and they only ran
 5000 Zeny (the in-game currency) from the non-player merchant. 
 
-![The Sunglasses](/assets/ragnarok_sunglasses.jpg)
+![The Sunglasses](/assets/ragnarok_sunglasses.png)
 
 I priced them with the same margin as all the other items, so I expected to make
 a profit of maybe 1-2K Zeny. The sunglasses sold before I even logged off.
@@ -108,16 +108,27 @@ their System 2 mode of thinking. In reality, much of our lives are governed
 by how effective our System 1 mode of thinking processes information.
 And it's easily tricked.
 
+
+Cognitive Ease
+==============
+
 If conscious thought 
 had been engaged, for example if I had been charging more for the sunglasses,
-such as 500K or something along those lines, then the sale would have been
-prevented. "Those probbaly don't actually cost that much." The would-be
+such as 500K, then the sales would have been prevented. 
+"Those probably don't actually cost that much." The would-be
 buyer might say. They might consult a price list and find out how
 outrageous the prices were, for example. I think of the 500K sunglasses
 as the more traditional definition of a scam, like people who would
 sell XBox boxes on eBay for the same price as an XBox because the buyer
 did not pay attention.
 
+In _Thinking Fast and Slow_, Kahneman mentions that when information looks
+relatively normal and we're enjoying a feeling of cognitive ease, we tend to 
+rely upon our System 1 mode of thinking to handle many assessments for us.
+It's taxing to use System 2 thinking so we tend not to engage it until
+we have to or we encounter something surprising. By keeping the price of the
+sunglasses in a normal range, I may have avoided engaging System 2 thought
+and tricked System 1.
 
 The same things happen with deals websites, I've noticed. I've read a deal
 aggregation site, for a number of years off and on.  Members post "deals" which
@@ -126,10 +137,15 @@ headphones. I've noticed, over time, that the frequency that I check the site
 is linked to how many purchases I make. Is it still a deal if I'm purchasing
 more things than I need? Am I "saving money" if I'm spending it more often? 
 
-Kahneman also brings up the idea of anchoring. In some studies that they did,
-they found that if they started with a higher number, participants were more
-likely to believe the number and use it (consciously or otherwise) as the
-starting point for their bargaining. There's an excellent example from the book:
+
+Anchoring
+=========
+
+In some studies that Kahneman mentions,
+they found that if they started any discussion with a higher number, 
+participants were more likely to believe the number and use it 
+(consciously or otherwise) as their starting point. 
+There's an excellent example from the book:
 
 > Is the height of the tallest redwood more or less than 1,200 feet? 
 > What is your best guess about the height of the tallest redwood?
@@ -148,20 +164,20 @@ sunglasses, customers used it as their starting point. The cheaper sunglasses,
 by comparison, looked like a great deal.
 
 My hypothesis is that when the brain sees a set of sunglasses for sale in
-a vending window, it looks them all over and thinks "Okay, the pair of
-sunglasses is set to 30K.  Based on my understanding of other vendors in the
+a vending window, it looks them all over and thinks "Okay, the sunglasses
+range from 30K to 40K.  Based on my understanding of other vendors in the
 area, and conventions of vending, I suspect that its actual price is probably
-somewhere around 30K. If I buy that 30K pair, I'm getting a great deal.  If it
-turns out to be cheaper, 30K is still not all that much money." All of this, of
-course, probably happens subconsciously, which is why System 1 thinking can be
-so powerful. 
+somewhere around 30K. If I buy that 30K pair, I'm getting a deal.  If it
+turns out to be cheaper somewhere else, 30K is still not all that much money." 
+This train of thought happens mostly subconsciously, 
+which is why System 1 thinking can be so powerful. 
 
 I'd recommend _Thinking Fast and Slow_, I've certainly enjoyed it. I'll be
 writing a few more articles related to it shortly, particularly as it relates to
 software engineering and clean code. If you'd like to find out when they're
 posted, please sign up for the mailing list below and I'll send you a note.
 
-It's easy to shortcircuit our normal thought processes, especially if we're not
-aware that we're being manipulated. I'd also recommend that you think critically
-if you see a pair of sunglasses for sale in Ragnarok.  It's possible you may not
-be getting such a great deal.
+It's easy to short-circuit our normal thought processes, especially if we're not
+aware that we're being manipulated. I'd recommend that you think critically
+if you think you're getting a great deal. It's possible that it's not so
+wonderful.
