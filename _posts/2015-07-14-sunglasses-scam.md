@@ -24,7 +24,7 @@ customized in small ways. You can color your character's armor, change your
 headgear, or change your facial wear. That's it. As such, hats and facial
 wear held positions of great importance.
 
-![Character Selection](/assets/ragnarok_characters.png)
+![Character Selection](/assets/ragnarok_characters.PNG)
 
 In the game, you could sell items to other players using a Vending mode.
 You'd put a number of items in your virtual inventory to sell with a set
@@ -51,7 +51,7 @@ old sunglasses that you could buy from a vendor in a distant town. I had picked
 up a pair just because I thought they'd be interesting and they only ran
 5000 Zeny (the in-game currency) from the non-player merchant. 
 
-![The Sunglasses](/assets/ragnarok_sunglasses.png)
+![The Sunglasses](/assets/ragnarok_sunglasses.PNG)
 
 I priced them with the same margin as all the other items, so I expected to make
 a profit of maybe 1-2K Zeny. The sunglasses sold before I even logged off.
