@@ -14,7 +14,7 @@ but it does mean that we should pay close attention to their usage.
 The Command Injection Series
 --------------------------
 
-The first group of dangerous Python functions revolve around the trusting
+The first group of dangerous Python functions revolve around trusting
 user-provided input and piping it into a shell. 
 
 
@@ -178,16 +178,17 @@ Other services rely upon pickle to do their thing as well.
 One of those is [`shelve`](https://docs.python.org/2/library/shelve.html), 
 which is another module related to serializing Python objects.
 
-`Celery`, a popular package used for sending messages to queues, used pickle by
-default for communication with its workers before version 3.0.18. If you're
-using an older version of Celery, check and make sure you're following the
+[`Celery`](http://www.celeryproject.org/), a popular package used for sending 
+messages to queues, used pickle by default for communication with its workers 
+before version 3.0.18. If you're using an older version of Celery, check and 
+make sure you're following the
 [recommended security guidelines](http://celery.readthedocs.org/en/latest/userguide/security.html).
 
 
 A dangerous example
 ===================
 
-Examples are best illustrated by the linked articles so please read those
+Examples are best illustrated by the linked articles below so please read those
 if you're interested in learning more about pickle's dangers.
 
 
@@ -217,7 +218,8 @@ Loading YAMLs
 ------------------------
 
 YAML stands for `YAML Ain't Markup Language` and offers another way to
-serialize data. PyYaml does not live in the standard library but seems like the
+serialize data. [`PyYaml`](http://pyyaml.org/wiki/PyYAMLDocumentation) 
+does not live in the standard library but seems like the
 most popular way of parsing YAMLs in Python so I'm including it here.
 
 
@@ -239,7 +241,7 @@ to execute arbitrary code on the host machine.
 A dangerous example
 ===================
 
-Please see the linked articles if you're interested in an example.
+Please see the linked articles below if you're interested in an example.
 The Rails-related YAML exploit that came out a few years ago applies to Python
 as well.
 
