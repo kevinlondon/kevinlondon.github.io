@@ -14,3 +14,4 @@ fb_admins: https://www.facebook.com/klond
 
 # Build settings
 markdown: kramdown
+locale: en_US
