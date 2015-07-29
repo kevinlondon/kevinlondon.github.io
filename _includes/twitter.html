@@ -1,0 +1,11 @@
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@kevin_london">
+<meta name="twitter:creator" content="@kevin_london">
+{% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+  <meta name="twitter:title" content="{{ site.title }}">
+{% endif %}
+<meta property="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<meta property="twitter:description" content="{% if page %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+<meta property="twitter:image:src" content="{% if page.thumbnail %}{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}{% else %}{{ {{baseurl}}/avatar | prepend: site.baseurl | prepend: site.url }}{% endif %}">
