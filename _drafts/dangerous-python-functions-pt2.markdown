@@ -4,28 +4,36 @@ title:  "Dangerous Python Functions, Part 2"
 date:   2015-07-19 15:54:08
 ---
 
-Untrusted Input Part 2: Pickle and friends
+As mentioned in the [first part of this series](http://kevinlondon.com/2015/07/26/dangerous-python-functions.html),
+some functions in Python can be dangerous if you're not aware of their risks.
+In this installment, we'll cover deserializing data, loading yamls and 
+information leakage.
+
+Pickle and friends
 ------------------------------------------
 
-Pickle serializes Python objects or data to a file and can restore it as well.
-
-
-Why they're useful
+Why it's useful
 ==================
 
-Pickle enables you to store state to disk. In the past, I've used pickle
-to support pause and resume functionality with large file transfers. I did not
-want to store the information in a database so I used pickle files to track what
-had been done and what had not.
+[`pickle`](https://docs.python.org/3/library/pickle.html) enables you to store
+state and Python objects to disk so that you can later restore them. Pickle can
+be useful for storing something that doesn't quite need a database or for data
+that's inherently temporary.
 
-Why they're dangerous
+In the past, I've used pickle to support pause and resume functionality for
+large file transfers. I saved the progress to a pickle file and then, 
+on resume, picked up where it left off and removed the pickle.
+
+Why it's dangerous
 =====================
 
-Pickle, unfortunately, is prone to the same problems as `exec` and `eval`
+Pickle has the same weaknesses as `exec` and `eval`
+,which we covered in [part 1](http://kevinlondon.com/2015/07/26/dangerous-python-functions.html),
 because it enables users to craft input that executes arbitrary code on
 your machine. Sound familiar?
 
-Other services rely upon pickle to do their thing as well.
+Other libraries and modules rely upon Pickle to do their thing as well, which
+makes them prone to the same risks.
 One of those is [`shelve`](https://docs.python.org/2/library/shelve.html), 
 which is another module related to serializing Python objects.
 
@@ -35,12 +43,52 @@ before version 3.0.18. If you're using an older version of Celery, check and
 make sure you're following the
 [recommended security guidelines](http://celery.readthedocs.org/en/latest/userguide/security.html).
 
+[Django](https://www.djangoproject.com/), a popular Python web framework, 
+used `pickle` before version 1.6
+(they're currently on v1.8) to store session information. There's a
+[scary warning in the Django docs](https://docs.djangoproject.com/en/1.8/topics/http/sessions/#session-serialization)
+about how that can go wrong.
+
 
 A dangerous example
 ===================
 
-Examples are best illustrated by the linked articles below so please read those
-if you're interested in learning more about pickle's dangers.
+To demonstrate how this might be exploited, I'm going to use an example from 
+Lincoln Loop's 
+[Playing with Pickle Security](https://lincolnloop.com/blog/playing-pickle-security/).
+and expand upon it. In our example, we will serialize a command to call 
+`ls` and then deserialize it with `pickle.loads()`.
+
+{% highlight python %}
+import os
+import cPickle
+
+
+# Exploit that we want the target to unpickle
+class Exploit(object):
+    def __reduce__(self):
+        # Note: this will only list files in your directory.
+        # It is a proof of concept.
+        return (os.system, ('ls',))
+
+
+def serialize_exploit():
+    shellcode = cPickle.dumps(Exploit())
+    return shellcode
+
+
+def insecure_deserialize(exploit_code):
+    cPickle.loads(exploit_code)
+
+
+if __name__ == '__main__':
+    shellcode = serialize_exploit()
+    print('Yar, here be yer files.')
+    insecure_deserialize(shellcode)
+{% endhighlight %}
+
+In this case, we only wanted to list the files in the directory using the
+`ls` command. We could have used almost any shell command we wanted.
 
 
 What to use instead
@@ -50,11 +98,15 @@ You could use [`json`](https://docs.python.org/3/library/json.html) to
 serialize data or, if you must, `yaml`. If you use `yaml`, please read the
 section below on why it has its own set of risks.
 
+If you're using Celery or Django, you should upgrade to a version that
+does not use `pickle` for serialization.
+
 
 If you must use them...
 =======================
 
-Be extra careful with your input.
+Be careful with your input! Never trust a pickle that has gone over
+the network or come from someone else. It's too easy to exploit.
 
 
 Additional references
@@ -62,7 +114,6 @@ Additional references
 
 * [Arbitrary code execution with Python pickles](https://www.cs.jhu.edu/~s/musings/pickle.html)
 * [Sour Pickles](https://media.blackhat.com/bh-us-11/Slaviero/BH_US_11_Slaviero_Sour_Pickles_WP.pdf)
-* [Playing with Pickle Security](https://lincolnloop.com/blog/2013/mar/22/playing-pickle-security/)
 
 
 Loading YAMLs
@@ -71,7 +122,7 @@ Loading YAMLs
 YAML stands for `YAML Ain't Markup Language` and offers another way to
 serialize data. [`PyYaml`](http://pyyaml.org/wiki/PyYAMLDocumentation) 
 does not live in the standard library but seems like the
-most popular way of parsing YAMLs in Python so I'm including it here.
+most popular way to parse YAMLs in Python.
 
 
 Why they're useful
@@ -82,6 +133,7 @@ change much. As such, having something that can easily load and
 manipulate YAML files is great. I have used YAMLs to store 
 configuration values for Python apps in the past.
 
+
 Why they're dangerous
 =====================
 
@@ -89,12 +141,14 @@ Calling `yaml.load()` is the simplest way to load a YAML file but `yaml.load()`
 is an unsafe operation that, you guessed it, enables maliciously crafted files
 to execute arbitrary code on the host machine. 
 
+
 A dangerous example
 ===================
 
 Please see the linked articles below if you're interested in an example.
 The Rails-related YAML exploit that came out a few years ago applies to Python
 as well.
+
 
 What to use instead
 ===================
