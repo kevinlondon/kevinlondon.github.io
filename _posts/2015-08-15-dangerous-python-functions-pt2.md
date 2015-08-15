@@ -86,7 +86,7 @@ if __name__ == '__main__':
 {% endhighlight %}
 
 In this case, we only wanted to list the files in the directory using the
-`ls` command. We could have used almost any shell command we wanted.
+`ls` command. We could have used almost any shell command.
 
 
 What to use instead
