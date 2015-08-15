@@ -262,3 +262,5 @@ can be dangerous. Python's documentation is good about letting you know when
 it's risky to use something but you have to know when and where to look.  If
 you take nothing else away from this post, please remember to be careful when
 it comes to accepting untrusted input.
+
+Discussion on [Hacker News](https://news.ycombinator.com/item?id=10067207).
