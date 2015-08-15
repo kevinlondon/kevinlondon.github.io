@@ -164,8 +164,9 @@ Next time...
 ------------
 
 We've covered ways in which user input can pose serious risks to Python
-applications. In the next part of this series, we'll discuss issues
-related to deserializing data, loading yaml configurations, information
-leakage, and more.
+applications. In the 
+[next part of this series](http://kevinlondon.com/2015/08/15/dangerous-python-functions-pt2.html), 
+we'll discuss issues related to deserializing data, loading yaml configurations,
+information leakage, and more.
 
 Thanks to Zach Schipono and Carissa Sandoval for reviewing drafts of this.
