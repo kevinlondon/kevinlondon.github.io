@@ -228,9 +228,10 @@ If you ran this example against a real database, the malicious name would drop
 the user's table. Not great.
 
 Python provides a database binding for
-[`sqlite3`]((https://docs.python.org/3/library/sqlite3.html) in the standard
+[`sqlite3`](https://docs.python.org/3/library/sqlite3.html) in the standard
 library and there's a section in the Python docs where they talk about how to
-properly escape variables. Otherwise, I'd recommend using an ORM, such as the
+properly escape variables (which we do not do in the example). 
+Otherwise, I'd recommend using an ORM, such as the
 one in [Django](https://www.djangoproject.com/) or
 [sqlalchemy](http://www.sqlalchemy.org/). 
 
