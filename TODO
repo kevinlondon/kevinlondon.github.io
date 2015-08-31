@@ -20,3 +20,39 @@ CR Anti Patterns
 * Style
 * Add opt-in email form
 * Rename
+
+Personal Testing Philosophy
+* Small
+* One assertion, maybe two
+* Tests describe what it should do
+* Space-ship analogy
+* Mocks are smell
+* Hard testing is smell
+* Slow is smell
+*
+
+
+Talk Ideas
+----------
+
+* Conflict resolution, how to get what you want
+* Testing Philosophy
+* Avoiding burnout
+
+* Finding balance as an engineer
+* What does happiness look like?
+* How to be happier
+* How to get out of your own way
+* Dealing with change
+* How to get out of your own way
+** If money doesn't make you happy, you're doing it wrong
+** Exercise
+** Sleep
+** Therapy
+** Procrastination
+** Extreme modesty
+** Side projects
+https://news.ycombinator.com/item?id=9691002
+** Learn about imposter syndrome
+*** Roast of Bob Sagat
+** Find your own personal trajectory
