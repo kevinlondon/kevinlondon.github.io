@@ -69,24 +69,42 @@ Email is where information goes to die.
 
 [Fast Test, Slow Test - Gary Bernhardt](https://www.youtube.com/watch?v=RAxiiRPHS9k&index=88&list=LLlt4ZSW8NUcXLWiB3NMnK_w)
 
-Gary Bernhardt is the man.
+A number of my personal testing philosophies can be traced back to Gary
+Bernhardt and to this talk in particular. It covers how test suites become
+slow and fragile and how we can write tests that serve us by meeting the 
+three primary goals of testing as he lays them out:
 
+1. Prevent regressions
+2. Prevent fear
+3. Prevent bad design
+
+This talk is a good introduction to high-level concepts in writing smaller, 
+focused tests and taking test performance seriously.
 
 [The Magic Tricks of Testing - Sandi Metz](https://www.youtube.com/watch?v=URSWYvyc42M)
 
-I've been going through a Sandi Metz phase lately. I think all of her videos
-are excellent but this one has an idea that's stuck with me perhaps more than
-the others, though Rules and
+I've been going through a Sandi Metz phase lately. I think all of her talks
+are excellent but I think I found this one to be the most applicable.
+Some highlights from her talk:
 
+* Don't test private methods
+* Isolate the method under test
+* Lots of small objects makes testing easier
+
+I don't agree with all of her points and I think that's okay.
+It's good to get different perspectives.
 
 [All the Little Things - Sandi Metz](https://www.youtube.com/watch?v=8bZh5LMaSmE)
 
-Got me thinking about small objects and OO design.
+The talk describes the value of small objects and the Open / Closed principle. It
+illustrates how to refactor an app without tests and how to apply Open / Closed.
+I started thinking about how to use smaller objects and how to use more traditional
+Object Oriented design principles after watching this.
 
 
 [Stop Writing Classes - Jack Diederich](https://www.youtube.com/watch?v=o9pEzgHorH0)
 
-Jack Diederich makes some good points and some bad ones in here. I think, in
+Jack Diederich makes some good points in here. I think, in
 general, that I agree with his point and that if we can write small functions
 instead of heavy-weight classes with a group of internal state, then we should do that.
 If we find ourselves creating lots of similar methods, then that's probably
