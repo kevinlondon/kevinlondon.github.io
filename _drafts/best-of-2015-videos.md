@@ -3,32 +3,39 @@ layout: post
 title: Recommended Software Development Videos
 ---
 
-In 2015, started watching videos in car. Big difference in quality over year.
-These are some of the most influential videos I've seen in the last year.
-I've watched about 100 conference videos in the last year.
+I worked as a solo developer for a few years so, when I joined a team, I felt
+like I [did not know anything](http://kevinlondon.com/2015/05/27/impostor-syndrome-and-me.html).
+I wanted to learn as much as I could.  One day, while constructing an Ikea bed
+frame in my living room, I listened to a conference talk about Django and had
+a revelation: conference talks did not require you to watch them.
 
+Speakers typically craft their presentations so that they can be understood in
+one sitting and read by those in the back of the room (or not read at all). In
+addition, they hone their message so it's simple to understand and does not have
+too much slack in it. In other words, they're like podcasts without fluff.
+
+I started listening to conference talks in the car in August of last year
+and I've heard over 100 since then[1]. I've noticed a difference in the way I think
+about software and each day I learn a little bit more about software development.
+I prefer to listen to talks on the way to work to prime my brain so that
+when I get there I'm usually excited about software and ready to start my day.
+
+All that said, here is a list of ten of my favorite videos that I've seen in the
+last year.
+
+[1] I do not recommend watching videos in the car - just listen to them.
 
 ## Software Architecture & Design
 
 ### [Growing a Language - Guy Steele](https://www.youtube.com/watch?v=_ahvzDzKdB0&list=FLlt4ZSW8NUcXLWiB3NMnK_w&index=11)
 
-# TODO 
-
-Guy Steele is a master. This talk is so well formed. Whether or not you use
-Java, I think Guy makes some excellent points and the form of the talk
-supports all of his ideas. I don't want to spoil any more than that.
-
-### [Architecture, the Lost Years - Bob Martin](https://www.youtube.com/watch?v=WpkDN78P884&list=FLlt4ZSW8NUcXLWiB3NMnK_w&index=22)
-
-# TODO
-
-Another Uncle Bob talk. Architecture is the idea that we delay choosing until we must.
-Does your software structure tell you anything about the software is constructed?
-Thought provoking and my introduction to Uncle Bob.
+Whether or not you use Java, I think Guy makes some excellent points about
+language design and the form of the talk supports his ideas. I don't want
+to spoil any more than that.
 
 ### [Simplicity Matters - Rich Hickey](https://www.youtube.com/watch?v=rI8tNMsozo0&list=FLlt4ZSW8NUcXLWiB3NMnK_w&index=27)
 
-# TODO
+TODO 
 
 Rich Hickey seems like a treasure. The Closure community, and the software community as whole,
 is lucky to have him tackling hard problems. 
@@ -46,14 +53,6 @@ What should the project do?  How would we want to use it to accomplish that goal
 Oh, and "example code should be exemplary".
 
 [1] At least not without deprecation warnings and much gnashing of teeth.
-
-### [All the Little Things - Sandi Metz](https://www.youtube.com/watch?v=8bZh5LMaSmE)
-
-The talk describes the value of small objects and the Open / Closed principle. It
-illustrates how to refactor an app without tests and how to apply Open / Closed.
-I started thinking about how to use smaller objects and how to use more traditional
-Object Oriented design principles after watching this.
-
 
 ## Working in Software
 
@@ -73,16 +72,6 @@ Essentially, Scott offers some suggestions to accomplish more in less time and
 with fewer distractions. My favorite line from the talk? "Email is where
 information goes to die." I stopped writing long-form emails after I watched
 this.
-
-### [Demanding Professionalism in Software Development - Bob Martin](https://www.youtube.com/watch?v=p0O1VVqRSK0&list=FLlt4ZSW8NUcXLWiB3NMnK_w&index=12)
-
-Uncle Bob can be a polarizing figure. In this talk, he lays out a general list
-of practices he believes we should follow. It has a few ideas that I liked
-in particular:
-
-* QA should hardly ever find anything.
-* Write tests that you trust.
-* No one will ever thank you for saying "No." but sometimes it is the most important thing you can do.
 
 
 ## Testing
