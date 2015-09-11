@@ -79,8 +79,9 @@ mechanics by playing with those values.
 
 Scott offers suggestions to accomplish more in less time and
 with fewer distractions. My favorite line from the talk: "Email is where
-information goes to die." I stopped writing long emails after I watched
-the talk and started using the [Pomodoro technique](https://en.wikipedia.org/wiki/Pomodoro_Technique).
+information goes to die." 
+Actually, I wrote this post because one of my friends emailed me asking for 
+some talk recommendations and the email started to get too long.
 
 
 ## Testing
