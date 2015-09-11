@@ -32,11 +32,65 @@ you.  You can specify the levels of feedback you'd like from the tool, ranging
 from "show me all the things!" to "only report something if it could blow up my
 car".
 
-For example, let's run a check on one of my old projects.
-
 What does it check?
 ------------------
 List some things.
+
+
+Personal Results
+----------------
+
+I ran this on an old program that I wrote, out of curiosity.
+
+{% highlight python %}
+
+    kevin$ bandit -r  ~/programming/my_old_app
+    [bandit]    INFO    using config: ~/.virtualenvs/bandit/etc/bandit/bandit.yaml
+    [bandit]    INFO    running on Python 2.7.6
+
+    Run started:
+        2015-09-11 20:09:47.141203
+
+    Test results:
+
+    >> Issue: Consider possible security implications associated with subprocess module.
+       Severity: Low   Confidence: High
+       Location: ~/programming/my_old_app/controllers/old_controller.py:1
+    1   import subprocess
+    2   import threading
+
+    >> Issue: subprocess call with shell=True identified, security issue.
+       Severity: High   Confidence: High
+       Location: ~/programming/my_old_app/controllers/old_controller.py:123
+    122             logging.info("Issuing command: %s" % item)
+    123             p = subprocess.Popen(item, shell=True, stdout=subprocess.PIPE)
+    124             process_list.append(p)
+
+    >> Issue: Use of insecure MD2, MD4, or MD5 hash function.
+       Severity: Medium   Confidence: High
+       Location: ~/programming/my_old_app/controllers/old_controller.py:230
+    229 def get_hex_digest(f, blocksize):
+    230     checksum = hashlib.md5()
+    231     while 1:
+
+{% endhighlight %}
+
+In this case, we have three results. One of them is low severity with a high
+confidence. In other words, Bandit's certain we're doing something questionable
+but it's not a big deal. In this case, it's a warning.
+
+The second is more serious with a high severity and high confidence. In other
+words, Bandit knows you're doing a dangerous thing.  We're calling a command
+with `shell=True`, which will can have 
+[serious security implications](http://kevinlondon.com/2015/07/26/dangerous-python-functions.html).
+If we were to find this in our code, it would be a good idea to change it so it
+no longer uses `shell=True` or at least sanitize our input before piping it
+directly into the shell.
+
+The last case is medium severity with a high confidence, so somewhere in the middle.
+In the case of this application, we made a conscious choice to use MD5s and
+we're not using it for something that needs to be secure (like password hashing),
+so that's working as expected. 
 
 
 Field Results
