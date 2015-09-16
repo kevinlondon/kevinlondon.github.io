@@ -34,8 +34,27 @@ car".
 
 What does it check?
 ------------------
-List some things.
 
+There's not currently a comprehensive list of what Bandit checks. From looking
+through the list of plugins, here's a few items that are getting checked by
+default:
+
+- Items falling within a set of blacklisted imports, calls, or functions are used.
+  Defaults include md5, eval, mark-safe, pickle, yaml, etc.
+- Exec called.
+- Hardcoded or non-secret passwords
+- Shell injections.
+- Hardcoded SQL statements
+- Calling Linux commands with wildcards (`*`)
+- Requests with certificate validation turned off
+- Bad SSL settings
+- Using try / except / pass
+
+The closest thing to a comprehensive list can be found by looking at the
+default [`bandit.yaml`](https://github.com/openstack/bandit/blob/master/bandit/config/bandit.yaml) configuration file.
+Anything in the `profiles`:`All`:`include` section are run on each run by default
+and the `blacklist` sections call out some of the insecure calls they're
+looking for.
 
 Personal Results
 ----------------
@@ -77,32 +96,32 @@ I ran this on an old program that I wrote, out of curiosity.
 
 In this case, we have three results. One of them is low severity with a high
 confidence. In other words, Bandit's certain we're doing something questionable
-but it's not a big deal. In this case, it's a warning.
+but it's not a big deal.
 
-The second is more serious with a high severity and high confidence. In other
-words, Bandit knows you're doing a dangerous thing.  We're calling a command
-with `shell=True`, which will can have 
+The second is more serious with a high severity and high confidence.
+Using `shell=True` with subprocess can have
 [serious security implications](http://kevinlondon.com/2015/07/26/dangerous-python-functions.html).
 If we were to find this in our code, it would be a good idea to change it so it
-no longer uses `shell=True` or at least sanitize our input before piping it
-directly into the shell.
+no longer uses `shell=True` or at least sanitize our input before sending
+it off to the shell.
 
-The last case is medium severity with a high confidence, so somewhere in the middle.
-In the case of this application, we made a conscious choice to use MD5s and
-we're not using it for something that needs to be secure (like password hashing),
-so that's working as expected. 
+The last case is medium severity with a high confidence, so somewhere in the
+middle.  For this application, we made a conscious choice to use MD5s and we're
+not using it for something that needs to be secure (like password hashing), so
+that's working as expected. We might consider adding a `# nosec` annotation
+at the end of the line so it ignores this on future runs.
 
 
 Field Results
 -------------
 
 I wanted to know how we were doing as a community. In general, are our open
-source projects secure and well-written? Are we accidentally performing `gem
-install hairball` each time we install a community package? The nature of open
-source, of course, is that something can change from insecure to secure with
-a single pull request.  I checked a few of the trending projects on Github to
-see what we could find and to see if I could help address any security problems.
-Here's what I found:
+source projects secure and well-written? Are we accidentally performing [`gem
+install hairball`](https://www.youtube.com/watch?v=rI8tNMsozo0) each time we
+install a community package? The nature of open source, of course, is that
+something can change from insecure to secure with a single pull request.  I
+checked a few of the trending projects on Github to see what we could find and
+to see if I could help address any security problems.  Here's what I found:
 
 Note: For the protection of the projects, I will change identities and sample
 code.
@@ -113,22 +132,23 @@ X critical vulnerabilities, which I helped address.
 Include Bandit in your CI Pipeline
 ----------------------------------
 
-One of the great things about running discrete programs is that you can run them
-whenever you want and it won't slow you down. The obvious downside to that is
-that you have to remember to run them. I know if I only ran flake8 when
-I explicitly ran the program as opposed to every save in Vim, I would never
-bother with the output.  The key, I think, is to hold ourselves accountable. 
+One of the great things about running discrete programs is that you can run
+them whenever you want and it won't slow you down. The obvious downside to that
+is that you have to remember to run them. I know if I only ran
+[flake8](http://flake8.readthedocs.org/en/latest/index.html) when I explicitly
+ran the program as opposed to every save in Vim, I would never bother with the
+output. The key, I think, is to hold ourselves accountable. 
 
 If you're using something like TravisCI or another CI server, consider setting
 Bandit as one of the steps to a successful build. I'd recommend setting the
 threshold at a severity of 3, to start, and perhaps gradually ratcheting it up.
 I'm still getting a feel for the project myself so I'm not sure how accurate all
-the mid-level warnings are. If you accidentally check in dangerous code, it's
+the mid-level warnings are. If you accidentally check in risky code, it's
 better to know about it early rather than after someone has hacked you.
 
-Adding Checks
--------------
+Extending Bandit
+---------------
 
-Bandit's also expandable, so if you find that there's a vulnerability that's not
+Bandit's also extensible, so if you find that there's a vulnerability that's not
 adequately covered already in the project, you can easily add another one. 
 Let's pick one ourselves to include.
