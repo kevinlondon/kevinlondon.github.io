@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Finding Vulnerabilities with Bandit Talk / Slides"
+title:  "Finding Vulnerabilities with Bandit Talk"
 date:   2015-09-24 13:23:08
 ---
 
@@ -24,8 +24,7 @@ Slides
 ------
 
 {% raw %}
-TBD
-<script async class="speakerdeck-embed" data-id="637a1e03016b4297bbf9bdb4444a8ea7" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="d589cefcc0a2426988da5c6042dabc9c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 {% endraw %}
 
 Additional Reading
