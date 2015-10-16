@@ -10,8 +10,8 @@ that question hard to answer because of the ever-changing nature of security
 and the scope of Django's documentation.
 
 Levi Gross, in [Django Security Interview Questions](http://www.levigross.com/2014/02/07/django-security-interview-questions/),
-has a list of security questions that help us get closer to feeling confident
-in our ability to secure our applications. He opens his list with this:
+has a list of security questions to help us feel more confident
+in our ability to secure our applications. He opens with this:
 
 > I feel that every Django developer should know the answer to the questions below. 
 > If you don’t, look it up.
