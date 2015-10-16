@@ -4,6 +4,8 @@ title: Finding Insecure Python Code with Bandit
 date: 2015-09-10 22:17:10
 ---
 
+TODO: Throw this away.
+
 It's hard to keep track of all the ways we can shoot ourselves in the foot.  In
 C, they had stack overflow problems if you didn't check your bounds.  TODO: Go
 into stack overflows a bit more.  Eventually, the tooling (and compilers) caught
@@ -126,8 +128,99 @@ to see if I could help address any security problems.  Here's what I found:
 Note: For the protection of the projects, I will change identities and sample
 code.
 
-I checked X projects with an average of Y stars each. In general, I found
-X critical vulnerabilities, which I helped address.
+
+Keepers
+=======
+
+
+>> Issue: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: monitoring/outputs/progress_bars.py:72
+70      @percent.setter
+71      def percent(self, value):
+72          assert value >= 0
+73          assert value <= 100
+74          self.__percent = value
+
+
+
+>> Issue: Requests call with verify=False disabling SSL certificate checks, security issue.
+   Severity: High   Confidence: High
+   Location: encrypter.py:206
+205         try:
+206             response = requests.get(uri, verify=False)
+207         except requests.exceptions.RequestException as error:
+208             logger.error("Unable to reach %s: %s", uri, error)
+
+
+>> Issue: Use of insecure and deprecated function (mktemp).
+   Severity: Medium   Confidence: High
+   Location: decrypter.py:291
+291         listpath = tempfile.mktemp(".tmp", "LIST")
+292
+293         with open(listpath, "rb") as originalfile:
+
+https://security.openstack.org/guidelines/dg_using-temporary-files-securely.html
+
+
+>> Issue: Pickle library appears to be in use, possible security issue.
+   Severity: Medium   Confidence: High
+   Location: serializers/pickle.py:43
+42      def loads(self, value):
+43          return pickle.loads(force_bytes(value))
+
+
+>> Issue: Audit url open for permitted schemes. Allowing use of file:/ or
+custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+
+165    try:
+166       conn = urllib2.urlopen(request, timeout=item.timeout_seconds)
+
+
+>> Issue: Deserialization with the marshal module is possibly dangerous.
+    Argument/s:
+        Name(id='dump', ctx=Load())
+   Severity: Medium   Confidence: High
+   Location: grab/spider/cache_backend/postgresql.py:92
+88
+89      def unpack_database_value(self, val):
+91          dump = zlib.decompress(val)
+92          return marshal.loads(dump)
+
+
+
+>> Issue: subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   Location: ./src/CryptographicConnection.py:90
+87          # Create ECC privatekey
+88          proc = subprocess.Popen(
+89              "%s ecparam -name prime256v1 -genkey -out %s/key-ecc.pem" % (self.openssl_bin, config.data_dir),
+90              shell=True, 
+91          )
+
+
+>> Issue: Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load().
+   Severity: Medium   Confidence: High
+   Location: ./parser/parser.py:447
+446     yamlFile = open(yamlPath)
+447     regexes = yaml.load(yamlFile)
+448     yamlFile.close()
+
+
+
+>> Issue: Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with it's defusedxml equivilent function.
+   Severity: Medium   Confidence: High
+   Location: ./output/formatters/xml.py:46
+45              try:
+46                  root = ElementTree.fromstring(response_body.encode('utf8'))
+47              except ElementTree.ParseError:
+
+https://pypi.python.org/pypi/defusedxml
+https://docs.python.org/3/library/xml.html#xml-vulnerabilities
+
+
+
 
 Include Bandit in your CI Pipeline
 ----------------------------------

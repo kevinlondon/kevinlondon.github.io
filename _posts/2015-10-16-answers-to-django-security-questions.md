@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Answers to Django Security Questions"
-date:   2015-10-14 12:42:04
+date:   2015-10-16 13:56:04
 ---
 
 How much do you know about Django's security protections? Do you feel
@@ -302,8 +302,8 @@ set a CSRF token for the whole domain.
 In Closing
 ----------
 
-Hopefully you know a little bit more about how Django's security works 
-or at least have a place you can search if you'd like to know more.
+I hope this post helped you better understand how Django's security works. 
 If you'd like to hear some more from Levi, he gave a talk called 
-[Practical Django Security](https://www.youtube.com/watch?v=tcylo9qo9gA) 
-which is enjoyable.
+[Practical Django Security](https://www.youtube.com/watch?v=tcylo9qo9gA).
+In my opinion, it's not important to keep all of this in memory, so long
+as you remember roughly which areas pose a security risk.
