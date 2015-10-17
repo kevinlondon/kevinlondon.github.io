@@ -8,8 +8,7 @@ How much do you know about Django's security protections? Do you feel
 confident that you could secure a Django application from attackers? 
 
 Levi Gross, in [Django Security Interview Questions](http://www.levigross.com/2014/02/07/django-security-interview-questions/),
-has a list of security questions to help us feel more confident
-in our ability to secure our applications. He opens with this:
+has a list of security questions to explore. He opens with this:
 
 > I feel that every Django developer should know the answer to the questions below. 
 > If you don’t, look it up.
