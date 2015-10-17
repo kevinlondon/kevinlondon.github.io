@@ -302,5 +302,3 @@ you'd like to hear more from Levi, he gave a talk on [Practical Django
 Security](https://www.youtube.com/watch?v=tcylo9qo9gA). In my opinion, it's not
 important to keep all of this in memory so long as you remember roughly which
 areas pose a security risk when you're working on a Django application.
-
-Thanks to Zach Schipono for reviewing a draft of this post.
