@@ -5,9 +5,7 @@ date:   2015-10-16 13:56:04
 ---
 
 How much do you know about Django's security protections? Do you feel
-confident that you could secure a Django application from attackers? I find
-that question hard to answer because of the ever-changing nature of security
-and the scope of Django's documentation.
+confident that you could secure a Django application from attackers? 
 
 Levi Gross, in [Django Security Interview Questions](http://www.levigross.com/2014/02/07/django-security-interview-questions/),
 has a list of security questions to help us feel more confident
@@ -16,8 +14,8 @@ in our ability to secure our applications. He opens with this:
 > I feel that every Django developer should know the answer to the questions below. 
 > If you don’t, look it up.
 
-When I looked at the list, I didn't feel I knew the answers to any of them and 
-I had a hard time finding answers because of the open-ended nature of the
+When I looked at the list, I didn't feel like I knew the answers to any of them
+and I had a hard time finding answers because of the open-ended nature of the
 questions.
 
 I'd like to share what I found with you. 
@@ -30,10 +28,6 @@ If you don't know the answer, that's okay.  If you get stuck, feel free to
 consult the list below. I think you'll find it more valuable if you work through
 it and find your personal areas for improvement. I did not know what Django uses
 to hash passwords by default, to name just one example.
-
-This post is primarily aimed at Django developers and I think it's also
-interesting for those that work in Python or want to learn more about web
-security.
 
 I should also mention that I ran these answers by Levi first and he gave me
 a few notes.
@@ -56,15 +50,15 @@ someone malicious, could do [much worse](https://www.owasp.org/index.php/DOM_Bas
 
 Django, by default, has [automatic HTML
 escaping](https://docs.djangoproject.com/en/1.7/topics/templates/#automatic-html-escaping)
-turned on, so it *may* protect us from this particular attack, depending on what
+turned on, so it *may* protect us from this attack, depending on what
 the user has entered. As we discuss later, HTML escaping does not cover every
 use case.
 
 For example, if the code called
 [`mark_safe()`](https://docs.djangoproject.com/en/1.8/ref/utils/#django.utils.safestring.mark_safe)
 on the variable, then Django would inject it directly into the template without
-escaping.  Similarly, if `{% raw %}{% autoescape off %}{% endraw %}` is defined
-in the template around the snippet, Django would not try to escape it.
+escaping.  Similarly, if the template includes `{% raw %}{% autoescape off %}{% endraw %}` 
+before the snippet, Django would not try to escape it.
 
 ###Identify the security vulnerability in the following code. What is it? How can it be exploited?
 
@@ -94,14 +88,14 @@ The `urlopen()` call poses the most danger because it can open
 arbitrary urls
 ([including file urls!](http://www.levigross.com/2014/07/04/security-concerns-with-pythons-urllib-and-urllib2/)).
 An attacker could set the `picture_url` to `file:///etc/password`.
-Then, when the page is rendered, it would include the contents of
-`/etc/password` as a base 64 encoded value.
+Then, when they visit the page, they may see the contents of
+[`/etc/password`](https://en.wikipedia.org/wiki/Passwd) as a base 64 encoded value.
 
 ###Provide ways to identify a Django application during a blackbox test? 
 
 1. If the site uses the Django administration panel, it can be accessed at the
    `/admin` route. If it uses the default theme, that's a dead giveaway.
-2. If the application has DEBUG=True mode enabled and you go to an invalid page,
+2. If the application has DEBUG = True and you go to an invalid page,
    it will show diagnostic information, including the version of Django it uses. 
 3. If the server responds with headers that include something like `Server:
    WSGIServer/0.1 Python/2.7.6`, that points to a Python-based web framework, 
@@ -109,15 +103,15 @@ Then, when the page is rendered, it would include the contents of
 4. If you get a stock Django error page for a [400, 403, 404, or 500 status code
    response](https://github.com/django/django/blob/master/django/views/defaults.py)
    with messaging unique to Django.
-5. If you POST a form and do not include a CSRF token, the CSRF error that comes
-   back may be the Django default.
+5. If you POST a form and do not include a CSRF token, the application may 
+   return the default CSRF error for Django.
 
 ###What is the default password hash algorithm that Django uses? Were there any recent changes?
 
 [PBKDF2](https://docs.djangoproject.com/en/1.8/topics/auth/passwords/#how-django-stores-passwords)
 with HMAC and SHA256. Django increases the number of iterations for each major
 release as hardware gets faster and cheaper.  Higher numbers of iterations mean
-that it will take longer to crack each password.  Here's the number for each of
+that it takes longer to crack each password.  Here's the number for each of
 the last few releases: 
 
 * 1.6.x: [12k iterations](https://github.com/django/django/blob/stable/1.6.x/django/contrib/auth/hashers.py#L230)
@@ -142,14 +136,14 @@ environment. It enables information leakage, has performance implications, and
 yields full tracebacks on error. 
 
 * [ADMINS](https://docs.djangoproject.com/en/1.8/ref/settings/#admins): Django
-emails a full exception traceback on errors when DEBUG = False
-to the email addresses specified in the ADMINS tuple. If the company or
-individual that created the Django application does not own the email addresses
-specified, it could cause issues with information leakage.
+emails a full exception traceback on errors when DEBUG = False to the email
+addresses specified in the ADMINS tuple. If the company or individual that
+created the Django application does not control the email addresses specified,
+it cause an information leak.
 
 * [FILE_UPLOAD_PERMISSIONS](https://docs.djangoproject.com/en/1.8/ref/settings/#file-upload-permissions):
-Setting this value incorrectly will yield unexpected
-results when users upload a file.
+Setting this value incorrectly will yield unexpected results when users upload
+a file.
 
 * [SECRET_KEY](https://docs.djangoproject.com/en/1.8/ref/settings/#secret-key):
 Exposing the secret key means that an attacker can, under
@@ -157,9 +151,8 @@ some circumstances, execute code remotely and it invalidates the safety of
 sessions.
 
 * [SECURE_PROXY_SSL_HEADER](https://docs.djangoproject.com/en/1.8/ref/settings/#secure-proxy-ssl-header):
-According to the documentation, this setting can 
-be challenging if you need to set it to something other than the default and
-setting it wrong creates security holes.
+The documentation says that settings this incorrectly or not setting it when
+it needs to be can create security holes.
 
 * Any of the headers under the [Security section](https://docs.djangoproject.com/en/1.8/ref/settings/#security).
 
@@ -198,26 +191,24 @@ possible to execute the attack.
 Using [`raw()`, `extra()`, or SQL statements
 directly](https://docs.djangoproject.com/en/1.8/topics/security/#sql-injection-protection)
 bypasses the protections offered by Django's ORM and could lead to SQL
-injection. Using the ORM instead of custom queries offers the best protection
-against SQL injection. 
+injection. Using the ORM offers the best protection.
 
 ###Why is the SECRET_KEY so important?
 
-Django uses the `SECRET_KEY` for cryptographic signing and security safeguards.
-Change the `SECRET_KEY` value immediately if it gets leaked.
+Django uses the `SECRET_KEY` for cryptographic signing and security safeguards,
+such as cookies and sessions.  if an attacker got the `SECRET_KEY` and the site
+uses the `PickleSerializer` and cookie-based sessions, they could craft a cookie
+such that it would cause [remote code
+execution](https://docs.djangoproject.com/en/1.8/topics/http/sessions/#using-cookie-based-sessions),
 
-Django also uses the `SECRET_KEY` value for cookies and sessions.  In Django
-[1.5.x and
-older](https://docs.djangoproject.com/en/1.8/topics/http/sessions/#using-cookie-based-sessions),
-if an attacker got the `SECRET_KEY`, they could craft a cookie such that it
-would cause remote code execution on the server.
+Change the `SECRET_KEY` value immediately if it gets leaked.
 
 ###When looking for a denial of service vector, which part of Django stands out as the most vulnerable?
 
-* Any sort of aggregate query or report could be vulnerable to DoS, depending
+* Any sort of aggregate query or report could be a vector for DoS, depending
 on how the application uses caching. Interacting with the database slows
-Django down, so pages that require large or numerous queries could
-cause the server to slow or stop responding.
+Django down, so hitting pages that require large or numerous queries could
+cause the server stop responding.
 
 * Several DoS-related bugs have been found lately in
 [session](https://docs.djangoproject.com/en/1.8/releases/1.8.4/#denial-of-service-possibility-in-logout-view-by-filling-session-store)
@@ -230,17 +221,16 @@ a denial of service risk as well.
 
 ###Is Django threadsafe? If not, how does this effect the security of the application?
 
-Yes*. Django itself is
-[thread-safe](https://docs.djangoproject.com/en/1.9/howto/custom-template-tags/#thread-safety-considerations).
-Problems arise when applications written on top of Django do not properly handle
-threads or use an insufficient database transaction type. It can be challenging
-to write thread-safe custom middleware as well.
+[Yes*](https://docs.djangoproject.com/en/1.9/howto/custom-template-tags/#thread-safety-considerations).
+Django itself is thread-safe.  Problems arise when applications written on top
+of Django do not properly handle threads or use an insufficient database
+transaction type. It can be challenging to write thread-safe custom middleware.
 
 Thankfully, `get_or_create()` should be [thread-safe and
 atomic](http://stackoverflow.com/questions/6586552/django-how-to-do-get-or-create-in-a-threadsafe-way/22095136#22095136),
 so no need to worry about
 [TOCTOU](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use) problems
-there. 
+with that.
 
 ###How does Django’s permission model work? Is it effective?
 
@@ -259,7 +249,7 @@ per-object permissions at the cost of additional complexity.
 
 ###How does Django’s file uploading functionality work? How would you make it more secure?
 
-Django stores user uploaded files on their request as `request.FILES`.
+Django stores user uploaded files on their request in `request.FILES`.
 Depending on the storage backend and file handler, Django will store files
 up to 2.5 MB [in memory](https://docs.djangoproject.com/en/1.9/topics/http/file-uploads/#where-uploaded-data-is-stored). 
 Beyond that, it saves the file to a temporary location
@@ -291,10 +281,15 @@ class](https://docs.djangoproject.com/en/1.8/topics/http/middleware/) called
 `django.middleware.csrf.CsrfViewMiddleware` by default. For any operations other
 than GET, Django wants you to include a CSRF token in the form.  The Django
 documentation includes a section that covers [how it
-works](https://docs.djangoproject.com/en/1.8/ref/csrf/#how-it-works).  In short,
-it sets a cookie for the CSRF value, includes a csrf value as part of the post
-to the server, and compares the two. Over HTTPS, it also uses strict referrer
-checking.  It's not totally effective because, as [pointed out in the
+works](https://docs.djangoproject.com/en/1.8/ref/csrf/#how-it-works).  
+
+In short, Django creates a cookie with the CSRF value and then expects
+a matching csrf value to be submitted as part of the POST to the server.  If
+they do not match, the server returns an [HTTP 403
+- Forbidden](https://docs.djangoproject.com/en/1.7/ref/contrib/csrf/#rejected-requests)
+response. Over HTTPS, it also uses strict referrer checking. 
+
+It's not totally effective because, as [pointed out in the
 docs](https://docs.djangoproject.com/en/1.8/ref/csrf/#limitations), subdomains
 set a CSRF token for the whole domain.
 
@@ -302,8 +297,10 @@ set a CSRF token for the whole domain.
 In Closing
 ----------
 
-I hope this post helped you better understand how Django's security works. 
-If you'd like to hear some more from Levi, he gave a talk called 
-[Practical Django Security](https://www.youtube.com/watch?v=tcylo9qo9gA).
-In my opinion, it's not important to keep all of this in memory, so long
-as you remember roughly which areas pose a security risk.
+I hope this post helped you better understand how Django's security works.  If
+you'd like to hear more from Levi, he gave a talk on [Practical Django
+Security](https://www.youtube.com/watch?v=tcylo9qo9gA). In my opinion, it's not
+important to keep all of this in memory so long as you remember roughly which
+areas pose a security risk when you're working on a Django application.
+
+Thanks to Zach Schipono for reviewing a draft of this post.
