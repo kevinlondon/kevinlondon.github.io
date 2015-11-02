@@ -25,7 +25,7 @@ No one has ever said "It's a simple 11 point plan!" and meant it.
 That said, most of these go by quickly. Let's go into each item in detail.
 
 
-1. Pick a Topic
+Pick a Topic
 ---------------
 
 I sometimes get stuck when I try to come up with a topic. 
@@ -43,7 +43,7 @@ learned](http://ideas.time.com/2011/11/30/the-protege-effect/) and helps me feel
 more like an expert in that area. 
 
 
-2. Write About It
+Write About It
 -----------------
 
 I like to write a long-form blog post on the topic before I continue.
@@ -71,7 +71,7 @@ I also use the post as a way to tell if what I'm writing about would be
 interesting for attendees.
 
 
-3. Pick the Primary Points
+Pick the Primary Points
 --------------------------
 
 Great talks contain a few simple points.  A common recommendation I've read is
@@ -88,7 +88,7 @@ about. Something about writing on paper helps me condense ideas more
 effectively. I write too much and then edit it down.
 
 
-4. Write the Rough Outline
+Write the Rough Outline
 --------------------------
 
 I think of the outline as a trimmed down, simpler version of the blog post
@@ -98,7 +98,7 @@ not something I release so I don't bother to edit it much. If I spend too
 much time on the outline, I feel tempted to read from it. Do not do that.
 
 
-5. Prepare a First Draft of the Slides
+Prepare a First Draft of the Slides
 --------------------------------------
 
 At this point, I like to create the first pass on the slides. I use 
@@ -112,7 +112,7 @@ parts I remember and where I stumble.
 If I'm giving a 30 minute talk, I aim for something like 30-60 slides. 
 The style doesn't matter because the slides will probably change.
 
-6. Practice the Talk Out Loud
+Practice the Talk Out Loud
 -----------------------------
 
 I find the first read of a talk intimidating because it tells me
@@ -122,7 +122,7 @@ I feel particularly stuck. After I do a runthrough, I make notes
 about what felt weak and what felt good. 
 
 
-7. Research Weak Spots
+Research Weak Spots
 ------------------------------------------------
 
 What academic articles are available on my topic? Are there other blog posts?
@@ -131,7 +131,7 @@ After I finish the research, I continue adding slides where I need help
 and removing ones that feel extraneous.
 
 
-8. Practice More
+Practice More
 ----------------
 
 I like to time the talk and give it aloud as though I were presenting it,
@@ -139,7 +139,7 @@ usually 2-3 more times. Sometimes I'll pick a friend to present to them in order
 to get some feedback on the content of the presentation. The slides can still be
 temporary.
 
-9. Finalize slides.
+Finalize the Slides
 -------------------
 
 Once I feel good about the presentation's content, I like to go back through and
@@ -152,7 +152,7 @@ Here's a couple examples from my previous talks:
 * [Intro to Code Reviews](http://kevinlondon.com/2015/06/25/intro-to-code-reviews-talk.html)
 * [Finding Vulnerabilities with Bandit](http://kevinlondon.com/2015/09/24/finding-vulnerabilities-with-bandit.html)
 
-10. One Final Practice
+One Final Practice
 ----------------------
 
 I do one practice with the final slides. Presenting it to a small group can be
@@ -161,7 +161,7 @@ stopping for any reason. I think recovering from problems can be as important
 as how delivering the content, particularly in front of others.
 
 
-11. Give the talk!
+Give the Talk!
 ------------------
 
 The easy part. 
