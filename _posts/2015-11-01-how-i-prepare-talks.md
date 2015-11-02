@@ -196,6 +196,6 @@ please feel free to contact me! I'd love to help.
 Other References
 ----------------
 
-[Nancy Duarte - The Secret Structure of Great Talks](https://www.ted.com/talks/nancy_duarte_the_secret_structure_of_great_talks)
-[Giving a Technical Talk](https://homes.cs.washington.edu/~mernst/advice/giving-talk.html)
-[Tips on Giving Your First Technical Talk](https://www.happybearsoftware.com/tips-on-giving-your-first-technical-talk)
+* [Nancy Duarte - The Secret Structure of Great Talks](https://www.ted.com/talks/nancy_duarte_the_secret_structure_of_great_talks)
+* [Giving a Technical Talk](https://homes.cs.washington.edu/~mernst/advice/giving-talk.html)
+* [Tips on Giving Your First Technical Talk](https://www.happybearsoftware.com/tips-on-giving-your-first-technical-talk)
