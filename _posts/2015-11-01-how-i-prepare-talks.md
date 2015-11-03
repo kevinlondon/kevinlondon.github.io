@@ -4,10 +4,11 @@ title:  "How I Prepare for Talks"
 date:   2015-11-01 22:09:00
 ---
 
-It's hard to know where to start when preparing a talk and everyone has
-a different process that feels comfortable for them. I've experimented
-and given four talks so far and I feel like I learn something new every time.
-Here's my current process:
+Are you thinking about giving a talk but unsure where to start? That's usually
+how I feel at the beginning of my preparation. I've given a few talks and
+I feel like I learn something new every time. It can be intimidating to go
+from idea to presentation, so I'd like to share my current process. I 
+typically follow these steps:
 
 1. Pick a topic.
 2. Write about it.
@@ -15,7 +16,7 @@ Here's my current process:
 4. Write the outline on paper
 5. Prepare a first draft of slides.
 6. Try to give the talk aloud, warts and all.
-7. Research areas where I feel the talk is weak.
+7. Research areas where the talk needs work.
 8. Practice more.
 9. Finalize slides.
 10. Practice as much as possible.
@@ -29,36 +30,36 @@ Pick a Topic
 ---------------
 
 I sometimes get stuck when I try to come up with a topic. 
-Good news: You do not have to be an expert to give a talk. 
+Good news: You do not have to be an expert to give a talk!
 
-I pick topics I feel like I know but I'd like to learn more about. 
+I pick topics I feel like I know but want to learn more about. 
 The topics I've chosen tend to come from one of the following:
 
 1. A question someone has asked me (e.g. How do we write good tests for code?)
 2. Something I had to figure out (e.g. How do I do code reviews?)
 3. Something I'd like to learn more about (e.g. What should I know about application security?)
 
-I find that presenting a topic [cements what I've
-learned](http://ideas.time.com/2011/11/30/the-protege-effect/) and helps me feel
-more like an expert in that area. 
+I find that presenting a topic [cements
+learning](http://ideas.time.com/2011/11/30/the-protege-effect/) and helps me
+feel more like an expert in that area once I'm done.
 
 
 Write About It
 -----------------
 
 I like to write a long-form blog post on the topic before I continue.
-I think it has a few key benefit that make the rest of the process easier:
+This offers some benefits that make the rest of the process easier:
 
-1. You're forced to clarify what you think is important about the topic.
-2. You can get preliminary feedback and adjust accordingly
+1. You're get to consider what you think is important about the topic.
+2. You get early feedback.
 3. You can later point talk attendees to additional material
 if they'd like to learn more.
 4. You gain confidence on the subject.
+5. You find out if other people have interest in your topic.
 
-
-When giving a talk, my goal is to cover an idea in a way that sticks around
-with the audience after they leave. 
-Blog posts, however, can serve as a reference.
+When giving a talk, my goal is to cover a broad idea in a way that sticks 
+with the audience. Blog posts, however, can go into more detail and serve
+as a reference.
 
 For example, I wrote about [code
 reviews](http://kevinlondon.com/2015/05/05/code-review-best-practices.html)
@@ -67,25 +68,23 @@ also provided more context and personal examples.
 
 If you can, seek out feedback on your blog post.
 I find it's gentler to correct mistakes at this stage than in later ones.
-I also use the post as a way to tell if what I'm writing about would be
-interesting for attendees.
 
 
 Pick the Primary Points
 --------------------------
 
 Great talks contain a few simple points.  A common recommendation I've read is
-that you should pick the top idea that you'd like people to leave with and
-perhaps 2-3 points that support it.  Anything else and it can be hard to retain
-it. 
+that you should pick the central idea that you'd like people to leave with and
+perhaps 2-3 points that support it. Anything else and it can be hard to
+remember.
 
 Picking the primary focus of your talk allows you to streamline. 
 The typical 30 minute slot will not be long enough to go
 into depth on a topic. That's okay.
 
-I like to write out primary ideas on paper and see which ones I feel strongly
-about. Something about writing on paper helps me condense ideas more
-effectively. I write too much and then edit it down.
+Writing out your ideas on paper allows you to see which ones you feel strongly
+about and something about writing on paper helps me condense ideas more
+effectively. I'll usually write too much and then edit it down later.
 
 
 Write the Rough Outline
@@ -94,8 +93,8 @@ Write the Rough Outline
 I think of the outline as a trimmed down, simpler version of the blog post
 that we completed earlier. I include as many anecdotes and personal stories
 as possible in the outline so I remember to include them in the talk. This is
-not something I release so I don't bother to edit it much. If I spend too
-much time on the outline, I feel tempted to read from it. Do not do that.
+not something I release so I don't bother to editing or filling it 
+in completely.
 
 
 Prepare a First Draft of the Slides
@@ -105,9 +104,6 @@ At this point, I like to create the first pass on the slides. I use
 big text and no more than a few words per slide. The less text that you can
 put on the slides, the better. It becomes too tempting to read slides and
 that can prevent you from connecting with the audience.
-
-I use these slides so that I have something to advance through and to see what 
-parts I remember and where I stumble.
 
 If I'm giving a 30 minute talk, I aim for something like 30-60 slides. 
 The style doesn't matter because the slides will probably change.
