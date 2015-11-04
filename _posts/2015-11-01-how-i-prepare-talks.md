@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How I Prepare for Talks"
+title:  "How to Prepare for Talks"
 date:   2015-11-01 22:09:00
 ---
 
