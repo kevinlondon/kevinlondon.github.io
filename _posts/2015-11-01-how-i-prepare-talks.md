@@ -90,11 +90,10 @@ effectively. I'll usually write too much and then edit it down later.
 Write the Rough Outline
 --------------------------
 
-I think of the outline as a trimmed down, simpler version of the blog post
-that we completed earlier. I include as many anecdotes and personal stories
-as possible in the outline so I remember to include them in the talk. This is
-not something I release so I don't bother to editing or filling it 
-in completely.
+The outline is a simpler version of the blog post that we completed earlier.
+I include as many anecdotes and personal stories as possible in the outline so
+I remember to include them in the talk. This is not something I release so
+I don't bother to editing or filling it in completely.
 
 
 Prepare a First Draft of the Slides
