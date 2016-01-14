@@ -1,385 +1,360 @@
+---
+layout: post
+title:  "Advice for a Tech Job Hunt"
+date:   2016-01-10 15:54:08
+---
+
+Job hunting can be exhausting.
+
+[TODO Revisit open]
+
+I recently completed a job hunt and wound up at
+[ChowNow](https://www.chownow.com/). I realized
+how many things can go wrong and I have advice to share about
+mindset and finding a job that fits your needs.
+
+### Personal Stats
+
+For a quick background on my process, I applied to 25 places over
+3 months, had phone interviews with 9, and passed on-site technical
+interviews with 6.
+
+I helped interview around 20 technical candidates and 30 interns in previous
+positions, so I have experience on the other side of the table as well.
 
 
-Advice for a Technical Job Search
-------
+Finding Jobs
+------------
 
-I just recently completed a job hunt and wound up at ChowNow. As I was going
-through the process, I realized that there's a lot of steps and many bits that
-can go wrong. I think there's some advice I can share about mindset and finding
-a good opportunity that works for you.
+Locating an opportunity that sounds good can range from painful to easy,
+depending on where you're based and what kind of experience you have.
 
+The first step to finding a job is locating a job post or hearing about an
+opportunity that interests you. Here's a few different approaches you could use
+for finding positions:
 
-## Personal Stats
+### Check job sites
 
-I wound up applying to about 25 places this time, had phone interviews with 9,
-and on-site technical interviews with 6. Most of those would have progressed to
-offers but I turned most of them down for various reasons.
+It can be hard to sift through the many options you
+have for checking job postings to find the good ones.
 
-I've also helped interview around 20 technical candidates and 30 interns in
-previous positions, so I have some experience on the other side of the table as
-well.
+I think there's something to the saying that "the best jobs aren't advertised".
+That said, most tech companies want to hire great talent, so they tend to leave
+job postings up even when they're not actively looking.
 
-I offer these only as background and reference. I have a background in the film
-industry where I would sometimes send out 100+ applications for a single job, so
-these hit rates are comparatively much higher. It's one of the many nice things
-about working in tech that's easy to take for granted.
+Sites I've used in my job search:
 
-## Finding Jobs
+* **[Hacker News - Who's Hiring?](https://news.ycombinator.com/submitted?id=whoishiring)**:
+  Posted on the first of each month. I like that it usually gives you a direct
+  line to someone who works at the company and it feels more personal than most
+  job postings. I would guess that, on average, individuals who post about their
+  company on HN are more likely to enjoy their work and work at
+  a progressive organization.
+* **[Glassdoor](https://www.glassdoor.com/Job/index.htm)**: Even if you don't use
+  their job listings, Glassdoor reviews can provide an excellent and easy way to
+  see what other employees have said about working at a company. As with all
+  internet reviews, take what you read with a grain of salt.
+* **[Angel List](https://angel.co/)**: Mostly for startups. I applied to a few
+  companies through here but did not find any for me.
+* **[Stack Overflow Careers](http://careers.stackoverflow.com/)**: Pretty good
+  overall. I don't understand why you cannot use your Careers profile to apply
+  for jobs. Otherwise, I found it easy to sort and search for jobs.
+* **[Triplebyte](https://triplebyte.com)**: A startup that interviews you and
+  may fast-track you to YCombinator startups. That currently means
+  that you can bypass the application and initial phone screen.
+  I think it's good to get practice with technical interviews and this offers
+  a low-risk way to do that.
 
-3. Look at job postings
-
-There's a large number of places where you can find job postings. I think
-there's something to the ["the best jobs aren't
-advertised"](http://www.careershifters.org/expert-advice/why-the-best-jobs-are-never-advertised-and-how-to-find-them)
-but networking kind of sucks too so sometimes it's nice to see what's out there.
-I think we also have a leg-up in tech. Most tech companies are constantly in
-hiring mode so they leave job postings up all the time even they're not actively
-searching because of the possibility of missing out on an excellent candidate.
-
-Note, these are non-exhaustive lists.
-
-Some examples of places I've used to look for jobs:
-
-* [Hacker News - Who's Hiring?](https://news.ycombinator.com/submitted?id=whoishiring)
-  - Posted on the first of every month. A good list of companies along
-  with their region. If a company is posting on Hacker News, it's
-  more likely that I would want to work for them because it means that they're
-  active in the community. 
-* [Glassdoor](https://www.glassdoor.com/Job/index.htm) - Even if you don't use
-  their jobs page, Glassdoor reviews can provide an excellent and easy way to
-  see what other employees have said about working there. Be sure to carefully
-  read any reviews that have been posted for the positives and negatives.
-* [Angel List](https://angel.co/) - Mostly for startups. I had a few
-  applications through here and didn't find anything that was a good fit.
-* [Stack Overflow Careers](http://careers.stackoverflow.com/) - Pretty good
-  overall. I don't really understand why you have to make a careers page for
-  yourself and then it doesn't use that for any of the applications. 
-* [Triplebyte](https://triplebyte.com) - A startup that interviews you and then
-  will fast-track you to YCombinator startups. Right now, the fast track is
-  basically a way to bypass the steps up to the technical phone screen so it
-  doesn't actually buy you much time. Still, it's good to get practice with
-  technical interviews and this was one of the more challenging technical
-  interviews I went through.
-
-If you want to work remotely:
+If you'd like to work remotely:
 
 * [We Work Remotely](https://weworkremotely.com/)
 * [Working Nomads](http://www.workingnomads.co/jobs)
 * [Remotive](http://remotive.io/)
-* [FlexJobs](https://www.flexjobs.com/)
-
-I've never applied through Monster or Dice so I can't speak to those.
 
 
-3. Make a list of companies you would like to work for / products you use and
-   like
+### Look into local options
 
-Sometimes I think this one is easy to skip. I live in Los Angeles, so we don't
-have quite the same breadth of places that we can apply as those in Silicon
-Valley. As such, it's easy to assume that some of the companies I'd be
-interested in don't have a presence in my area. That said, most of the larger
-companies do have a branch down in Los Angeles area. After making a list
-of companies you'd like to work for, you may be surprised by how many of them
-are options in an area near you. For example, in LA, there's Google, Microsoft,
-Snapchat, Tindr, and a number of other larger tech companies. After making
-the list, you may find more options than you thought!
+Many larger companies have satellite branches that may be an option for you if
+you'd prefer not to move. Microsoft and Google have satellite branches in Los
+Angeles, for example, and Snapchat, Tinder, Riot Games have their headquarters
+here too. You may find pleasant surprises if you look around.
 
+### Configure LinkedIn to work for you
 
-4. Configure LinkedIn to work for you
+First, you'll probably want to [turn off your activity notifications](
+https://help.linkedin.com/app/answers/detail/a_id/78/~/showing-or-hiding-activity-updates-about-you).
+If you make changes to your job description or the place that you live and
+LinkedIn broadcasts your change to your coworkers, you may raise suspicions.
 
-First, you'll probably want to turn off any notifications of your activity.
-If you make a bunch of changes to your job description or the place that you 
-live and it's broadcasted to your coworkers, you're gonna have a bad time.
+If you'd like to relocate, set your city to the place you'd like to move.
+Recruiters tend to search in the company's local area for talent. I worked with
+someone that did this and it led him to a new job. He didn't get help with
+relocation that time but many companies offer that as well.
 
-https://help.linkedin.com/app/answers/detail/a_id/78/~/showing-or-hiding-activity-updates-about-you
+Finally, review what you have on your profile and see if it reflects the kind of
+job you want next. Do you list a number of QA-related skills but want to
+build web application front-ends? Reorganizing your profile can help
+present a clear picture of your direction and attract job postings relevant to
+your interests.
 
-Then, if you're looking to move somewhere, set your locale to the place you'd
-like to move. I've worked with someone that did this to great success. They
-lived in Michigan at the time but wanted to move to Los Angeles. Changing their
-locale got more recruiters interested in them. He mentioned during his
-interviews that he lived in Michigan but he wanted to move and would be happy to
-do so. It's a great way to get extra recruiter attention if you're looking for
-it.
+### Attend local meetups
 
+Whatever your interest in tech, you can probably find a [local Meetup
+group](http://www.meetup.com/) for it. Attending them has a number of
+positives:
 
-5. Attend local meetups
+* It's a great way to find other places to apply. Companies that host meetups
+  usually do so because they want to hire candidates, they want to foster good
+  will with the community, or promote their engineering culture. As a job
+  seeker, those all work in your favor.
 
-[Local Meetup Groups](http://www.meetup.com/)
+* You can talk with other developers in your community, which has all
+sorts of benefits. They might have a different perspective on technical
+topics you're interested in, or may offer you a view into their experience
+working for a particular company you'd like to join. I've also made good
+friends by attending meetups.
 
-Whatever your interest in tech, there's probably a meetup group for it. 
-I think that attending local meetups has a number of positives if you're 
-getting ready for a job hunt. 
+* You'll probably learn about interesting
+developments in your area of interest from the meetup presenters, which gives
+you something to talk about in interviews.
 
-For one, it's a great way to find other places to apply. I find that the
-companies that host meetup events are more likely to be ones that I would want
-to work at because it shows that they care about the community (even if only to
-find candidates) and want to foster an engineering culture. Those are both
-important!
-
-For another, you can talk with other developers in your community, which has all
-sorts of benefits. They might have a different perspective on some technical
-topics you're interested in (such as code reviews or security), or they may be
-able to offer you a view into what it's like at their company. 
-
-For yet another, you'll probably get to learn about some interesting
-developments in your field, which gives you something to talk about in
-interviews.
-
-Finally, if you're interested in speaking, meetups are a great way to practice
-slides before submitting them to a conference. Speaking at meetups also offers
+* If you'd interested in speaking, meetups are a great way to practice
+talks before submitting them to a conference. Speaking at meetups also offers
 a way to feel like you're an expert at something and develop a deeper knowledge
-on a topic. If you're practicing on that topic, it's a good chance you'll feel 
-comfortable talking about it during an interview later. 
+on a topic. During interviews, you'll probably feel more comfortable if you talk
+about subjects on which you've presented.
 
 
-## Application Preparation
+Application Preparation
+------------
 
-1. Update your resume
+So let's say you found a few places to apply. What's next?
 
-You'll probably want to tune your resume more specifically to what you want to
-do. Try to keep it short and full of active sentences without much fluff.
+### Update your resume
+
+You'll want to tune your resume to what you want to do, as with your LinkedIn
+profile earlier. Keep it short and focused around [what you
+achieved](http://www.quintcareers.com/accomplishment-resume-samples/) at previous
+positions rather than your responsibilities. For example:
+
+* "Responsible for database management with MySQL and Percona." - ok.
+* "Optimized query times for 10 most common queries yielding 30%
+  improvement in MySQL performance." - much better.
+
 [This
 article](https://www.asme.org/career-education/articles/job-hunting/6-tips-for-writing-an-effective-resume)
-has a pretty good set of recommendations in it. Feel free to send it my way too
-and I'll be happy to offer some opinions.
+has a decent set of recommendations in it as well.
 
-2. I hate cover letters
+I once applied for a tech job in the film industry and left on my resume that
+I had experience as a film colorist because I felt it would be relevant. I got
+a question about it at every interview.
 
-I pretty much don't bother with cover letters if I can help it. In this past
-group of applications, I put together cover letters for about 5 different places
-and none of them contacted me back.
+Them: "Are you sure you don't want to be a colorist?"
+Me: "Yes, that's why I'm applying here!"
 
-1. Keep a spreadsheet to track where you apply
+Hopefully that does not happen to you.
 
-I kept a Google Spreadsheet with a list of the places I had applied, 
-a bit about the position, dates for the various steps I completed, and any
-notes or thoughts I had as I went through them. Sometimes it's challenging
-to keep dates straight.
+Feel free to send your resume my way and I'll offer you feedback as well.
 
+### Keep a spreadsheet to track where you apply
 
-2. Keep a positive attitude
+I kept a Google Spreadsheet with a list of the places I had applied,
+description of each position, dates for the steps I completed, and
+notes or thoughts I had along the way.
 
-It can take a while to find a job that's a good fit for you and it's important
-to keep a good attitude.
+Detailed notes can help you make decide which company to choose, especially if
+you get more than one offer, and can come in handy if you decide you'd like to
+apply somewhere in the future.
 
-I was looking for apartments with my girlfriend and we looked for a long time.
-We had a fixed price range and a firm idea of where we wanted to live, but the
-places we kept finding were dumpy, small, or "not for the, shall we say,
+### Keep a positive attitude
+
+A job hunt can challenge you in unexpected ways and it may take longer than
+you thought, so keeping a positive attitude can help you through the tougher
+parts and the doubt.
+
+I looked for an apartment with my girlfriend for a long time.  We had a fixed
+price range and a firm idea of where we wanted to live. In our search, we found
+place after place that looked dumpy, small, or "not for the, shall we say,
 culinary inclined" (aka a hotplate and a mini-fridge made up the kitchen).  In
-our case, we wound up looking at around 30 places until we found one that we
-wanted. When we finally did, we had one last appointment scheduled afterward.
-When we looked at it, we knew it was for us.
+our case, we looked at 30 apartments until we found one that we
+wanted. It felt tempting to give up, particularly around #20 or so, but we stuck
+with it and thankfully found a great place.
 
-It's really tempting to want to give up. Stick with it and do your best to keep
-a good attitude. I find meditation helpful for avoiding frustration when I feel
-particularly down. It's always hard looking for a new job and we have
-the great fortune of being in an industry that's in-demand.
+Stick with it, even if it feels impossible.
+I find meditation helpful for avoiding frustration when I feel
+particularly down. It's always hard looking for a new job and that's true even
+though we have the great fortune of being in-demand.
 
-2. Plan on applying and interviewing at more than one place
+### Plan on applying and interviewing at more than one place
 
-I have a friend that took the first interview he was offered and then accepted
-the job. It's working out great for him but he also says that he wishes he had
-applied to more places. For one, it gives you a better understanding of what's
-out there and prevents you from fixating on a single company.
+I have a friend that applied to one place, interviewed there, and accepted the
+job. He says he feels fortunate that it worked out so well but he also
+wishes he had applied to more companies for a number of reasons:
 
-You can apply the Secretary Problem.
-https://en.wikipedia.org/wiki/Secretary_problem
+1. It gives you a better understanding of what's available.
+2. It prevents you from fixating on a single company.
+3. You may be put into a position where you have to hire others shortly. Having
+   more experience with interviews can be helpful when you're on the other side.
 
-Basically, you'll interview at the first third of the places you'd expect to
-interview at in general and then take the next job that is better than all the
-ones you've taken so far.
+If you're looking for a number on how many places to apply, you could apply the
+[Secretary Problem](https://en.wikipedia.org/wiki/Secretary_problem) algorithm.
+Essentially, you can plan on interviewing and talking to a few places and then
+picking the next one that looks better than all those you've talked to so far.
+
+### Determine your salary range
+
+How?
+
+[Glassdoor](https://www.glassdoor.com/index.htm) has options for evaluating
+the salary range in your area or for a particular position. Similarly, you could
+use Payscale or Salary.com. The numbers may be out of date because they're
+historical and they'll change over time but it can offer an overview of your
+particular market.  There's also [excellent](https://www.roberthalf.com/sites/default/files/Media_Root/images/rht-pdfs/robert_half_technology_2016_salary_guide.pdf)
+[salary
+guides](http://get.hired.com/rs/348-IPO-044/images/Hired-State-of-Salaries.pdf)
+for those specifically in technical fields, which should help you figure out
+a range as well.
+
+Worst case, you could take what your current salary and bonuses and add 10-20%.
 
 
-3. Determine your salary range
+### What do you want?
 
-How do you do this? 
+The two most common questions interviewers asked me:
 
-Glassdoor is probably your biggest ally. Do a quick search
-at the particular company you're investigating or you can do a broader search
-for the region. To some extent, the numbers may be out of date because they're
-historical and they'll change over time. It should give you a pretty good idea
-of what the market's like where you live though. There's also 
-[some excellent](https://www.roberthalf.com/sites/default/files/Media_Root/images/rht-pdfs/robert_half_technology_2016_salary_guide.pdf)
-[salary guides](http://get.hired.com/rs/348-IPO-044/images/Hired-State-of-Salaries.pdf)
-for those in technical fields, so those should help you figure out some numbers
-too. 
+* Why did you decide to leave?
+* What would you like from your next job?
 
-
-4. Think about why you're leaving and what you want from your next job
-
-You'll probably be asked some combination of the following two questions at
-every interview:
-
-* Why are you leaving?
-* What are you looking for on your new team?
-
-Be careful when talking about reasons why you're leaving. Definitely don't
-badmouth the company you're at. There's ways to say what you're feeling without
-it sounding negative.
+Answer truthfully but avoid saying anything too negative. "I'm ready for
+new opportunities and I've tried my best to change things for the better."
+sounds better than "x and I never got along, I had 8 bosses, and it was
+impossible to get anything done with all the meetings."
 
 Sometimes the reasons why you're thinking about leaving can be fixed. I'd
-recommend trying (if you haven't) to affect change, even in your last few weeks
-in the position.
+recommend trying to affect change, even in your last few weeks in the position.
+At the least, it may make the work environment better for your colleagues who
+stay behind.
 
 
-6. Do something that demonstrates your passion
+### Do something that demonstrates your passion
 
-Interviewers love to see that you have an interest in programming beyond the
-day-to-day work that you do at your job. For some people, this means getting
-involved in the open source community or open sourcing a project of your own on
+Interviewers love to see that you have an interest in programming beyond your
+day-to-day work. For some, this means getting involved in the open source
+community or open sourcing a project of your own on
 [GitHub](https://github.com/). For others, it means writing a blog (like this
-one!). I'd consider this a "nice to have" but it is valuable to be able to
-show that you're invested in what you and you care.
+one!). Overall, I would consider this a nice to have. I included it because it
+offers you an opportunity to show that you care and want to grow.
 
 
-## Interview Preparation
+Interview Preparation
+----------------------
 
-4. Study datastructures and algorithms
+At the same time as you prepare your application, you may want to get ready for
+the interviews that will follow. Here are some areas to focus on:
 
-Unfortunately, this is still a major part of the process. As an industry, we
-[haven't figured out](http://sockpuppet.org/blog/2015/03/06/the-hiring-post/)
-how to find people who will excel at the job, so algorithms are used as a proxy
-to test your problem-solving skills.
+### Study datastructures and algorithms
 
-* [Cracking the Coding Interview][cct] - A great review of data structures and
-  some examples of algorithmic questions you might encounter. I think that
+Unfortunately, algorithms still factor into the interview process. As an
+industry, we [haven't figured
+out](http://sockpuppet.org/blog/2015/03/06/the-hiring-post/) how to determine
+who will excel, so interviewers use algorithms as a proxy to test how you think
+and communicate. Personally, I feel like technical interviews suck because the
+skills we have to demonstrate for them often do not match the day to day work.
+
+Understanding the most common data structures and when you might use them will
+help you toward finding the solution for many algorithm questions. If you pick
+the right one, it can make questions trivial. Some questions rely on more
+concrete implementation of popular algorithms, though I feel you will encounter
+those less.
+
+I used these resources in the past:
+
+* **[Cracking the Coding Interview][cct]**: A great review of data structures and
+  examples of algorithmic questions you might encounter. I think that
   re-reading the book is one of the best uses of time, especially if you have an
   interview coming up on short notice. I've used this one for different job
   interviews.
+* **[Big O Cheat Sheet](http://bigocheatsheet.com/)**: Big O notation offers
+  a way to talk about how long it will take an algorithm to run. Interviewers
+  may ask you about the efficiency of the algorithm you implement and Big O can
+  be a good way to communicate your understanding.
+* **[The Technical Interview Cheat
+  Sheet](https://gist.github.com/TSiege/cbb0507082bb18ff7e4b)**: Another list of
+  common data structures and algorithms along with information about them. If it
+  has been a few years since you completed coursework in CS, this may help
+  refresh your memory.
 
-Data structures are pretty much the key to most algorithm questions, so long as
-you know the right ones to pick. Some are legitimately algorithms that you just
-have to know, but less likely.
+If you have more time, I recommend Coursera's [Algorithms: Design and
+Analysis](https://www.coursera.org/course/algo) course when I got started.
 
-http://bigocheatsheet.com/
-
-
-I would not recommend trying to cram all your algorithm practice in at once. You
-probably won't have a good time doing it and you're more likely to retain the
-knowledge if you [study each
-day](http://www.nytimes.com/2010/09/07/health/views/07mind.html) rather than fit
-it all in at once.
-
-If you have more time, I've gone through Coursera's [Algorithms: Design and
-Analysis](https://www.coursera.org/course/algo) course and found it useful for
-getting started with algorithms.
-
-3. Practice some problems
+### Practice problems
 
 When you practice, try to practice in an environment as close as possible to the
 one you'll be in in the interview. So, in general:
 
 1. Write your solution on a whiteboard / piece of paper first without looking
    anything up.
-2. Check
+2. Walk through the solution manually and look for errors.
+3. When you're confident in it, run the code on your computer.
 
-Here's some canonical recommendations that I've looked at in preparation:
+Many websites offer practice problems. I've used the following:
 
-* [Project Euler](https://projecteuler.net/) - A collection of free mathematical
-  / programming questions. 
+* **[Project Euler](https://projecteuler.net/)**: A collection of free
+  math-based programming problems.
+* **[Cryptopals](http://cryptopals.com/)**: A set of cryptography-based problems
+  that does not assume prior crypto knowledge. It's a nice way to practice
+  because it also gives you some insight into cryptography.
+* **[LeetCode](https://leetcode.com/)**: More online problems.
 
-* http://cryptopals.com/
-* https://github.com/codingforinterviews/practice-problems
-
-
-
-1. Use a Calendar to keep track of your interviews
-
-Depending on how aggressive your job search, you may have quite a few 
-phone screens and on-site technical interviews ahead of you. It's tough to keep
-all the dates in your head. Use a calendar! I would schedule one hour blocks
-for technical phone screens and a longer block for on-site technical interviews
-or culture fit interviews.
-
-If you're scheduling phone screens and you are still employed, I find that lunch
-breaks are good times to do phone screens. Some places are flexible and will let
-you interview before / after traditional work hours but it can be hard to
-find do that. 
-
-
-2. Research the company
-
-I like to ratchet up the amount of research I do on companies as interviews
-progress. For recruiter phone calls, sometimes reading the website and figuring
-out what they do is enough to get by. For phone screens, I'll typically read
-blog posts they or their employees have done about working at the company. For
-on site interviews, I also like to read up on any recent news stories that have
-come out about the company and research talks that they've done.
-
-The graduated approach toward learning more about the company allows you to get
-a good understanding of what they do without requiring too much up-front
-investment in one individual company. As the number of companies you apply to
-goes up, the ways in which you invest your job search time become more important
-to prioritize.
-
-2. Research your interviewers
-
-
-If you know who you'll be speaking with for interviews, it can help to learn
-ahead of time what area they specialize in. Do they have an open source
-presence? Have they given talks at a conference that have been recorded?
-Learning a bit about the things that interest them allows you to prepare more
-specific questions to them and shows that you have an interest in the people
-you're meeting. I have once or twice followed someone I'm interviewing on
-Twitter.
-
-Note, you can definitely go too far with this. I probably wouldn't go to
-personal social media or try to dredge up Reddit profiles or something. Try to
-just get a broad overview of what they're like so you can prepare.
-
-4. Prepare questions to ask
-
-I once had a phone interview that started at 7 PM. The interviewer called me
-and said "I don't want to waste your time, what questions do you have for me?"
-Although I think that's overall a terrible approach to interviewing a candidate,
-that kind of thing does happen. More frequently, the interview is an opportunity
-for you to get insight into what it's like to work there and what they're
-working on. Hopefully your earlier research should make this one easy.
-
-I like to write down both the questions and the answers they give. 
-
-Some other, less company-specific, questions include things like:
-
-* What's an average work week like?
-* How is the software team organized?
-* What process does a new feature follow from conception to delivery?
-* What's one of your favorite things about working at the company? What would
-  you like to change?
-
+If you picked up Cracking the Coding Interview, it has practice problems in it
+as well. I've never done more than 5-10 exercises in any one of these
+resources it can take a while to work through even one problem, so don't feel
+bad if you don't complete all the exercises.
 
 # Interviews
 
 ## Process
 
-3. Phone screen with recruiter (45 minutes)
-4. Technical phone screen (45 minutes to 1 hour)
-5. On-site technical interview (3 to 6 hours)
-6. On-site culture fit interview (2 to 3 hours)
-7. Offer
-8. Profit?
+Here's the most common process I've seen:
+
+1. Phone screen with recruiter (45 minutes) - likely
+2. Technical phone screen (45 minutes to 1 hour)
+3. On-site technical interview (3 to 6 hours)
+4. On-site culture fit interview (2 to 3 hours) - less common
+5. Offer / negotiation
+7. Profit?
+
+The phone screen with a recruiter may or may not happen if you apply directly to
+the company.
 
 ## General Advice
 
-1. You're interviewing them as much as they're interviewing you.
+### Interviewing goes both ways
 
-This is an easy one to forget because I think there's a lot of emphasis on
-impressing the interviewer.
+You want to get a feel for if the company will be a good fit for you as much as
+the company wants to figure out if you'll work out there. It's easy to forget
+that it's bidirectional.
 
-Try to keep in mind that you're getting a feel for if the company is a good fit
-for you as much as they are. Ask questions about what it's like there on a day
-to day. 
+### Use a calendar for scheduling
 
-2. Take notes
+You may have a few phone screens and on-site technical interviews ahead of you.
+It's tough to keep all the dates in your head. Use a calendar! I scheduled one
+hour blocks for technical phone screens and longer blocks for on-site technical
+interviews or culture fit interviews.
+
+If you have to schedule phone interviews and you're still employed, I recommend
+suggesting a lunch time slot.  Some companies will let you interview before or
+after traditional work hours but that's less common.
+
+### Take notes
 
 I liked keeping a small notebook and pen with me throughout the interview
-process for each company. It's helpful to be able to refer back to things
-they've said to you and it's easy to forget details about companies if you're
-not writing it down as you go. Sometimes I've found it helpful to record
-examples of what their workweek was like, how it is to work there, general
-stack, general problems. Writing down the name of the interviewer is incredibly
-valuable as it allows you to use their name when you talk with them.
+process. It's helpful to be able to refer back to things they've said to you and
+it's easy to forget details about companies if you're not writing it down as you
+go. Write down the name of the interviewer too so you can use their name when
+you speak with them or about them to other interviewers.
 
-3. It won't always work out
+### It won't always work out
 
 There will probably be a few places you interview that aren't as good as you
 thought they sounded on paper. That's alright.
@@ -387,9 +362,9 @@ thought they sounded on paper. That's alright.
 On the other side, there may be companies that don't think you're the right fit
 for them. That too is okay. If you get turned down for a position and you had
 your heart set on that particular place, you could always wait and reapply in
-6 months. 
+6 months.
 
-4. Admit when you don't know
+### Admit when you don't know
 
 Interviewers will sometimes ask you how to do something, and you may not know
 the answer. In that case, it's fine to say that you don't know the answer. You
@@ -397,264 +372,332 @@ should probably explain your thought process "Well, I know that this does x and
 that does y, but I'm not sure what x and y would do together. Perhaps it would
 do z?"
 
-5. Keep an eye out for red flags
+### Keep an eye out for red flags
 
 Everyone has a different set of red flags. Here's a few things that have
 been red flags for me:
 
 * "We have no work-life balance. We come in at 6 AM and leave at 10 PM."
 
-Good that they're being honest with me but the way it's presented makes it
-sound like they're proud of it. If they're being this level of upfront about the
-workload, it's probable that it's even worse in practice and they won't probably
-feel bad about it because they warned me.
+Good that they're being honest with me but the way it's presented makes it sound
+like they're proud of it. If they're being this upfront about the workload, it's
+likely that it's even worse in practice and they won't probably feel bad about
+it because they gave me a warning during the interview
 
-Also, that amount of work is unsafe and will drive you crazy.
+Working that much will drive you to burnout and [adding more time to the workday
+does not make you more
+productive](http://www.alternet.org/story/154518/why_we_have_to_go_back_to_a_40-hour_work_week_to_keep_our_sanity).
 
-http://www.businessinsider.com/working-more-than-40-hours-a-week-is-useless-2012-3
 
-* "Our team is super green. We have four people do code reviews for everything
-    because they don't know what they're doing."
+* "Our team is super green and doesn't know what they're doing. I look at
+  everything they commit and approve it."
 
-Whoa, four people review every bit of code? Perhaps that's okay if you work at
-NASA or JPL and you're doing safety critical work. For most stuff, it makes me
-feel like it's probably an environment that does not lend itself to trust.
-
-Also, if this person does not have faith in the team and would badmouth them in
-an interview, that does not bode well.
+This does not sound like an environment built on trust and distributed
+responsibility. Also, if the manager does not have faith in their team and would
+badmouth them in an interview, it's not a good sign.
 
 * Dishonesty
 
-I interviewed with $BIG_TECH_CO in SF. A department manager contacted me for an
-interview and said that they would allow for remote work. I said "Great!" and we
-discussed next steps. 
+I interviewed with $BIG_TECH_CO in San Francisco. A department manager contacted
+me for an interview and said that they allowed for full time remote work. I said
+"Great!" and we discussed next steps.
 
 I did the phone interview with them and it went well. The
-next day I got a phone call from the recruiter who was handling the process and
-she said "We'd like to schedule you for an on-site interview. Oh, but just
-checking, you can relocate to San Francisco right?" When I said "No, we said
-this would be remote" it changed to "Ok, we'll need you up here for 4 months so
-we can get you ramped up and then you can be full time remote." Well, that's not
-full-time remote... but okay...
+next day I got a phone call from the recruiter who was handling the process:
+
+>**Recruiter**: "We'd like to schedule you an on-site interview. Oh, but just
+checking, you can relocate to SF right?"
+>
+>**Me**: "When the manager contacted me, he said this could be remote."
+>
+>**Recruiter**: "Ok. I checked with him and we'll need you up here for about 4 months
+so you can get ramped up. You can work remotely after that."
+
+That's no longer full-time remote... but okay... I can make it work.
 
 I went up for the on-site interview and thought it went great. Next day, I got
-a phone call from the recruiter again and she said "We'd like to extend you an
+a phone call from the recruiter again.
+
+>**Recruiter**: "We'd like to extend you an
 offer but we'd need you to be up here for 6-9 months to ramp up and
-we're just not built for that so we'd need you to relocate." 
+we're just not built for that. We'd need you to relocate."
+>
+>**Me**: That's too bad. I'll have to turn it down, then.
+>
+> **Recruiter**: Are you sure? This could really change your life. Why don't you
+think about it until Monday?
+>
+> **Me** (later):  I have been up front with you that
+I wanted to do remote work from the beginning so I am not interested.
 
-I had to turn it down because I had expressed interest in full-time remote work
-from the beginning. Their actions gave me insight into what it could be like to
-work for them. If they're not being honest or up-front with me during the
-interview process, what would it be like to be there full time? What other
-expectations would they have of me? 
+Their actions gave me insight into what it could be like to work for them. If
+they're not honest or up-front with me during the interview process, what
+would it be like to be there full time? What other expectations would they have?
 
-* Asshole Interviewers
+## Research
 
-Sometimes you'll meet someone that's just an asshole in an interview. It's
-probably a red flag if they're going to be that way in an interview. Hopefully
-they're in a department far away from yours but, if not, it's probably not worth
-it. I find interviews to be nerve wracking so having someone be cruel when you're
-in a position of vulnerability is not cool.
+Part of the interview process involves doing a little research.
+
+### Research the company
+
+I like to ratchet up the amount of research I do on companies as interviews
+progress. This is what I do for each stage, depending on the company:
+
+* Initial phone calls: Reviewing the website and figuring out what
+they do feels like enough to get by.
+* Phone screens: I typically read
+their blog posts and read through their reviews.
+* On-site interviews: I
+like to read up on any recent news stories that have come out about the company
+and research talks their employees have done.
+
+This approach allows you to get a good understanding of what they do without
+requiring too much up-front investment in one individual company. As the number
+of companies you apply to goes up, it becomes important to prioritize how you
+spend your job search time.
+
+### Research your interviewers
+
+If you know who will interview you, it can help to learn
+more about them ahead of time. Do they have open source
+projects? Have they given conference talks? If so, have they been recorded?
+
+Learning about the things that interest them allows you to prepare more specific
+questions and shows that you're interested. I have once or twice followed
+someone I'm interviewing on Twitter.
+
+You can definitely go too far with this, especially if it drifts into stalking
+on their social media profiles, so aim for enough so that you can prepare.
+
+### Prepare questions to ask
+
+I once had a phone interview that started at 7 PM. The interviewer called me and
+said "Hello! I don't want to waste your time, what questions do you have for
+me?"
+
+Although I think that's a terrible approach to interviewing, that kind of thing
+can happen. Hopefully your earlier research should make this one easy.
+I like to write down both the questions and the answers I hear in response.
+
+General questions include:
+
+* What's an average work week like?
+* How is the software team organized?
+* What process does a feature follow from idea to delivery?
+* What's one of your favorite things about working at the company?
+* What would you like to change?
 
 
 ## Phone Interviews
 
-Describe overall phone interviews, what they're looking for, typical questions
+The phone interview typically does not involve coding because of the tricky
+mechanics of coding over the phone. It will probably take about an hour overall.
+Typically, the interviewer wants to see if you would be a good fit for the
+position and your comfort with their technology stack.
 
-2. Find a comfortable place to talk
+The questions typically skew to the softer end. Examples include:
 
-If you're doing a phone screen, you could be on the phone for an hour or so. I'd
-recommend finding a good, comfortable place to do that. It might be parked
-somewhere nearby work or it could be a coffee shop that you know will be quiet.
-It's important to pick somewhere that will 
+* Tell me about yourself
+* What project are you most proud of? Why?
+* What interests you about the position?
 
-a. Be quiet.
-b. Let you focus
+Sometimes for the technical phone screens you'll get more challenging questions,
+such as [what happens when](https://github.com/alex/what-happens-when) you type
+ `https://www.<company>.com` in your browser?
 
+### Find a comfortable place to talk
+
+You could be on the phone for an hour or so. I'd
+recommend finding a good, comfortable place to do that.
+It's important to pick somewhere that will
+
+* Be quiet.
+* Let you focus.
+
+Your spot could be parked on a street near work or at your kitchen table.
 There's nothing worse than constantly worrying if you'll get caught on a phone
-screen, so picking a place that's somewhat secluded is helpful.
+screen, so it's helpful to pick a secluded place.
 
-3. Recruiters are not your friends
+I once left my keys in my car and my car wouldn't start after the interview when
+I had to return to work, so probably don't do that.
 
-Some recruiters will be friendly and helpful. They want you to find a job you'll
-like and be happy at. That said, they want to place you with companies so they
-will sometimes be aggressive or try to sell you hard on a place. Keep in mind
-that this, like all things, is a two way street.
+### Recruiters are not your friends
 
-One example. I was talking with a recruiter this time and they wanted to move
-forward. I wanted to think about it and said I'd email them back later. He said
-it was bullshit and told me not to waste his time or lie to him. I would have
-emailed him honestly with my opinion but felt pressured and shamed, even though
-I was being honest.
+Recruiters can be friendly and helpful. They want you to find a job that
+you'll enjoy. That said, you are a paycheck for them if you're
+placed with the company they represent so they may be aggressive or try for the
+hard sell.
+Keep in mind that this, like all things, is a two way street.
 
-Recruiters will also sometimes pose as employees / managers internal to the
-company. Sometimes this is true. Sometimes it's not. Just be careful if they
-make promises such as re-evaluating your salary in x months, because they may
-not have any impact on that process.
+One example. I talked with a recruiter and the company he represented wanted
+to move forward. I said I'd like time to think about it and I would email
+him back that evening. He told me not to waste his time or lie to him.
 
-4. Anchor high if you must give a salary range
+A friend of mine negotiated his contract with a recruiter and they promised
+things to him that they had no control over. For example, they said they would
+re-evaluate his salary in a few months but that didn't happen because he had no
+influence on when that happened.
 
-I haven't been able to avoid giving a salary range to recruiters on the phone.
+Recruiters want to help you and I've found jobs through recruiters but be
+careful out there.
+
+### If you must give a salary range, anchor high
+
+Early in the process, your interviewer will try to get you to offer a salary
+range. Avoid it if you can. We'll talk about negotiating in more detail
+later in this post.
+
+I haven't been able to avoid offering a salary range to recruiters on the phone.
 It's worth asking for what you want or a little more so you'll have room to
 negotiate down the line. We'll cover negotiating in more detail later.
+
+If you've
+already discussed salary with the company earlier in the process and they
+exceeded it, it could be in bad faith to negotiate for a higher number. "Oh
+actually I decided I want more than I told you." That's one reason
+why people anchor with higher numbers earlier in the process
+so that they have room to negotiate for other things.
+
 
 
 ## On-site Interviews
 
-On-site interviews typically span from about 3-6 hours, depending on the
-company. In my experience, they're typically with groups of 1-3 people and
-you'll probably meet up with a few different groups. Some companies, like Uber
-and Google, typically do a series of one-on-one interviews while others do the
-small groups. 
+On-site interviews take about 3-6 hours, depending on the company. In
+my experience, they tend to be with groups of 1-3 people and you meet with a few
+groups. Some companies, like Uber and Google, do a series of one-on-one
+interviews while others prefer small groups.
 
-Generally interviews will open with some questions to
-hear about your experiences. Almost always the first item will be "Tell me
-about yourself." It can be hard to give a thumbnail sketch of your life but...
-do your best.
+Generally interviews open with questions to about your experiences, like
+the questions we've covered in earlier sections. After that, the interviewer
+will likely ask more questions to get you comfortable.  Sometimes they will be
+questions about project you've worked on, side projects, or personal interests.
 
-After that, there's usually some questions to get you feeling comfortable.
-Sometimes they will be questions about project you've worked on, side projects,
-or personal interests. Sometimes you'll talk about the reasons why you're
-leaving your last place or looking for a new one.
+You can expect a few different algorithmic questions. Interviewers will often
+tailor questions based on your resume or they may have a fixed set of problems
+they like to ask. On the other side, you may be asked scenario questions.
+We'll cover both of those in more detail.
 
-You can expect a few different algorithmic questions. My guess is that the
-questions will either be tailored to items that you have put on your resume or
-items that are somewhat related to the job. Sometimes you'll get "scenario"
-questions.
-
-
-* Tips for an Algorithm question
+### Tips for algorithm questions
 
 Example of an algorithmic question:
-"How would you store all the phone numbers in the phone book? Write out the code
-you'd use to do so."
+"How would you store all the phone numbers in the phone book?"
+[TODO, revisit]
 
-Ask clarifying questions. There's a famous question about sorting a list of
-1 million integers. The bit of information that's left out is that the integers
-represent birthdays, so you can sort the integers into at most 150 buckets
-rather than doing a slower, less efficient sorting method. If you ask what they
-represent, you might get a shortcut like that. It's almost always better to ask
-or suppose than to assume.
+**Ask clarifying questions.** There's a famous question about sorting a list of
+1 million integers. The question notably does not include the fact that the
+numbers represent birthdays, so you can sort the integers into at most 150
+buckets. If you ask questions, you might get a shortcut like that.
+It's almost always better to ask or suppose than to assume.
 
-During coding interviews, it's tempting to work out how to solve the problems in
-your head. I'd suggest avoiding that instinct. One of the biggest favors you can
-do for yourself is thinking out loud. By saying your thoughts and explaining
-where you're at in a problem, even if you're stuck, you give the interviewer an
+**Think out loud.** It's tempting to work through problems in your head,
+especially if that's how you'd normally work. Unfortunately, that can work
+against you in a coding interview. By explaining your thought process, even when
+you're stuck, you give the interviewer a view into how you work and an
 opportunity to help you out.
 
-Using something in your language's standard library might not be allowed, but
-you can mention that you might use it. 
+**Solve it with pseudocode first.** Thinking through how you would approach the
+problem without the constraints of writing syntactically correct code makes it
+much easier. If you choose to do this, it's a good idea to explain that you'll
+write pseudocode first and write the implementation afterward.
+It's also okay to solve it by brute-force as long as you explain that it's not
+your final solution.
 
-Think through different data structures you might use and the trade-offs for
-each. When would you use a dictionary / hash map? When would you want to use
-a queue?
+**Consider efficiency.** Think through different data structures you might use
+and the trade-offs for each. When would you use a dictionary / hash map? When
+would you want to use a queue?
 
-It's okay to solve it with psuedocode first as long as you explain that that's
-what you're doing and that you'll revisit it later.
+**Write tests as you go.** It's a good idea to write tests that will verify that
+your solution works so you can trace through your solution if you get stuck.
+It also shows that you like writing tests, which I think is a big plus.
 
-It's also okay to solve it in a brute-force style at first. You can always
-revisit, again as long as you're explaining that you're doing the brute force
-approach. Think out loud, remember?
+**Check for mistakes.** When you feel like you're done, trace through your
+solution and look for any mistakes or areas where it would fall apart. Did you
+miss an edge case? What happens if the list is empty? How might it fall apart in
+production?
 
-If you're doing a code challenge, write tests as you go. 
 
-
-* Tips for a Scenario Question
+### Tips for a Scenario Question
 
 Example of a scenario question:
 "How would you architect an upload workflow for a SaaS application?"
 
-Depending on the interviewer, it could be less important to implement low-level
-code for this as much as it would be to walk through your approach to solving
-the problem. Typically for this level (again, depending on the interviewer),
-you'll want to do broader strokes. 
+It's more important to explain your approach and the technical implications of
+your implementation than to design code for scenario questions.
 
 For example, for the above question you might want to think about how the user
 will interact with the server, what kind of HTTP operation they'd do to what
 example endpoint, how to handle background processing for any files that are
 uploaded, and what steps you'd take to prevent things from going wrong.
 
+### It's okay if you don't know the answer right away
 
-4. If they offer water, take it.
+Interviewers want to test you with the technical questions and there's no
+expectation that you'll solve it quickly.
 
-Something to do if nervous. Easy to get dehydrated over the course of the day.
+The interviewer may want to see how you perform under pressure. Take your time
+and work through it a bit at a time. No one expects that you'll know the answer
+right away. They want to see your process and if they can work with you to get
+to the answer.
 
-6. It's okay if you don't know the answer right away
+### Futher Reading
 
-Interviewers want to see what your thought process is like, so if you know the
-answer immediately it's like doing a math problem without showing your work. 
+If you'd like suggestions for further reading, I like these:
 
-Interviewers usually want to stump you with the technical questions, so it's
-okay to not know the answer. Sometimes they'll want to see how you are under
-pressure. I worked in the past with some people who, if I was being kind during
-the interview, would compensate by being aggressive to see how the interviewee
-was under pressure. In one case, that led to someone slamming a glass cup
-repeatedly and getting obviously mad. I don't like that this happens, I think we
-should be kind to everyone, but it does. So, keep your cool if you can. It's not
-expected that you'll know the answer but rather they want to see your process of
-getting to an answer and see if they can work with you to find the answer.
-
-
-If you'd still like more suggestions, there's some more tips here:
-https://www.interviewcake.com/article/python/coding-interview-tips
+* [Coding Interview Tips](https://www.interviewcake.com/article/python/coding-interview-tips).
+* [How to Rock an Algorithms
+  Interview](http://www.palantir.com/2011/09/how-to-rock-an-algorithms-interview/)
+* [
 
 ## Offers
 
-1. If you're offered equity, find out how it's worth
+### You don't have to move forward
 
-http://robertheaton.com/2015/11/02/how-to-value-your-startup-stock-options/
-http://jvns.ca/blog/2015/12/30/do-the-math-on-your-stock-options/
-http://www.bothsidesofthetable.com/2010/09/06/how-to-discuss-stock-options-with-your-team/
+If you get an offer, it does not mean you have to take it. Over the course of
+the interview, you may have found that it's not a good fit. Let the company know
+as soon as you do if you don't think it's for you so you can save each other's
+time.
 
-The short version? Your options probably will be worth $0, so might be better to
-ignore them completely in the negotiation process.
+### If you're offered equity, determine its worth
 
+The short version: Your options probably will be worth $0, so it might be
+easiest to ignore them.
 
-2. Negotiate as a rule
+If you're looking for numbers, there are many resources you could consult.
+I think [this guide](https://github.com/jlevy/og-equity-compensation) is the
+easiest to understand. Beyond that, there's also a number of entertaining and
+informative articles such as:
 
-Patrick Kalzumeus http://www.kalzumeus.com/2012/01/23/salary-negotiation/
+* [How to value your startup stock
+  options](http://robertheaton.com/2015/11/02/how-to-value-your-startup-stock-options/)
+* [Things you should know about stock
+  options](http://jvns.ca/blog/2015/12/30/do-the-math-on-your-stock-options/)
 
-Hopefully you've already established a salary range that you'd be looking at in
-one of the earlier steps. What would it take for you to be happy there for
-a while? 
+### Always negotiate
 
-Don't feel bad about negotiating - this is what you're supposed to do.
-If you don't negotiate, you could be leaving considerable money on the table.
-Patrick talks about this in his article but it is true. 
+Patrick Kalzumeus wrote an excellent and popular article on [how to
+negotiate](http://www.kalzumeus.com/2012/01/23/salary-negotiation/)
+It's worth the time to read it.
 
-If you've already discussed salary with them earlier in the process and they
-exceeded it, it could be bad faith to discuss other numbers. That's one reason
-why people will sometimes anchor with much higher numbers earlier in the process
-so that they have room to negotiate for other things.
+Don't feel bad about negotiating - it's what you're supposed to do.
 
-If salary's already great, maybe there are other things you could negotiate.
-For example, are you taking classes outside of work that they could reimburse
-you for? What about vacation days? Perhaps you'd like to attend a conference
-later in the year? These things can be discussed at this point for sure.
-
-3. Ask for more than you're comfortable with
-
-I've had a few experiences negotiating that have stuck with me.
-
-PCI
-
-3. Don't feel pressured to take the offer
-
-Don't feel pressured to take the first job offer that comes along. Sometimes
-the first one that you get is the perfect one for you. If so, great! 
-
-If not, it's okay. Sometimes over the course of the interviews you may find that
-the company's not a good fit for you in particular and that you shoudl turn it
-down. That's alright.
+If you're happy with the salary they offer, you could negotiate other aspects.
+For example, would you like to take classes outside of work that they could
+reimburse you for? What about vacation days? Would you like to attend
+a conference later in the year? Perhaps you'd like to work from home for a day
+or two a week. You may be able to negotiate these things.
 
 
-Other reading:
+Thanks for reading.  [TODO: Conclusion]
 
-http://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/
-https://medium.com/@davidbyttow/abc-always-be-coding-d5f8051afce2#.ommpytr82
-http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html
-http://www.palantir.com/2011/09/how-to-rock-an-algorithms-interview/
-http://paultyma.blogspot.ca/2007/03/howto-pass-silicon-valley-software.html
-http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html
+
+If you're interested in reading more on the overall subject, I've found these
+articles useful as well:
+
+* [Lessons from a Silicon Valley Job Search](http://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/)
+* [ABC: Always Be Coding](https://medium.com/@davidbyttow/abc-always-be-coding-d5f8051afce2#.ommpytr82)
+* [Get That Job at Google](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
+* [How to Pass an SV Software Engineering Interview](http://paultyma.blogspot.ca/2007/03/howto-pass-silicon-valley-software.html)
+* [The Guerilla Guide to Interviewing
+  (v3)](http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html)
 
 [cct]: http://www.amazon.com/gp/product/0984782850/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0984782850&linkCode=as2&tag=kevlonsblo-20&linkId=3I6XYK3XWBHI3W2X
