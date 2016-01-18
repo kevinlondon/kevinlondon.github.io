@@ -25,7 +25,7 @@ In addition, I've interviewed around 20 technical candidates and a number of
 interns in previous posiitons, so I have experience with interviews from the
 other side of the table as well.
 
-Finding Jobs
+**Finding Jobs**
 ------------
 
 There are many different ways to hear about opportunities that interest you -
@@ -116,7 +116,7 @@ a way to feel like you're an expert in some area and deepen your knowledge.
 During interviews, I felt more comfortable talking about topics I presented.
 
 
-Application Preparation
+**Application Preparation**
 ------------
 
 Let's say you found a few places to apply. What's next?
@@ -243,7 +243,7 @@ community or open sourcing a project of your own on
 one!). Overall, I would consider this a nice to have.
 
 
-Interview Preparation
+**Interview Preparation**
 ----------------------
 
 As you prepare your application, it's a good idea to start preparing for the
@@ -305,7 +305,8 @@ too. It can take a while to work through even one problem, so don't feel bad
 if you don't complete all the exercises. I've never done more than 5-10
 exercises in any one of these.
 
-# Interviews
+**Interviews**
+----------
 
 Tech interviews usually don't vary much from place to place.
 Here's the most common process I've seen:
@@ -362,33 +363,33 @@ been red flags for me:
 
 * "We have no work-life balance. We come in at 6 AM and leave at 10 PM."
 
-Good that they're being honest with me but the way it's presented makes it sound
-like they're proud of it. If they're being this upfront about the workload, it's
-likely that it's even worse in practice and they won't probably feel bad about
-it because they gave me a warning during the interview
+The way the work schedule is presented makes it sound like they're proud of it,
+like working long hours is macho or cool. If they're being upfront about the
+workload, it's likely that it's worse in practice and they won't probably
+feel bad about it because they gave me this warning.
 
-Working that much will drive you to burnout and [adding more time to the workday
+Working that much has driven me to burnout before and [adding more time to the workday
 does not make you more
 productive](http://www.alternet.org/story/154518/why_we_have_to_go_back_to_a_40-hour_work_week_to_keep_our_sanity).
 
 
 * "Our team is super green and doesn't know what they're doing. I look at
-  everything they commit and approve it."
+  everything they commit and have to approve it."
 
 This does not sound like an environment built on trust and distributed
 responsibility. Also, if the manager does not have faith in their team and would
-badmouth them in an interview, it's not a good sign.
+bad-mouth them in an interview, it's not a good sign.
 
 * Untrustworthy
 
 I interviewed with $BIG_TECH_CO in San Francisco. A department manager contacted
-me for an interview and said that they allowed for full time remote work. I said
+me for an interview and said that they allowed for remote work. I said
 "Great!" and we discussed next steps.
 
 I did the phone interview with them and it went well. The
 next day I got a phone call from the recruiter who was handling the process:
 
->**Recruiter**: "We'd like to schedule you an on-site interview. Oh, but just
+>**Recruiter**: "We'd like to schedule you for an on-site interview. Oh, but just
 checking, you can relocate to SF right?"
 >
 >**Me**: "When the manager contacted me, he said this could be remote."
@@ -396,7 +397,7 @@ checking, you can relocate to SF right?"
 >**Recruiter**: "Ok. I checked with him and we'll need you up here for about 4 months
 so you can get ramped up. You can work remotely after that."
 
-That's no longer full-time remote... but okay... I can make it work.
+That's no longer full-time remote... but okay... I think I can make it work.
 
 I went up for the on-site interview and thought it went great. Next day, I got
 a phone call from the recruiter again.
@@ -407,29 +408,51 @@ we're just not built for that. We'd need you to relocate."
 >
 >**Me**: That's too bad. I'll have to turn it down, then.
 >
-> **Recruiter**: Are you sure? This could really change your life. Why don't you
+> **Recruiter**: Are you sure? This would really change your life. Why don't you
 think about it until Monday?
 >
 > **Me** (later):  I have been up front with you that
 I wanted to do remote work from the beginning so I am not interested.
 
-Their actions gave me insight into what it could be like to work for them. If
-they're not honest or up-front with me during the interview process, what
+If they're not honest or up-front with me during the interview process, what
 would it be like to be there full time? What other expectations would they have?
+If I don't feel like I can trust the company, that's a big red flag.
+
+The sentiment that I should be willing to drop everything and move for
+a tech job is bullshit too.
 
 ## Research
 
-Part of the interview process involves doing a little research.
+I view research as an interview secret weapon because a little work
+can give you a leg up during an interview. Candidates don't often prepare so
+having prepared gives you the ability to ask better questions and show that you
+care about the opportunity.
+
+### Prepare questions to ask
+
+I once had a phone interview that started at 7 PM. The interviewer called me and
+said "Hello! I don't want to waste your time, what questions do you have for
+me?"
+
+Although I think that's a terrible approach to interviewing, that kind of thing
+can happen. General questions include:
+
+* What's an average work week like?
+* How is the software team organized?
+* What process does a feature follow from idea to delivery?
+* What's one of your favorite things about working at the company?
+* What would you like to change?
+
 
 ### Research the company
 
 I like to ratchet up the amount of research I do on companies as interviews
 progress. This is what I do for each stage, depending on the company:
 
-* Initial phone calls: Reviewing the website and figuring out what
-they do feels like enough to get by.
-* Phone screens: I typically read
-their blog posts and read through their reviews.
+* Initial phone calls: Reviewing the website and figuring out their product
+* feels like enough to get by.  Phone screens: I typically read
+their blog posts and read through their reviews. If they make an app, I try
+it out.
 * On-site interviews: I
 like to read up on any recent news stories that have come out about the company
 and research talks their employees have done.
@@ -446,37 +469,14 @@ more about them ahead of time. Do they have open source
 projects? Have they given conference talks? If so, have they been recorded?
 
 Learning about the things that interest them allows you to prepare more specific
-questions and shows that you're interested. I have once or twice followed
-someone I'm interviewing on Twitter.
+questions and shows that you're interested.
 
-You can definitely go too far with this, especially if it drifts into stalking
-on their social media profiles, so aim for enough so that you can prepare.
-
-### Prepare questions to ask
-
-I once had a phone interview that started at 7 PM. The interviewer called me and
-said "Hello! I don't want to waste your time, what questions do you have for
-me?"
-
-Although I think that's a terrible approach to interviewing, that kind of thing
-can happen. Hopefully your earlier research should make this one easy.
-I like to write down both the questions and the answers I hear in response.
-
-General questions include:
-
-* What's an average work week like?
-* How is the software team organized?
-* What process does a feature follow from idea to delivery?
-* What's one of your favorite things about working at the company?
-* What would you like to change?
-
+Be careful, though, because you can go too far with this. Don't stalk anyone.
 
 ## Phone Interviews
 
-The phone interview typically does not involve coding because of the tricky
-mechanics of coding over the phone. It will probably take about an hour overall.
-Typically, the interviewer wants to see if you would be a good fit for the
-position and your comfort with their technology stack.
+The phone interview typically does not involve coding because it's tough to
+communicate code over the phone. They usually run an hour or less.
 
 The questions typically skew to the softer end. Examples include:
 
@@ -490,19 +490,17 @@ such as [what happens when](https://github.com/alex/what-happens-when) you type
 
 ### Find a comfortable place to talk
 
-You could be on the phone for an hour or so. I'd
-recommend finding a good, comfortable place to do that.
 It's important to pick somewhere that will
 
 * Be quiet.
 * Let you focus.
 
-Your spot could be parked on a street near work or at your kitchen table.
 There's nothing worse than constantly worrying if you'll get caught on a phone
 screen, so it's helpful to pick a secluded place.
+Your spot could be parked on a street near work or at your kitchen table.
 
-I once left my keys in my car and my car wouldn't start after the interview when
-I had to return to work, so probably don't do that.
+I once left my keys in my car during a phone interview and my car wouldn't start
+afterward when I had to return to work, so don't do that.
 
 ### Recruiters are not your friends
 
@@ -510,88 +508,77 @@ Recruiters can be friendly and helpful. They want you to find a job that
 you'll enjoy. That said, you are a paycheck for them if you're
 placed with the company they represent so they may be aggressive or try for the
 hard sell.
-Keep in mind that this, like all things, is a two way street.
 
 One example. I talked with a recruiter and the company he represented wanted
-to move forward. I said I'd like time to think about it and I would email
-him back that evening. He told me not to waste his time or lie to him.
+to move forward. I said I'd like time to think about it and I'd email
+him back that evening. He told me not to waste his time or lie to him and that
+I obviously wasn't going to email him. That sealed my decision to not move
+forward.
 
 A friend of mine negotiated his contract with a recruiter and they promised
 things to him that they had no control over. For example, they said they would
-re-evaluate his salary in a few months but that didn't happen because he had no
-influence on when that happened.
+re-evaluate his salary in a few months. That didn't happen because the recruiter
+had no influence on when that process.
 
-Recruiters want to help you and I've found jobs through recruiters but be
-careful out there.
+Be careful out there.
 
 ### If you must give a salary range, anchor high
 
 Early in the process, your interviewer will try to get you to offer a salary
-range. Avoid it if you can. We'll talk about negotiating in more detail
-later in this post.
+range. Avoid it if you can.
 
 I haven't been able to avoid offering a salary range to recruiters on the phone.
 It's worth asking for what you want or a little more so you'll have room to
 negotiate down the line. We'll cover negotiating in more detail later.
 
-If you've
-already discussed salary with the company earlier in the process and they
-exceeded it, it could be in bad faith to negotiate for a higher number. "Oh
-actually I decided I want more than I told you." That's one reason
-why people anchor with higher numbers earlier in the process
-so that they have room to negotiate for other things.
-
-
-
 ## On-site Interviews
 
-On-site interviews take about 3-6 hours, depending on the company. In
-my experience, they tend to be with groups of 1-3 people and you meet with a few
-groups. Some companies, like Uber and Google, do a series of one-on-one
+If you make it past the phone interviews, you'll progress to the on-sites.
+On-site interviews take about 3-6 hours, depending on the company.  Most
+companies will fly you out if you're remote for a full day of interviews.
+
+In my experience, they tend to be with groups of 1-3 people and you meet with
+a few groups. Some companies, like Uber and Google, do a series of one-on-one
 interviews while others prefer small groups.
 
-Generally interviews open with questions to about your experiences, like
+These interviews open with questions to about your experiences, like
 the questions we've covered in earlier sections. After that, the interviewer
 will likely ask more questions to get you comfortable.  Sometimes they will be
 questions about project you've worked on, side projects, or personal interests.
 
-You can expect a few different algorithmic questions. Interviewers will often
-tailor questions based on your resume or they may have a fixed set of problems
-they like to ask. On the other side, you may be asked scenario questions.
-We'll cover both of those in more detail.
+You can expect a few different algorithm and scenario questions. We'll cover
+both of those in more detail. Interviewers
+may tailor questions based on your resume or they may have a fixed set of
+problems they like to ask.
 
 ### Tips for algorithm questions
 
-Example of an algorithmic question:
-"How would you store all the phone numbers in the phone book?"
-[TODO, revisit]
+[Examples of algorithm
+questions](http://www.careercup.com/page?pid=algorithm-interview-questions&sort=votes)
 
 **Ask clarifying questions.** There's a famous question about sorting a list of
 1 million integers. The question notably does not include the fact that the
-numbers represent birthdays, so you can sort the integers into at most 150
-buckets. If you ask questions, you might get a shortcut like that.
-It's almost always better to ask or suppose than to assume.
+numbers represent ages and you can sort the integers into at most 150
+buckets. If you ask questions, you might find a shortcut like that.
+It's always better to ask or suppose than to assume.
 
 **Think out loud.** It's tempting to work through problems in your head,
-especially if that's how you'd normally work. Unfortunately, that can work
-against you in a coding interview. By explaining your thought process, even when
-you're stuck, you give the interviewer a view into how you work and an
+especially if that's how you normally work. Unfortunately, that can work against
+you in a coding interview. By explaining your thought process, even when you're
+stuck, you give the interviewer a view into how you approach the problem and an
 opportunity to help you out.
 
 **Solve it with pseudocode first.** Thinking through how you would approach the
-problem without the constraints of writing syntactically correct code makes it
+problem without needing to write syntactically correct code makes it
 much easier. If you choose to do this, it's a good idea to explain that you'll
-write pseudocode first and write the implementation afterward.
+write pseudocode first and implement it afterward.
 It's also okay to solve it by brute-force as long as you explain that it's not
 your final solution.
 
 **Consider efficiency.** Think through different data structures you might use
 and the trade-offs for each. When would you use a dictionary / hash map? When
-would you want to use a queue?
-
-**Write tests as you go.** It's a good idea to write tests that will verify that
-your solution works so you can trace through your solution if you get stuck.
-It also shows that you like writing tests, which I think is a big plus.
+would you want to use a queue? We talked about Big O notation earlier. It's good
+to mention what you think the runtime of your algorithm is when you complete it.
 
 **Check for mistakes.** When you feel like you're done, trace through your
 solution and look for any mistakes or areas where it would fall apart. Did you
@@ -601,7 +588,7 @@ production?
 
 ### Tips for a Scenario Question
 
-Example of a scenario question:
+An example of a scenario question:
 "How would you architect an upload workflow for a SaaS application?"
 
 It's more important to explain your approach and the technical implications of
@@ -612,15 +599,14 @@ will interact with the server, what kind of HTTP operation they'd do to what
 example endpoint, how to handle background processing for any files that are
 uploaded, and what steps you'd take to prevent things from going wrong.
 
-### It's okay if you don't know the answer right away
+### You don't have to know the answer right away
 
 Interviewers want to test you with the technical questions and there's no
-expectation that you'll solve it quickly.
+expectation that you'll solve it quickly. Take your time
+and work through it.
 
-The interviewer may want to see how you perform under pressure. Take your time
-and work through it a bit at a time. No one expects that you'll know the answer
-right away. They want to see your process and if they can work with you to get
-to the answer.
+No one expects that you'll know the answer right away. They want to see your
+process and if they can work with you to get to the answer.
 
 ### Futher Reading
 
@@ -629,9 +615,11 @@ If you'd like suggestions for further reading, I like these:
 * [Coding Interview Tips](https://www.interviewcake.com/article/python/coding-interview-tips).
 * [How to Rock an Algorithms
   Interview](http://www.palantir.com/2011/09/how-to-rock-an-algorithms-interview/)
-* [
 
-## Offers
+**Offers**
+------
+
+Congratulations! You passed your interviews and you have an offer!
 
 ### You don't have to move forward
 
@@ -663,17 +651,16 @@ It's worth the time to read it.
 
 Don't feel bad about negotiating - it's what you're supposed to do.
 
-If you're happy with the salary they offer, you could negotiate other aspects.
-For example, would you like to take classes outside of work that they could
-reimburse you for? What about vacation days? Would you like to attend
-a conference later in the year? Perhaps you'd like to work from home for a day
-or two a week. You may be able to negotiate these things.
+You can negotiate other than just the salary.  For example, would you like to
+take classes outside of work that they could reimburse you for? What about
+vacation days? Would you like to attend a conference later in the year? Perhaps
+you'd like to work from home for a day or two a week.
 
 
-Thanks for reading.  [TODO: Conclusion]
+Thanks for reading. Hopefully this guide will help you find a satisfying job. If
+it does, please let me know!
 
-
-If you're interested in reading more on the overall subject, I've found these
+If you're interested in reading more, I've found these
 articles useful as well:
 
 * [Lessons from a Silicon Valley Job Search](http://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/)
