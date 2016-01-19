@@ -202,7 +202,7 @@ English](http://www.urbandharma.org/udharma4/mpe.html) for beginners.
 
 ### Plan on applying and interviewing at more than one place
 
-A friend of mine to one place, interviewed there, and got the job.
+A friend of mine applied to one place, interviewed there, and got the job.
 He feels fortunate that it worked out so well but he also
 wishes he had applied to other companies too because:
 
@@ -392,33 +392,9 @@ I interviewed with $BIG_TECH_CO in San Francisco. A department manager contacted
 me for an interview and said that they allowed for remote work. I said
 "Great!" and we discussed next steps.
 
-I did the phone interview with them and it went well. The
-next day I got a phone call from the recruiter who was handling the process:
-
->**Recruiter**: "We'd like to schedule you for an on-site interview. Oh, but just
-checking, you can move to SF right?"
->
->**Me**: "When the manager contacted me, he said this could be remote."
->
->**Recruiter**: "Ok. I checked with him and we'll need you up here for about 4 months
-so you can get ramped up. You can work remote after that."
-
-That's no longer full-time remote... but okay... I think I can make it work.
-
-I went up for the on-site interview and it, too, went great. Next day, I got
-another phone call.
-
->**Recruiter**: "We'd like to extend you an
-offer. We'd need you to be up here for 6-9 months to ramp up and
-we're just not built for that. We'd need you to move."
->
->**Me**: That's too bad. I'll have to turn it down, then.
->
-> **Recruiter**: Are you sure? This would really change your life. Why don't you
-think about it until Monday?
->
-> **Me** (later): Thank you for the offer. I said I wanted to do remote work
-> from the beginning so I will have to turn it down.
+I passed the phone interview and the position went from full-time remote to remote
+after 4 months. Once I completed the on-site tech interview, they
+offered me the job but only if I would move to SF.
 
 If they're not up-front with me during the interview process, what
 would it be like to work there? What other expectations would they have?
