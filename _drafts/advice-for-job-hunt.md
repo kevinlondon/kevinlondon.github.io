@@ -4,7 +4,7 @@ title:  "Advice for a Tech Job Hunt"
 date:   2016-01-10 15:54:08
 ---
 
-Going through a job hunt feels a bit like when I've shopped for a new car.
+Job hunting feels like shopping for a new car.
 
 At first, it's exciting and full of promise. As you start your research, it
 gets less exciting. There's so many options. How do you choose?
