@@ -538,8 +538,6 @@ questions](http://www.careercup.com/page?pid=algorithm-interview-questions&sort=
 represent ages. If you know that,  you can sort the integers into at most 150
 buckets. If you ask questions about the problem, you might find a shortcut.
 
-It's better to ask than assume.
-
 **Think out loud.** It's tempting to think through problems in your head.
 Unfortunately, that can work against you in a coding interview. If you think
 aloud, you show how you approach problems and give the interviewer a chance to
