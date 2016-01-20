@@ -8,7 +8,7 @@
   <meta property="og:image" content="https://s.gravatar.com/avatar/c1428d36c91a53a1e4c39fb2c7ceff15?s=200">
 {% endif %}
 
-<meta property="og:description" content="{% if page %}{{ page.excerpt | escape | truncate: 160 }}{% endif %}">
+<meta property="og:description" content="{% if page %}{{ page.excerpt | strip_html | escape | truncate: 160 }}{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{{ site.locale }}">
 {% if page.date %}
