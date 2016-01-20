@@ -3,9 +3,9 @@
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
 {% if page.thumbnail %}
-  <meta property="og:image:url" content="{{ site.url }}/{{ page.image }}">
+  <meta property="og:image" content="{{ site.url }}/{{ page.image }}">
 {% else %}
-  <meta property="og:image:url" content="{{ site.gravatar }}">
+  <meta property="og:image" content="{{ site.gravatar }}">
 {% endif %}
 
 <meta property="og:description" content="{% if page %}{{ page.excerpt | strip_html | escape | truncate: 160 }}{% endif %}">
