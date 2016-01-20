@@ -1,8 +1,14 @@
 <meta property='og:title' content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-<meta property="og:image" content="{% if page.thumbnail %}{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}{% else %}{{ {{baseurl}}/avatar | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-<meta property="og:description" content="{% if page %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+
+{% if page.thumbnail %}
+  <meta property="og:image" content="{{ site.url }}/{{ page.image }}">
+{% else %}
+  <meta property="og:image" content="https://s.gravatar.com/avatar/c1428d36c91a53a1e4c39fb2c7ceff15?s=200">
+{% endif %}
+
+<meta property="og:description" content="{% if page %}{{ page.excerpt | escape | truncate: 160 }}{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{{ site.locale }}">
 {% if page.date %}
