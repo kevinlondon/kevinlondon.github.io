@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![The Author](https://s.gravatar.com/avatar/c1428d36c91a53a1e4c39fb2c7ceff15?s=200)
+![The Author]({{ site.gravatar }}?s=200)
 
 Hi! I'm a software developer in Los Angeles with an interest in Python and Django.
 I work at [ChowNow](http://www.chownow.com)
