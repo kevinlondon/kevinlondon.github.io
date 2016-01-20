@@ -1,25 +1,26 @@
 ---
 layout: post
-title:  "Advice for a Tech Job Hunt"
+title:  "A Complete Guide to Landing Your Ideal Tech Job"
 date:   2016-01-10 15:54:08
 ---
 
-Job hunting feels like shopping for a new car.
+Job hunting can feel like shopping for a new car.
 
 At first, it's exciting and full of promise. As you start your research, it
-gets less exciting. There's so many options. How do you choose?
+feels less and less exciting. There are *so many* options. How do you choose?
 
-Once you have a car you're interested in, you may need to go to many
-dealerships to find a good deal. You may need to negotiate.
+Once you have a car you're interested in, you may need to check many
+dealerships to find a good deal. You may have to negotiate, which feels
+uncomfortable too.
 It's a big headache.
 
-Job hunting, like car shopping, has exciting moments. For the most part, though,
+Job hunting, like car shopping, has great moments. For the most part, though,
 it requires time, effort, research, and facing challenges.
 Many things can go wrong but the rewards can be great, particularly if you wind
 up at one of your dream jobs.
 
 In this post, I'll share lessons and personal war stories to help you get
-through a job hunt and land a tech job you love.
+through a job hunt and land the right tech job for you.
 We'll cover finding a job, interviewing, and negotiating offers.
 
 ### Personal Stats
@@ -647,11 +648,11 @@ find a satisfying new job. If it does, please let me know!
 
 If you're interested in reading somehow even more, I like these articles:
 
-* [Lessons from a Silicon Valley Job Search](http://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/)
-* [ABC: Always Be Coding](https://medium.com/@davidbyttow/abc-always-be-coding-d5f8051afce2#.ommpytr82)
-* [Get That Job at Google](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
-* [How to Pass an SV Software Engineering Interview](http://paultyma.blogspot.ca/2007/03/howto-pass-silicon-valley-software.html)
 * [The Guerilla Guide to Interviewing
   (v3)](http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html)
+* [ABC: Always Be Coding](https://medium.com/@davidbyttow/abc-always-be-coding-d5f8051afce2#.ommpytr82)
+* [Get That Job at Google](http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
+* [Lessons from a Silicon Valley Job Search](http://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/)
+* [How to Pass an SV Software Engineering Interview](http://paultyma.blogspot.ca/2007/03/howto-pass-silicon-valley-software.html)
 
 [cct]: http://www.amazon.com/gp/product/0984782850/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0984782850&linkCode=as2&tag=kevlonsblo-20&linkId=3I6XYK3XWBHI3W2X
