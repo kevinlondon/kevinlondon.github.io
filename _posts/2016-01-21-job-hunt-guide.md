@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Complete Guide for Landing Your Ideal Tech Job"
-date:   2016-01-10 15:54:08
+date:   2016-01-21 20:45:08
 ---
 
 Job hunting can feel like shopping for a new car.
@@ -12,6 +12,7 @@ feels less and less exciting. There are *so many* options. How do you choose?
 Once you have a car you're interested in, you may need to check many
 dealerships to find a good deal. You may have to negotiate, which feels
 uncomfortable too.
+
 It's a big headache.
 
 Job hunting, like car shopping, has great moments. For the most part, though,
@@ -21,7 +22,6 @@ up at one of your dream jobs.
 
 In this post, I'll share lessons and personal war stories to help you get
 through a job hunt and land the right tech job for you.
-We'll cover finding a job, interviewing, and negotiating offers.
 
 ### Personal Stats
 
@@ -87,9 +87,8 @@ You may find some surprises if you look around.
 
 ### Configure LinkedIn to work for you
 
-Someone at your company might notice changes to your job description or personal
-details. That could raise suspicions, particularly if LinkedIn broadcasts them
-to your coworkers.
+Coworkers may notice changes to your job description or personal
+details if LinkedIn broadcasts them.
 You'll want to [turn off your activity notifications](
 https://help.linkedin.com/app/answers/detail/a_id/78/~/showing-or-hiding-activity-updates-about-you).
 
