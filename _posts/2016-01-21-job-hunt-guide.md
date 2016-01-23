@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Land the Right Tech Job for You"
+title:  "A Comprehensive Guide for Landing a Tech Job"
 date:   2016-01-21 20:45:08
 ---
 
