@@ -48,7 +48,7 @@ through your options to find the good ones.
 
 I think there's something to the saying that "the best jobs aren't advertised".
 That said, most tech companies want to hire great talent. They tend to leave
-job postings up even when they're not in looking, just in case someone comes
+job postings up even when they're not looking, just in case someone comes
 along.
 
 Sites I've used:
@@ -270,7 +270,7 @@ I would say this category is a "nice to have".
 ----------------------
 
 As you prepare your application, you should also prepare for the
-interviews that follow. Here's some areas too focus on:
+interviews that follow. Here's some areas to focus on:
 
 ### Datastructures and algorithms
 
@@ -311,7 +311,7 @@ one you'll be in in the interview. In general:
 1. Write your solution on a whiteboard or piece of paper first without looking
    anything up.
 2. Walk through your solution and look for errors.
-3. When you're confident your answer, type and run the code on a computer.
+3. When you're confident with your answer, type and run the code on a computer.
 
 Many websites offer practice problems. I've used the following:
 
@@ -344,7 +344,7 @@ Here's the most common process I've seen:
 
 ### Interviewing goes both ways
 
-You want to get a feel for if the company will be a good fit for you as much as
+You want to get a sense of whether the company will be a good fit for you as much as
 they do. It's easy to forget that it's bi-directional and focus on
 impressing them. They should impress you as well.
 
@@ -430,7 +430,7 @@ Your list may differ.
 I like to ratchet up the amount of research I do on companies as interviews
 progress. This is what I do for each stage, depending on the company:
 
-* **Initial phone calls**: Reviewing the website and figuring out their product
+* **Initial phone calls**: Reviewing the website and figuring out if their product
 feels like enough to get by.
 * **Phone screens**: I read
 their blog posts and read through their reviews. If they make an app, I try
@@ -475,8 +475,8 @@ It's important to pick somewhere that will
 * Let you focus.
 
 It's helpful to pick a secluded place.
-There's nothing worse than worrying about getting caught aside from actually
-getting caught.
+If you're currently employed, there's nothing worse than worrying about 
+getting caught than actually getting caught.
 Your spot could be in a parking lot near work or at your kitchen table.
 
 I once left my keys in my car during a phone interview and my car wouldn't start
@@ -633,7 +633,7 @@ It's worth your time to read it.
 
 Don't feel bad about negotiating - it's what you're supposed to do.
 
-You can negotiate other than just the salary.  For example, would you like to
+You can negotiate on points other than just the salary.  For example, would you like to
 take classes outside of work that they could reimburse you for? What about
 vacation days? Would you like to attend a conference later in the year? Perhaps
 you'd like to work from home for a day or two a week.
@@ -645,7 +645,7 @@ Conclusion
 I hope that this guide helps you better understand the process and helps you
 find a satisfying new job. If it does, please let me know!
 
-If you're interested in reading somehow even more, I like these articles:
+If you're interested in reading (somehow) even more, I like these articles:
 
 * [The Guerilla Guide to Interviewing
   (v3)](http://www.joelonsoftware.com/articles/GuerrillaInterviewing3.html)
