@@ -1,0 +1,496 @@
+---
+layout: post
+title: "DevOps From Scratch"
+date:  2016-02-24 21:09:00
+---
+
+Let's say you're at a startup and everything is going great. Your app is
+growing, users are happy, money is coming in when, all of a sudden, your ops guy
+quits.
+
+What happens as you start to scale
+up? What's your plan for building out your infrastructure? Does it involve
+manually clicking around to setup new servers? What happens when you need to add
+5 servers at 3 AM because some story broke in Europe and your site is buckling
+under the load? What happens if half of your application servers are deleted by
+a well meaning but over-permissioned intern?
+
+Think about how nice it would be if we could scale up the number of servers we
+have, deploy new application code to it, and add them into our load balancer
+with a few small code changes. We'd get the opportunity to look like a hero
+while saving ourselves work in the long term. If something goes wrong with an
+infrastructure change, we could refer back to our version controlled code and
+roll it back easily and quickly. Doesn't that sound great?
+
+We can solve most of these problems by automating our infrastructure. But how do
+you start? There's so many tools out there, how do we know which ones to pick?
+And how do we get to a working site at the end?
+
+We'll walk through automating infrastructure and deploying an application to
+Amazon using modern DevOps tools such as Ansible, Terraform, and Vagrant. Along
+the way, we'll talk about a few other tools as well for deploying our
+application, such as uwsgi.
+
+
+The Goal
+========
+
+We're a startup and we have a small proof-of-concept application that we want to
+deploy on some new servers. In this case, our application is a Python-based
+Flask app. For the most part, any other framework or thing could get slotted in
+here too. We're going to deploy with Git for now.
+
+Our end goal is to have a site that we can access.
+
+We simply cannot cover everything. We'll do our best.
+
+Start manually, then automate.
+Alternatively, just automate from the beginning.
+
+Local Development
+=================
+
+Let's start a Flask application. If you already have one, feel free to use it.
+Otherwise we're going to assume that you're working from a basic Flask
+application. We'll build everything as we go.
+
+To get started, we'll assume that you have Git already installed. You can run
+`git clone https://github.com/kevinlondon/flask-hello-world.git` to get a copy of
+the small project we'll be working with. It's directly from the [Flask
+quickstart](http://flask.pocoo.org/). They do an excellent job explaining what
+the code does as well.
+
+In order to run it, we'll first need a few packages. From your command line,
+run:
+
+{% highlight bash %}
+
+easy_install pip
+pip install flask gunicorn
+
+{% endhighlight %}
+
+Alternatively, you can run `pip install -r requirements.txt` from the cloned Git
+directory to install the requirements.
+
+After you've installed them, run `python app.py` from your Terminal. When you go
+to `http://localhost:5000`, you should see our "Hello World!" page, as below.
+
+![Hello World!](/assets/localhost_helloworld.png)
+
+Nice! In our case, that's all the more we'll do with setting up the Python
+application.
+
+Let's say we want to make it so anyone can develop on our application. We could
+pass out the instructions we just gave (not too hard, right?). That works for
+a while. For our case, we're pretending this is an easier bit of a mucher larger
+project which might have many more steps.
+
+Up next, we want to move our development into a virtual machine with Vagrant.
+
+We want to deploy it though, right? So let's move toward that.
+
+Running Our App with Vagrant
+============================
+
+Install Vagrant
+`vagrant init`
+
+Change `config.vm.box` to `'ubuntu/trusty64'` to set our base box as one of the
+latest Ubuntu distributions. This might take a little while, depending on your
+connection speed.
+
+* Uncomment the 'private_network' line and note the IP address (by default,
+    it's `192.168.33.10`
+
+`vagrant up`
+`vagrant ssh`
+
+`sudo apt-get install git python-pip`
+`git clone https://github.com/kevinlondon/flask-hello-world.git`
+`cd flask-hello-world`
+`sudo pip install -r requirements.txt`
+`python app.py`
+
+Go to your browser, should see it on `192.168.33.10:5000`!
+
+Now, before we continue, we should start automating these bits so we can track
+them over time.
+
+
+Our First Ansible Playbook
+==========================
+
+Let's install Ansible.
+
+`pip install ansible`
+
+Make the first playbook.
+
+https://raw.githubusercontent.com/kevinlondon/devops-from-scratch/cd497a8cab16f16531431639dcb32fa9a5b8b309/site.yml
+
+Explain why the pieces are in the playbook.
+
+Go into Vagrant file, add this line:
+
+```thing```
+
+Then, let's reprovision your host. `vagrant provision` should take care of it.
+
+Just to show how confident we are, let's start it from scratch. Tearing things
+down and reprovisioning them is a good way to make sure your code is idempotent.
+
+`vagrant destroy`. Enter 'y' at the prompt. After it's destroyed, type `vagrant
+up` to recreate the virtualmachine and to provision it in one go.
+
+
+When it comes back up, we should be able to `vagrant ssh` in and `cd` into our
+directory and run the server.
+
+{% highlight bash %}
+
+cd flask-hello-world
+python app.py
+
+{% endhighlight %}
+
+We're going to assume that the rest of what you're doing here will be run within
+the Vagrnat box unless otherwise specified.
+
+Setting up gunicorn
+===================
+
+Now that we have a decent base, we can start building up our application on top
+of it. One of the things we'll need is a webserver to serve requests. Serving
+requests through the application's debug server has poses serious security risks
+and it's not intended for anything like a production load.
+
+To serve our requests, we're going with gunicorn. Another popular option is
+uWSGI or gevent but, for the sake of constraining choice, we'll go with this
+one.
+
+We've already installed gunicorn in the earlier requirements doc.  If you're not
+working from the stock repo, add a line for `gunicorn` to your
+`requirements.txt` file.
+
+After it's been installed, you should be able to run the following:
+
+{% highlight bash %}
+
+$ gunicorn --bind 0.0.0.0:8000 app:app
+
+{% endhighlight %}
+
+This will use gunicorn to serve your application through WSGI, which is the
+traditional way that Python webapps are served.
+
+This is the simplest way to serve our application for now.
+
+
+Upstart for Gunicorn
+====================
+
+Now that we have gunicorn roughly configured (it's not perfect yet of course!),
+we'll want to set up a script so that we can run our server automatically
+when our server restarts or just kick the process if it's stuck.
+
+How we'll do that is with an [upstart](http://upstart.ubuntu.com/) script.
+Upstart handles starting and stopping tasks, so it's a good fit for us.
+
+We're going to use a slightly modified script from the
+[gunicorn](http://docs.gunicorn.org/en/stable/deploy.html#upstart) examples.
+Create this file in `/etc/init/hello-world.conf`.
+
+{% highlight bash %}
+
+description "hello-world"
+
+start on (filesystem)
+stop on runlevel [016]
+
+respawn
+setuid nobody
+setgid nogroup
+chdir /home/vagrant/flask-hello-world
+
+exec gunicorn app:app --bind 0.0.0.0:8000
+
+{% endhighlight %}
+
+When you've created the file, you should be able to run `sudo service
+hello-world start` to start the task, go in your browser, and then view
+the service at `http://192.168.33.10:8000`, as before. The big difference is now
+we have something that will run it for us, so we don't need to SSH in to run
+our server. It's also on a more robust tool that we can trust.
+
+Great, now that we have that set up, let's automate that process! Editing files
+on a server is a sure way to forget something long-term.
+
+
+Automating Upstart
+==================
+
+Let's go back and modify our original Ansible provisioning file. We have this
+file that we want to setup, so that's good. We could directly copy the file we
+have above as-is into our Ansible directory and use it but we'd be missing out
+on some of the benefits of Ansible.
+
+Namely, in this case, it's using the file as
+a template. What if we have a different user than `vagrant`? Would we need
+a different file? Templating helps us avoid that fate.
+
+In the same directory (for now) as our `site.yml` file, create a new file:
+`hello-world.conf.j2`. The `.j2` extension implies that we're going to be using
+it as a [Jinja2](http://jinja.pocoo.org/) template. Jinja2 is a popular template
+engine and the one that Ansible has blessed for their use case.
+
+All that said, let's look at the new file we'll write:
+
+{% highlight bash %}
+
+description "hello-world"
+
+start on (filesystem)
+stop on runlevel [016]
+
+respawn
+setuid nobody
+setgid nogroup
+chdir {{ repository_path }}
+
+exec gunicorn app:app --bind 0.0.0.0:8000
+
+{% endhighlight %}
+
+Subtle difference, right? We're plugging in the same variable that we're using
+in our `site.yml` file into this one.
+
+Ok, now that we have this template file, we'll need to set up Ansible to copy it
+into the directory that we did.
+
+Let's add a section to the bottom of our `site.yml` file.
+
+{% highlight bash %}
+
+- name: Configure application
+  hosts: all
+  vars:
+      repository_url: https://github.com/kevinlondon/flask-hello-world.git
+      repository_path: /home/vagrant/flask-hello-world
+
+  tasks:
+    . . .
+
+    - name: Copy Upstart configuration
+      template: src=hello-world.conf.j2 dest=/etc/init/hello-world.conf
+
+    - name: Make sure our server is running
+      service: name=hello-world state=started
+
+{% endhighlight %}
+
+
+What we're saying is that we want to copy the template file that we defined into
+the directory that we used before. It will use the variables we have defined in
+our file, inject them into the template, and write them to disc at the
+destination path we have defined.
+
+Then, we want to make sure our service has started (just like before!). If it
+hasn't been started yet, start it.
+
+Run another `vagrant provision`, make sure everything's looking good, and we can
+move on to the next step! By the way, you're doing great if you're still with
+us.
+
+
+Setting up a basic nginx server
+===============================
+
+Now that we have gunicorn configured, we need an HTTP server to handle the
+requests themselves and make sure we route our users to the right application.
+We'll use nginx to do this, though you could use any number of other
+alternatives too. I like nginx and I've worked with it the most.
+
+Let's get started, shall we? As before, we'll do the steps manually and then
+automate the process.
+
+To install the package, `vagrant ssh` into your box and run `sudo apt-get install nginx`.
+Confirm the prompt and let that package fly!
+
+You should be able to go to your browser at `192.168.33.10` currently and see
+nginx's version of "Hello world!".
+
+[picture of nginx hello world]
+
+Once you're back at your command prompt, we'll set up our first nginx
+configuration file.
+
+We're going to more or less copy the [stock nginx recommended
+file](http://docs.gunicorn.org/en/stable/deploy.html) for
+the sake of time. The goal of this configuration file is to make sure that we
+can access our server at the same host (`192.168.33.10`) but without needing to
+specify an HTTP port manually. Can you think of the last time you went to a site
+like ebay.com and put in a port? Exactly.
+
+We'll write our file to `/etc/nginx/nginx.conf` and it should
+look like this:
+
+{% highlight bash %}
+
+worker_processes 1;
+
+user nobody nogroup;
+# 'user nobody nobody;' for systems with 'nobody' as a group instead
+pid /tmp/nginx.pid;
+error_log /tmp/nginx.error.log;
+
+events {
+  worker_connections 1024; # increase if you have lots of clients
+  accept_mutex off; # set to 'on' if nginx worker_processes > 1
+  # 'use epoll;' to enable for Linux 2.6+
+  # 'use kqueue;' to enable for FreeBSD, OSX
+}
+
+http {
+  include mime.types;
+  # fallback in case we can't determine a type
+  default_type application/octet-stream;
+  access_log /tmp/nginx.access.log combined;
+  sendfile on;
+
+  upstream app_server {
+    # fail_timeout=0 means we always retry an upstream even if it failed
+    # to return a good HTTP response
+
+    # for UNIX domain socket setups
+    #server unix:/tmp/gunicorn.sock fail_timeout=0;
+
+    # for a TCP configuration
+    server 0.0.0.0:8000 fail_timeout=0;
+  }
+
+  server {
+    # use 'listen 80 deferred;' for Linux
+    # use 'listen 80 accept_filter=httpready;' for FreeBSD
+    listen 80 default;
+    client_max_body_size 4G;
+
+    keepalive_timeout 5;
+
+    location / {
+      # checks for static file, if not found proxy to app
+      try_files $uri @proxy_to_app;
+    }
+
+    location @proxy_to_app {
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      # enable this if and only if you use HTTPS
+      # proxy_set_header X-Forwarded-Proto https;
+      proxy_set_header Host $http_host;
+      # we don't want nginx trying to do something clever with
+      # redirects, we set the Host: header above already.
+      proxy_redirect off;
+      proxy_pass http://app_server;
+    }
+  }
+}
+
+{% endhighlight %}
+
+
+At this point, if we do a `sudo service nginx restart` ... we see this:
+
+{% highlight bash %}
+
+$ sudo service nginx restart
+ * Restarting nginx nginx
+   ...fail!
+
+{% endhighlight %}
+
+Hm... ok. So there's some problem. Well, we defined the path for our error log
+in the above nginx configuration file to be at `/tmp/nginx.error.log`, so let's
+look at that file.
+
+If we do `sudo tail -n 10 /tmp/nginx.error.log`, we see the following:
+
+
+{% highlight bash %}
+
+sudo tail -f -n 100 /tmp/nginx.error.log
+2016/03/05 23:15:54 [emerg] 6249#0: bind() to 0.0.0.0:80 failed (98: Address
+already in use)
+2016/03/05 23:15:54 [emerg] 6249#0: bind() to 0.0.0.0:80 failed (98: Address
+already in use)
+2016/03/05 23:15:54 [emerg] 6249#0: bind() to 0.0.0.0:80 failed (98: Address
+already in use)
+2016/03/05 23:15:54 [emerg] 6249#0: bind() to 0.0.0.0:80 failed (98: Address
+already in use)
+2016/03/05 23:15:54 [emerg] 6249#0: bind() to 0.0.0.0:80 failed (98: Address
+already in use)
+2016/03/05 23:15:54 [emerg] 6249#0: still could not bind()
+
+{% endhighlight %}
+
+Ah, so there's a server that's already running and it can't get access to the
+port. Right. Well, in this case, it's a problem with the `default` site
+that's [enabled by
+nginx](http://stackoverflow.com/questions/14972792/nginx-nginx-emerg-bind-to-80-failed-98-address-already-in-use). We don't need it, so let's remove it with `sudo rm /etc/nginx/sites-enabled/default`.
+
+Run `sudo service nginx restart` and it should work. Check it out in your browser
+at `http://192.168.33.10`. Cool right? It's coming right along!
+
+
+As before, the next step will be to automate this.
+
+
+This is getting pretty manual!
+
+Create a single AWS instance
+Hard-code values in Ansible
+Deploy to AWS instance
+Destroy AWS instance
+Setup Terraform to do the same thing as you just did
+Terraform some infrastructure
+Apply your Ansible stuff to AWS
+Victory!
+
+Bonus Section:
+Deploys
+
+Next Steps:
+-----------
+
+* Jenkins for CI / CD?
+* Immutable infrastructure?
+* Deploys?
+* Docker?
+* VPC?
+* Security Groups?
+* virtualenv
+
+
+Provide steps for setting up an application stack from scratch!
+
+Terraform
+Ansible
+Vagrant
+
+Walk them through the process *you* followed.
+
+This post assumes you already have an application you'd like to stand up from
+scratch. If not, then let's do this thing instead!
+
+This mirrors our existing methodology. It might not be perfect, it might not be
+for everyone.
+
+Other things we'll need to talk about:
+
+Flask
+nginx
+uwsgi
+
+
+https://www.upwork.com/job/Amazon-Web-Services-DevOps-from-scratch-for-Startup_~01513371d4528ef639/
+https://www.reddit.com/r/devops/comments/3prm8g/building_deployment_pipeline_from_scratch_advice/
+https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx
