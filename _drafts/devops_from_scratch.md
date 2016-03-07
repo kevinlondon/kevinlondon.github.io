@@ -397,8 +397,10 @@ http {
 
 {% endhighlight %}
 
+Our file tells nginx to look for our server at 0.0.0.0:8000 which, if our
+gunicorn server is running properly, should be accessible!
 
-At this point, if we do a `sudo service nginx restart` ... we see this:
+At this point, if we do a `sudo service nginx restart`, we see this:
 
 {% highlight bash %}
 
@@ -438,16 +440,116 @@ that's [enabled by
 nginx](http://stackoverflow.com/questions/14972792/nginx-nginx-emerg-bind-to-80-failed-98-address-already-in-use). We don't need it, so let's remove it with `sudo rm /etc/nginx/sites-enabled/default`.
 
 Run `sudo service nginx restart` and it should work. Check it out in your browser
-at `http://192.168.33.10`. Cool right? It's coming right along!
+at `http://192.168.33.10`. Cool right? It's coming along!
 
 
 As before, the next step will be to automate this.
 
 
-This is getting pretty manual!
+Automating nginx
+================
+
+This is actually quite simple to add to our Ansible setup.
+Create another file in the same directory as `site.yml` named `nginx.conf.j2`
+and copy the file that we defined above.
+
+This time, we won't use any template variables yet. It's easy to imagine where
+we might want some (error logs at `/tmp/nginx.error.log` are not the greatest),
+but we will leave that as a project for later.
+
+At the bottom of our `site.yml` file, we'll add this section:
+
+{% highlight bash linenos %}
+
+  tasks:
+    - name: Install packages
+      apt: update_cache=yes name={{ item }} state=present
+      with_items:
+        - git
+        - python-pip
+        - nginx
+    . . .
+
+    - name: Copy nginx configuration
+      template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
+      notify:
+        - reload nginx
+
+    - name: Remove default site
+      file: path=/etc/nginx/sites-enabled/default state=absent
+
+    - name: Make sure nginx is running
+      service: name=nginx state=started
+
+  handlers:
+    - name: reload nginx
+      service: name=nginx state=reloaded
+
+{% endhighlight %}
+
+Woah, what's a handler? What are we notifying? We're introducing a new Ansible
+concept.  A
+[handler](http://docs.ansible.com/ansible/playbooks_intro.html#handlers-running-operations-on-change)
+is something that takes action at the end of your chain of events.  In this
+case, we're saying "If the nginx configuration changes, please notify nginx
+that it should reload itself." It won't run otherwise, because we don't need to
+restart nginx if everything's going great.
+
+We also added a section in here to remove the default site. `state=absent`
+means that Ansible will make sure it's not there for us.
+
+Finally, note that we added nginx to the list of packages we need to install.
+
+Let's run `vagrant provision` again, check out our server, and move on to the next
+thing!
+
+Wait, actually, what's the next step?
+We have our app running with the web server and code, so that's all good.
+The next step, in our case, should be to do one final check and make sure
+we don't need any of the manual configuration we did along the way.
+
+One more time, let's run a `vagrant destroy`, `vagrant up` to make sure it all works.
+You should not have to SSH at any time, you should just be able to go to your
+browser at `http://192.168.33.10` when it's done and see our 'Hello World' example!
+
+
+Deploying to Amazon EC2
+=======================
+
+The next step for us with our tiny app is actually to deploy it into the wild!
+We're going to deploy to Amazon's EC2 service. Other options include Digital Ocean,
+Linode, Heroku, etc.
+
+Sign up for an Amazon account if you don't have one yet. Our work here should be
+eligible under the free tier if you've never done something with Amazon. Even if
+you have, it shouldn't cost much unless you forget and leave it running
+forever.
+
+https://aws.amazon.com/console/
+
+Now, sign into your Amazon console. You should see something like this:
+
+(amazon console)
+
+Make sure the dropdown in the top right says "N. Virginia".
+
+Let's create a new Cloud server, hereby referred to as an instance.
+
+Select "EC2" from the list of services.
+
+Click "Launch Instance". Select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-fce3c696".
+
+Click "Review and Launch".
+
+There's some warnings here. They're valid, but we're
+going to ignore them for now. Click "Launch"
+
+In the next screen, select "Create a new key pair". Name it 'flask-hello-world'
+and click "Download Key Pair". Then click "Launch Instances".
+
+
 
 Create a single AWS instance
-Hard-code values in Ansible
 Deploy to AWS instance
 Destroy AWS instance
 Setup Terraform to do the same thing as you just did
