@@ -513,7 +513,7 @@ You should not have to SSH at any time, you should just be able to go to your
 browser at `http://192.168.33.10` when it's done and see our 'Hello World' example!
 
 
-Deploying to Amazon EC2
+Setting up Amazon EC2
 =======================
 
 The next step for us with our tiny app is actually to deploy it into the wild!
@@ -547,7 +547,138 @@ going to ignore them for now. Click "Launch"
 In the next screen, select "Create a new key pair". Name it 'flask-hello-world'
 and click "Download Key Pair". Then click "Launch Instances".
 
+Click "View Instances".
 
+You should return to the main Instances page and see your instance launching.
+Nice!
+
+Let's quickly ssh into your box using the private key that we generated
+just to make sure everything is working. You can get the public IP address on
+the instance page.
+
+In your terminal:
+
+Type `ssh -i <your-key-path>/flask-hello-world.pem ubuntu@<your-server-ip>` (without
+the brackets, of course). This will try to use the private key we downloaded
+from Amazon to log in as the `ubuntu` user that's included in the image we used
+to start the instance. We'll see something like this:
+
+{% highlight bash %}
+
+$ ssh -i /Users/kevinlondon/Downloads/flask-hello-world.pem 54.172.44.73
+The authenticity of host '54.172.44.73 (54.172.44.73)' can't be established.
+ECDSA key fingerprint is SHA256:Br7lA5pReSmk+WVcr9xKwPKZrs5uLaUOg1eAngkZNxU.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '54.172.44.73' (ECDSA) to the list of known hosts.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '/Users/kevinlondon/Downloads/flask-hello-world.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/Users/kevinlondon/Downloads/flask-hello-world.pem": bad permissions
+Permission denied (publickey).
+
+{% endhighlight %}
+
+Well... oops. Okay let's change the permissions on it. Run `chmod 400
+<your-key-path>/flask-hello-world.pem`. That'll change the file so that only our
+user can read it. Retry your ssh connection after you've done it. Once you're
+sure you can log in, that will be the last time we SSH manually into our
+instance.
+
+
+Ansible x EC2 Setup
+===================
+
+Now that we have a box up, let's configure Ansible to provision it.
+
+Let's first make sure Ansible can ping your host and use SSH to log in to it.
+Before we can begin, we need to set up the
+[inventory](http://docs.ansible.com/ansible/intro_inventory.html) file so
+Ansible knows about our server.
+
+Create a file called `hosts` in your Ansible directory. It'll be quite short for
+now!
+
+{% highlight bash %}
+
+[webservers]
+<your-server-ip>
+
+{% endhighlight %}
+
+In this file, we're describing a group of servers (`webservers`), with a single
+host: the server IP we grabbed above. Once you've saved the file, you can run
+the following command:
+
+Run `ansible -m ping webservers --private_key=<your-key-path>/flask-hello-world.pem --inventory=hosts --user=ubuntu`. Here's what I saw:
+
+{% highlight bash %}
+$ `ansible -m ping webservers --private_key=~/Downloads/flask-hello-world.pem
+--inventory=hosts --user=ubuntu`
+
+54.172.44.73 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+    }
+
+{% endhighlight %}
+
+It's quite similar to what we did for `ssh`ing into the box, and with good
+reason. Ansible is entirely built upon SSH. That said, this is dumb right?
+I don't want to type all these command line arguments.
+
+Great, let's make ourselves an [Ansible config
+file](http://docs.ansible.com/ansible/intro_configuration.html) to automate most
+of that. Create a file named `ansible.cfg` in your directory that contains the
+following:
+
+{% highlight bash %}
+
+[defaults]
+inventory = hosts
+remote_user = ubuntu
+private_key_file = <your-key-path>/flask-hello-world.pem
+
+{% endhighlight %}
+
+Now, we should be able to run `ansible ping -m all` or `ansible ping -m
+webservers` without any arguments. Give it a try!
+
+
+Deploying to AWS with Ansible
+=============================
+
+With all that footwork out of the way, deploying is actually very simple.
+Run `ansible-playbook -v site.yml`.
+
+It'll start deploying to your instance. Wait, what? Yep! The same file that set
+up your Vagrant file can be used to configure this one. Since the `webservers`
+is considered to be in the `all` group, it gets broomed up. After a minute or
+so, your server should be in the same state as your Vagrant virtual machine.
+
+At the end, we should see something like this:
+
+{% highlight bash %}
+
+PLAY RECAP *********************************************************************
+54.172.44.73               : ok=9    changed=8    unreachable=0    failed=0
+
+{% endhighlight %}
+
+Then let's go to your server at `http://<your-server-ip>` annndddd....
+
+Hm.
+
+It's not loading. Oh, right, remember those warnings that Amazon gave us about
+the security groups when we launched the instance? Yep. Now we have to take care
+of that.
+
+Setting up AWS Security Groups for your Instance
+=================================================
+
+TODO
 
 Create a single AWS instance
 Deploy to AWS instance
@@ -570,6 +701,7 @@ Next Steps:
 * VPC?
 * Security Groups?
 * virtualenv
+* dynamic provisioning
 
 
 Provide steps for setting up an application stack from scratch!
