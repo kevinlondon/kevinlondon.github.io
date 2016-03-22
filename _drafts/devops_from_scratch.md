@@ -133,7 +133,7 @@ Explain why the pieces are in the playbook.
 
 Go into Vagrant file, add this line:
 
-```thing```
+`thing`
 
 Then, let's reprovision your host. `vagrant provision` should take care of it.
 
@@ -678,11 +678,232 @@ of that.
 Setting up AWS Security Groups for your Instance
 =================================================
 
-TODO
+Click "Security Groups".
 
-Create a single AWS instance
-Deploy to AWS instance
-Destroy AWS instance
+Click "Create Security Group" button along the top.
+
+Add a new security group named `web`. Click "Add Rule". For the first, select
+`HTTP`. For the second, select `HTTPS`. That will allow web traffic to travel
+through to your instance.
+Click "Create".
+
+Now we have to associate it with our instance.  Click the "Actions" dropdown and
+select "Networking" - "Change Security Groups".  Select the new group in
+addition to the previous one.
+
+After you've associated the group, you should actually be able to visit your
+instance. Go to `http://<your-server-ip>`.
+
+TODO: Revisit socket / nginx settings. Remake from scratch.
+
+Hooray! We have a server!
+
+Notice all those screenshots we need to accomplish this. Too much, right? Let's
+automate that too. Automate all the things.
+
+We won't need the original instance anymore, we can destroy it. Select EC2
+instances again, right click your instance, and select Instance State ->
+Terminate.
+
+We should also destroy the security group we created for it. Go into Security
+Groups, select Web, then select Actions -> Delete Security Group.
+
+Ok, all set! No more clicking around in the AWS console for us.
+
+Automating AWS Instance with Terraform
+======================================
+
+Graphic
+
+Time for another tool! In this case, we'll use
+[Terraform](https://www.terraform.io/) to provision our
+infrastructure. Again, there are many options here - including CloudFormation
+and others, but we'll use Terraform.
+
+Download and install Terraform from their `Downloads` page. If you use Mac OSX,
+you can do a `brew install terraform` if you have [homebrew](http://brew.sh/)
+installed.
+
+Basically how Terraform works is that we'll define the different resources that
+we want to set up and then we'll use Terraform to plan out what our changes will
+do and, finally, apply the plan.
+
+
+In the same directory as we've been working, let's make a new folder for
+Terraform with `mkdir terraform`.
+
+Then, cd into that directory and make a single new file called `main.tf`.
+`*.tf` extensions indicate that they're using the Terraform syntax.
+
+In that file, add the following:
+
+{% highlight bash %}
+
+provider "aws" {
+    access_key = "${var.aws_access_key}"
+    secret_key = "${var.aws_secret_key}"
+    region = "${var.aws_region}"
+}
+
+resource "aws_instance" "hello_world" {
+    ami = "ami-fce3c696"  # Ubuntu 14.04 for us-east-1
+    instance_type = "t2.micro"
+    vpc_security_group_ids = ["${aws_security_group.web.id}"]
+}
+
+resource "aws_security_group" "web" {
+    name = "web"
+    description = "Allow HTTP connections."
+
+    ingress {
+        from_port = 80
+        to_port = 80
+        protocol = "tcp"
+    }
+}
+
+resource "aws_key_pair" "hello_world" {
+    key_name = "hello_world"
+    public_key = "${file(var.public_key_path)}"
+}
+
+{% endhighlight %}
+
+`variables.tf`
+
+{% highlight bash %}
+
+# These variables come from the terraform.tfvars file
+variable "aws_access_key" {}
+variable "aws_secret_key" {}
+
+variable "aws_region" {
+    description = "AWS region in which to launch the servers."
+    default = "us-east-1"
+}
+
+variable "public_key_path" {
+    default = "~/.ssh/id_rsa.pub"
+}
+
+{% endhighlight %}
+
+`terraform.tfvars`
+
+{% highlight bash %}
+
+aws_access_key = "your-key"
+aws_secret_key = "your/secret/key"
+
+{% endhighlight %}
+
+Need a secret key and key?
+Make a new account in Amazon for your Terraform user
+
+Make a public key for your Terraform state by following Github's [RSA creation
+guide](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
+
+Set your public key path in your variables file. It should be something like the
+above.
+
+Run `terraform plan`.
+
+{% highlight bash %}
+
+$ terraform plan -out initial
+
+Refreshing Terraform state prior to plan...
+
+
+The Terraform execution plan has been generated and is shown below.
+Resources are shown in alphabetical order for quick scanning. Green resources
+will be created (or destroyed and then created if an existing resource
+exists), yellow resources are being changed in-place, and red resources
+will be destroyed.
+
+Your plan was also saved to the path below. Call the "apply" subcommand
+with this plan file and Terraform will exactly execute this execution
+plan.
+
+Path: initial
+
++ aws_instance.hello_world
+    ami:                      "" => "ami-fce3c696"
+    availability_zone:        "" => "<computed>"
+    ebs_block_device.#:       "" => "<computed>"
+    ephemeral_block_device.#: "" => "<computed>"
+    instance_state:           "" => "<computed>"
+    instance_type:            "" => "t2.micro"
+    key_name:                 "" => "<computed>"
+    placement_group:          "" => "<computed>"
+    private_dns:              "" => "<computed>"
+    private_ip:               "" => "<computed>"
+    public_dns:               "" => "<computed>"
+    public_ip:                "" => "<computed>"
+    root_block_device.#:      "" => "<computed>"
+    security_groups.#:        "" => "<computed>"
+    source_dest_check:        "" => "1"
+    subnet_id:                "" => "<computed>"
+    tenancy:                  "" => "<computed>"
+    vpc_security_group_ids.#: "" => "<computed>"
+
++ aws_key_pair.hello_world
+    fingerprint: "" => "<computed>"
+    key_name:    "" => "hello_world"
+    public_key:  "" => "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDICLUGBvrrYfuNCOGNSXUapZXH26sZMVGZq/MlaiYBEWebAGY/ilf/GjppkEn+Jsy7NZPHUe/Hzzhrh8D8RX2wu8nV7iZD1TDsIeyjvDTNsZI3/eBUAclOaqb6hQ/u66PLreDIiiAqTrXBOiFls7cWCP37MkEIJWjkqyO/hPiWlzn9gBUsDjWqgjtP8fEmf9WqtYzum38f9X+vOSEQQFNj1zIitToUyXywbTuK7CLbVlD+dQ79/xifG5odwg1usiMRku8lQzkvzkeMQkPnXDEyZU11np8BL8zeVUt4IFVNKvwA2Y9JlbXVQ4wLj8NSek5mMHNbjkmTnjROY1SM44x/Tejvpts9uV9xJrK27YNrUWMR+20DmzVDrUF3fTlM97PbKHsEKBef+Mf/jqsI/5PFzgNMNYRjJgLHtVe5aeSLHWxPAryy7S4tf7VeVrzjWN3vBTwHhHJh0BCDTdWG8U3nF0wPx6jbWxONvK5GVDB9NonsC2/KrI3F9/+h7BQoiPE9wpY5hyml0NkbJ7vfTC8iqWen+ncPeBpfgNX/UM1MAQD3/6aUq28JqH23lBJytdgVPQMHQMXGM7axeg5vmu+hvZrkCaZkOGRilrsSApWagbmncktazTgq0lPonQJ8j6YuNV49RsfWHbF17UNw6zLj+PzGRv9u3ypLjx4BDiep8w== kevinlondon@gmail.com"
+
++ aws_security_group.web
+    description:                          "" => "Allow HTTP connections."
+    egress.#:                             "" => "<computed>"
+    ingress.#:                            "" => "1"
+    ingress.1145654509.cidr_blocks.#:     "" => "0"
+    ingress.1145654509.from_port:         "" => "80"
+    ingress.1145654509.protocol:          "" => "tcp"
+    ingress.1145654509.security_groups.#: "" => "0"
+    ingress.1145654509.self:              "" => "0"
+    ingress.1145654509.to_port:           "" => "80"
+    name:                                 "" => "web"
+    owner_id:                             "" => "<computed>"
+    vpc_id:                               "" => "<computed>"
+
+{% endhighlight bash %}
+
+And, now that we've generated a plan, we can apply it with `terraform apply
+initial`.
+
+Terraform output setup. outputs.tf
+
+{% highlight bash %}
+
+output "ip" {
+    value = "${aws_instance.hello_world.public_ip}"
+}
+
+{% endhighlight %}
+
+Run a `terraform plan; terraform output` and grab your ip. Now, modify your
+Ansible inventory file to include the new ip.
+
+
+Provisioning Our Server
+=======================
+
+Okay, now that that's done, we can modify our settings just a little bit for
+Ansible and be done!
+
+Modify your config to look like this: (include the new ssh path)
+
+then run `ansible-playbook -v site.yml`.
+
+At the end, you should be able to go to your site's IP.
+
+
+"This is dumb why do I have to do all of this"
+
+This is more about an investment in your future of devops.
+
+
+
 Setup Terraform to do the same thing as you just did
 Terraform some infrastructure
 Apply your Ansible stuff to AWS
