@@ -753,7 +753,13 @@ resource "aws_instance" "hello_world" {
 
 resource "aws_security_group" "web" {
     name = "web"
-    description = "Allow HTTP connections."
+    description = "Allow HTTP and SSH connections."
+
+    ingress {
+        from_port = 22
+        to_port = 22
+        protocol = "tcp"
+    }
 
     ingress {
         from_port = 80
@@ -811,6 +817,8 @@ Run `terraform plan`.
 {% highlight bash %}
 
 $ terraform plan -out initial
+
+# TODO: Gather new output on second pass
 
 Refreshing Terraform state prior to plan...
 
@@ -893,28 +901,24 @@ Ansible and be done!
 
 Modify your config to look like this: (include the new ssh path)
 
-then run `ansible-playbook -v site.yml`.
+then run `ansible-playbook -v site.yml`. Type `yes` at the prompt to confirm
+that you'd like to accept the SSH connection to this host.
 
 At the end, you should be able to go to your site's IP.
 
 
 "This is dumb why do I have to do all of this"
 
-This is more about an investment in your future of devops.
+This is more about an investment in your future.
 
 
+And it's up! Hooray!
 
-Setup Terraform to do the same thing as you just did
-Terraform some infrastructure
-Apply your Ansible stuff to AWS
-Victory!
-
-Bonus Section:
-Deploys
 
 Next Steps:
 -----------
 
+* dynamic inventory
 * Jenkins for CI / CD?
 * Immutable infrastructure?
 * Deploys?
