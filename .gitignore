@@ -38,3 +38,5 @@ build/
 *.un~
 *.swp
 *.swo
+
+.DS_Store
