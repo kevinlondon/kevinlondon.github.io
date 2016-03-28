@@ -32,8 +32,7 @@ the way, we'll talk about a few other tools as well for deploying our
 application, such as uwsgi.
 
 
-The Goal
-========
+## The Goal
 
 We're a startup and we have a small proof-of-concept application that we want to
 deploy on some new servers. In this case, our application is a Python-based
@@ -47,8 +46,7 @@ We simply cannot cover everything. We'll do our best.
 Start manually, then automate.
 Alternatively, just automate from the beginning.
 
-Local Development
-=================
+## Local Development
 
 Let's start a Flask application. If you already have one, feel free to use it.
 Otherwise we're going to assume that you're working from a basic Flask
@@ -76,7 +74,7 @@ directory to install the requirements.
 After you've installed them, run `python app.py` from your Terminal. When you go
 to `http://localhost:5000`, you should see our "Hello World!" page, as below.
 
-![Hello World!](/assets/localhost_helloworld.png)
+![Hello World!](/assets/devops_from_scratch/localhost_helloworld.png)
 
 Nice! In our case, that's all the more we'll do with setting up the Python
 application.
@@ -90,8 +88,7 @@ Up next, we want to move our development into a virtual machine with Vagrant.
 
 We want to deploy it though, right? So let's move toward that.
 
-Running Our App with Vagrant
-============================
+## Running Our App with Vagrant
 
 Install Vagrant
 `vagrant init`
@@ -118,8 +115,7 @@ Now, before we continue, we should start automating these bits so we can track
 them over time.
 
 
-Our First Ansible Playbook
-==========================
+## Our First Ansible Playbook
 
 Let's install Ansible.
 
@@ -157,8 +153,7 @@ python app.py
 We're going to assume that the rest of what you're doing here will be run within
 the Vagrnat box unless otherwise specified.
 
-Setting up gunicorn
-===================
+## Enter Gunicorn
 
 Now that we have a decent base, we can start building up our application on top
 of it. One of the things we'll need is a webserver to serve requests. Serving
@@ -187,8 +182,7 @@ traditional way that Python webapps are served.
 This is the simplest way to serve our application for now.
 
 
-Upstart for Gunicorn
-====================
+## Automating the Gunicorn service
 
 Now that we have gunicorn roughly configured (it's not perfect yet of course!),
 we'll want to set up a script so that we can run our server automatically
@@ -227,8 +221,7 @@ Great, now that we have that set up, let's automate that process! Editing files
 on a server is a sure way to forget something long-term.
 
 
-Automating Upstart
-==================
+## Automating the automation with Ansible
 
 Let's go back and modify our original Ansible provisioning file. We have this
 file that we want to setup, so that's good. We could directly copy the file we
@@ -303,8 +296,7 @@ move on to the next step! By the way, you're doing great if you're still with
 us.
 
 
-Setting up a basic nginx server
-===============================
+## A basic nginx site
 
 Now that we have gunicorn configured, we need an HTTP server to handle the
 requests themselves and make sure we route our users to the right application.
@@ -410,6 +402,8 @@ $ sudo service nginx restart
 
 {% endhighlight %}
 
+## Troubleshooting our site
+
 Hm... ok. So there's some problem. Well, we defined the path for our error log
 in the above nginx configuration file to be at `/tmp/nginx.error.log`, so let's
 look at that file.
@@ -446,8 +440,7 @@ at `http://192.168.33.10`. Cool right? It's coming along!
 As before, the next step will be to automate this.
 
 
-Automating nginx
-================
+## Automating nginx
 
 This is actually quite simple to add to our Ansible setup.
 Create another file in the same directory as `site.yml` named `nginx.conf.j2`
@@ -513,12 +506,11 @@ You should not have to SSH at any time, you should just be able to go to your
 browser at `http://192.168.33.10` when it's done and see our 'Hello World' example!
 
 
-Setting up Amazon EC2
-=======================
+## Cloud Deploy Preparation with Amazon
 
 The next step for us with our tiny app is actually to deploy it into the wild!
-We're going to deploy to Amazon's EC2 service. Other options include Digital Ocean,
-Linode, Heroku, etc.
+We're going to deploy to Amazon's EC2 service. Other options include Digital
+Ocean, Linode, Heroku, etc.
 
 Sign up for an Amazon account if you don't have one yet. Our work here should be
 eligible under the free tier if you've never done something with Amazon. Even if
@@ -529,32 +521,58 @@ https://aws.amazon.com/console/
 
 Now, sign into your Amazon console. You should see something like this:
 
-(amazon console)
+![Amazon Console](/assets/devops_from_scratch/amazon_console_01a_services.png)
 
-Make sure the dropdown in the top right says "N. Virginia".
+Make sure the dropdown in the top right says "N. Virginia". If not, select it
+and switch to N. Virginia (a.k.a. US-East-1 in Amazon parlance).
 
-Let's create a new Cloud server, hereby referred to as an instance.
+Let's create a new Cloud server. Amazon generally refers to individual servers
+as instances, so we'll use that terminology too.
 
 Select "EC2" from the list of services.
 
-Click "Launch Instance". Select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-fce3c696".
 
+![EC2 Menu](/assets/devops_from_scratch/amazon_console_01b_launch.png)
+
+In the EC2 menu, click "Launch Instance".
+
+![Instance Type](/assets/devops_from_scratch/amazon_console_02_provision.png)
+
+Select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-fce3c696".
+
+![Server Type](/assets/devops_from_scratch/amazon_console_03_instance_type.png)
+
+Choose "t2.micro", which is a small, free tier-eligible instance type.
 Click "Review and Launch".
 
-There's some warnings here. They're valid, but we're
-going to ignore them for now. Click "Launch"
+There's some warnings on the next screen. They're valid, but we're
+going to ignore them for now.
+
+![Pre-launch](/assets/devops_from_scratch/amazon_console_04_launch_instance.png)
+
+Click "Launch".
+
+![Key Pair](/assets/devops_from_scratch/amazon_console_06_download_pair.png)
 
 In the next screen, select "Create a new key pair". Name it 'flask-hello-world'
 and click "Download Key Pair". Then click "Launch Instances".
 
+Congratulations! We've launched our first instance.
+
+![Launched!](/assets/devops_from_scratch/amazon_console_07_post_launch.png)
+
 Click "View Instances".
+
 
 You should return to the main Instances page and see your instance launching.
 Nice!
 
+![Our Running
+Instance](/assets/devops_from_scratch/amazon_console_08_our_instance.png)
+
 Let's quickly ssh into your box using the private key that we generated
 just to make sure everything is working. You can get the public IP address on
-the instance page.
+the instance page on the bottom right.
 
 In your terminal:
 
@@ -581,21 +599,19 @@ Permission denied (publickey).
 
 {% endhighlight %}
 
-Well... oops. Okay let's change the permissions on it. Run `chmod 400
-<your-key-path>/flask-hello-world.pem`. That'll change the file so that only our
+Well... oops. Okay let's change the permissions on it. Run
+`chmod 400 <your-key-path>/flask-hello-world.pem`. That'll change the file so that only our
 user can read it. Retry your ssh connection after you've done it. Once you're
 sure you can log in, that will be the last time we SSH manually into our
 instance.
 
 
-Ansible x EC2 Setup
-===================
+## Ansible x Amazon EC2 Setup
 
 Now that we have a box up, let's configure Ansible to provision it.
 
 Let's first make sure Ansible can ping your host and use SSH to log in to it.
-Before we can begin, we need to set up the
-[inventory](http://docs.ansible.com/ansible/intro_inventory.html) file so
+Before we can begin, we need to set up the [inventory](http://docs.ansible.com/ansible/intro_inventory.html) file so
 Ansible knows about our server.
 
 Create a file called `hosts` in your Ansible directory. It'll be quite short for
@@ -647,8 +663,7 @@ Now, we should be able to run `ansible ping -m all` or `ansible ping -m
 webservers` without any arguments. Give it a try!
 
 
-Deploying to AWS with Ansible
-=============================
+## Deploying to AWS with Ansible
 
 With all that footwork out of the way, deploying is actually very simple.
 Run `ansible-playbook -v site.yml`.
@@ -675,21 +690,27 @@ It's not loading. Oh, right, remember those warnings that Amazon gave us about
 the security groups when we launched the instance? Yep. Now we have to take care
 of that.
 
-Setting up AWS Security Groups for your Instance
-=================================================
+## AWS Security Groups for your Instance
 
+![Security
+Groups](/assets/devops_from_scratch/amazon_console_09_security_groups.png)
 Click "Security Groups".
 
 Click "Create Security Group" button along the top.
 
+![Web Security Group](/assets/devops_from_scratch/amazon_console_10_security_group_settings.png)
 Add a new security group named `web`. Click "Add Rule". For the first, select
 `HTTP`. For the second, select `HTTPS`. That will allow web traffic to travel
 through to your instance.
 Click "Create".
 
+![Associate the SG](/assets/devops_from_scratch/amazon_console_11_attach.png)
+
 Now we have to associate it with our instance.  Click the "Actions" dropdown and
-select "Networking" - "Change Security Groups".  Select the new group in
-addition to the previous one.
+select "Networking" - "Change Security Groups".
+
+![Change the Security Groups](/assets/devops_from_scratch/amazon_console_12_select_sg.png)
+Select the new group in addition to the previous one.
 
 After you've associated the group, you should actually be able to visit your
 instance. Go to `http://<your-server-ip>`.
@@ -705,13 +726,16 @@ We won't need the original instance anymore, we can destroy it. Select EC2
 instances again, right click your instance, and select Instance State ->
 Terminate.
 
+![Terminate!](/assets/devops_from_scratch/amazon_console_13_terminate.png)
+
 We should also destroy the security group we created for it. Go into Security
 Groups, select Web, then select Actions -> Delete Security Group.
 
+![Delete Security Group](/assets/devops_from_scratch/amazon_console_15_delete_sg.png)
+
 Ok, all set! No more clicking around in the AWS console for us.
 
-Automating AWS Instance with Terraform
-======================================
+## Automating AWS Instance with Terraform
 
 Graphic
 
@@ -804,13 +828,20 @@ aws_secret_key = "your/secret/key"
 {% endhighlight %}
 
 Need a secret key and key?
-Make a new account in Amazon for your Terraform user
+
+![Create Terraform user](/assets/devops_from_scratch/amazon_console_14a_user_create.png)
+Make a new account in Amazon for your Terraform user.
 
 Make a public key for your Terraform state by following Github's [RSA creation
 guide](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
 Set your public key path in your variables file. It should be something like the
 above.
+
+We'll also need to setup our permissions for the new user. In the IAM screen,
+select "Attach Policy" and choose "Administrator".
+
+![IAM Policy Attach](/assets/devops_from_scratch/amazon_console_14b_iam.png)
 
 Run `terraform plan`.
 
@@ -874,7 +905,7 @@ Path: initial
     owner_id:                             "" => "<computed>"
     vpc_id:                               "" => "<computed>"
 
-{% endhighlight bash %}
+{% endhighlight %}
 
 And, now that we've generated a plan, we can apply it with `terraform apply
 initial`.
@@ -893,8 +924,8 @@ Run a `terraform plan; terraform output` and grab your ip. Now, modify your
 Ansible inventory file to include the new ip.
 
 
-Provisioning Our Server
-=======================
+## Provisioning Our Server
+
 
 Okay, now that that's done, we can modify our settings just a little bit for
 Ansible and be done!
@@ -915,8 +946,7 @@ This is more about an investment in your future.
 And it's up! Hooray!
 
 
-Next Steps:
------------
+## Next Steps
 
 * dynamic inventory
 * Jenkins for CI / CD?
