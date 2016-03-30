@@ -5,66 +5,83 @@ date:  2016-02-24 21:09:00
 ---
 
 Let's say you're at a startup and everything is going great. Your app is
-growing, users are happy, money is coming in when, all of a sudden, your ops guy
-quits.
+growing, users are happy, money is coming in.
 
-What happens as you start to scale
-up? What's your plan for building out your infrastructure? Does it involve
-manually clicking around to setup new servers? What happens when you need to add
-5 servers at 3 AM because some story broke in Europe and your site is buckling
-under the load? What happens if half of your application servers are deleted by
-a well meaning but over-permissioned intern?
+What happens if some story about your app breaks on TechCrunch and you need to
+scale up at 3 AM to prevent your site from crashing?
+What if someone accidentally deletes a few of your application servers?
+Would it be easy to replace them?
 
-Think about how nice it would be if we could scale up the number of servers we
-have, deploy new application code to it, and add them into our load balancer
-with a few small code changes. We'd get the opportunity to look like a hero
-while saving ourselves work in the long term. If something goes wrong with an
-infrastructure change, we could refer back to our version controlled code and
-roll it back easily and quickly. Doesn't that sound great?
+If you handle infrastructure manually, these scenarios can sound spooky.
+It can be hard to make sure you've captured everything about your
+servers when they've been set up manually.
 
-We can solve most of these problems by automating our infrastructure. But how do
-you start? There's so many tools out there, how do we know which ones to pick?
-And how do we get to a working site at the end?
+How great would it be if we could automate our infrastructure and make adding new
+servers simple and easy?
 
-We'll walk through automating infrastructure and deploying an application to
-Amazon using modern DevOps tools such as Ansible, Terraform, and Vagrant. Along
-the way, we'll talk about a few other tools as well for deploying our
-application, such as uwsgi.
+But where do you start? There's so many DevOps tools, it can be overwhelming to
+pick when you're starting from scratch.
+
+In this tutorial, we'll walk create and deploy a Python web
+application to Amazon. We'll use some DevOps tools such as Ansible,
+Terraform, and Vagrant and talk about other services that support our
+application, such as Flask and gunicorn.
+
+Let's get started!
 
 
-## The Goal
+## Overview
 
-We're a startup and we have a small proof-of-concept application that we want to
-deploy on some new servers. In this case, our application is a Python-based
-Flask app. For the most part, any other framework or thing could get slotted in
-here too. We're going to deploy with Git for now.
+At the end, we'd like a tiny application that we can automatically provision
+and deploy.
 
-Our end goal is to have a site that we can access.
+We'll use the Python-based Flask framework for our web application because it's
+easy to pick up. We'll also say that we'd like to deploy new versions of our
+application with `Git`.
 
-We simply cannot cover everything. We'll do our best.
+Neither of these may be exactly the way you'd choose to
+do it. That's okay! The goal of this tutorial is to reduce choice enough to
+get to an end goal. If there are things you'd like to change afterwards,
+awesome.
 
-Start manually, then automate.
-Alternatively, just automate from the beginning.
+We'll do each step manually and then automate the action we've just done. I find
+that doing something manually the first time helps me understand why we're doing
+it. Doing it twice will also help show why it's useful to automate it because of
+the time it saves.
+
+You could bypass this process by using something like
+[Heroku](https://www.heroku.com/) but it's helpful to understand how the app
+works under the hood and why it is constructed in the way that it is.
+
+Our general workflow will be as follows, we'll:
+
+1. Get the application running on our local machine
+2. Setup the application on a virtual machine with Vagrant
+3. Automate setting up the application in Vagrant with Ansible
+4. Manually set up our Amazon instance and deploy our application to it
+5. Automate the Amazon setup with Terraform
+6. Automatically provision our Amazon account with Terraform and deploy with
+   Ansible
 
 ## Local Development
 
-Let's start a Flask application. If you already have one, feel free to use it.
-Otherwise we're going to assume that you're working from a basic Flask
-application. We'll build everything as we go.
+Let's start a [Flask](http://flask.pocoo.org/) application. We're going to
+pretend that this tiny app is part of a much larger picture.
 
-To get started, we'll assume that you have Git already installed. You can run
-`git clone https://github.com/kevinlondon/flask-hello-world.git` to get a copy of
-the small project we'll be working with. It's directly from the [Flask
+To get started, we'll assume that you already have [Git](https://git-scm.com/)
+installed. You can run `git clone
+https://github.com/kevinlondon/flask-hello-world.git` to get a copy of the small
+project we'll be working with. It's from the [Flask
 quickstart](http://flask.pocoo.org/). They do an excellent job explaining what
 the code does as well.
 
 In order to run it, we'll first need a few packages. From your command line,
-run:
+within the directory of our `flask-hello-world` project, run:
 
 {% highlight bash %}
 
-easy_install pip
-pip install flask gunicorn
+$ easy_install pip
+$ pip install flask gunicorn
 
 {% endhighlight %}
 
@@ -76,31 +93,53 @@ to `http://localhost:5000`, you should see our "Hello World!" page, as below.
 
 ![Hello World!](/assets/devops_from_scratch/localhost_helloworld.png)
 
-Nice! In our case, that's all the more we'll do with setting up the Python
-application.
+Nice! That's about as complicated as the application itself will be.
 
 Let's say we want to make it so anyone can develop on our application. We could
 pass out the instructions we just gave (not too hard, right?). That works for
-a while. For our case, we're pretending this is an easier bit of a mucher larger
-project which might have many more steps.
+a while. We're pretending this is part of a larger project, which might have
+many more steps.
 
 Up next, we want to move our development into a virtual machine with Vagrant.
 
-We want to deploy it though, right? So let's move toward that.
-
 ## Running Our App with Vagrant
 
-Install Vagrant
-`vagrant init`
+Keeping all of our code on our local machine works fine for a while. There's two
+main challenges that you'll probably encounter:
 
-Change `config.vm.box` to `'ubuntu/trusty64'` to set our base box as one of the
-latest Ubuntu distributions. This might take a little while, depending on your
-connection speed.
+1. It's tough to wipe your local machine and get it into a blank state to
+   replicate what it's like to set up a new server.
+2. It's possible that your local machine is a different type of box than your
+   server. Perhaps you're working on a Mac but deploying to a Linux box, for
+   example. Even if you're running on a Linux box, maybe you're deploying to
+   a different OS version.
 
-* Uncomment the 'private_network' line and note the IP address (by default,
-    it's `192.168.33.10`
+We'll use [Vagrant](https://www.vagrantup.com/) as our development environment
+because it allows us to address both of those problems. We'll set up a virtual
+machine and run it there but still write code locally.
+
+To get started, we'll need to first [install
+Vagrant](https://www.vagrantup.com/docs/installation/).
+
+Once that's done, we should set up another folder for our DevOps stuff. In my
+case, I made a folder called `devops-from-scratch` and worked in there. I'll
+refer to this folder as `devops-from-scratch` from now on, but feel free to use
+whatever you'd like.
+
+From within your `devops-from-scratch` folder, run `vagrant init` in your
+Terminal. This sets up a basic Vagrant configuration file that we can modify to
+suit our needs.
+
+Here's what we should change in our file:
+
+1. Change the `config.vm.box` to `ubuntu/trusty64`. That sets our Virtual
+   Machine to use one of the latest Ubuntu distributions.
+2. Uncomment the line that has `private_network` in it and note the IP address.
+   (By default, it's `192.168.33.10`).
 
 `vagrant up`
+This might take a little while, depending on your connection speed.
+
 `vagrant ssh`
 
 `sudo apt-get install git python-pip`
