@@ -107,12 +107,13 @@ Up next, we want to move our development into a virtual machine with Vagrant.
 Keeping all of our code on our local machine works fine for a while. There's two
 main challenges that you'll probably encounter:
 
-1. It's tough to wipe your local machine and get it into a blank state to
-   replicate what it's like to set up a new server.
+1. We'll need to replicate what it's like to set up a new server. If you're
+   using your local machine, it's tough to get it to act like a fresh machine.
 2. It's possible that your local machine is a different type of box than your
    server. Perhaps you're working on a Mac but deploying to a Linux box, for
    example. Even if you're running on a Linux box, maybe you're deploying to
-   a different OS version.
+   a different version of the operating system or a different operating system
+   all together.
 
 We'll use [Vagrant](https://www.vagrantup.com/) as our development environment
 because it allows us to address both of those problems. We'll set up a virtual
@@ -132,33 +133,63 @@ suit our needs.
 
 Here's what we should change in our file:
 
-1. Change the `config.vm.box` to `ubuntu/trusty64`. That sets our Virtual
+1. Change the `config.vm.box` value to `ubuntu/trusty64`. That sets our Virtual
    Machine to use one of the latest Ubuntu distributions.
 2. Uncomment the line that has `private_network` in it and note the IP address.
    (By default, it's `192.168.33.10`).
 
-`vagrant up`
-This might take a little while, depending on your connection speed.
 
-`vagrant ssh`
+Next, in your terminal, run `vagrant up`. It will download the Ubuntu image that
+we specified as the `config.vm.box` value and create your server as a virtual
+machine. This might take a little while, depending on your connection speed.
 
-`sudo apt-get install git python-pip`
-`git clone https://github.com/kevinlondon/flask-hello-world.git`
-`cd flask-hello-world`
-`sudo pip install -r requirements.txt`
-`python app.py`
+Once it completes, run `vagrant ssh`. It will put us into the command line of
+our virtual machine (from here, referred to as a VM).
 
-Go to your browser, should see it on `192.168.33.10:5000`!
+In your VM's Terminal, run the following:
 
-Now, before we continue, we should start automating these bits so we can track
-them over time.
+{% highlight bash linenos %}
+
+sudo apt-get install git python-pip
+git clone https://github.com/kevinlondon/flask-hello-world.git
+cd flask-hello-world
+sudo pip install -r requirements.txt
+python app.py
+
+{% endhighlight %}
+
+This is pretty much the same set of steps that we had followed above when we
+manually set up our environment.
+
+Let's go through each line briefly as a refresher.
+
+1. Using our operating system's package manager, install `git` and `python-pip`.
+   We're going to use git to pull down our small sample project and `python-pip`
+   to install requirements for our project.
+2. Create a local copy of the application.
+3. Change into the cloned application's directory.
+4. Install the Python package requirements for the project from the
+   `requirements.txt` file in the project's directory.
+5. Run the application.
+
+When it's done, go to your browser and type `192.168.33.10:5000` in the location
+bar. You should see the app!
+
+We've done these steps twice now, so that's a good sign that we should think
+about automating them so that we can build out a foundation over time.
+Let's start automating what we have so far before continuing.
 
 
 ## Our First Ansible Playbook
 
-Let's install Ansible.
+To automate the steps we followed above, we will use
+[Ansible](https://www.ansible.com/). Essentially, it will remotely log in to
+servers that you specify using `ssh` and run commands on them.
 
-`pip install ansible`
+To begin, let's first install Ansible. On your host machine (not the vm), run
+`pip install ansible`.
+
+We're going to start off by automating the steps that we followed before.
 
 Make the first playbook.
 
