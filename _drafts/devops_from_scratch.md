@@ -131,13 +131,16 @@ From within your `devops-from-scratch` folder, run `vagrant init` in your
 Terminal. This sets up a basic Vagrant configuration file that we can modify to
 suit our needs.
 
-Here's what we should change in our file:
+Here's what we should change in our `Vagrantfile`:
 
 1. Change the `config.vm.box` value to `ubuntu/trusty64`. That sets our Virtual
    Machine to use one of the latest Ubuntu distributions.
 2. Uncomment the line that has `private_network` in it and note the IP address.
    (By default, it's `192.168.33.10`).
 
+With those modifications, it should look like this:
+
+<script src="https://gist.github.com/kevinlondon/331321615b550fb03e2141db64510210.js"></script>
 
 Next, in your terminal, run `vagrant up`. It will download the Ubuntu image that
 we specified as the `config.vm.box` value and create your server as a virtual
@@ -189,13 +192,31 @@ servers that you specify using `ssh` and run commands on them.
 To begin, let's first install Ansible. On your host machine (not the vm), run
 `pip install ansible`.
 
-We're going to start off by automating the steps that we followed before.
+Let's create a file called `site.yml` in the same folder as your `Vagrantfile`.
+This will be our Ansible
+[playbook](http://docs.ansible.com/ansible/playbooks.html), and it will contain
+our automation steps. `site` implies that this is the only file needed to get
+a successful version of our site up and running. The `.yml` extension tells us
+that it's a [YAML](http://www.yaml.org/start.html)-formatted file (Ansible's
+preference).
 
-Make the first playbook.
+<script src="https://gist.github.com/kevinlondon/01a45e1f5ddd398fe8b10f2f919a45dd.js"></script>
 
-https://raw.githubusercontent.com/kevinlondon/devops-from-scratch/cd497a8cab16f16531431639dcb32fa9a5b8b309/site.yml
+Let's review what we're doing here, line by line.
 
-Explain why the pieces are in the playbook.
+* 1: Give a human readable name to the overall step. This shows up in the terminal
+    when we run it.
+* 2: Apply this playbook to all hosts that we know about.
+* 3-4: Run these commands as the superuser.
+* 5-7: Define some variables to use for the rest of the playbook. Ansible uses
+    a template engine called [Jinja2](http://jinja.pocoo.org/docs/dev/), so we can
+    use these later to prevent repeating ourselves.
+* 8: The `tasks` directive is the meat of what we're actually doing.
+* 11: We're telling our package manager (`apt`) to install a set of packages. The
+    `item` variable (indicated by the braces in Jinja) will be replaced by each
+    of the items in the `with_items` block right below.
+* 18: Use git to clone our application to a directory of our choosing.
+* 21: Install the Python requirements from the `requirements.txt` file.
 
 Go into Vagrant file, add this line:
 
