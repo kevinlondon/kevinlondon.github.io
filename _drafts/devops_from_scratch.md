@@ -200,7 +200,8 @@ a successful version of our site up and running. The `.yml` extension tells us
 that it's a [YAML](http://www.yaml.org/start.html)-formatted file (Ansible's
 preference).
 
-<script src="https://gist.github.com/kevinlondon/01a45e1f5ddd398fe8b10f2f919a45dd.js"></script>
+<script
+src="https://gist.github.com/kevinlondon/01a45e1f5ddd398fe8b10f2f919a45dd/a79ba3b1b3ab8b80874a5a6979a74e178acc2f4c.js"></script>
 
 Let's review what we're doing here, line by line.
 
@@ -299,7 +300,7 @@ Upstart handles starting and stopping tasks, so it's a good fit for us.
 
 We're going to use a slightly modified script from the
 [gunicorn](http://docs.gunicorn.org/en/stable/deploy.html#upstart) examples.
-Create this file in `/etc/init/hello-world.conf`.
+Create this file in the VM in `/etc/init/hello-world.conf`.
 
 {% highlight bash %}
 
@@ -321,7 +322,7 @@ When you've created the file, you should be able to run `sudo service
 hello-world start` to start the task, go in your browser, and then view
 the service at `http://192.168.33.10:8000`, as before. The big difference is now
 we have something that will run it for us, so we don't need to SSH in to run
-our server. It's also on a more robust tool that we can trust.
+our server.
 
 Great, now that we have that set up, let's automate that process! Editing files
 on a server is a sure way to forget something long-term.
@@ -329,19 +330,16 @@ on a server is a sure way to forget something long-term.
 
 ## Automating the automation with Ansible
 
-Let's go back and modify our original Ansible provisioning file. We have this
-file that we want to setup, so that's good. We could directly copy the file we
-have above as-is into our Ansible directory and use it but we'd be missing out
-on some of the benefits of Ansible.
+Let's go back and modify our Ansible `site.yml` file. We want to copy the
+`hello-world.conf` file that we created above onto our servers. In order to do
+that, we need a local copy. We could copy the file directly from the VM into our
+`devops-from-scratch` directory, but we'd be missing out on some of the benefits
+of Ansible. Namely, that we could be using a variable instead of hard coding the
+path to our repository.
 
-Namely, in this case, it's using the file as
-a template. What if we have a different user than `vagrant`? Would we need
-a different file? Templating helps us avoid that fate.
-
-In the same directory (for now) as our `site.yml` file, create a new file:
+In the same directory as our `site.yml` file, create a new file:
 `hello-world.conf.j2`. The `.j2` extension implies that we're going to be using
-it as a [Jinja2](http://jinja.pocoo.org/) template. Jinja2 is a popular template
-engine and the one that Ansible has blessed for their use case.
+it as a [Jinja2](http://jinja.pocoo.org/) template.
 
 All that said, let's look at the new file we'll write:
 
@@ -365,20 +363,11 @@ Subtle difference, right? We're plugging in the same variable that we're using
 in our `site.yml` file into this one.
 
 Ok, now that we have this template file, we'll need to set up Ansible to copy it
-into the directory that we did.
+into the same directory as we used when doing it manually.
 
-Let's add a section to the bottom of our `site.yml` file.
+Let's add a section to the bottom of our `site.yml` file in the `tasks` section:
 
 {% highlight bash %}
-
-- name: Configure application
-  hosts: all
-  vars:
-      repository_url: https://github.com/kevinlondon/flask-hello-world.git
-      repository_path: /home/vagrant/flask-hello-world
-
-  tasks:
-    . . .
 
     - name: Copy Upstart configuration
       template: src=hello-world.conf.j2 dest=/etc/init/hello-world.conf
@@ -388,29 +377,31 @@ Let's add a section to the bottom of our `site.yml` file.
 
 {% endhighlight %}
 
+We're using Ansible's
+[template](http://docs.ansible.com/ansible/template_module.html) and
+[service](http://docs.ansible.com/ansible/service_module.html) modules to
+accomplish our task.
 
 What we're saying is that we want to copy the template file that we defined into
 the directory that we used before. It will use the variables we have defined in
-our file, inject them into the template, and write them to disc at the
+our file, inject them into the template, and write them to the
 destination path we have defined.
 
 Then, we want to make sure our service has started (just like before!). If it
 hasn't been started yet, start it.
 
 Run another `vagrant provision`, make sure everything's looking good, and we can
-move on to the next step! By the way, you're doing great if you're still with
-us.
+move on to the next step! You're doing great so far if everything is working.
 
 
 ## A basic nginx site
 
 Now that we have gunicorn configured, we need an HTTP server to handle the
 requests themselves and make sure we route our users to the right application.
-We'll use nginx to do this, though you could use any number of other
-alternatives too. I like nginx and I've worked with it the most.
+We'll use [nginx](https://www.nginx.com/) to do this, though you could use any
+number of other alternatives too. I like nginx and I've worked with it the most.
 
-Let's get started, shall we? As before, we'll do the steps manually and then
-automate the process.
+As before, we'll do the steps manually and then automate the process.
 
 To install the package, `vagrant ssh` into your box and run `sudo apt-get install nginx`.
 Confirm the prompt and let that package fly!
@@ -427,75 +418,15 @@ We're going to more or less copy the [stock nginx recommended
 file](http://docs.gunicorn.org/en/stable/deploy.html) for
 the sake of time. The goal of this configuration file is to make sure that we
 can access our server at the same host (`192.168.33.10`) but without needing to
-specify an HTTP port manually. Can you think of the last time you went to a site
+specify a port. Can you think of the last time you went to a site
 like ebay.com and put in a port? Exactly.
 
 We'll write our file to `/etc/nginx/nginx.conf` and it should
 look like this:
 
-{% highlight bash %}
+<script src="https://gist.github.com/kevinlondon/2f6ec12b196733c251dda6748bc562e5.js"></script>
 
-worker_processes 1;
-
-user nobody nogroup;
-# 'user nobody nobody;' for systems with 'nobody' as a group instead
-pid /tmp/nginx.pid;
-error_log /tmp/nginx.error.log;
-
-events {
-  worker_connections 1024; # increase if you have lots of clients
-  accept_mutex off; # set to 'on' if nginx worker_processes > 1
-  # 'use epoll;' to enable for Linux 2.6+
-  # 'use kqueue;' to enable for FreeBSD, OSX
-}
-
-http {
-  include mime.types;
-  # fallback in case we can't determine a type
-  default_type application/octet-stream;
-  access_log /tmp/nginx.access.log combined;
-  sendfile on;
-
-  upstream app_server {
-    # fail_timeout=0 means we always retry an upstream even if it failed
-    # to return a good HTTP response
-
-    # for UNIX domain socket setups
-    #server unix:/tmp/gunicorn.sock fail_timeout=0;
-
-    # for a TCP configuration
-    server 0.0.0.0:8000 fail_timeout=0;
-  }
-
-  server {
-    # use 'listen 80 deferred;' for Linux
-    # use 'listen 80 accept_filter=httpready;' for FreeBSD
-    listen 80 default;
-    client_max_body_size 4G;
-
-    keepalive_timeout 5;
-
-    location / {
-      # checks for static file, if not found proxy to app
-      try_files $uri @proxy_to_app;
-    }
-
-    location @proxy_to_app {
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      # enable this if and only if you use HTTPS
-      # proxy_set_header X-Forwarded-Proto https;
-      proxy_set_header Host $http_host;
-      # we don't want nginx trying to do something clever with
-      # redirects, we set the Host: header above already.
-      proxy_redirect off;
-      proxy_pass http://app_server;
-    }
-  }
-}
-
-{% endhighlight %}
-
-Our file tells nginx to look for our server at 0.0.0.0:8000 which, if our
+Our file tells nginx to look for our server a unix socket which, if our
 gunicorn server is running properly, should be accessible!
 
 At this point, if we do a `sudo service nginx restart`, we see this:
@@ -507,6 +438,10 @@ $ sudo service nginx restart
    ...fail!
 
 {% endhighlight %}
+
+
+<script src="https://gist.github.com/kevinlondon/db40d7867c613bd4b0565bfe4535fc80.js"></script>
+
 
 ## Troubleshooting our site
 
@@ -549,52 +484,27 @@ As before, the next step will be to automate this.
 ## Automating nginx
 
 This is actually quite simple to add to our Ansible setup.
-Create another file in the same directory as `site.yml` named `nginx.conf.j2`
+Create another file in the same directory as `site.yml` named `hello-world.nginx.j2`
 and copy the file that we defined above.
-
-This time, we won't use any template variables yet. It's easy to imagine where
-we might want some (error logs at `/tmp/nginx.error.log` are not the greatest),
-but we will leave that as a project for later.
 
 At the bottom of our `site.yml` file, we'll add this section:
 
-{% highlight bash linenos %}
+We're going to modify our `site.yml` file again to include the steps necessary
+to set up nginx.
 
-  tasks:
-    - name: Install packages
-      apt: update_cache=yes name={{ item }} state=present
-      with_items:
-        - git
-        - python-pip
-        - nginx
-    . . .
+When we're done, it should look like this:
 
-    - name: Copy nginx configuration
-      template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
-      notify:
-        - reload nginx
+<script src="https://gist.github.com/kevinlondon/01a45e1f5ddd398fe8b10f2f919a45dd/9e14c0d58d90eff576755209a7b58fcf3b5d1e67.js"></script>
 
-    - name: Remove default site
-      file: path=/etc/nginx/sites-enabled/default state=absent
-
-    - name: Make sure nginx is running
-      service: name=nginx state=started
-
-  handlers:
-    - name: reload nginx
-      service: name=nginx state=reloaded
-
-{% endhighlight %}
-
-Woah, what's a handler? What are we notifying? We're introducing a new Ansible
+In this update, we're introducing a new Ansible
 concept.  A
 [handler](http://docs.ansible.com/ansible/playbooks_intro.html#handlers-running-operations-on-change)
 is something that takes action at the end of your chain of events.  In this
 case, we're saying "If the nginx configuration changes, please notify nginx
-that it should reload itself." It won't run otherwise, because we don't need to
-restart nginx if everything's going great.
+that it should reload itself." Our handler won't restart otherwise, because we
+don't need to restart nginx if everything's going great.
 
-We also added a section in here to remove the default site. `state=absent`
+We also added a section in here to remove the default site if it exists. `state=absent`
 means that Ansible will make sure it's not there for us.
 
 Finally, note that we added nginx to the list of packages we need to install.
@@ -602,9 +512,11 @@ Finally, note that we added nginx to the list of packages we need to install.
 Let's run `vagrant provision` again, check out our server, and move on to the next
 thing!
 
-Wait, actually, what's the next step?
+...
+
+Wait, what's the next step?
 We have our app running with the web server and code, so that's all good.
-The next step, in our case, should be to do one final check and make sure
+The next step should be to do one final check and make sure
 we don't need any of the manual configuration we did along the way.
 
 One more time, let's run a `vagrant destroy`, `vagrant up` to make sure it all works.
