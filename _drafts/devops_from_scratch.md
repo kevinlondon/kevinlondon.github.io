@@ -527,17 +527,18 @@ browser at `http://192.168.33.10` when it's done and see our 'Hello World' examp
 ## Cloud Deploy Preparation with Amazon
 
 The next step for us with our tiny app is actually to deploy it into the wild!
-We're going to deploy to Amazon's EC2 service. Other options include Digital
-Ocean, Linode, Heroku, etc.
+We're going to deploy to [Amazon Web Service's](http://aws.amazon.com/)
+[EC2](https://aws.amazon.com/ec2/) service.
+Other options include Digital Ocean, Linode, Heroku, etc.
 
-Sign up for an Amazon account if you don't have one yet. Our work here should be
+Create an Amazon account, if you don't have one yet. Our work here should be
 eligible under the free tier if you've never done something with Amazon. Even if
 you have, it shouldn't cost much unless you forget and leave it running
 forever.
 
-https://aws.amazon.com/console/
 
-Now, sign into your Amazon console. You should see something like this:
+Now, sign into your Amazon [AWS console](http://aws.amazon.com/console). You
+should see something like this:
 
 ![Amazon Console](/assets/devops_from_scratch/amazon_console_01a_services.png)
 
@@ -556,7 +557,8 @@ In the EC2 menu, click "Launch Instance".
 
 ![Instance Type](/assets/devops_from_scratch/amazon_console_02_provision.png)
 
-Select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-fce3c696".
+Select "Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-fce3c696". We're
+using the same type of OS as we used for our VM.
 
 ![Server Type](/assets/devops_from_scratch/amazon_console_03_instance_type.png)
 
@@ -580,8 +582,6 @@ Congratulations! We've launched our first instance.
 ![Launched!](/assets/devops_from_scratch/amazon_console_07_post_launch.png)
 
 Click "View Instances".
-
-
 You should return to the main Instances page and see your instance launching.
 Nice!
 
@@ -659,7 +659,7 @@ $ `ansible -m ping webservers --private_key=~/Downloads/flask-hello-world.pem
 
 {% endhighlight %}
 
-It's quite similar to what we did for `ssh`ing into the box, and with good
+It's similar to what we did for `ssh`ing into the box, and with good
 reason. Ansible is entirely built upon SSH. That said, this is dumb right?
 I don't want to type all these command line arguments.
 
@@ -678,7 +678,7 @@ private_key_file = <your-key-path>/flask-hello-world.pem
 {% endhighlight %}
 
 Now, we should be able to run `ansible ping -m all` or `ansible ping -m
-webservers` without any arguments. Give it a try!
+webservers` without specifying the private key or user. Give it a try!
 
 
 ## Deploying to AWS with Ansible
@@ -733,8 +733,6 @@ Select the new group in addition to the previous one.
 After you've associated the group, you should actually be able to visit your
 instance. Go to `http://<your-server-ip>`.
 
-TODO: Revisit socket / nginx settings. Remake from scratch.
-
 Hooray! We have a server!
 
 Notice all those screenshots we need to accomplish this. Too much, right? Let's
@@ -755,12 +753,10 @@ Ok, all set! No more clicking around in the AWS console for us.
 
 ## Automating AWS Instance with Terraform
 
-Graphic
-
-Time for another tool! In this case, we'll use
+Time for add another tool to our toolkit! We'll use
 [Terraform](https://www.terraform.io/) to provision our
 infrastructure. Again, there are many options here - including CloudFormation
-and others, but we'll use Terraform.
+and others.
 
 Download and install Terraform from their `Downloads` page. If you use Mac OSX,
 you can do a `brew install terraform` if you have [homebrew](http://brew.sh/)
@@ -769,7 +765,6 @@ installed.
 Basically how Terraform works is that we'll define the different resources that
 we want to set up and then we'll use Terraform to plan out what our changes will
 do and, finally, apply the plan.
-
 
 In the same directory as we've been working, let's make a new folder for
 Terraform with `mkdir terraform`.
@@ -928,7 +923,9 @@ Path: initial
 And, now that we've generated a plan, we can apply it with `terraform apply
 initial`.
 
-Terraform output setup. outputs.tf
+Terraform output setup.
+
+outputs.tf
 
 {% highlight bash %}
 
