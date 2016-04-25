@@ -218,21 +218,33 @@ Let's review what we're doing here, line by line.
 * 18: Use git to clone our application to a directory of our choosing.
 * 21: Install the Python requirements from the `requirements.txt` file.
 
-Go into Vagrant file, add this line:
+Now that we have the playbook defined, we'll need to tell our VM to use it when
+setting itself up. In your `Vagrantfile`, uncomment the bottom-most section on
+provisioning and modify it to look like this:
 
-`thing`
+{% highlight bash %}
 
-Then, let's reprovision your host. `vagrant provision` should take care of it.
+  config.vm.provision 'ansible' do |ansible|
+    ansible.playbook = 'site.yml'
+    ansible.verbose = 'v'
+  end
 
-Just to show how confident we are, let's start it from scratch. Tearing things
-down and reprovisioning them is a good way to make sure your code is idempotent.
+{% endhighlight %}
 
-`vagrant destroy`. Enter 'y' at the prompt. After it's destroyed, type `vagrant
-up` to recreate the virtualmachine and to provision it in one go.
+We're telling Vagrant to use the `site.yml` file we created and to use
+verbose output. Then, let's reprovision your host. This will run all the
+commands we defined in the playbook on it.
+`vagrant provision` should take care of it.
 
+To prove that our automation works, let's redo our VM from scratch. Tearing things
+down and reprovisioning them is a good way to make sure your automation
+completes all of the necessary steps.
 
-When it comes back up, we should be able to `vagrant ssh` in and `cd` into our
-directory and run the server.
+To destroy your VM, run `vagrant destroy`. After it's destroyed, type `vagrant
+up` to recreate the VM and to provision it in one go.
+
+When it comes back up, we should be able to `vagrant ssh` into our VM and run the
+following to get our server up and going again:
 
 {% highlight bash %}
 
@@ -241,23 +253,26 @@ python app.py
 
 {% endhighlight %}
 
-We're going to assume that the rest of what you're doing here will be run within
-the Vagrnat box unless otherwise specified.
+Nice! I love automation.
 
 ## Enter Gunicorn
 
-Now that we have a decent base, we can start building up our application on top
-of it. One of the things we'll need is a webserver to serve requests. Serving
-requests through the application's debug server has poses serious security risks
+Now that we have a decent base, we can start polishing up our application.
+One of the things we'll need is a webserver to serve requests. Serving
+requests through the application's debug server poses serious security risks
 and it's not intended for anything like a production load.
 
-To serve our requests, we're going with gunicorn. Another popular option is
-uWSGI or gevent but, for the sake of constraining choice, we'll go with this
-one.
+To serve our requests, we're going with [gunicorn](http://gunicorn.org/).  Other
+popular options are [uWSGI](https://uwsgi-docs.readthedocs.org/en/latest/) or
+[gevent](http://www.gevent.org/) but, for the sake of constraining choice, we'll
+go with this one.
 
-We've already installed gunicorn in the earlier requirements doc.  If you're not
-working from the stock repo, add a line for `gunicorn` to your
-`requirements.txt` file.
+We're going to assume that the rest of what you're doing here will be run within
+the Vagrant box unless otherwise specified.
+
+We've already installed gunicorn in the earlier `requirements.txt` file.  If
+you're not working from the the same application repo, add a line for `gunicorn`
+to your `requirements.txt` file.
 
 After it's been installed, you should be able to run the following:
 
@@ -268,16 +283,16 @@ $ gunicorn --bind 0.0.0.0:8000 app:app
 {% endhighlight %}
 
 This will use gunicorn to serve your application through WSGI, which is the
-traditional way that Python webapps are served.
-
-This is the simplest way to serve our application for now.
-
+traditional way that Python webapps are served. It replaces our usual `python
+app.py` step. This is the simplest way to serve our application for now.
 
 ## Automating the Gunicorn service
 
 Now that we have gunicorn roughly configured (it's not perfect yet of course!),
 we'll want to set up a script so that we can run our server automatically
 when our server restarts or just kick the process if it's stuck.
+
+# TODO: we should use supervisord
 
 How we'll do that is with an [upstart](http://upstart.ubuntu.com/) script.
 Upstart handles starting and stopping tasks, so it's a good fit for us.
