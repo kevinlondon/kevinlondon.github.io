@@ -770,77 +770,48 @@ In the same directory as we've been working, let's make a new folder for
 Terraform with `mkdir terraform`.
 
 Then, cd into that directory and make a single new file called `main.tf`.
-`*.tf` extensions indicate that they're using the Terraform syntax.
+`*.tf` extensions indicate that they're using the Terraform syntax, which is
+similar to JSON.
 
 In that file, add the following:
 
-{% highlight bash %}
+<script src="https://gist.github.com/kevinlondon/efd46ec140786ecf3444d7daabfd5473.js"></script>
 
-provider "aws" {
-    access_key = "${var.aws_access_key}"
-    secret_key = "${var.aws_secret_key}"
-    region = "${var.aws_region}"
-}
+In the first provider block, we specify our credentials for AWS. The
+`${var.aws_secret_key}` value, for example, tells Terraform to look for
+a variable named `aws_secret_key` and plug the value in there. We'll define the
+variables in another file shortly.
 
-resource "aws_instance" "hello_world" {
-    ami = "ami-fce3c696"  # Ubuntu 14.04 for us-east-1
-    instance_type = "t2.micro"
-    vpc_security_group_ids = ["${aws_security_group.web.id}"]
-}
+For our instance, we set the Amazon AMI ID to match the one we
+selected through the GUI. An Amazon AMI is a machine image, more or less.
+We also set up its key and security groups to reference other resources.
+`"${aws_security_group.web.id}"` tells Terraform to look for another
+`aws_security_group` resource named `web` and plug in its `id`.
 
-resource "aws_security_group" "web" {
-    name = "web"
-    description = "Allow HTTP and SSH connections."
+Next, we set up the security group as we did in the GUI. We're letting in SSH
+control (port 22), HTTP (port 80), and nothing else. We're allowing all outbound
+traffic.
 
-    ingress {
-        from_port = 22
-        to_port = 22
-        protocol = "tcp"
-    }
+Finally, we create a new `aws_key_pair` to remotely ssh into our server, just as
+we did when setting it up manually.
 
-    ingress {
-        from_port = 80
-        to_port = 80
-        protocol = "tcp"
-    }
-}
+Now, we had defined a few variables in our `main.tf` file, and we need to
+provide the values for those to Terraform. Let's make a new file called
+`variables.tf`. It should look like this:
 
-resource "aws_key_pair" "hello_world" {
-    key_name = "hello_world"
-    public_key = "${file(var.public_key_path)}"
-}
+<script src="https://gist.github.com/kevinlondon/d792b2e3b5e36508869e5b9e218d3c3b.js"></script>
 
-{% endhighlight %}
+Finally, we'll need one more file, which we'll want to be sure we don't include
+in version control for our folder. This file will be `terraform.tfvars`, which,
+by convention, contains secret keys and such.
 
-`variables.tf`
+<script src="https://gist.github.com/kevinlondon/edf4c7a3d479fd59850621595c0b0882.js"></script>
 
-{% highlight bash %}
+Where do we get an `aws_access_key` and `aws_secret_key`? We should make a new
+user in Amazon's console for our Terraform use. This way, if something goes
+wrong with it or the key is exposed, we can replace the key for just this user.
 
-# These variables come from the terraform.tfvars file
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
-
-variable "aws_region" {
-    description = "AWS region in which to launch the servers."
-    default = "us-east-1"
-}
-
-variable "public_key_path" {
-    default = "~/.ssh/id_rsa.pub"
-}
-
-{% endhighlight %}
-
-`terraform.tfvars`
-
-{% highlight bash %}
-
-aws_access_key = "your-key"
-aws_secret_key = "your/secret/key"
-
-{% endhighlight %}
-
-Need a secret key and key?
+Go back to the Amazon AWS Console.
 
 ![Create Terraform user](/assets/devops_from_scratch/amazon_console_14a_user_create.png)
 Make a new account in Amazon for your Terraform user.
