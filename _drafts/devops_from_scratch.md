@@ -795,43 +795,54 @@ traffic.
 Finally, we create a new `aws_key_pair` to remotely ssh into our server, just as
 we did when setting it up manually.
 
-Now, we had defined a few variables in our `main.tf` file, and we need to
-provide the values for those to Terraform. Let's make a new file called
-`variables.tf`. It should look like this:
+Now, we had defined a few
+[variables](https://www.terraform.io/intro/getting-started/variables.html) in
+our `main.tf` file, and we need to provide the values for those to Terraform.
+Let's make a new file called `variables.tf`. It should look like this:
 
 <script src="https://gist.github.com/kevinlondon/d792b2e3b5e36508869e5b9e218d3c3b.js"></script>
 
+One of the variables we've defined, `public_key_path`, expects the public part
+of an SSH key to be available at `~/.ssh/id_rsa.pub`. If you don't already have
+a private key, I'd recommend following [Github's guide](https://www.terraform.io/intro/getting-started/variables.html) and make one in that above path.
+
 Finally, we'll need one more file, which we'll want to be sure we don't include
-in version control for our folder. This file will be `terraform.tfvars`, which,
+in version control. This file will be `terraform.tfvars`, which,
 by convention, contains secret keys and such.
 
 <script src="https://gist.github.com/kevinlondon/edf4c7a3d479fd59850621595c0b0882.js"></script>
 
-Where do we get an `aws_access_key` and `aws_secret_key`? We should make a new
-user in Amazon's console for our Terraform use. This way, if something goes
+Where do we get an `aws_access_key` and `aws_secret_key`? We can grab them from
+the Amazon web console. We should make a new
+user in Amazon's console for Terraform. This way, if something goes
 wrong with it or the key is exposed, we can replace the key for just this user.
 
-Go back to the Amazon AWS Console.
+Go back to the Amazon AWS Console. Select the "Identity & Access Management" section
+from the main AWS console screen. In the left navigation bar, select "Users".
 
 ![Create Terraform user](/assets/devops_from_scratch/amazon_console_14a_user_create.png)
-Make a new account in Amazon for your Terraform user.
 
-Make a public key for your Terraform state by following Github's [RSA creation
-guide](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
+Make a new account in Amazon for your Terraform user by clicking the "Create New
+Users" button and following the prompts.
 
-Set your public key path in your variables file. It should be something like the
-above.
-
-We'll also need to setup our permissions for the new user. In the IAM screen,
-select "Attach Policy" and choose "Administrator".
-
+We also need to setup our permissions for the new user.
 ![IAM Policy Attach](/assets/devops_from_scratch/amazon_console_14b_iam.png)
 
-Run `terraform plan`.
+Select the "Permissions" tab, click "Attach Policy" and choose "Administrator" from the dropdown menu. Save your changes.
+
+Finally, to get our keys, go to the "Security Credentials" tab next to the
+"Permissions" tab. Click "Create Access Key". Toggle the dropdown and copy the
+values from here into your `terraform.tfvars` file from earlier.
+
+Great! That's all the more setup we should need to do. Now that we have our ssh
+key and the keys we need for AWS, we should be good to go!
+
+To preview the changes we'd make, run `terraform plan`. You should see something
+like this:
 
 {% highlight bash %}
 
-$ terraform plan -out initial
+$ terraform plan
 
 # TODO: Gather new output on second pass
 
@@ -847,8 +858,6 @@ will be destroyed.
 Your plan was also saved to the path below. Call the "apply" subcommand
 with this plan file and Terraform will exactly execute this execution
 plan.
-
-Path: initial
 
 + aws_instance.hello_world
     ami:                      "" => "ami-fce3c696"
@@ -891,27 +900,29 @@ Path: initial
 
 {% endhighlight %}
 
-And, now that we've generated a plan, we can apply it with `terraform apply
-initial`.
+Once we're satisfied with our plan, we can apply it by running `terraform
+apply`. Go ahead and do that now.
 
-Terraform output setup.
 
-outputs.tf
+## Getting Our Instance's IP Address
 
-{% highlight bash %}
+Awesome! Our server is up. Now we need to set it up using Ansible but, in order
+to do that, we need to know its ip address. What is its IP? We could find out
+via the console, but that kind of stinks.
 
-output "ip" {
-    value = "${aws_instance.hello_world.public_ip}"
-}
+Let's use another feature of Terraform: [output
+variables](https://www.terraform.io/intro/getting-started/outputs.html). We'll
+make one more file in our `terraform` directory: `output.tf`. It should look
+like this:
 
-{% endhighlight %}
+<script src="https://gist.github.com/kevinlondon/b2342f75c2564eedd74ad7caff26c26e.js"></script>
 
-Run a `terraform plan; terraform output` and grab your ip. Now, modify your
-Ansible inventory file to include the new ip.
+This will reference our resources and show us the IP address for our hello world
+instance. Run a `terraform plan; terraform output` and grab your ip. Now, modify your
+Ansible inventory `hosts` file to include the new ip.
 
 
 ## Provisioning Our Server
-
 
 Okay, now that that's done, we can modify our settings just a little bit for
 Ansible and be done!
