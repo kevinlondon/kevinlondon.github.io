@@ -908,7 +908,7 @@ apply`. Go ahead and do that now.
 
 Awesome! Our server is up. Now we need to set it up using Ansible but, in order
 to do that, we need to know its ip address. What is its IP? We could find out
-via the console, but that kind of stinks.
+via the Amazon console, but that stinks.
 
 Let's use another feature of Terraform: [output
 variables](https://www.terraform.io/intro/getting-started/outputs.html). We'll
@@ -927,56 +927,79 @@ Ansible inventory `hosts` file to include the new ip.
 Okay, now that that's done, we can modify our settings just a little bit for
 Ansible and be done!
 
-Modify your config to look like this: (include the new ssh path)
+Modify your config to look like this:
 
-then run `ansible-playbook -v site.yml`. Type `yes` at the prompt to confirm
+<script src="https://gist.github.com/kevinlondon/428f7e53e986f894c42f09a6cc2bd803.js"></script>
+
+Then run `ansible-playbook -v site.yml`. Type `yes` at the prompt to confirm
 that you'd like to accept the SSH connection to this host.
 
-At the end, you should be able to go to your site's IP.
+Once that's done, your site should be live! Just as importantly, it's automated!
+Congratulations!
 
+It can feel like work to automate infrastructure, particularly when the manual
+steps may only be taken once for a while. It's valuable to have the automation
+later, though, and to know how to automate it.
 
-"This is dumb why do I have to do all of this"
+Automating infrastructure when
+it's been around for a long time can be painful. It's hard to migrate an
+existing environment over to one that's fully automated and usually requires
+a complex migration plan.
 
-This is more about an investment in your future.
+By starting the automation process early, we save
+ourselves the work of that cutover later and we get the benefits of automation
+along the way - a reliable process that's documented as code.
 
+This is an investment in the future and it also benefits you now.
 
 And it's up! Hooray!
 
 
 ## Next Steps
 
-* dynamic inventory
-* Jenkins for CI / CD?
-* Immutable infrastructure?
-* Deploys?
-* Docker?
-* VPC?
-* Security Groups?
-* virtualenv
-* dynamic provisioning
+If you've followed along, at this point you have an automated process to
+provision your infrastructure and set up your servers. There's so much more we
+could do!
 
+I find that I learn best when working hands-on. If you'd like some suggestions
+for projects, here's what I'd look into for improving what we have:
 
-Provide steps for setting up an application stack from scratch!
+* [Dynamic
+    inventory](http://docs.ansible.com/ansible/intro_dynamic_inventory.html):
+    Ansible can automatically query your AWS inventory to get server IPs and
+    tags, which can make building the inventory files (e.g. `hosts` file)
+    simpler. This is a short one.
+* Deploys: We already have something that will automatically provision our
+    server. How would we streamline it for deploys? We could separate the steps
+    for provisioning the server (e.g. installing packages, etc) and deploying
+    the actual code (e.g. installing dependencies, updating git repo).
+* Continuous Integration / [Continuous Delivery](http://amzn.to/1SyOMyN):
+    It'd be great if we had something that would check that our code works every
+    time we commit to the repository. For that, I'd start with
+    [Jenkins](https://jenkins.io/).
+    Continuous Delivery
+    builds on that and, once you have tests running automatically, thinks about
+    how to get code ready to deploy automatically. The linked book is an
+    excellent guide to automating infrastructure as well.
+* [Immutable
+    infrastructure](http://radar.oreilly.com/2015/06/an-introduction-to-immutable-infrastructure.html): Our setup right now is built on images and on modifying the state of our machines. Another way to think about infrastructure is as immutable. In that case, instead of modifying running machines, you create new machines offline, set them up, and create an image from them. Then, when you deploy new servers, you use the image that you created earlier. As such, the server would not need any changes. If you'd like to get started with this, I'd recommend looking at [Packer](https://www.packer.io/intro/).
+* [Docker](https://www.docker.com/): We could put our application into
+    a container instead of a VM and make development, at the least, move more
+    quickly. Virtual Machines with Vagrant are fine but using Docker would be
+    better for resource and speed reasons.
+* [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/): We're currently
+    relying upon the "default" Amazon Virtual Private Cloud, which is kind of
+    like a private datacenter. If we wanted to set up other environments, for
+    example test or staging environments, I think it's a good idea to use a VPC
+    per environment. We could set this up in Terraform with a little work.
+* [Virtual
+    Enviroments](http://docs.python-guide.org/en/latest/dev/virtualenvs/): We're
+    manually installing our Python requirements app-wide right now. That
+    wouldn't work if we wanted to install another application on the server with
+    different requirements. The best practice is to use a virtual environment
+    so that we can separate the packages. If you go down this route, check out
+    Ansible's [pip module](http://docs.ansible.com/ansible/pip_module.html),
+    which has an option to install your requirements inside of a virtualenv.
 
-Terraform
-Ansible
-Vagrant
-
-Walk them through the process *you* followed.
-
-This post assumes you already have an application you'd like to stand up from
-scratch. If not, then let's do this thing instead!
-
-This mirrors our existing methodology. It might not be perfect, it might not be
-for everyone.
-
-Other things we'll need to talk about:
-
-Flask
-nginx
-uwsgi
-
-
-https://www.upwork.com/job/Amazon-Web-Services-DevOps-from-scratch-for-Startup_~01513371d4528ef639/
-https://www.reddit.com/r/devops/comments/3prm8g/building_deployment_pipeline_from_scratch_advice/
-https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx
+Thanks for reading! Please let me know if you're interested in
+reading a follow-up article on one of the suggested topics.
