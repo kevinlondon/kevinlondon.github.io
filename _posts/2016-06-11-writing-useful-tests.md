@@ -4,9 +4,9 @@ title:  "Strategies for Writing Useful Tests"
 date:   2016-05-11 13:54:09
 ---
 
-I hated writing tests. It felt like a waste of time. I had no idea what
-to test. If I wrote tests, they took forever to run.
-I'd forget to run them and they'd break all the time.
+I hated writing tests. It felt like a waste of time. I had no idea what 
+to test. If I wrote tests, they took forever to run. 
+I'd forget to run them. They broke all the time. 
 It wasn't good.
 
 I like writing tests now.
