@@ -1,81 +1,101 @@
 ---
 layout: post
 title:  "How to Write Useful Unit Tests"
-date:   2015-12-28 18:54:09
+date:   2016-05-06 18:54:09
 ---
 
-Testing plays an important part in the software development lifecycle but
-it can be intimidating or feel like a waste of time at first. How do we get
-from a place where there are no or ineffective tests to a place where they feel
-valuable and useful? 
+I hated writing tests. It felt like a waste of time. I had no idea what
+to test or, if I wrote tests, they took forever to run.
+I'd forget to run them and they'd break.
+It wasn't good.
 
-In this article, we'll explore some philsophies to keep in mind while writing tests
-that should help get you into a place where you value your tests rather than
-hate them.
+I find tests incredibly useful when I wrote software now. I like writing them.
+They've prevented me from deploying bugs into production. They don't suck to
+write (usually).
 
-Why Write Tests?
-----------------
+How do we get from hating tests or having tests that work against you to
+creating a set of tests that supports your development?
+I have a few suggestions that work for me and I'll share those here.
 
-Tests:
+Why should I write tests?
+-------------------------
 
-* Reduce bugs
+* They reduce bugs & regressions
 
-You probably won't catch all classes of bugs but you may catch a few other 
-ones. If your language isn't statically typed, writing tests can catch 
+Tests help you catch bugs that you might have missed. I think this almost
+a secondary benefit compared to the others. Like code reviews, tests can catch
+some errors but not all of them. For example, your tests cannot tell you if you
+have a flaw in the way you thought about a problem.
+
+If your language isn't statically typed, writing tests can catch
 typos or other silly mistakes that are easy to miss when you're writing code.
 
 * Remove fear
 
-If you change that line of code, will it break something else? Without tests, it
-feels impossible to refactor. If you choose to refactor, you know that you'll
-have some manual testing ahead of you to make sure it works.
+If you change that line of code, will it break something else? Without tests,
+it's challenging to refactor or upgrade dependencies.
+
+With tests, you can feel confident about changing the code because the tests
+should fail if the changes break something.
 
 * Improve design
 
-If something is tough to test, we can correct it so that it's easy to test
-and, in so doing, create smaller, more loosely coupled code.
+When writing code, it can be tempting to write methods that do a series of
+actions or have deeply nested logic loops.
+
+It's painful to write tests for code like that, which is a good thing. If
+something is tough to test, we can adjust the code so that it's easy to test
+and, in doing so, write more loosely coupled code.
 
 * Speeds up development
 
-It takes a long time to manually test something. You have to consider 
-possible edge cases and repeat them any time something changes. Over time,
-that can add up to a considerable amount of time for any new feature and it
+It takes a long time to manually test something. You have to consider
+possible edge cases and repeat them any time something changes.
+That can add up to a considerable amount of time for any new feature and it
 requires you to track what has been done either in a test plan or something
 else.
+
+Although tests take time to write and consider, in the end I've found that
+they wind up taking less time overall when I consider all the time I spent
+manually testing.
 
 
 A Philosophy for Useful Tests
 -----------------------------
 
+Now that we've discussed a few reasons why it might be helpful to write tests,
+we can talk about some tips for improving the tests that you write.
 
 ### Write tests as you go
 
-I personally do not care if you practice Test-Driven Development or not.
-I generally do and I understand why people would want to defer testing.
-Sometimes you don't know what you're going to build so you'd throw out
-many of your tests. Other times, you don't want tests to get in the way. 
-I get it.
-
 Before wrapping up a new feature or bit of functionality, while you're still
 thinking about the thing you're building or just completed, you should write
-tests. Writing tests any later than that becomes very painful because it 
+tests. Writing tests any later than that becomes very painful because it
 feels like a chore rather than something that helps you.
 
-If you choose to write tests after your code, be careful. One of the cons of 
-taking that path is that I find I'm less likely to change the code under test 
-if something already works. Worse, if I'm going to lengths to avoid changing
-the code, then I'm probably building in boundaries that will get in my way
-later when I want to refactor the code. 
+I like Test-Driven Development, so I use a form of it in my day-to-day development.
+Basically, Test-Driven Development says that you should write a test that fails
+before you write any production code, then write just the code necessary to make
+that test pass. Once that's done, you can clean it up.
 
-Tests should help us, not get in the way. Writing tests after the fact
-is a good way to have them get in the way.
+I do not care if you practice Test-Driven Development or not.
+Sometimes you don't know what you're going to build so you'd throw out
+many of your tests. Other times, you don't want tests to get in the way.
+
+I like writing tests first because seeing a failing test provides peace of mind
+when you fix the code. You know for sure that there was a problem and now there
+no longer should be, as long as the test and code keep doing what they're doing.
+
+When you write a test against already functional code, it's hard to know if what
+you've done is actually testing something or not.
+Writing a failing test gives you assurance.
 
 
 ### Treat your tests as first-class code
 
-Test code sometimes get treated as less important than "real code" that powers
-your system so the tests sometimes get left to rot. It's not easy to clean up
-tests, to be sure, but I think it's a worthwhile endeavor. 
+Test code sometimes get treated as less important than production code.
+Sometimes the tests sit and rot as production code changes.
+It's not easy to clean up tests, to be sure, but it's a worthwhile endeavor.
 
 I recommend the same rules of thumb for writing tests as writing code. For
 example, that includes some of the following:
@@ -83,17 +103,19 @@ example, that includes some of the following:
 * Avoiding duplication of code
 * Following style guidelines for your language
 * Prioritizing readability
-* Considering ways they could be improved during code reviews
+* Considering ways they can be improved during code reviews
 
+By emphasisizing readability and maintainability, you'll make it much easier on
+yourself if it breaks and you need to fix it.
 
-### If it's hard to write the test, treat it as a code smell
+### If it's hard to write the test, that's a code smell.
 
 When you first start writing tests, it might be uncomfortable. It's unfamiliar
 to figure out what to test, if what you're writing will be useful, if you're
 doing it right, etc etc. After you get over the initial bump, I think you'll
-find that it gets easier to write tests than to skip tests. 
+find that it feels easy to write tests.
 
-If you find that it's very difficult to write tests because of the way the code
+If you find that it's challenging to write tests because of the way the code
 is architected, it's a different matter.
 
 A code smell is a symptom that could indicate a deeper problem in the code.
@@ -103,6 +125,9 @@ I've done something wrong in the code.
 Most often, I have a method that does too much or interacts with too many
 things. If I need to set up the world in order to test something, that's
 probably bad. There may also be a small object in there looking to escape.
+
+By making your code easy to test, you're also probably improving the design of
+it.
 
 ### Use test names to describe what you're testing
 
@@ -123,28 +148,85 @@ If we're naming our tests after what we're testing, it can get muddy with more
 than one assertion, so aim for a single assertion per test. Sometimes it makes
 sense to jam more than one in there, particularly if you're doing something slow
 or GUI based. Generally one per test will help you keep them to a manageable
-size.
+size and keep it clear what's under test.
 
-### Make your test suite fast
+Multiple assertions make it hard to figure out what we should get from our test.
+They also may lead to a problem where you fix one failing assertion only to find
+that the next one fails when you re-run the test.
+
+### Keep your tests small
+
+If you can keep your tests small and short, it's a good thing. The more you have
+to set up, the more likelihood some small piece of it will change and break your
+test. My favorite on this is a tweet by [Gary
+Bernhardt](https://www.destroyallsoftware.com/screencasts):
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en"
+dir="ltr">Resisting the urge to write a test runner that raises CoolStoryBro if
+your test is over eight lines long.</p>&mdash; Gary Bernhardt (@garybernhardt)
+<a href="https://twitter.com/garybernhardt/status/125711084878442496">October
+16, 2011</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+It's a pretty good metric to use for testing, though sometimes you'll need
+more space than that.
+
+
+Potential Pitfalls
+------------------
+
+### Mocks / test doubles
+
+Mock objects are a way of simulating the interaction that your test will have
+with other things, such as external services or expensive method calls.
+
+Sometimes it makes sense to use them, particularly if it's going to involve
+network activity or some very slow activity. Otherwise, it's a good idea to use
+them as infrequently as possible to accomplish your goal of writing tests.
+
+Mocks can cause your code to be brittle due to the tight coupling between the mock and
+the objects themselves. Worse, mocks can give you a false positive. If you
+change the method signature of your method but don't change your mock, you could
+have a test pass when it shouldn't.
+
+Mocks are a useful tool as long as you keep in mind that they require trade-offs.
+
+
+### Big helper methods
+
+One temptation when writing and refactoring tests is to create a helper
+method to do something for you. Perhaps you have to set up some complex
+condition in order to do your test. The downside of helper methods is that they
+can obscure what you're trying to do. If you have a helper method that makes an
+assertion, that's almost certainly a sign that it's too big.
+
+I have seen test helper methods that require 10 arguments and have different
+code paths inside of the helper method. When a helper method is that big,
+it's really hard to debug if something goes wrong with it. It also makes it
+harder to understand what the test itself is trying to do.
+
+
+### Slow tests
 
 It's important to keep tests small and fast. The faster the unit test suite,
 the more likely people will run them and keep them passing. As a unit test suite
 grows and becomes less pleasant to work with, there's less temptation to run
 them and a greater likelihood of failing something like a CI server when code
-is finally pushed to them. 
+is finally pushed to them.
 
 If you can find ways to keep your test suite fast, do them.
 
 In Python, we have a few different ways of doing that. Both of the main
-third party test runners (nosetest and pytest) have ways of detecting the 
+third party test runners (nosetest and pytest) have ways of detecting the
 tests with the slowest runtime. Sometimes you'll find tests with an order
 or more magnitude slower runtime than the others. They're a great candidate
-for reducing the runtime of the overall test suite. 
+for reducing the runtime of the overall test suite.
 
 When I started at a previous job, I ran a test suite for a project I had been
 assigned to. To my surprise, the unit test suite took 3.5 minutes to run for
-150 tests. I would expect the same tests to run much more quickly and, at 3.5
-minutes per run, I would not run them terribly often at all. That's a long time.
+150 tests. That's incredibly slow. Can you imagine making a change, starting the
+tests, waiting for 3 and a half minutes, and finding out you have a syntax
+error? No thanks. That's a long time.
 
 I dug into it and found that the tests were loading and unloading json fixture
 files full of test data for each and every test. In some cases, the json
@@ -153,34 +235,27 @@ the fixtures, the test suite dropped down to 15 seconds. That still felt long
 but it allowed us to get much more immediate results and feedback on our code.
 
 Over time, the number of tests in that project grew to over 500 but the runtime
-still stayed around 25 seconds or so. It would've been 10 minutes or more 
+still stayed around 25 seconds or so. It would've been 10 minutes or more
 had we continued with the test suite as it was.
 
-### Keep your tests small
+The shorter the feedback loop, the more valuable your test suite will feel.
 
-Gary Bernhardt tweet about 8 lines.
-
-### Minimize the number of mocks / test doubles
-
-Talk about what mocks / test doubles do, why you want to minimize them.
-
-
-Potential Pitfalls
-------------------
-
-### Big helper methods
-
-### Unclear what's being tested
-
-### Randomly failing tests
 
 Conclusion
 ----------
 
+I think testing is great, and writing tests has dramatically transformed the way
+I think about writing code in general.
 
-Other Resources
----------------
+Here's a few more recommendations, if you're looking for more to read:
 
-
-https://www.destroyallsoftware.com/blog/2014/test-isolation-is-about-avoiding-mocks
-https://www.destroyallsoftware.com/blog/2014/tdd-straw-men-and-rhetoric
+* I like Gary Bernhardt's thoughts on testing, which he mostly shares in his
+screencast series [Destroy All Software](https://www.destroyallsoftware.com/screencasts)
+or [blog](https://www.destroyallsoftware.com/blog/2014/test-isolation-is-about-avoiding-mocks)
+* Sandi Metz has a good talk on [The Magic Tricks of
+    Testing](https://www.youtube.com/watch?v=URSWYvyc42M).
+* I've heard good things about [Growing Object-Oriented Software, Guided by
+    Tests](http://amzn.to/1TMY2ya), though I haven't yet read it.
+* Finally, I've enjoyed Roy Osherove's talks on testing, such as
+    this one on [Unit Testing Best
+    Practices](https://www.youtube.com/watch?v=dJUVNFxrK_4).
