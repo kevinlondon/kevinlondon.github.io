@@ -202,7 +202,7 @@ but it allowed us to get more immediate results and shorten the feedback loop.
 
 Over time, the number of tests in that project grew to over 500. The runtime stayed around 25 seconds or so. It would've taken 10 minutes or more had we not optimized our test suite.
 
-The tests take to run, the more valuable your test suite will feel.
+The quicker the test suite runs, the more valuable it will feel.
 
 
 Conclusion
