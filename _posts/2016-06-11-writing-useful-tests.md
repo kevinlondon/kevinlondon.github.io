@@ -1,6 +1,7 @@
-yout: post
-title:  "How to Write Useful Unit Tests"
-date:   2016-05-06 18:54:09
+---
+layout: post
+title:  "Strategies for Writing Useful Tests"
+date:   2016-05-11 13:54:09
 ---
 
 I hated writing tests. It felt like a waste of time. I had no idea what
@@ -56,8 +57,8 @@ If you have a workflow like that, each new feature will take longer to build. It
 Writing tests winds up taking less time as compared to performing them manually. And, better, I've automated the actions I need to take to test the feature.
 
 
-A Philosophy for Useful Tests
------------------------------
+Strategies
+----------
 
 Now that we've discussed a few reasons why tests help us,
 let's talk about strategies.
@@ -202,7 +203,8 @@ Conclusion
 ----------
 
 I love writing tests. Testing has transformed the way
-I think about writing code, in general. I think that by applying some of these strategies, you can get to a place where you love your tests.
+I think about writing code, in general. By applying these strategies, I believe
+you can get to a place where you love your tests.
 
 I have a few more recommendations, if you're looking to read further:
 
