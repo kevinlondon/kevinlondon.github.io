@@ -153,23 +153,7 @@ size and keep it clear what's under test.
 Multiple assertions make it hard to figure out what we should get from our test.
 They also may lead to a problem where you fix one failing assertion only to find
 that the next one fails when you re-run the test.
-
-### Keep your tests small
-
-If you can keep your tests small and short, it's a good thing. The more you have
-to set up, the more likelihood some small piece of it will change and break your
-test. My favorite on this is a tweet by [Gary
-Bernhardt](https://www.destroyallsoftware.com/screencasts):
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en"
-dir="ltr">Resisting the urge to write a test runner that raises CoolStoryBro if
-your test is over eight lines long.</p>&mdash; Gary Bernhardt (@garybernhardt)
-<a href="https://twitter.com/garybernhardt/status/125711084878442496">October
-16, 2011</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-It's a pretty good metric to use for testing, though sometimes you'll need
-more space than that.
+I like to keep my tests as short as possible. It makes it clear what's happening and what's under test.
 
 
 Potential Pitfalls
@@ -177,85 +161,64 @@ Potential Pitfalls
 
 ### Mocks / test doubles
 
-Mock objects are a way of simulating the interaction that your test will have
-with other things, such as external services or expensive method calls.
+Mock objects help simulate the interaction that your test will have
+with other things. I use mocks to replace dependencies on external services in tests. Otherwise, it's a good idea to use
+them only rarely.
 
-Sometimes it makes sense to use them, particularly if it's going to involve
-network activity or some very slow activity. Otherwise, it's a good idea to use
-them as infrequently as possible to accomplish your goal of writing tests.
+Mocks can make your tests and code brittle due to the tight coupling between the mock and the code itself. Worse, mocks can give you a false positive. If you
+change a method's arguments, the test might pass when it shouldn't because of the mock.
 
-Mocks can cause your code to be brittle due to the tight coupling between the mock and
-the objects themselves. Worse, mocks can give you a false positive. If you
-change the method signature of your method but don't change your mock, you could
-have a test pass when it shouldn't.
-
-Mocks are a useful tool as long as you keep in mind that they require trade-offs.
+Mocks are a useful tool as long as you understand the trade-offs and limitations.
 
 
 ### Big helper methods
 
-One temptation when writing and refactoring tests is to create a helper
-method to do something for you. Perhaps you have to set up some complex
-condition in order to do your test. The downside of helper methods is that they
-can obscure what you're trying to do. If you have a helper method that makes an
-assertion, that's almost certainly a sign that it's too big.
+Writing helper methods feels natural when writing tests. Perhaps you have to set up some complex
+condition to do your test. A helper method could be useful. One temptation is to grow a helper method until it reaches a point where it's hard to understand.
 
-I have seen test helper methods that require 10 arguments and have different
-code paths inside of the helper method. When a helper method is that big,
-it's really hard to debug if something goes wrong with it. It also makes it
-harder to understand what the test itself is trying to do.
+Helper methods, unfortunately, can hide what you want them to do. They can make tests hard to understand and maintain. If you have a helper method that makes an
+assertion, that's a sign that the helper does too much.
+
+I've seen test helper methods that need 10 arguments (!) and I've seen helpers with nested conditionals inside of the helper. When a helper method is that big,
+we can't debug it when something goes wrong. 
 
 
 ### Slow tests
 
-It's important to keep tests small and fast. The faster the unit test suite,
-the more likely people will run them and keep them passing. As a unit test suite
-grows and becomes less pleasant to work with, there's less temptation to run
-them and a greater likelihood of failing something like a CI server when code
-is finally pushed to them.
+Keep tests small and fast. The faster the unit test suite,
+the more likely people will run them and keep them passing. If a test suite becomes slow, no one will run the tests. 
 
-If you can find ways to keep your test suite fast, do them.
+In Python, we have a few different ways to ensure fast tests. The main
+third party test runners (nosetest and pytest) can detect
+tests with the slowest runtime. Sometimes you'll find tests with a much slower runtime than the others. Optimizing those can shrink your test suite runtime and make your tests more enjoyable to run.
 
-In Python, we have a few different ways of doing that. Both of the main
-third party test runners (nosetest and pytest) have ways of detecting the
-tests with the slowest runtime. Sometimes you'll find tests with an order
-or more magnitude slower runtime than the others. They're a great candidate
-for reducing the runtime of the overall test suite.
+When I started at a previous job, I ran a test suite for one of the projects. To my surprise, the unit test suite took 3.5 minutes to run for
+150 tests. That's slow. Can you imagine waiting for 3 and a half minutes to find out you have a syntax error? No thanks. 
 
-When I started at a previous job, I ran a test suite for a project I had been
-assigned to. To my surprise, the unit test suite took 3.5 minutes to run for
-150 tests. That's incredibly slow. Can you imagine making a change, starting the
-tests, waiting for 3 and a half minutes, and finding out you have a syntax
-error? No thanks. That's a long time.
+I dug into it and found that the tests loaded and unloaded JSON fixtures files for each test. In some cases, the JSON files had 4000 lines of data in them. 
+I centralized the loading and unloading of
+the data and the test suite took 15 seconds. That still felt long
+but it allowed us to get more immediate results and shorten the feedback loop.
 
-I dug into it and found that the tests were loading and unloading json fixture
-files full of test data for each and every test. In some cases, the json
-fixtures were 4k lines long. After I centralized the loading and unloading of
-the fixtures, the test suite dropped down to 15 seconds. That still felt long
-but it allowed us to get much more immediate results and feedback on our code.
+Over time, the number of tests in that project grew to over 500. The runtime stayed around 25 seconds or so. It would've taken 10 minutes or more had we not optimized our test suite.
 
-Over time, the number of tests in that project grew to over 500 but the runtime
-still stayed around 25 seconds or so. It would've been 10 minutes or more
-had we continued with the test suite as it was.
-
-The shorter the feedback loop, the more valuable your test suite will feel.
+The tests take to run, the more valuable your test suite will feel.
 
 
 Conclusion
 ----------
 
-I think testing is great, and writing tests has dramatically transformed the way
-I think about writing code in general.
+I love writing tests. Testing has transformed the way
+I think about writing code, in general. I think that by applying some of these strategies, you can get to a place where you love your tests.
 
-Here's a few more recommendations, if you're looking for more to read:
+I have a few more recommendations, if you're looking to read further:
 
-* I like Gary Bernhardt's thoughts on testing, which he mostly shares in his
+* I like Gary Bernhardt's thoughts on testing, which he shares in his
 screencast series [Destroy All Software](https://www.destroyallsoftware.com/screencasts)
-or [blog](https://www.destroyallsoftware.com/blog/2014/test-isolation-is-about-avoiding-mocks)
+and [blog](https://www.destroyallsoftware.com/blog/2014/test-isolation-is-about-avoiding-mocks)
 * Sandi Metz has a good talk on [The Magic Tricks of
     Testing](https://www.youtube.com/watch?v=URSWYvyc42M).
 * I've heard good things about [Growing Object-Oriented Software, Guided by
     Tests](http://amzn.to/1TMY2ya), though I haven't yet read it.
-* Finally, I've enjoyed Roy Osherove's talks on testing, such as
-    this one on [Unit Testing Best
-    Practices](https://www.youtube.com/watch?v=dJUVNFxrK_4).
+* Finally, I enjoyed Roy Osherove's talks on testing, such as
+    this one on [Unit Testing Best Practices](https://www.youtube.com/watch?v=dJUVNFxrK_4).
