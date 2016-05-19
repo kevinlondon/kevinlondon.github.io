@@ -573,9 +573,9 @@ the code for this kind of question.
 
 For example, for the above question you might want to consider:
 
-* How will how the user interact with the server?
-* What kind of HTTP method would they use and why?
-* What sorts of endpoints would you want?
+* How will the user interact with the server?
+* What kind of HTTP methods would they use and why?
+* What should the endpoint(s) look like?
 * How would you handle background processing?
 * What would you do to prevent something going wrong?
 * What steps would you need to take to secure it?

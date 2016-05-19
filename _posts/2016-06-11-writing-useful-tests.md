@@ -4,9 +4,9 @@ title:  "Strategies for Writing Useful Tests"
 date:   2016-05-11 13:54:09
 ---
 
-I hated writing tests. It felt like a waste of time. I had no idea what
-to test. If I wrote tests, they took forever to run.
-I'd forget to run them and they'd break all the time.
+I hated writing tests. It felt like a waste of time. I had no idea what 
+to test. If I wrote tests, they took forever to run. 
+I'd forget to run them. They broke all the time. 
 It wasn't good.
 
 I like writing tests now.
@@ -65,10 +65,7 @@ let's talk about strategies.
 
 ### Write tests as you go
 
-While you're still
-thinking about the thing you're building or just completed, you should write
-tests. Writing tests any later than that feels painful. It
-feels like a chore.
+Writing tests any later feels like a painful chore.
 
 I like Test-Driven Development and I use a form of it.
 Test-Driven Development says before you write code, you should write a test that fails. Then, write just the code necessary to make
@@ -96,8 +93,9 @@ example, that includes some of the following:
 * Prioritizing readability
 * Considering ways to improve them during code reviews
 
-By emphasisizing readability and maintainability, you'll make it much easier on
-yourself if it breaks.
+If the test is easy to understand, it's much easier to fix if it breaks.
+
+
 
 ### If it's hard to write the test, that's a code smell.
 
@@ -127,10 +125,10 @@ With `test_cart()` it's easy to add in more bits of functionality. With the latt
 
 Tests become muddy with more
 than one assertion, so aim for a single assertion per test. Sometimes it makes
-sense to use more than one, particularly if you're doing something slow. Generally one per test will help you keep them to a manageable
+sense to use more than one. Generally one per test will help you keep them to a manageable
 size and keep it clear what's under test.
 
-Many assertions make it hard to figure out what we should get from our test.
+Multiple assertions make it hard to figure out what we should get from our test.
 They also may lead to a problem where you fix one failing assertion only to find that the next one fails.
 
 ### Keep your tests small
@@ -182,8 +180,7 @@ we can't debug it when something goes wrong.
 Keep tests small and fast. The faster the unit test suite,
 the more likely people will run them and keep them passing. If a test suite becomes slow, no one will run the tests.
 
-In Python, we have a few different ways to ensure fast tests. The main
-third party test runners (nosetest and pytest) can detect
+In Python, we have a few different ways to ensure fast tests. Pytest and nosetest can detect
 tests with the slowest runtime. Sometimes you'll find tests with a much slower runtime than the others. Optimizing those can shrink your test suite runtime and make your tests more enjoyable to run.
 
 When I started at a previous job, I ran a test suite for one of the projects. To my surprise, the unit test suite took 3.5 minutes to run for
@@ -208,12 +205,12 @@ you can get to a place where you love your tests.
 
 I have a few more recommendations, if you're looking to read further:
 
-* I like Gary Bernhardt's thoughts on testing, which he shares in his
+* Gary Bernhardt talks about testing in his
 screencast series [Destroy All Software](https://www.destroyallsoftware.com/screencasts)
 and [blog](https://www.destroyallsoftware.com/blog/2014/test-isolation-is-about-avoiding-mocks)
 * Sandi Metz has a good talk on [The Magic Tricks of
     Testing](https://www.youtube.com/watch?v=URSWYvyc42M).
 * I've heard good things about [Growing Object-Oriented Software, Guided by
-    Tests](http://amzn.to/1TMY2ya), though I haven't yet read it.
-* Finally, I enjoyed Roy Osherove's talks on testing, such as
-    this one on [Unit Testing Best Practices](https://www.youtube.com/watch?v=dJUVNFxrK_4).
+    Tests](http://amzn.to/1TMY2ya).
+* I enjoyed Roy Osherove's talks on testing, such as
+    [Unit Testing Best Practices](https://www.youtube.com/watch?v=dJUVNFxrK_4).
