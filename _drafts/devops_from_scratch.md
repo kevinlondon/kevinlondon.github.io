@@ -95,17 +95,15 @@ to `http://localhost:5000`, you should see our "Hello World!" page, as below.
 
 Nice! That's about as complicated as the application itself will be.
 
-Let's say we want to make it so anyone can develop on our application. We could
-pass out the instructions we just gave (not too hard, right?). That works for
-a while. We're pretending this is part of a larger project, which might have
-many more steps.
 
 Up next, we want to move our development into a virtual machine with Vagrant.
 
 ## Running Our App with Vagrant
 
-Keeping all of our code on our local machine works fine for a while. There's two
-main challenges that you'll probably encounter:
+Let's say we want to make it so anyone can develop on our application.
+Keeping all of our code on our local machine works fine for a while.
+We could pass out the instructions we just gave (not too hard, right?).
+There's two main challenges that you'll encounter:
 
 1. We'll need to replicate what it's like to set up a new server. If you're
    using your local machine, it's tough to get it to act like a fresh machine.
@@ -151,8 +149,9 @@ our virtual machine (from here, referred to as a VM).
 
 In your VM's Terminal, run the following:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 
+sudo apt-get update
 sudo apt-get install git python-pip
 git clone https://github.com/kevinlondon/flask-hello-world.git
 cd flask-hello-world
@@ -166,6 +165,7 @@ manually set up our environment.
 
 Let's go through each line briefly as a refresher.
 
+0. Refresh the system's package cache.
 1. Using our operating system's package manager, install `git` and `python-pip`.
    We're going to use git to pull down our small sample project and `python-pip`
    to install requirements for our project.
@@ -180,7 +180,7 @@ bar. You should see the app!
 
 We've done these steps twice now, so that's a good sign that we should think
 about automating them so that we can build out a foundation over time.
-Let's start automating what we have so far before continuing.
+Let's automate what we have so far before we continue.
 
 
 ## Our First Ansible Playbook
