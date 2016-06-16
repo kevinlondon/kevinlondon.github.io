@@ -293,14 +293,14 @@ Now that we have gunicorn roughly configured (it's not perfect yet of course!),
 we'll want to set up a script so that we can run our server automatically
 when our server restarts or just kick the process if it's stuck.
 
-# TODO: we should use supervisord
-
 How we'll do that is with an [upstart](http://upstart.ubuntu.com/) script.
 Upstart handles starting and stopping tasks, so it's a good fit for us.
 
 We're going to use a slightly modified script from the
 [gunicorn](http://docs.gunicorn.org/en/stable/deploy.html#upstart) examples.
 Create this file in the VM in `/etc/init/hello-world.conf`.
+
+# TODO: Embed this as a gist
 
 {% highlight bash %}
 
@@ -338,10 +338,12 @@ of Ansible. Namely, that we could be using a variable instead of hard coding the
 path to our repository.
 
 In the same directory as our `site.yml` file, create a new file:
-`hello-world.conf.j2`. The `.j2` extension implies that we're going to be using
+`hello-world.upstart.j2`. The `.j2` extension implies that we're going to be using
 it as a [Jinja2](http://jinja.pocoo.org/) template.
 
 All that said, let's look at the new file we'll write:
+
+# TODO: Embed this as a gist
 
 {% highlight bash %}
 
@@ -370,7 +372,7 @@ Let's add a section to the bottom of our `site.yml` file in the `tasks` section:
 {% highlight bash %}
 
     - name: Copy Upstart configuration
-      template: src=hello-world.conf.j2 dest=/etc/init/hello-world.conf
+      template: src=hello-world.upstart.j2 dest=/etc/init/hello-world.conf
 
     - name: Make sure our server is running
       service: name=hello-world state=started
@@ -409,7 +411,7 @@ Confirm the prompt and let that package fly!
 You should be able to go to your browser at `192.168.33.10` currently and see
 nginx's version of "Hello world!".
 
-[picture of nginx hello world]
+TODO: [picture of nginx hello world]
 
 Once you're back at your command prompt, we'll set up our first nginx
 configuration file.
@@ -421,6 +423,7 @@ can access our server at the same host (`192.168.33.10`) but without needing to
 specify a port. Can you think of the last time you went to a site
 like ebay.com and put in a port? Exactly.
 
+# WE probably want to use sites-enabled instead of modifying nginx.conf
 We'll write our file to `/etc/nginx/nginx.conf` and it should
 look like this:
 
@@ -439,6 +442,9 @@ $ sudo service nginx restart
 
 {% endhighlight %}
 
+
+Oh right, the unix socket. Ok, let's make a few more changes to the way gunicorn
+works.
 
 <script src="https://gist.github.com/kevinlondon/db40d7867c613bd4b0565bfe4535fc80.js"></script>
 
