@@ -1,59 +1,61 @@
-I like thinking about things in analogies. It's how I best understand and
-explain complex ideas. I have a few favorites that I've reached for time and
-time again, so I'd like to share those here. They're mostly about refactoring
-and how to be effective in software, particularly in older codebases.
+I think about almost everything in terms of analogies. They help me think about and explain complex ideas.
+I'd like to share a few of my favorites for ways to think about writing
+maintainable code.
 
 
 Two Trains
 ----------
 
-I think this is my favorite one. OK, you know how in movies, there's those
+You know how in movies, there's those
 dramatic scenes where someone has to jump from one moving train to another one?
 And it looks super dicey? Maybe there's some bumps in the tracks or an upcoming
-tunnel that would knock the protagonist off of the train completely?
+tunnel that would knock the protagonist off of the train?
 
-That's how I view doing application rewrites, or even a big refactor.
-Sometimes when you're doing a rewrite, it can feel like a great idea.
+That's how I view doing application rewrites or even a big refactor.
+When you're doing a rewrite, it can feel like a great idea.
 The tricky part: How do you cut over from the old thing to the new? How will you
 know when it's ready?
 
 There has to be some point where there's a switch. The switch
 gets harder if, along the way, you decide to implement new features.
 It's best to exactly match the functionality of the old thing and then, once
-you've switched over, think about adding in the new features.
+you've switched over, think about adding in the new features or fixing existing
+bugs.
 
-For example, I automated some AWS environments we had with Terraform. Along the
-way, I saw a bunch of things I wanted to do or change about the way our
-environments worked. Wouldn't it be cool to add in Docker? Or Continuous
-Deployment? But I tried to keep it going at the same rate.
+If the two trains aren't moving at the same speed, you'll never be able to make the jump.
 
-When we switched over environments from the old to the new, there were still
-a few little bugs but at least we weren't also introducing new functionality at
-the same time. It made the switch much simpler.
+For example, I automated some AWS environments we had with
+[Terraform](https://www.terraform.io/). Along the
+way, I saw things I wanted to change about the way our
+environments worked. Wouldn't it be cool to use Docker? Or Continuous
+Deployment? I wrote those ideas down and kept going without implementing them.
+
+When we switched environments from the old to the new, we found a few little
+bugs. We would have encountered much more had we introduced new functionality at
+the same time! Doing the minimum coding necessary made it much simpler to
+switch.
 
 There have been other times where I chose to implement something along the way.
 I remember I once rewrote an archival application to have a cleaner architecture
-but to also handle archiving files in a different format. I got about 80% of the
-way through the project when I needed to go back and make changes to the
-original, which stopped me from working on the reboot.
-I had missed my window of opportunity where I could refactor
-without needing to worry about adding in new features from the old app too.
-The reboot eventually got shelved.
+but to also archive files in a different format. I got about 80% of the
+way through the project when I needed to go back to the original application and
+add features into it.
+I missed my window of opportunity where I could refactor
+because I chose to add in new functionality at the same time.
+The reboot eventually got shelved and we continued to work on the original
+application.
 
-Another time I worked on an API. As we built out the API, we added in a bunch of
-features we wished we had for the original interface before we would switch
-over. In that case, too, we never reached the point where we could switch
-because we had so many features to replicate. I think I heard that that company
-is rewriting the API again in Node.
+Another time I worked on an API. As we built it, we added in
+features we wished we had. In that case, too, we never reached the point where
+we could switch because we had so many features to replicate.
+I've heard that the company has since rewritten the partially-completed API in Node.
 
-Joel Spolsky wrote probably the best essay on Not Rewriting that I've come
+Joel Spolsky wrote my favorite essay on Not Rewriting that I've come
 across in [Things You Should Never Do, Part
 1](http://www.joelonsoftware.com/articles/fog0000000069.html). Still, if you're
 going to do a rewrite of some kind, keep the Two Trains in mind or it'll be hard
 to make the jump.
 
-If the two trains
-aren't moving at the same speed, you'll never be able to make the jump.
 
 Trash Pile
 ----------
@@ -73,17 +75,17 @@ Another example. At a previous job, we had a big legacy codebase and a new shiny
 API. Nobody wanted to work on the legacy codebase but it paid the bills.
 Inevitably when we would have to add some new feature or fix a bug for
 a customer, the person who fixed it would implement it in the laziest possible
-way. When I'd point out things during code reviews with them, they'd say "Who
+way. When I asked about areas for improvement during their code reviews, they'd say "Who
 cares? It's just the legacy codebase? It's going away soon anyway."
 
 I should mention that this particular "legacy codebase" had been around for so
 long already that in it was *another* "legacy" codebase inside of it. So there
-was a "legacy legacy" that was also still in use. By the way, for the two years
-that I was at
-this particular company, we kept adding features to that legacy codebase. Over
-time, we adopted better practices and started building tests for the new things.
-We would have to live with this particular pile of trash for a while, so we
-might as well make it as good as we can.
+was a "legacy legacy" that was also still in use.
+We added features to the legacy codebase for the next two years that I stayed
+with the company.
+Over time, we adopted better practices and built tests for the new things.
+We had to live with the pile of trash for a while, so we
+might as well improve it where we can.
 
 If you can leave it better than you found it, then you'll prevent other people
 from treating it like a pile of trash too.
@@ -97,7 +99,7 @@ You know how when you get a tube of toothpaste, it's really easy to get the
 toothpaste out for a while? In the beginning, it doesn't matter how you try to
 push out the toothpaste, you'll definitely get toothpaste. As you near the end
 of it, though, it's hard to get the toothpaste out. You have to roll
-the toothpaste from the bottom or else you can't get any out.
+the toothpaste from the bottom.
 
 Sometimes in software, it feels the same way. New codebases are really easy to
 work in because there's so much greenfield. Everything is a new choice. As it
