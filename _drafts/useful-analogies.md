@@ -1,28 +1,26 @@
-I think about almost everything in terms of analogies. They help me think about and explain complex ideas.
-I'd like to share a few of my favorites for ways to think about writing
-maintainable code.
+I think about almost everything in terms of analogies. They help me think about
+and explain complex ideas.  I'd like to share a few of my favorite analogies for
+thinking about writing software.
 
 
 Two Trains
 ----------
 
-You know how in movies, there's those
-dramatic scenes where someone has to jump from one moving train to another one?
-And it looks super dicey? Maybe there's some bumps in the tracks or an upcoming
+Have you ever seen a scene in a film where someone has to jump from one moving
+train to another? It looks really dangerous ([and
+is!](https://en.wikipedia.org/wiki/Train_surfing#Risks)).
+Maybe there's some bumps in the tracks or an upcoming
 tunnel that would knock the protagonist off of the train?
 
-That's how I view doing application rewrites or even a big refactor.
+That's how I view doing application rewrites or a large refactoring.
 When you're doing a rewrite, it can feel like a great idea.
-The tricky part: How do you cut over from the old thing to the new? How will you
-know when it's ready?
+The tricky part: How do you cut over from the old thing to the new? When will
+you be ready and how will you know when it's time?
 
-There has to be some point where there's a switch. The switch
-gets harder if, along the way, you decide to implement new features.
-It's best to exactly match the functionality of the old thing and then, once
-you've switched over, think about adding in the new features or fixing existing
-bugs.
-
-If the two trains aren't moving at the same speed, you'll never be able to make the jump.
+There has to be a point where you cut-over. The switch gets harder if, along the
+way, you decide to implement new features. It's best to exactly match the
+existing functionality and, once you've switched over, think about adding in the
+new features or fixing known bugs.
 
 For example, I automated some AWS environments we had with
 [Terraform](https://www.terraform.io/). Along the
@@ -30,82 +28,72 @@ way, I saw things I wanted to change about the way our
 environments worked. Wouldn't it be cool to use Docker? Or Continuous
 Deployment? I wrote those ideas down and kept going without implementing them.
 
-When we switched environments from the old to the new, we found a few little
-bugs. We would have encountered much more had we introduced new functionality at
-the same time! Doing the minimum coding necessary made it much simpler to
-switch.
+When we switched environments from the old to the new, we found a few problems
+that we didn't know about. Configuration that had been missed, or some settings
+that had not been set properly.  We would have encountered much worse had we
+introduced new functionality at the same time! Doing the minimum necessary made
+it much simpler to switch.
 
 There have been other times where I chose to implement something along the way.
-I remember I once rewrote an archival application to have a cleaner architecture
-but to also archive files in a different format. I got about 80% of the
-way through the project when I needed to go back to the original application and
-add features into it.
-I missed my window of opportunity where I could refactor
-because I chose to add in new functionality at the same time.
-The reboot eventually got shelved and we continued to work on the original
-application.
+I remember I once rewrote an archival application and, in the process, also
+added the ability to archive files in a different format.
+I got about 80% of the way through the rewrite when I had to return to the
+original application and add features. I missed my window of opportunity where
+I could refactor because I chose to add in new functionality.
+The rewrite got shelved.
 
-Another time I worked on an API. As we built it, we added in
-features we wished we had. In that case, too, we never reached the point where
-we could switch because we had so many features to replicate.
-I've heard that the company has since rewritten the partially-completed API in Node.
-
-Joel Spolsky wrote my favorite essay on Not Rewriting that I've come
-across in [Things You Should Never Do, Part
+Joel Spolsky wrote my favorite essay on Not Rewriting that I've come across in
+[Things You Should Never Do, Part
 1](http://www.joelonsoftware.com/articles/fog0000000069.html). Still, if you're
-going to do a rewrite of some kind, keep the Two Trains in mind or it'll be hard
-to make the jump.
+going to do a rewrite of some kind, keep the Two Trains analogy in mind. It's
+hard enough to make the jump.
 
 
 Trash Pile
 ----------
 
-This is kind of like the broken windows theory meets the Boyscouts. Basically,
-if you're at a dump, you won't think twice about throwing a piece of trash onto
-the top of a pile.  Who cares? It's already a dump, there's already a big pile
-of trash. Who will notice?
+If you're at a dump, you won't think twice about throwing a piece of trash onto
+the top of a pile. It's a dump. There's a big pile of trash. Who would even notice?
 
-In software, it can feel like the same thing. If there's a messy codebase, who
-would know if you wrote something without tests? Or if you added in just
-a few lines of code to a 300 line method? What's the harm?
+In software, legacy applications can feel like the same thing. If there's
+a messy codebase, who would care if you wrote something without tests? Or if you
+added in just a few lines of code to a 300 line method? What's the harm?
 
 Instead, I think it's best to clean up the pile of trash as you're there.
 
-Another example. At a previous job, we had a big legacy codebase and a new shiny
-API. Nobody wanted to work on the legacy codebase but it paid the bills.
-Inevitably when we would have to add some new feature or fix a bug for
-a customer, the person who fixed it would implement it in the laziest possible
-way. When I asked about areas for improvement during their code reviews, they'd say "Who
-cares? It's just the legacy codebase? It's going away soon anyway."
+An example. At a previous job, we had a big legacy codebase and a new shiny API.
+No one wanted to work on the legacy codebase.  When a developer needed to add
+a new feature or fix a bug, the person who fixed it do so in the laziest
+possible way.  When I asked about areas for improvement during their code
+reviews, they'd say "Who cares? It's just the legacy codebase? It's going away
+soon anyway."
 
 I should mention that this particular "legacy codebase" had been around for so
-long already that in it was *another* "legacy" codebase inside of it. So there
-was a "legacy legacy" that was also still in use.
-We added features to the legacy codebase for the next two years that I stayed
-with the company.
-Over time, we adopted better practices and built tests for the new things.
-We had to live with the pile of trash for a while, so we
-might as well improve it where we can.
+long already that in it was *another* legacy codebase inside of it.
+A sub-legacy.
 
-If you can leave it better than you found it, then you'll prevent other people
+We changed our attitude towards working with the legacy code. We built tests.
+We followed best practices. We reworked our code review processes. Eventually,
+it got to a pretty good place and developers stopped avoiding it. We had to live
+with the pile of trash, so we chose to own it and improve instead of letting it
+rot.
+
+If you can leave the code better than you found it, then you'll prevent other people
 from treating it like a pile of trash too.
 
 Tube of Toothpaste
 ------------------
 
-I think this is one of my weirder analogies.
+You know how when you buy a tube of toothpaste, it's really easy to get the
+toothpaste out? In the beginning, it doesn't matter what you do, you'll get
+toothpaste.  As you near the end of it, though,
+it's hard to get the toothpaste out. You have to roll the tube from the
+bottom.
 
-You know how when you get a tube of toothpaste, it's really easy to get the
-toothpaste out for a while? In the beginning, it doesn't matter how you try to
-push out the toothpaste, you'll definitely get toothpaste. As you near the end
-of it, though, it's hard to get the toothpaste out. You have to roll
-the toothpaste from the bottom.
-
-Sometimes in software, it feels the same way. New codebases are really easy to
-work in because there's so much greenfield. Everything is a new choice. As it
-grows, gets older, gets more quirky, it becomes harder. Sometimes it's tempting
-to take the shortcut and push the toothpaste from the top of the tube, or just
-barely do enough to do what you need.
+New codebases are really easy to work in because there's so much greenfield.
+Everything is a new choice. As it grows, gets older, gets more quirky, it
+becomes harder. Sometimes it's tempting to take the shortcut or just barely do
+enough to do what you need.
 
 I think Kent Beck said it best:
 
@@ -116,22 +104,18 @@ href="https://twitter.com/KentBeck/status/250733358307500032">September 25,
 2012</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-So, with the toothpaste tube, we would roll it up so it's easy to get the
-toothpaste out. It's the same thing with code.
+One time, I added an `if` statement to a class that performed validation. I only
+needed to add one conditional but I needed to add it to a function that spanned
+many lines and had 10 other similar conditionals already.
+I could have added in my little conditional, tested it
+manually, and called it done.
 
-Let's see... an example.
-
-This one time I needed to add a conditional to a class that was doing some
-validation. It was just one conditional, but it was in a function that already
-had like 10 conditionals. I could have added in my little conditional, tested it
-manually, and called it good. I tried writing a unit test for the method but
-there was so much to account for that my unit test was something like 30-40
-lines long.
-
-I got it passing and then reconstructed the validation call into
+Instead, I chose to write a test to make sure
+I wouldn't break existing functionality and then refactor.
+I got the test passing and then reconstructed the validation call into
 a series of little methods, each easily testible. It made it easy to make the
-change I wanted and easier to extend the next week when we had some other
-validation that we needed to do there.
+change I wanted and then I made the easy change. As an added bonus, we added
+another bit of validation logic the next week. It was an easy change.
 
 It's better to lightly refactor
 the thing you're working in so that it's easy to make your change and then make
@@ -141,7 +125,7 @@ the easy change.
 Princess and the Pea
 --------------------
 
-This is a bit more general. Are you familar with the Hans Christen Andersen
+Are you familar with the Hans Christen Andersen
 fable about the Princess and the Pea?
 
 Short version: a prince is looking for a princess and having a hard time finding
