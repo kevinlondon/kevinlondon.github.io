@@ -18,20 +18,20 @@ it?
 We can address legacy code with a two-step process:
 
 1. Add tests.
-2. Refactor
+2. Refactor.
 
-Refactoring, in this case, means improving the design of the code *without*
+We'll document the behavior of the code by creating tests and then clean it up.
+Refactoring means improving the design of the code *without*
 changing its behavior.
 
-In this post, I'll share 3 analogies I use with colleague and sometimes with
-myself for thinking about refactoring and legacy code.
+In this post, I'll share 3 analogies I use for thinking about refactoring and legacy code.
 
 Trash Pile
 ----------
 
 If you're at a dump, you don't think twice about throwing a piece of trash onto
 the top of a pile. There's a big pile of trash. Who will notice? The trash pile
-probably won't fall down and nothing bad will probably happen.
+won't fall down and nothing bad will happen.
 
 In software, legacy applications can feel like the same thing. If there's
 a messy codebase, who cares if you add something without tests? Or if you added
@@ -41,25 +41,25 @@ Instead, I think it's best to clean up as you go. Otherwise, you'll be stuck
 with a pile of trash forever.
 
 It can make a big difference if you make small improvements. Adding tests,
-cleaning things up, refactoring even a little bit - these will all pay dividends
+cleaning things up, refactoring - these pay dividends
 over time. It doesn't have to be perfect. Making things a little better will be
 a huge improvement.
 
 I worked with a legacy codebase that no one wanted to work with. As a team, we
-didn't write tests or care about code quality because we had been told that it
+didn't write tests or care about code quality because we had thought that it
 "was going away soon". It didn't.
 
-When we realized we would have to live with the code for a while, we made
-a conscious choice to change our attitude towards the legacy codebase.  We wrote
-tests.  We followed best practices. We improved our [code review
+We realized we would have to live with the code so we changed our attitude
+towards it.
+We wrote tests.  We followed best practices. We improved our [code review
 processes](https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html).
-Eventually, it got to a pretty good place and developers stopped avoiding it. We
+In time, developers stopped avoiding it. We
 had to live with the pile of trash, so we chose to own it and improve instead of
 letting it rot.
 
-If you can leave the code better than you found it, then you'll prevent other people
-from treating it like a pile of trash too. We can transform the trash from
-an obligaton into an asset.
+If you leave the code better than you found it, you'll prevent other people
+from treating it like a pile of trash. We can transform the trash from
+an obligation into an asset.
 
 
 Tube of Toothpaste
