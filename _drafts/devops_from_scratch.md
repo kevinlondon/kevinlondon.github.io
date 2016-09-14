@@ -1,31 +1,29 @@
 ---
 layout: post
 title: "DevOps From Scratch"
-date:  2016-02-24 21:09:00
+date:  2016-09-13 21:09:00
 ---
 
 Let's say you're at a startup and everything is going great. Your app is
 growing, users are happy, money is coming in.
 
 What happens if some story about your app breaks on TechCrunch and you need to
-scale up at 3 AM to prevent your site from crashing?
-What if someone accidentally deletes a few of your application servers?
-Would it be easy to replace them?
+scale up at 3 AM to prevent your site from crashing?  What if someone
+accidentally deletes a few of your application servers?  Would it be easy to
+replace them?
 
-If you handle infrastructure manually, these scenarios can sound spooky.
-It can be hard to make sure you've captured everything about your
-servers when they've been set up manually.
+If you handle infrastructure manually, these scenarios can sound spooky.  It can
+be hard to make sure you've captured everything about your servers when they've
+been set up manually.
 
-How great would it be if we could automate our infrastructure and make adding new
-servers simple and easy?
-
-But where do you start? There's so many DevOps tools, it can be overwhelming to
+How great would it be if we could automate our infrastructure and make adding
+new servers simple and easy? But where do you start?
+There's so many DevOps tools, it can be overwhelming to
 pick when you're starting from scratch.
 
-In this tutorial, we'll walk create and deploy a Python web
-application to Amazon. We'll use some DevOps tools such as Ansible,
-Terraform, and Vagrant and talk about other services that support our
-application, such as Flask and gunicorn.
+In this tutorial, we'll create and deploy a Python web application to Amazon.
+We'll use some DevOps tools such as Ansible, Terraform, and Vagrant and talk
+about other services that support our application, such as Flask and gunicorn.
 
 Let's get started!
 
@@ -300,7 +298,6 @@ We're going to use a slightly modified script from the
 [gunicorn](http://docs.gunicorn.org/en/stable/deploy.html#upstart) examples.
 Create this file in the VM in `/etc/init/hello-world.conf`.
 
-# TODO: Embed this as a gist
 
 {% highlight bash %}
 
@@ -343,7 +340,6 @@ it as a [Jinja2](http://jinja.pocoo.org/) template.
 
 All that said, let's look at the new file we'll write:
 
-# TODO: Embed this as a gist
 
 {% highlight bash %}
 
@@ -383,7 +379,6 @@ We're using Ansible's
 [template](http://docs.ansible.com/ansible/template_module.html) and
 [service](http://docs.ansible.com/ansible/service_module.html) modules to
 accomplish our task.
-
 What we're saying is that we want to copy the template file that we defined into
 the directory that we used before. It will use the variables we have defined in
 our file, inject them into the template, and write them to the
@@ -411,7 +406,6 @@ Confirm the prompt and let that package fly!
 You should be able to go to your browser at `192.168.33.10` currently and see
 nginx's version of "Hello world!".
 
-TODO: [picture of nginx hello world]
 
 Once you're back at your command prompt, we'll set up our first nginx
 configuration file.
@@ -421,10 +415,9 @@ file](http://docs.gunicorn.org/en/stable/deploy.html) for
 the sake of time. The goal of this configuration file is to make sure that we
 can access our server at the same host (`192.168.33.10`) but without needing to
 specify a port. Can you think of the last time you went to a site
-like ebay.com and put in a port? Exactly.
+like [eBay](https://www.ebay.com) and put in a port? Exactly.
 
-# WE probably want to use sites-enabled instead of modifying nginx.conf
-We'll write our file to `/etc/nginx/nginx.conf` and it should
+We'll write our file to `/etc/nginx/sites-enabled/hello-world` and it should
 look like this:
 
 <script src="https://gist.github.com/kevinlondon/2f6ec12b196733c251dda6748bc562e5.js"></script>
@@ -655,13 +648,13 @@ the following command:
 Run `ansible -m ping webservers --private_key=<your-key-path>/flask-hello-world.pem --inventory=hosts --user=ubuntu`. Here's what I saw:
 
 {% highlight bash %}
-$ `ansible -m ping webservers --private_key=~/Downloads/flask-hello-world.pem
---inventory=hosts --user=ubuntu`
+$ ansible -m ping webservers --private_key=~/Downloads/flask-hello-world.pem
+--inventory=hosts --user=ubuntu
 
 54.172.44.73 | SUCCESS => {
     "changed": false,
     "ping": "pong"
-    }
+}
 
 {% endhighlight %}
 
@@ -690,12 +683,12 @@ webservers` without specifying the private key or user. Give it a try!
 ## Deploying to AWS with Ansible
 
 With all that footwork out of the way, deploying is actually very simple.
-Run `ansible-playbook -v site.yml`.
+Run `ansible-playbook -v site.yml`. It'll start deploying to your instance.
 
-It'll start deploying to your instance. Wait, what? Yep! The same file that set
-up your Vagrant file can be used to configure this one. Since the `webservers`
-is considered to be in the `all` group, it gets broomed up. After a minute or
-so, your server should be in the same state as your Vagrant virtual machine.
+Wait, what? Yep! The same file that set up your Vagrant file can be used to
+configure this one. Since the `webservers` is considered to be in the `all`
+group, it gets broomed up. After a minute or so, your server should be in the
+same state as your Vagrant virtual machine.
 
 At the end, we should see something like this:
 
@@ -711,7 +704,7 @@ Then let's go to your server at `http://<your-server-ip>` annndddd....
 Hm.
 
 It's not loading. Oh, right, remember those warnings that Amazon gave us about
-the security groups when we launched the instance? Yep. Now we have to take care
+the security groups when we launched the instance? Now we have to take care
 of that.
 
 ## AWS Security Groups for your Instance
@@ -850,8 +843,6 @@ like this:
 
 $ terraform plan
 
-# TODO: Gather new output on second pass
-
 Refreshing Terraform state prior to plan...
 
 
@@ -888,7 +879,7 @@ plan.
 + aws_key_pair.hello_world
     fingerprint: "" => "<computed>"
     key_name:    "" => "hello_world"
-    public_key:  "" => "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDICLUGBvrrYfuNCOGNSXUapZXH26sZMVGZq/MlaiYBEWebAGY/ilf/GjppkEn+Jsy7NZPHUe/Hzzhrh8D8RX2wu8nV7iZD1TDsIeyjvDTNsZI3/eBUAclOaqb6hQ/u66PLreDIiiAqTrXBOiFls7cWCP37MkEIJWjkqyO/hPiWlzn9gBUsDjWqgjtP8fEmf9WqtYzum38f9X+vOSEQQFNj1zIitToUyXywbTuK7CLbVlD+dQ79/xifG5odwg1usiMRku8lQzkvzkeMQkPnXDEyZU11np8BL8zeVUt4IFVNKvwA2Y9JlbXVQ4wLj8NSek5mMHNbjkmTnjROY1SM44x/Tejvpts9uV9xJrK27YNrUWMR+20DmzVDrUF3fTlM97PbKHsEKBef+Mf/jqsI/5PFzgNMNYRjJgLHtVe5aeSLHWxPAryy7S4tf7VeVrzjWN3vBTwHhHJh0BCDTdWG8U3nF0wPx6jbWxONvK5GVDB9NonsC2/KrI3F9/+h7BQoiPE9wpY5hyml0NkbJ7vfTC8iqWen+ncPeBpfgNX/UM1MAQD3/6aUq28JqH23lBJytdgVPQMHQMXGM7axeg5vmu+hvZrkCaZkOGRilrsSApWagbmncktazTgq0lPonQJ8j6YuNV49RsfWHbF17UNw6zLj+PzGRv9u3ypLjx4BDiep8w== kevinlondon@gmail.com"
+    public_key:  "" => "ssh-rsa <yourkey> <email>"
 
 + aws_security_group.web
     description:                          "" => "Allow HTTP connections."
@@ -947,14 +938,13 @@ It can feel like work to automate infrastructure, particularly when the manual
 steps may only be taken once for a while. It's valuable to have the automation
 later, though, and to know how to automate it.
 
-Automating infrastructure when
-it's been around for a long time can be painful. It's hard to migrate an
-existing environment over to one that's fully automated and usually requires
-a complex migration plan.
+Automating infrastructure when it's been around for a long time can be painful.
+It's hard to migrate an existing environment over to one that's fully automated
+and usually requires a complex migration plan.
 
-By starting the automation process early, we save
-ourselves the work of that cutover later and we get the benefits of automation
-along the way - a reliable process that's documented as code.
+By starting the automation process early, we save ourselves the work of that
+cutover later and we get the benefits of automation along the way - a reliable
+process that's documented as code.
 
 This is an investment in the future and it also benefits you now.
 
@@ -970,42 +960,60 @@ could do!
 I find that I learn best when working hands-on. If you'd like some suggestions
 for projects, here's what I'd look into for improving what we have:
 
-* [Dynamic
-    inventory](http://docs.ansible.com/ansible/intro_dynamic_inventory.html):
-    Ansible can automatically query your AWS inventory to get server IPs and
-    tags, which can make building the inventory files (e.g. `hosts` file)
-    simpler. This is a short one.
-* Deploys: We already have something that will automatically provision our
+### [Dynamic inventory](http://docs.ansible.com/ansible/intro_dynamic_inventory.html)
+
+Ansible can automatically query your AWS inventory to get server IPs and
+tags, which can make building the inventory files (e.g. `hosts` file)
+simpler. This is a short one.
+
+### Deploys
+
+We already have something that will automatically provision our
     server. How would we streamline it for deploys? We could separate the steps
     for provisioning the server (e.g. installing packages, etc) and deploying
     the actual code (e.g. installing dependencies, updating git repo).
-* Continuous Integration / [Continuous Delivery](http://amzn.to/1SyOMyN):
-    It'd be great if we had something that would check that our code works every
-    time we commit to the repository. For that, I'd start with
-    [Jenkins](https://jenkins.io/).
-    Continuous Delivery
-    builds on that and, once you have tests running automatically, thinks about
-    how to get code ready to deploy automatically. The linked book is an
-    excellent guide to automating infrastructure as well.
-* [Immutable
-    infrastructure](http://radar.oreilly.com/2015/06/an-introduction-to-immutable-infrastructure.html): Our setup right now is built on images and on modifying the state of our machines. Another way to think about infrastructure is as immutable. In that case, instead of modifying running machines, you create new machines offline, set them up, and create an image from them. Then, when you deploy new servers, you use the image that you created earlier. As such, the server would not need any changes. If you'd like to get started with this, I'd recommend looking at [Packer](https://www.packer.io/intro/).
-* [Docker](https://www.docker.com/): We could put our application into
-    a container instead of a VM and make development, at the least, move more
-    quickly. Virtual Machines with Vagrant are fine but using Docker would be
-    better for resource and speed reasons.
-* [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/): We're currently
-    relying upon the "default" Amazon Virtual Private Cloud, which is kind of
-    like a private datacenter. If we wanted to set up other environments, for
-    example test or staging environments, I think it's a good idea to use a VPC
-    per environment. We could set this up in Terraform with a little work.
-* [Virtual
-    Enviroments](http://docs.python-guide.org/en/latest/dev/virtualenvs/): We're
-    manually installing our Python requirements app-wide right now. That
-    wouldn't work if we wanted to install another application on the server with
-    different requirements. The best practice is to use a virtual environment
-    so that we can separate the packages. If you go down this route, check out
-    Ansible's [pip module](http://docs.ansible.com/ansible/pip_module.html),
-    which has an option to install your requirements inside of a virtualenv.
+
+### Continuous Integration / [Continuous Delivery](http://amzn.to/1SyOMyN)
+
+It'd be great if we had something that would check that our code works every
+time we commit to the repository. For that, I'd start with
+[Jenkins](https://jenkins.io/).
+Continuous Delivery
+builds on that and, once you have tests running automatically, thinks about
+how to get code ready to deploy automatically. The linked book is an
+excellent guide to automating infrastructure as well.
+
+### [Immutable infrastructure](http://radar.oreilly.com/2015/06/an-introduction-to-immutable-infrastructure.html)
+
+Our setup right now is built on images and on modifying the state of our machines. Another way to think about infrastructure is as immutable. In that case, instead of modifying running machines, you create new machines offline, set them up, and create an image from them. Then, when you deploy new servers, you use the image that you created earlier. As such, the server would not need any changes. If you'd like to get started with this, I'd recommend looking at [Packer](https://www.packer.io/intro/).
+
+### [Docker](https://www.docker.com/)
+
+We could put our application into
+a container instead of a VM and make development, at the least, move more
+quickly. Virtual Machines with Vagrant are fine but using Docker would be
+better for resource and speed reasons.
+
+### [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/)
+
+We're currently
+relying upon the "default" Amazon Virtual Private Cloud, which is kind of
+like a private datacenter. If we wanted to set up other environments, for
+example test or staging environments, I think it's a good idea to use a VPC
+per environment. We could set this up in Terraform with a little work.
+
+### [Virtual Enviroments](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+
+We're manually installing our Python requirements app-wide right now. That
+wouldn't work if we wanted to install another application on the server with
+different requirements. The best practice is to use a virtual environment so
+that we can separate the packages. If you go down this route, check out
+Ansible's [pip module](http://docs.ansible.com/ansible/pip_module.html), which
+has an option to install your requirements inside of a virtualenv.
+
+
+## Thanks!
 
 Thanks for reading! Please let me know if you're interested in
 reading a follow-up article on one of the suggested topics.
+If you hit some rough edges, please reach out as well.
