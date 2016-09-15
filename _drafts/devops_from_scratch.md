@@ -445,15 +445,15 @@ works.
 ## Troubleshooting our site
 
 Hm... ok. So there's some problem. Well, we defined the path for our error log
-in the above nginx configuration file to be at `/tmp/nginx.error.log`, so let's
+in the above nginx configuration file to be at `/var/log/nginx/error.log`, so let's
 look at that file.
 
-If we do `sudo tail -n 10 /tmp/nginx.error.log`, we see the following:
+If we do `sudo tail -n 10 /var/log/nginx/error.log`, we see the following:
 
 
 {% highlight bash %}
 
-sudo tail -f -n 100 /tmp/nginx.error.log
+sudo tail -f -n 100 /var/log/nginx/error.log
 2016/03/05 23:15:54 [emerg] 6249#0: bind() to 0.0.0.0:80 failed (98: Address
 already in use)
 2016/03/05 23:15:54 [emerg] 6249#0: bind() to 0.0.0.0:80 failed (98: Address
