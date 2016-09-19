@@ -1,54 +1,54 @@
 ---
 layout: post
 title: "DevOps From Scratch: First Steps with Ansible"
-date:  2016-09-19 21:09:00
+date:  2016-09-19 12:32:00
 ---
 
 Let's say you're at a startup and everything is going great. Your app is
 growing, users are happy, money is coming in.
 
-What happens if some story about your app breaks on TechCrunch and you need to
-scale up at 3 AM to prevent your site from crashing?  What if someone
-accidentally deletes a few of your application servers?  Would it be easy to
+What happens if there's a news story about your company and you need
+scale up at 3 AM to keep the site up?  What if Amazon decommissions
+a few of your application servers?  Would it be easy to
 replace them?
 
-If you handle infrastructure manually, these scenarios can sound spooky.  It can
-be hard to make sure you've captured everything about your servers when they've
-been set up manually.
+If you create infrastructure without automation, these scenarios can sound
+spooky. You may have [snowflake servers](http://martinfowler.com/bliki/SnowflakeServer.html), each with their own configuration that
+differs slightly. Capturing the complete configuration details can feel
+intimidating.
 
-How great would it be if we could automate our infrastructure and make adding
-new servers simple and easy? But where do you start?
-There's so many DevOps tools, it can be overwhelming to
-pick when you're starting from scratch.
+It'd be great if we could automate our infrastructure and easily add new servers.
+But where do you start?  There's so many DevOps tools, it can be overwhelming to
+choose.
 
 In this tutorial, we'll create and deploy a Python web application to Amazon.
-We'll use some DevOps tools such as Ansible, Terraform, and Vagrant and talk
-about other services that support our application, such as Flask and gunicorn.
+We'll use some DevOps tools such as Ansible, Terraform, and Vagrant and discuss
+how we'll run the application itself.
 
 Let's get started!
 
 ## Overview
 
-At the end, we'd like a tiny application that we can automatically provision
+At the end, we'd like a tiny application that we can programmatically provision
 and deploy.
 
-We'll use the Python-based Flask framework for our web application because it's
-easy to pick up. We'll also say that we'd like to deploy new versions of our
-application with `Git`.
+We'll use Flask for our web application. We'll also say that we'd like to deploy
+new versions of our application with `Git`.
 
 Neither of these may be exactly the way you'd choose to
 do it. That's okay! The goal of this tutorial is to constrain choice enough to
 get to an end goal. If there are things you'd like to change afterwards,
 awesome.
 
-We'll do each step manually and then automate the action we've just done. I find
-that doing something manually the first time helps me understand why we're doing
-it. Doing it twice will also help show why it's useful to automate it because of
+We'll perform each step and then automate the action we've just done. I find
+that doing something by hand helps me understand it better.
+Doing it twice will also help show why it's useful to automate it because of
 the time it saves.
 
-You could bypass this process by using something like
-[Heroku](https://www.heroku.com/) but it's helpful to understand how the app
-works under the hood and why it is constructed in the way that it is.
+You could skip this process with something like
+[Heroku](https://www.heroku.com/) but it's helpful to understand as much of
+your application stack as you can.  It's useful knowledge when something goes
+wrong.
 
 Our general workflow will be as follows, we'll:
 
@@ -57,8 +57,7 @@ Our general workflow will be as follows, we'll:
 3. Automate setting up the application in Vagrant with Ansible
 4. Manually set up our Amazon instance and deploy our application to it
 5. Automate the Amazon setup with Terraform
-6. Automatically provision our Amazon account with Terraform and deploy with
-   Ansible
+6. Deploy to Amazon with Ansible
 
 ## Local Development
 
@@ -67,12 +66,12 @@ pretend that this tiny app is part of a much larger picture.
 
 To get started, we'll assume that you already have [Git](https://git-scm.com/)
 installed. You can run `git clone
-https://github.com/kevinlondon/flask-hello-world.git` to get a copy of the small
+https://github.com/kevinlondon/flask-hello-world.git` to get a copy of the
 project we'll be working with. It's from the [Flask
-quickstart](http://flask.pocoo.org/). They do an excellent job explaining what
-the code does as well.
+quickstart](http://flask.pocoo.org/). Their docs do an excellent job explaining
+what the code does as well.
 
-In order to run it, we'll first need a few packages. From your command line,
+To run it, we'll first need a few packages. From your command line,
 within the directory of our `flask-hello-world` project, run:
 
 {% highlight bash %}
@@ -98,7 +97,7 @@ Up next, we want to move our development into a virtual machine with Vagrant.
 ## Running Our App with Vagrant
 
 Let's say we want to make it so anyone can develop on our application.
-Keeping all of our code on our local machine works fine for a while.
+Keeping our code on our local machine works fine for a while.
 We could pass out the instructions we just gave (not too hard, right?).
 There's two main challenges that you'll encounter:
 
@@ -106,12 +105,12 @@ There's two main challenges that you'll encounter:
    using your local machine, it's tough to get it to act like a fresh machine.
 2. It's possible that your local machine is a different type of box than your
    server. Perhaps you're working on a Mac but deploying to a Linux box, for
-   example. Even if you're running on a Linux box, maybe you're deploying to
+   example. Maybe you're deploying to
    a different version of the operating system or a different operating system
    all together.
 
-We'll use [Vagrant](https://www.vagrantup.com/) as our development environment
-because it allows us to address both of those problems. We'll set up a virtual
+We'll use [Vagrant](https://www.vagrantup.com/) for our development environment
+because it allows us to address these challenges. We'll set up a virtual
 machine and run it there but still write code locally.
 
 To get started, we'll need to first [install
@@ -123,7 +122,7 @@ refer to this folder as `devops-from-scratch` from now on, but feel free to use
 whatever you'd like.
 
 From within your `devops-from-scratch` folder, run `vagrant init` in your
-Terminal. This sets up a basic Vagrant configuration file that we can modify to
+Terminal. This sets up a basic Vagrant configuration file that we can change to
 suit our needs.
 
 Here's what we should change in our `Vagrantfile`:
@@ -183,7 +182,7 @@ Let's automate what we have so far before we continue.
 ## Our First Ansible Playbook
 
 To automate the steps we followed above, we will use
-[Ansible](https://www.ansible.com/). Essentially, it will remotely log in to
+[Ansible](https://www.ansible.com/). Essentially, it will log in to
 servers that you specify using `ssh` and run commands on them.
 
 To begin, let's first install Ansible. On your host machine (not the vm), run
@@ -210,15 +209,15 @@ Let's review what we're doing here, line by line.
     a template engine called [Jinja2](http://jinja.pocoo.org/docs/dev/), so we can
     use these later to prevent repeating ourselves.
 * 8: The `tasks` directive is the meat of what we're actually doing.
-* 11: We're telling our package manager (`apt`) to install a set of packages. The
-    `item` variable (indicated by the braces in Jinja) will be replaced by each
-    of the items in the `with_items` block right below.
+* 11: We're telling our package manager (`apt`) to install a set of packages.
+  Jinja will replace the `item` variable (indicated by the braces in Jinja) with
+  each of the items in the `with_items` block right below.
 * 18: Use git to clone our application to a directory of our choosing.
 * 21: Install the Python requirements from the `requirements.txt` file.
 
 Now that we have the playbook defined, we'll need to tell our VM to use it when
 setting itself up. In your `Vagrantfile`, uncomment the bottom-most section on
-provisioning and modify it to look like this:
+provisioning and change it to look like this:
 
 {% highlight bash %}
 
@@ -236,7 +235,7 @@ commands we defined in the playbook on it.
 
 To prove that our automation works, let's redo our VM from scratch. Tearing things
 down and reprovisioning them is a good way to make sure your automation
-completes all of the necessary steps.
+completes all the necessary steps.
 
 To destroy your VM, run `vagrant destroy`. After it's destroyed, type `vagrant
 up` to recreate the VM and to provision it in one go.
@@ -531,4 +530,3 @@ browser at `http://192.168.33.10` when it's done and see our 'Hello World' examp
 Congrats on making it this far!
 
 In the next part of this series, we will deploy the app to Amazon with Terraform.
-
