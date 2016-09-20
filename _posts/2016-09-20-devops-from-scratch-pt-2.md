@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DevOps From Scratch, Part 2: Terraform & Deploying to Amazon"
+title: "DevOps From Scratch, Part 2: Amazon & Terraform"
 date:  2016-09-20 12:32:00
 ---
 
