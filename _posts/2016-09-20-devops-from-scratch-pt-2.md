@@ -9,7 +9,8 @@ Welcome to the second part of the DevOps from Scratch series!
 In this section, we'll cover Terraform and deploying to Amazon.  I'm assuming
 that you've already completed the [first part of the
 tutorial](https://www.kevinlondon.com/2016/09/19/devops-from-scratch-pt-1.html)
-or have cloned the `devops-from-scratch` repo.
+or have cloned the
+[devops-from-scratch](https://github.com/kevinlondon/devops-from-scratch) repo.
 
 ## Cloud Deploy Preparation with Amazon
 
