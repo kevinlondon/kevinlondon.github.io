@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DevOps From Scratch: First Steps with Ansible"
+title: "DevOps From Scratch, Part 1: First Steps with Ansible"
 date:  2016-09-19 12:32:00
 ---
 
