@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DevOps From Scratch, Part 1: Vagrant & Ansible"
+title: "DevOps from Scratch, Part 1: Vagrant & Ansible"
 date:  2016-09-19 12:32:00
 ---
 
