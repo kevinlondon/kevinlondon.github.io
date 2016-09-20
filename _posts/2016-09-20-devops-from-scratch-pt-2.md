@@ -1,10 +1,21 @@
+---
+layout: post
+title: "DevOps From Scratch: Terraform & Deploying to Amazon"
+date:  2016-09-20 12:32:00
+---
+
+Welcome to the second part of the DevOps from Scratch series!
+
+In this section, we'll cover Terraform and deploying to Amazon.  I'm assuming
+that you've already completed the [first part of the
+tutorial](https://www.kevinlondon.com/2016/09/19/devops-from-scratch-pt-1.html)
+or have cloned the `devops-from-scratch` repo.
+
 ## Cloud Deploy Preparation with Amazon
 
-Create an Amazon account, if you don't have one yet. Our work here should be
+Create an Amazon account if you don't have one yet. Our work should be
 eligible under the free tier if you've never done something with Amazon. Even if
-you have, it shouldn't cost much unless you forget and leave it running
-forever.
-
+you have, it shouldn't cost much unless you leave it running forever.
 
 Now, sign into your Amazon [AWS console](http://aws.amazon.com/console). You
 should see something like this:
@@ -14,7 +25,7 @@ should see something like this:
 Make sure the dropdown in the top right says "N. Virginia". If not, select it
 and switch to N. Virginia (a.k.a. US-East-1 in Amazon parlance).
 
-Let's create a new Cloud server. Amazon generally refers to individual servers
+Let's create a new server. Amazon generally refers to individual servers
 as instances, so we'll use that terminology too.
 
 Select "EC2" from the list of services.
@@ -43,7 +54,7 @@ Click "Launch".
 
 ![Key Pair](/assets/devops_from_scratch/amazon_console_06_download_pair.png)
 
-In the next screen, select "Create a new key pair". Name it 'flask-hello-world'
+In the next screen, select "Create a new key pair". Name it `flask-hello-world`
 and click "Download Key Pair". Then click "Launch Instances".
 
 Congratulations! We've launched our first instance.
@@ -179,9 +190,10 @@ of that.
 
 ## AWS Security Groups for your Instance
 
+Click "Security Groups".
+
 ![Security
 Groups](/assets/devops_from_scratch/amazon_console_09_security_groups.png)
-Click "Security Groups".
 
 Click "Create Security Group" button along the top.
 
