@@ -491,7 +491,7 @@ like a private datacenter. If we wanted to set up other environments, for
 example test or staging environments, I think it's a good idea to use a VPC
 per environment. We could set this up in Terraform with a little work.
 
-### [Virtual Enviroments](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+### [Virtual Environments](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 
 We're manually installing our Python requirements server-wide right now. That
 wouldn't work if we wanted to install another application on the server with
