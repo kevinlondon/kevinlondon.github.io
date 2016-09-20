@@ -529,4 +529,7 @@ browser at `http://192.168.33.10` when it's done and see our 'Hello World' examp
 
 Congrats on making it this far!
 
-In the next part of this series, we will deploy the app to Amazon with Terraform.
+In the [next part of this
+series](https://www.kevinlondon.com/2016/09/20/devops-from-scratch-pt-2.html),
+we will deploy the app to Amazon and automate infrastructure provisioning with
+Terraform.
