@@ -525,7 +525,7 @@ You should not have to SSH at any time, you should just be able to go to your
 browser at `http://192.168.33.10` when it's done and see our 'Hello World' example!
 
 
-### To be continued!
+### Up Next: Amazon & Terraform!
 
 Congrats on making it this far!
 
