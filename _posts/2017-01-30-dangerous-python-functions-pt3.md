@@ -13,4 +13,6 @@ Here's a working exploit for that one:
 
 <script src="https://gist.github.com/kevinlondon/9b0d1dddcced699067192923a8440a0a.js"></script>
 
+Their docs also mention the [security
+implications](https://jsonpickle.github.io/#module-jsonpickle) but it can be easy to miss.
 As a reminder, don't use anything that aspires to be Pickle.
