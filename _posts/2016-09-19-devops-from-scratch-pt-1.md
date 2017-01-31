@@ -208,7 +208,7 @@ Let's review what we're doing here, line by line.
 * 5-7: Define some variables to use for the rest of the playbook. Ansible uses
     a template engine called [Jinja2](http://jinja.pocoo.org/docs/dev/), so we can
     use these later to prevent repeating ourselves.
-* 8: The `tasks` directive is the meat of what we're actually doing.
+* 9: The `tasks` directive is the meat of what we're actually doing.
 * 11: We're telling our package manager (`apt`) to install a set of packages.
   Jinja will replace the `item` variable (indicated by the braces in Jinja) with
   each of the items in the `with_items` block right below.
