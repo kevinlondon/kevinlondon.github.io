@@ -654,4 +654,4 @@ If you're interested in reading (somehow) even more, I like these articles:
 * [Lessons from a Silicon Valley Job Search](http://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/)
 * [How to Pass an SV Software Engineering Interview](http://paultyma.blogspot.ca/2007/03/howto-pass-silicon-valley-software.html)
 
-[cct]: http://amzn.to/2suNFKX
+[cct]: http://amzn.to/2toQN7u

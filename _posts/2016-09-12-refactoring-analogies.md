@@ -183,6 +183,6 @@ can build something that we're proud of and that doesn't get thrown away.
 
 If you're looking to read more about working with legacy code, Martin Fowler
 & Kent Beck's
-[Refactoring](http://amzn.to/2sCgPr7)
+[Refactoring](http://amzn.to/2t4zBF8).
 book is excellent as is Michael Feather's [Working Effectively With Legacy
-Code](http://amzn.to/2svdg6H).
+Code](http://amzn.to/2rj6blr).
