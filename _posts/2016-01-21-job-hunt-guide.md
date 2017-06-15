@@ -475,7 +475,7 @@ It's important to pick somewhere that will
 * Let you focus.
 
 It's helpful to pick a secluded place.
-If you're currently employed, there's nothing worse than worrying about 
+If you're currently employed, there's nothing worse than worrying about
 getting caught than actually getting caught.
 Your spot could be in a parking lot near work or at your kitchen table.
 
@@ -654,4 +654,4 @@ If you're interested in reading (somehow) even more, I like these articles:
 * [Lessons from a Silicon Valley Job Search](http://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/)
 * [How to Pass an SV Software Engineering Interview](http://paultyma.blogspot.ca/2007/03/howto-pass-silicon-valley-software.html)
 
-[cct]: http://www.amazon.com/gp/product/0984782850/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0984782850&linkCode=as2&tag=kevlonsblo-20&linkId=3I6XYK3XWBHI3W2X
+[cct]: http://amzn.to/2suNFKX

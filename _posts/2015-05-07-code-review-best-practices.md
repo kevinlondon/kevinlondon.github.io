@@ -230,8 +230,8 @@ There's a number of books on the art of creating clean code. I've read through
 fewer of these than I might like (and I'm working to change that).
 Here's a few books on my list:
 
-* [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
-* [Refactoring](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672)
+* [Clean Code](http://amzn.to/2suJAq9)
+* [Refactoring](http://amzn.to/2t4yKUW)
 
 **Some useful, related talks**
 I'm a big fan of talks so here's a few that I thought of while writing this:

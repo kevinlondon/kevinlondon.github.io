@@ -4,9 +4,9 @@ title:  "Strategies for Writing Useful Tests"
 date:   2016-05-11 13:54:09
 ---
 
-I hated writing tests. It felt like a waste of time. I had no idea what 
-to test. If I wrote tests, they took forever to run. 
-I'd forget to run them. They broke all the time. 
+I hated writing tests. It felt like a waste of time. I had no idea what
+to test. If I wrote tests, they took forever to run.
+I'd forget to run them. They broke all the time.
 It wasn't good.
 
 I like writing tests now.
@@ -211,6 +211,6 @@ and [blog](https://www.destroyallsoftware.com/blog/2014/test-isolation-is-about-
 * Sandi Metz has a good talk on [The Magic Tricks of
     Testing](https://www.youtube.com/watch?v=URSWYvyc42M).
 * I've heard good things about [Growing Object-Oriented Software, Guided by
-    Tests](http://amzn.to/1TMY2ya).
+    Tests](http://amzn.to/2rtS7te).
 * I enjoyed Roy Osherove's talks on testing, such as
     [Unit Testing Best Practices](https://www.youtube.com/watch?v=dJUVNFxrK_4).
