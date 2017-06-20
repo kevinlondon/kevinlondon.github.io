@@ -65,11 +65,13 @@ Sites I've used:
 * **[Stack Overflow Careers](http://careers.stackoverflow.com/)**: Pretty good
     and easy to browse. It's how Stack Overflow supports itself, so worth
     a look I think.
-* **[Triplebyte](https://triplebyte.com)**: A startup / recruiting company. If
+* **[Triplebyte](https://triplebyte.com/iv/ccFNsAA/cp)**: A startup / recruiting company. If
     you pass their interviews, they'll help you apply to YCombinator startups. That
     currently means you can bypass the application and initial phone screen.
     I think it's good to practice for technical interviews and this offers
     a low-risk way to do that.
+* **[Hired](https://hired.com/x/4egcf)**: Similar to Triplebyte. Apply once, get
+    offers from a few companies if it's a good fit.
 
 If you'd like to work remote:
 
