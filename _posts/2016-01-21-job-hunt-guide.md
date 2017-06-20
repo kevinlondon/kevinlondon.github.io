@@ -71,7 +71,7 @@ Sites I've used:
     I think it's good to practice for technical interviews and this offers
     a low-risk way to do that.
 * **[Hired](https://hired.com/x/4egcf)**: Similar to Triplebyte. Apply once, get
-    offers from a few companies if it's a good fit.
+    offers from a few companies if it's a good fit. This is a referral link.
 
 
 If you'd like to work remote:
