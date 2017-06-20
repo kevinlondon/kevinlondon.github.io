@@ -161,7 +161,7 @@ went like this:
 >
 >Them: "You mean you don't want to work in the film indstry?"
 >
->Me: -places face in palm-
+>Me: *face palm*
 
 I hope that does not happen to you. If you craft your resume so that you're
 putting the most relevant skills on it, I think you'll do fine.
