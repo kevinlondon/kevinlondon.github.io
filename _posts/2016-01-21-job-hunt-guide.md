@@ -4,16 +4,13 @@ title:  "How to Land the Right Tech Job for You"
 date:   2016-01-21 20:45:08
 ---
 
-Job hunting can feel like shopping for a new car.
-
-At first, it's exciting and full of promise. As you start your research, it
-feels less and less exciting. There are *so many* options. How do you choose?
+Job hunting can feel like shopping for a new car. At first, it's exciting. Over
+time, it feels less exciting and more intimidating and hopeless. There are *so
+many* options. How do you choose?
 
 Once you have a car you're interested in, you may need to check many
 dealerships to find a good deal. You may have to negotiate, which feels
-uncomfortable too.
-
-It's a big headache.
+uncomfortable too. It's a big headache.
 
 Job hunting, like car shopping, has great moments. For the most part, though,
 it requires time, effort, research, and facing challenges.

@@ -87,8 +87,10 @@ True
 Adrien Guillo wrote an [excellent
 explanation](http://guilload.com/python-string-interning/) on how Python handles
 string interning.  The short version is that strings of length 0 and 1 are all
-interned, and the rest are interned at compile time. It leaves an interpreter in
-a weird spot. What gets interned and what doesn't?
+interned, and the rest are interned at compile time.
+
+As such, the IDs of the two items are different since once one was created at
+compile time and the other at runtime.
 
 
 ## More Complications
@@ -113,5 +115,9 @@ False
 
 If the IDs are the same, then why does the id comparison fail? What's different
 about this?
+
+## It all leads to `dis`
+
+http://akaptur.com/blog/2013/11/17/introduction-to-the-python-interpreter-3/
 
 String comparison in Python: https://stackoverflow.com/questions/2988017/string-comparison-in-python-is-vs
