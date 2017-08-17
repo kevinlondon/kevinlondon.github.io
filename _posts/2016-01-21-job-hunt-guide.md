@@ -66,7 +66,7 @@ Sites I've used:
     you pass their interviews, they'll help you apply to YCombinator startups. That
     currently means you can bypass the application and initial phone screen.
     I think it's good to practice for technical interviews and this offers
-    a low-risk way to do that.
+    a low-risk way to do that. This is a referral link.
 * **[Hired](https://hired.com/x/4egcf)**: Similar to Triplebyte. Apply once, get
     offers from a few companies if it's a good fit. This is a referral link.
 
