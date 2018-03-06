@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "How to Land the Right Tech Job for You [updated]"
-date:   2018-03-06 20:45:08
+title:  "How to Land the Right Tech Job for You [updated in 2018]"
+date:   2016-01-21 20:45:08
 ---
 
 Job hunting can feel like shopping for a new car. At first, it's exciting. Over
