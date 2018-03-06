@@ -26,4 +26,11 @@ Single element enum is often the best way to implement a singleton.
 
 # 4: Enforce noninstantiability with a private constructor
 
+Constructors are public by default but not always meant to be instantiated.
+Declaring the constructor as private to prevent it from being instantiated can
+help ensure that no one misuses your class by mistake.
 
+# 5: Prefer dependency injection to hardwiring resources
+
+Instead of using `final` or a class as singleton, can allow for setting some
+values at instantiation time, such as the dictionary.
