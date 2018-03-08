@@ -155,4 +155,14 @@ method on boxed primitive classes.
 ## 15: Minimize the accessibility of classes and members
 
 Hide implementation details in classes. It decouples components and allows them
-to be tested and developed in isolation.
+to be tested and developed in isolation. "Make each class or member as
+inaccessible as possible."
+
+Package private means it can only be accessed within the package. Public means
+it's part of the exported API and should maintain its contract with API
+consumers.
+
+In terms of increasing accessibility: `private`, `package-private`, `protected`,
+`public`. Protected members must be supported forever and should not be set
+lightly. Private -> package-private is okay to facilitate testing if done
+judiciously. Go no further.
