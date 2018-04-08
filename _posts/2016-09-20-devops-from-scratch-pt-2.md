@@ -127,7 +127,7 @@ In this file, we're describing a group of servers (`webservers`), with a single
 host: the server IP we grabbed above. Once you've saved the file, you can run
 the following command:
 
-Run `ansible -m ping webservers --private_key=<your-key-path>/flask-hello-world.pem --inventory=hosts --user=ubuntu`. Here's what I saw:
+Run `ansible -m ping webservers --private-key=<your-key-path>/flask-hello-world.pem --inventory=hosts --user=ubuntu`. Here's what I saw:
 
 {% highlight bash %}
 $ ansible -m ping webservers --private_key=~/Downloads/flask-hello-world.pem
