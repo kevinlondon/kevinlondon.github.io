@@ -7,8 +7,8 @@ permalink: /about/
 ![The Author]({{ site.gravatar }}?s=150)
 
 Hello! I'm a software developer in Los Angeles.
-I work at [ChowNow](http://www.chownow.com)
-and I'm pursuing a
+I work at [Amazon](https://www.amazon.com)
+and recently finished a
 [Masters in Comp Sci](http://www.omscs.gatech.edu/) at Georgia Tech.
 
 You can [follow me](https://twitter.com/kevin_london) on Twitter or sign up

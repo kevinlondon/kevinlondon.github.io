@@ -2,9 +2,9 @@
 title: Kevin London's blog
 email: kevinlondon@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Software Engineer at ChowNow.
-  Master's student in Computer Science at Georgia Tech.
-  This is a place for me to share thoughts on software engineering and Python.
+  Software Engineer at Amazon.
+  M.S. in Computer Science from Georgia Tech.
+  My views are my own and do not represent my employer.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://kevinlondon.com" # the base hostname & protocol for your site
 twitter_username: kevin_london
