@@ -84,6 +84,18 @@ not necessary.
         you'd put a comment.
 
 * Baby mind
+
+When I do code reviews, I like to use something I call "baby mind". Ideally,
+I'll do a pass where I look at large scale issues such as architecture and the
+way the code sits together. Does everything feel like it's in the right place?
+Can I follow the flow without thinking too deeply? Once we've settled the
+architectural construction, I like to go into "baby mind". In other words,
+I like to not think about the code. If I have to think and use serious cognitive
+thought to process something, it's going to be likely to have bugs. By making it
+seems simple and easy to understand, we give ourselves a leg up against
+complexity and have a great start to solving the problem. In a few months when
+we come back to something, it should still be easy to read and understand.
+
 * Do multiple passes
 * Time-box your efforts
 * Security!!
