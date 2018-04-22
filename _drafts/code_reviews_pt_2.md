@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "More Code Review Best Practices"
+date:   2018-04-22 15:54:08
+---
 
 This is a collection of thoughts and things I thought I'd written down in the
 past and somehow hadn't. In some cases, I will repeat myself in the earlier code
@@ -19,11 +24,9 @@ other's papers. I remember people racting to notes that I'd given them on
 anything like a resume or whatever. People don't generally expect feedback on
 things but it is important for growth.
 
-# Dos and Don'ts
+## Dos and Don'ts
 
-## Don't
-
-### Focus on coding style
+* Don't Focus on coding style
 
 In the earlier post, I had a full section on style and I stand by that. In this
 case, I'm talking specifically about language stylistic guidelines. For example,
@@ -37,14 +40,14 @@ submission of code. I find that this is a great way to reduce the noise of
 a code review and reduce ambiguity. It's much better to have a tool tell me that
 code isn't stylistically consistent than to hear that from a peer.
 
-### Consider your word choices
+* Consider your word choices
 
 Because code reviews are usually asynchronous and over text, it's hard to figure out how someone
 intends a sentence. As such, it's important to go out of our way to ensure that
 we're being sensitive to that and avoiding phrases that could be misconstrued
 over text. Here's some words / ideas I think about when writing reviews:
 
-#### No "just"
+* No "just"
 
 I picked this up from a book about Directing Actors that I read during film school.
 Using "just" can trivialize something that's not trivial. If it was as easy as
@@ -52,7 +55,7 @@ Using "just" can trivialize something that's not trivial. If it was as easy as
 side of it is stupid. I find it's better to assume the person on the other end
 of the conversation made a best effort.
 
-#### No "why"
+* No "why"
 
 "Why", in text form, often comes across as accusatory or demeaning. "Why don't
 you do this instead of that?" "Why did you do this thing?" I try instead to
@@ -70,7 +73,7 @@ Although some of these seek to find the same information,
 they can come across as more pleasant and less likely to put someone in
 a defensive mindset.
 
-#### No shaming
+* No shaming
 
 This is something that can come up too and quickly poison the process of doing
 a code review. Ideally code reviews feel good and useful for everyone involved,
@@ -86,6 +89,16 @@ I mentioned in the other post, make it about the code and not the person. Beyond
 that, we also want to make sure we're keeping in mind that there is a human
 being on the other side of the code review and we probably work with them on
 a regular basis.
+
+* Use "and" instead of "but"
+
+"This is a good first step **but** it needs tests" versus "This is a good first
+step and I think when we add tests it will be good to merge"
+
+#### Use "I feel" and "I think"
+
+Instead of "this is confusing", try "I have a hard time following what's
+happening here".
 
 #### Try to avoid questions with a yes / no answer
 
