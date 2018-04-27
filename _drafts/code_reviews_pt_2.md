@@ -4,60 +4,52 @@ title:  "More Code Review Best Practices"
 date:   2018-04-22 15:54:08
 ---
 
-This is a collection of thoughts and things I thought I'd written down in the
-past and somehow hadn't. In some cases, I will repeat myself in the earlier code
-review post. In others, it's new thinking. Still, given that it's been three
-years, I think it's ok if I retread some of the same ground as long as I provide
-you with some new information or ways to think about things.
+Three years ago, I posted an article on [Code Review Best
+Practices](https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html).
+Since then, I have changed my views on a few points and have additional
+recommendations.
 
-I just joined a new team at Amazon and realized how many opinions I have on code
-reviews. I have a lot of opinions on code reviews.
+I've found code reviews to be one of the most valuable tools for growing as
+a developer. I think the kind of feedback we get from code reviews is invaluable
+and I'd like to share what I've learned since the original post.
 
-I've been doing code reviews for four years or so now and I love them. I think
-I've found them to be the single most valuable tool for getting better at
-writing and thinking about code generally.
+## Potential Pitfalls
 
-I've always found feedback useful,
-and I view giving and receiving feedback as a kind of gift generally. I remember
-inadvertently making someone depressed in high school when we peer-reviewed each
-other's papers. I remember people racting to notes that I'd given them on
-anything like a resume or whatever. People don't generally expect feedback on
-things but it is important for growth.
+Distractions can cause code reviews to shift from a useful tool to a depressing
+chore. In particular, I've seen the following items weigh down good code review
+discusses:
 
-## Dos and Don'ts
+* Coding style
 
-* Don't Focus on coding style
+If your team has an agreed-upon standard for coding style,
+enforce it by using an *automated* style check before code review.
+For example, how many blank lines does your team prefer between methods? How
+many spaces between arguments?
 
-In the earlier post, I had a full section on style and I stand by that. In this
-case, I'm talking specifically about language stylistic guidelines. For example,
-how many spaces do we want between methods? How many spaces between arguments?
-Where do our braces live?
+Coding style discussions can be a form of
+[bikeshedding](https://en.wikipedia.org/wiki/Law_of_triviality) and add noise to
+a code review. It feels less personal when automation flags your code than
+when a human does.
 
-These things do not belong in a code review. If you find yourself regularly
-discussing coding style items, then I recommend that you codify the standards
-you and your team expect to see into a tool and run that tool on every
-submission of code. I find that this is a great way to reduce the noise of
-a code review and reduce ambiguity. It's much better to have a tool tell me that
-code isn't stylistically consistent than to hear that from a peer.
+## Consider your choice of words
 
-* Consider your word choices
+Because code reviews often take place over text, it can be hard to determine
+someone's tone. As such, it's important to be sensitive to that and think about
+word choice. It's important to trust that the developer on
+the other end of a review did their best.
 
-Because code reviews are usually asynchronous and over text, it's hard to figure out how someone
-intends a sentence. As such, it's important to go out of our way to ensure that
-we're being sensitive to that and avoiding phrases that could be misconstrued
-over text. Here's some words / ideas I think about when writing reviews:
+I believe some words can feel agressive over text, these are some words I try to avoid:
 
-* No "just"
+> __"just"__
 
-I picked this up from a book about Directing Actors that I read during film school.
-Using "just" can trivialize something that's not trivial. If it was as easy as
-"just" doing something, we're implicitly saying that the person on the other
-side of it is stupid. I find it's better to assume the person on the other end
-of the conversation made a best effort.
+Makes it sound easy to do something, and can come across as
+meaning that the person on the other side of a review didn't think of an
+obvious thing. What's obvious to you may not be obvious to them, or they may
+have considered that option and it did not work.
 
-* No "why"
+> __"why"__
 
-"Why", in text form, often comes across as accusatory or demeaning. "Why don't
+In text form, "why" can read as accusatory or demeaning. For example: "Why don't
 you do this instead of that?" "Why did you do this thing?" I try instead to
 assume that they're coming from the best effort perspective mentioned above and
 instead want to figure out what thought process lead them to make the choices
@@ -72,6 +64,8 @@ a particular solution?
 Although some of these seek to find the same information,
 they can come across as more pleasant and less likely to put someone in
 a defensive mindset.
+
+* __"but"__
 
 * No shaming
 
@@ -90,17 +84,12 @@ that, we also want to make sure we're keeping in mind that there is a human
 being on the other side of the code review and we probably work with them on
 a regular basis.
 
-* Use "and" instead of "but"
-
-"This is a good first step **but** it needs tests" versus "This is a good first
-step and I think when we add tests it will be good to merge"
-
-#### Use "I feel" and "I think"
+* Use "I feel" and "I think"
 
 Instead of "this is confusing", try "I have a hard time following what's
 happening here".
 
-#### Try to avoid questions with a yes / no answer
+* Try to avoid questions with a yes / no answer
 
 This is one that I'm still working on. Questions with a yes / no answer can be
 leading. Open ended questions allow the person on the other side to clarify
@@ -113,7 +102,7 @@ on the reviewee. If they ask questions, I'm usually happy to provide more
 context or suggestions. The first also presumes a conclusion while the second
 doesn't necessarily.
 
-#### Focus on the negatives
+### Focus on the positives
 
 Something that's hard to remember during a code review is that it's really
 a conversation. In some cases, code reviews have been treated as a "this is
@@ -125,9 +114,7 @@ If you remember that you're having an honest discussion with someone, I think
 both parties will get more out of it.
 
 
-## Do
-
-### Offer context on your own code in the review
+## Offer context on your own code in the review
 
 In the initial post, I mentioned that I like to go through and review my own
 code prior to committing it. I still like to do that. In addition to that,
@@ -153,7 +140,7 @@ If I find myself wanting to explain what the
 code does with a comment, that's a good sign that the code I've written is
 misleading and could be rewritten in a clearer and easier to understand way.
 
-### Use code comments judiciously
+### Use in-line code comments judiciously
 
 Although some code review comments are helpful to offer to others (and maybe
 yourself if you need to do forensics in the future), comments in the code should
