@@ -22,8 +22,8 @@ improvement.
 
 For the second point, even a small amount of research can
 help you improve. As obvious as it sounds to Google how to do something, we
-often don't think to do it. As an example, we may not think to improve [how we
-ask questions](https://www.google.com/search?q=how+do+you+ask+good+questions).
+often don't think to do it. As an example, I didn't think to look for [how to
+ask good questions](https://jvns.ca/blog/good-questions/).
 
 Okay! Let's talk resources.
 
@@ -121,7 +121,7 @@ I have a few sources that I check for programming-related videos:
     by Gary Bernhardt. Maybe it's cheating to include this, since I already
     mentioned Gary. Oh well! I enjoyed
     "[Patterns failed. Why? Should we
-    care?]"(https://www.deconstructconf.com/2017/brian-marick-patterns-failed-why-should-we-care)
+    care?](https://www.deconstructconf.com/2017/brian-marick-patterns-failed-why-should-we-care)"
     and look forward to the 2018 videos.
 
 ## Courses
