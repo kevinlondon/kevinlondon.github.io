@@ -349,7 +349,7 @@ stop on runlevel [016]
 respawn
 setuid nobody
 setgid nogroup
-chdir {{ repository_path }}
+chdir {% raw %}{{ repository_path }}{% endraw %}
 
 exec gunicorn app:app --bind 0.0.0.0:8000
 
