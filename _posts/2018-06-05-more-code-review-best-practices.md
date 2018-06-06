@@ -11,7 +11,7 @@ learn a new programming language, improve designs, and find
 blind spots. I'd like to offer some more recommendations.
 
 
-### Don't Discuss Code Style
+### Code Style
 
 If your team uses a style guide, such as [Python's PEP
 8](https://www.python.org/dev/peps/pep-0008/),
