@@ -10,18 +10,22 @@ Since then, code reviews helped me
 learn a new programming language, improve designs, and find
 blind spots. I'd like to offer some more recommendations.
 
-## Anti-Patterns
 
-Code reviews can be tricky. We take pride in our work and it's hard to have it
-dissected. Let's discuss some common traps!
-
-### Code style
+### Don't Discuss Code Style
 
 If your team uses a style guide, such as [Python's PEP
 8](https://www.python.org/dev/peps/pep-0008/),
 enforce it with automated tools.
 Style discussions can be a form of
 [bikeshedding](https://en.wikipedia.org/wiki/Law_of_triviality) and add noise.
+
+### Comment on the Good Stuff
+
+Code reviews are conversations and not a _"This is what's wrong with your code"_
+exercise. Point out positive aspects of the code. If a developer has improved,
+mention the improvement! If you learn something new from reading their code,
+mention that too.
+
 
 ### Tone
 
@@ -48,29 +52,6 @@ find how they came to their decision. Examples:
 * **Better**: What's preventing the code from configuring the database connections
     once?
 
-### Yes / No Questions
-
-Open-ended questions allow the other person to explain their thinking. Yes / no
-questions can feel like they're leading to an expected answer. For example:
-
-* **Avoid**: Do you think we should refactor this?
-* **Better**: How can we design this so we can reuse it in the other section?
-
-The first question implies that the answer should be "YES!" -- it's a question
-in form only. The second question could start a discussion.
-
-## Approach Recommendations
-
-We can make code reviews more effective by making changes in how we approach
-them.
-
-### Comment on the Good Stuff
-
-Code reviews are conversations and not a _"This is what's wrong with your code"_
-exercise. Point out positive aspects of the code. If a developer has improved,
-mention the improvement! If you learn something new from reading their code,
-mention that too.
-
 ### Offer Context
 
 I've started to leave comments on my code reviews for others to understand the
@@ -85,6 +66,17 @@ Context comments provide an entry point for people new to your code.
 If you're submitting code for review, you've been thinking about it for a while.
 Your reviewer doesn't have the same knowledge about your choices that
 you do.
+
+### Avoid Yes / No Questions
+
+Open-ended questions allow the other person to explain their thinking. Yes / no
+questions can feel like they're leading to an expected answer. For example:
+
+* **Avoid**: Do you think we should refactor this?
+* **Better**: How can we design this so we can reuse it in the other section?
+
+The first question implies that the answer should be "YES!" -- it's a question
+in form only. The second question could start a discussion.
 
 ### Think Big
 
