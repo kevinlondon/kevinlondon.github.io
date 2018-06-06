@@ -4,9 +4,9 @@ email: kevinlondon@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Software Engineer at Amazon.
   M.S. in Computer Science from Georgia Tech.
-  My views are my own and do not represent my employer.
+  Views are my own and not representative of my employer.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://kevinlondon.com" # the base hostname & protocol for your site
+url: "https://kevinlondon.com" # the base hostname & protocol for your site
 twitter_username: kevin_london
 github_username:  kevinlondon
 gravatar: https://s.gravatar.com/avatar/c1428d36c91a53a1e4c39fb2c7ceff15
