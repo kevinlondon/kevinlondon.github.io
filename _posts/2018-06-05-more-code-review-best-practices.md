@@ -6,12 +6,11 @@ date:   2018-06-05 20:54:08
 
 A few years ago, I wrote about [Code Review Best
 Practices](https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html).
-Since then, code reviews helped me
-learn a new programming language, improve designs, and find
-blind spots. I'd like to offer some more recommendations.
+I've found code reviews to be one of the most valuable tools for growing as
+a developer. I think the kind of feedback we get from code reviews is invaluable
+and I'd like to share what I've learned since the original post.
 
-
-## Code Style
+### Style
 
 If your team uses a style guide, such as [Python's PEP
 8](https://www.python.org/dev/peps/pep-0008/),
@@ -19,7 +18,7 @@ enforce it with automated tools.
 Style discussions can be a form of
 [bikeshedding](https://en.wikipedia.org/wiki/Law_of_triviality) and add noise.
 
-## Comment on the Good Stuff
+### Comment on the Good Stuff
 
 Code reviews are conversations and not a _"This is what's wrong with your code"_
 exercise. Point out positive aspects of the code. If a developer has improved,
@@ -27,7 +26,7 @@ mention the improvement! If you learn something new from reading their code,
 mention that too.
 
 
-## Tone
+### Tone
 
 Code reviews usually take place over text, where it's hard to determine
 [emotion and
@@ -52,7 +51,7 @@ find how they came to their decision. Examples:
 * **Better**: What's preventing the code from configuring the database connections
     once?
 
-## Offer Context
+### Offer Context
 
 I've started to leave comments on my code reviews for others to understand the
 change's context. I like to discuss what the code review includes (and why) and
@@ -67,7 +66,7 @@ If you're submitting code for review, you've been thinking about it for a while.
 Your reviewer doesn't have the same knowledge about your choices that
 you do.
 
-## Avoid Yes / No Questions
+### Avoid Yes / No Questions
 
 Open-ended questions allow the other person to explain their thinking. Yes / no
 questions can feel like they're leading to an expected answer. For example:
@@ -78,20 +77,22 @@ questions can feel like they're leading to an expected answer. For example:
 The first question implies that the answer should be "YES!" -- it's a question
 in form only. The second question could start a discussion.
 
-## Think Big
+### Think Big
 
 Think about architectural choices when looking at code.
 Does the design make sense? When reviewing code, it's tempting to focus on issues like
 "Should this variable be `final`?" and miss bigger issues.
 
-## Use "Baby Mind"
+### Baby Mind
 
-I like to use something I call "baby mind" when I'm doing code reviews. When
-looking at the code review specifics, I try to avoid thinking. I ask
-questions when confused. If it's confusing now, it will still be
-confusing later.
+Once we've settled the architectural questions, I like to go into "baby mind". In other
+words, I try not think about the code. If I have to think deeply to figure out
+what the code does, it's confusing and can hide bugs.
+In a few months when we come back to the code, it should still be easy to read
+and understand.
 
-## Limit Your Time
+
+### Time-box Reviews
 
 I like to spend no more than an hour on a code review. That can mean
 cutting up code reviews so they're easier to
@@ -102,6 +103,7 @@ try to make the changes (and tickets) smaller in scope.
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-It's hard to apply these tips all at once. I recommend the experimenting with
-one at a time. I hope you find these
-tips useful as you figure out what works for you and your team.
+### Wrapping Up
+
+That's it! I hope you find these practices useful. I'll do a post in a few more
+years if this changes.
