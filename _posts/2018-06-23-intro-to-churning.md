@@ -31,19 +31,19 @@ in learning more, including which cards to get, and how to do this safely.
 Churning can be wonderful but there are, of course, some
 risks. As such, here's some lessons I've learned:
 
-* Only purchase what you normally would buy.
+* **Only purchase what you'd normally would buy**
 
 It can be easy, when spending for credit card bonuses, to justify spending
 beyond what you normally would. Track your spending
 and, if you catch yourself thinking "Well, I need the bonus..." - stop.
 
-* Track your cards and make sure you meet your signup requirements to get the bonuses.
+* **Track your cards and make sure you meet your signup requirements to get the bonuses**
 
 It's easy to track one or two credit cards if you're going for sign up bonuses.
 It's harder if you have 3-5. I use a spreadsheet to track when I applied for
 a card, how long I have, and how much I need to spend for the bonus.
 
-* Setup your cards to automatically pay in full from your account.
+* **Setup your cards to automatically pay in full from your account**
 
 Don't carry a month to month balance. I like to treat credit cards the same way
 I would treat a debit card or cash. Carrying a balance will make you accrue
@@ -54,7 +54,7 @@ I'd recommend going to Reddit's
 [/r/personalfinance](https://www.reddit.com/r/personalfinance/) and pay off your
 debts first.
 
-* Research before you jump in
+* **Research before you jump in**
 
 Some credit card issuers, Chase in particular, have rules about how often you
 can apply for cards. If you apply for some random store card like Macy's, then
@@ -80,11 +80,11 @@ My goal is to give you the basic tools to learn more and educate yourself hobby.
 1. Make sure you have no outstanding credit card debt. (See above caveats).
 2. Think about what kind of rewards you're interested in. Do you prefer cashback
    or travel? How about airfare vs hotels?
-3. Read Reddit's [/r/churning](https://www.reddit.com/r/churning) community.
-   They have a wonderful [Credit Card
-   Flowchart](https://www.reddit.com/r/churning/comments/6wzkwj/faq_credit_card_recommendation_flowchart/)
-   that covers what I usually recommend. Another good resource is the [Doctor of
-   Credit blog](https://www.doctorofcredit.com).
+3. Read Reddit's **[/r/churning](https://www.reddit.com/r/churning)** community.
+   They have a wonderful **[Credit Card
+   Flowchart](https://www.reddit.com/r/churning/comments/6wzkwj/faq_credit_card_recommendation_flowchart/)**
+   that covers what I usually recommend. Another good resource is the **[Doctor of
+   Credit blog](https://www.doctorofcredit.com)**.
 4. Review the Credit Card Flowchart and pick a credit card.
 5. Think about it for a while. Do your research on alternatives before applying.
 6. Apply!
@@ -118,10 +118,10 @@ for a different rate. It's worth doing your research!
 
 Helpful resources:
 
-* Reddit [/r/awardtravel](https://www.reddit.com/r/awardtravel/)
-* [Award Mapper](http://www.awardmapper.com/): Hotel point search, good starting
+* **Reddit [/r/awardtravel](https://www.reddit.com/r/awardtravel/)**
+* **[Award Mapper](http://www.awardmapper.com/)**: Hotel point search, good starting
     spot.
-* [Award Hacker](https://www.awardhacker.com/): Flight point search.
+* **[Award Hacker](https://www.awardhacker.com/)**: Flight point search.
 
 You may come across posts by a travel blogger called The Points Guy. Take his
 posts with a grain of salt. His recommendations may be based on which issuers
