@@ -72,18 +72,21 @@ card bonuses.
 
 ## How do I start?
 
+Let's cover some of the basics. This is not intended to be an exhaustive guide.
+My goal is to give you the basic tools to learn more and educate yourself hobby.
+
 ### Preparation
 
 1. Make sure you have no outstanding credit card debt. (See above caveats).
-2. Read Reddit's [/r/churning](https://www.reddit.com/r/churning) community.
+2. Think about what kind of rewards you're interested in. Do you prefer cashback
+   or travel? How about airfare vs hotels?
+3. Read Reddit's [/r/churning](https://www.reddit.com/r/churning) community.
    They have a wonderful [Credit Card
    Flowchart](https://www.reddit.com/r/churning/comments/6wzkwj/faq_credit_card_recommendation_flowchart/)
    that covers what I usually recommend. Another good resource is the [Doctor of
    Credit blog](https://www.doctorofcredit.com).
-3. Think about what kind of rewards you're interested in. Do you prefer cashback
-   or travel? How about airfare vs hotels?
-4. Review the Credit Card Flowchart above and pick a credit card.
-5. Think about it for a while, make sure you do your reading before you start.
+4. Review the Credit Card Flowchart and pick a credit card.
+5. Think about it for a while. Do your research on alternatives before applying.
 6. Apply!
 
 ### When you get your card
@@ -93,20 +96,25 @@ card bonuses.
 3. Meet your minimum spending requirement
 4. Get the points!
 
+If you're having a hard time meeting the minimum spend requirements for your
+cards, there's creative ways to do so. I use [Plastiq](http://plastiq.com/),
+which is a service that lets you pay bills with
+credit cards. I've used Plastiq to pay rent, for example.
+
 ### Using the points
 
-This part can be challenging! There's many different ways to use points and they
-each have pros and cons. For example, redeeming your points for a gift card is
-almost universally **a bad idea**.
+This part can be challenging because there's many options!
 
 The term of art in the community is "cpp" or "cents per point". If you spent
 30,000 points on a hotel stay that normally costs $450 dollars, then your
-redemption was worth 1.5 cpp ($450 / 30000).
+redemption was worth 1.5 cpp ($450 / 30000). One way to approach using your
+points is to aim for a high cpp on your redemptions (at **least** 1 cpp).
+Redeeming your points for a gift card is usually a bad idea.
 
 You may have different ways of using points too. For example, if you're using
-Chase Ultimate Rewards points, you might be able to transfer them to a hotel
-chain or you could redeem them through the Chase Ultimate Rewards Travel portal
-for a different rate. It's worth doing your research here!
+Chase Ultimate Rewards points, you may be able to transfer them to a hotel
+chain. you could redeem them through the Chase Ultimate Rewards Travel portal
+for a different rate. It's worth doing your research!
 
 Helpful resources:
 
@@ -122,7 +130,7 @@ advice is good.
 
 ### After the first year
 
-If you've gotten the bonus for the card and don't use it as a regular spender,
+If you've gotten a card's bonus and don't use it regularly,
 consider downgrading it to a version of the card that has no fee or cancelling
 at the year mark. Issuers will often refund the annual fee if you cancel within
 the first month of it being assessed. This is another reason why it's helpful to
@@ -130,15 +138,18 @@ have a spreadsheet!
 
 ## Okay but... which cards should I get?
 
-Ok, I get it. That's a lot to do. If you're looking for the simplest start, I'd
-recommend going with Chase cards first. The single best card, I think, is the
+I get it. That's a lot to process. If you're looking for the simplest start, I'd
+recommend going with Chase cards first because Chase has the most strict set of
+rules and, typically, the best bonuses.
+
+The single best card, I think, is the
 [Chase Ink
 Preferred](https://creditcards.chase.com/small-business-credit-cards/ink-business-preferred).
 It currently has a public signup bonus of 80K Chase Ultimate Rewards points,
-which should be worth at least $1000 if you redeem them wisely.
+which should be worth at least $800.
 
-It's a business
-credit card. it's likely that you already have some kind of business, even
+The Chase Ink Preferred is a business
+credit card. It's likely that you already have some kind of business, even
 if it's an eBay or Craigslist sales business on the side. You can also use your
 Social Security Number instead of an Employer Identification Number if you have
 a sole proprietorship.
@@ -149,5 +160,7 @@ and doing your research. Churning is always changing, so what's good now will
 probably not be the best card when you read this.
 
 I hope you enjoy learning more about churning and using your credit cards to
-your advantage. It's a fun hobby and it's interesting *because* it changes. Do
-your research and you'll be fine. Best of luck!
+your advantage. It's a fun hobby. It's interesting *because* it changes. Do
+your research and you'll be fine.
+
+Best of luck!
