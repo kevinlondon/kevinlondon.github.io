@@ -4,31 +4,32 @@ title: AWS Certification Prep
 date: 2018-09-04 20:23:08
 ---
 
-I started at Amazon.com a few months ago and began studying for the AWS
-Certifications. So far, I've passed the [AWS Certified Solution Architect
-- Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
-- and
-[AWS Certified Developer
-- Associate](https://aws.amazon.com/certification/certified-developer-associate/)
-- certifications. I'd worked with AWS tools such as EC2 and
-VPCs prior to starting at Amazon but I'd never thought to get certified. In this
-post, we'll talk about why you should get certified and how to go about it.
+I started at Amazon.com a few months ago and began studying for the [Amazon Web
+Services](https://aws.amazon.com/)
+Certifications. So far, I've passed the [AWS Certified Solution Architect - Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
+and
+[AWS Certified Developer - Associate](https://aws.amazon.com/certification/certified-developer-associate/)
+certifications. In this post, we'll talk about why you should get certified and how to go about it.
 
 As a disclaimer, I don't work in AWS and these views are my own.
 
 ## Why Get Certified?
 
+I'd worked with AWS tools such as EC2 and
+VPCs prior to starting at Amazon but I'd never thought to get certified.
 I started studying because I wanted to both broaden and deepen my knowledge of
 AWS services. There's many AWS services and I had a hard time remembering the
 difference
 between, for example, [AWS Simple Workflow](https://aws.amazon.com/swf/) and [AWS Step Functions](https://aws.amazon.com/step-functions/).
 
-(Spoiler / aside:
+(_Spoiler / Aside_):
 
 1. AWS [recommends using Step
    Functions](https://aws.amazon.com/step-functions/faqs/) over Simple Workflow for new projects.
 2. SWF uses a "decider program" paradigm where you write the code to determine what to do.
 3. Step Functions uses a declarative JSON syntax instead.)
+
+(_End Aside_)
 
 In terms of technical depth, I wanted to learn more about specific behaviors in
 services I'd used. For example, in [AWS Simple Queue
