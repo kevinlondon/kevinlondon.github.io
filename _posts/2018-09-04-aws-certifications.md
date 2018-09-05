@@ -5,10 +5,16 @@ date: 2018-09-04 20:23:08
 ---
 
 I started at Amazon.com a few months ago and began studying for the AWS
-Certifications. So far, I've passed two (Solution Architect - Associate and
-Developer - Associate (2018)). I'd worked with AWS tools such as EC2 and VPCs
-prior to starting at Amazon but I'd never thought to get certified. As
-a disclaimer, I don't work in or on AWS and these views are my own.
+Certifications. So far, I've passed the [AWS Certified Solution Architect
+- Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
+- and
+[AWS Certified Developer
+- Associate](https://aws.amazon.com/certification/certified-developer-associate/)
+- certifications. I'd worked with AWS tools such as EC2 and
+VPCs prior to starting at Amazon but I'd never thought to get certified. In this
+post, we'll talk about why you should get certified and how to go about it.
+
+As a disclaimer, I don't work in AWS and these views are my own.
 
 ## Why Get Certified?
 
@@ -59,9 +65,11 @@ following order:
 
 ### Associate-level Certifications
 
-1. Solutions Architect - Associate
-2. Developer - Associate
-3. SysOps Administrator - Associate
+1. [Solutions Architect](https://aws.amazon.com/certification/certified-developer-associate/)
+2.
+[Developer](https://aws.amazon.com/certification/certified-developer-associate/)
+3. [SysOps
+   Administrator](https://aws.amazon.com/certification/certified-sysops-admin-associate/)
 
 #### Why?
 
@@ -86,9 +94,12 @@ more on serverless technologies, like AWS X-Ray.
 
 If you'd like, you can pursue the specialty certs:
 
-1. Security - Specialty
-2. Advanced Networking - Specialty
-3. Big Data - Specialty
+1.
+[Security](https://aws.amazon.com/certification/certified-security-specialty/)
+2. [Advanced
+   Networking](https://aws.amazon.com/certification/certified-advanced-networking-specialty/)
+3. [Big
+   Data](https://aws.amazon.com/certification/certified-big-data-specialty/)
 
 The Security certificate is especially valuable because any of the
 certifications (associate or professional) may cover security topics. An
@@ -99,8 +110,10 @@ studying easier.
 
 Finally, you can wrap up with the professional level certificates:
 
-1. DevOps Engineer - Professional
-2. Solutions Architect - Professional
+1. [DevOps
+   Engineer](https://aws.amazon.com/certification/certified-devops-engineer-professional/)
+2. [Solutions
+   Architect](https://aws.amazon.com/certification/certified-solutions-architect-professional/)
 
 I can't speak in depth to either of these certificates as I haven't started
 studying for them.
@@ -190,8 +203,8 @@ a service but, for me, there's no better way than using it a project.
 
 I think it's worthwhile to [learn and be
 curious](https://www.amazon.jobs/principles). I'm glad that I've studied so far
-because it allows me to drop into projects that use different AWS tech than
-I've used in the past. In other words, it's a good base. It's also good to learn
+because it allows me to drop into projects that use different AWS tech than I've
+used in the past. In other words, it's a good base. It's also good to learn
 about services that you might not have used but that can be really useful, like
 the API Gateway, AWS Lambda, or AWS DynamoDB.
 
