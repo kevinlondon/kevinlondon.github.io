@@ -14,8 +14,8 @@ As a disclaimer, I don't work in the AWS organization and these views are my own
 
 ## Why Get Certified?
 
-I'd worked with AWS tools such as [EC2](https://aws.amazon.com/ec2/) and
-[VPCs](https://aws.amazon.com/vpc/) before working at Amazon but I'd never
+Before working at Amazon, I'd used AWS services like [EC2](https://aws.amazon.com/ec2/) and
+[VPCs](https://aws.amazon.com/vpc/) but I'd never
 thought to get certified. I started studying because I wanted to both broaden
 and deepen my knowledge of AWS services. For example, I didn't know the
 difference between [AWS Simple
@@ -31,13 +31,13 @@ Functions](https://aws.amazon.com/step-functions/).
 
 (_End Aside_)
 
-I also wanted to learn more about services I used in greater depth.
+I also wanted to learn more about services I knew in greater depth.
 For example, in [AWS Simple Queue
 Service](https://aws.amazon.com/sqs/), what's [long
 polling](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html)
 and how does it differ from the default?
-I've found that the certifications have helped me improve in both areas. If
-you're looking to learn more about AWS, it's worthwhile to get
+The certifications have helped me improve in both areas. If
+you want to learn more about AWS and do well with structure, it's worthwhile to get
 certified.
 
 ## How to Get Certified
@@ -50,7 +50,7 @@ The basics for certification are easy:
    site](https://www.aws.training/certification?src=certification)
 4. Take the test
 
-## What Cert Do You Want?
+### What Cert Do You Want?
 
 AWS currently offers 5 primary certificates and several specialty
 certificates. I've heard that it's best to pursue the AWS certifications in the
@@ -66,7 +66,7 @@ following order:
 
 #### Why?
 
-Solutions Architect introduces you to most AWS services. For example, it may
+Solutions Architect introduces you to most AWS services. It may
 cover how to build the networks for a Virtual Private Cloud (VPC).
 The certification gives you a base to build the rest of your knowledge and
 understanding of the AWS ecosystem.
@@ -83,7 +83,9 @@ technologies, like AWS X-Ray.
 
 ### Specialty Certifications
 
-If you'd like, you can pursue the specialty certs:
+Between the Associate and Professional-level certifications, AWS offers a set of
+certificates that have a more specific focus on an industry or use-case. Here's
+the set of specialty certifications:
 
 1.  [Security](https://aws.amazon.com/certification/certified-security-specialty/)
 2. [Advanced Networking](https://aws.amazon.com/certification/certified-advanced-networking-specialty/)
@@ -105,13 +107,13 @@ I can't speak in depth to either of these certificates as I haven't started
 studying for them.
 
 The DevOps Engineer certificate builds on the Developer and
-SysOps Administrator Associate certifications. It also builds on the
+SysOps Administrator Associate certifications. It builds on the
 the Security and Advanced Networking certification
 materials.
 
 The Solutions Architect - Professional certificate covers most of the AWS
 services at a deep level.
-I've also heard that it's the hardest certification to pass.
+I've heard it's the hardest certification to pass.
 
 ## Studying Recommendations
 
@@ -184,7 +186,7 @@ a service but, for me, there's no better way than using it a project.
 It's worthwhile to [learn and be curious](https://www.amazon.jobs/principles).
 
 I'm glad that I've spent the time doing it. Learning more about the AWS
-ecosystem has allowed me to get up to speed on new projects in less time than
+ecosystem allowed me to get up to speed on new projects in less time than
 before. The certification process gives you a good base in AWS. It's
 also satisfying to overcome a challenge so I'd do it again and plan to finish
-out the certs.
+the rest of the AWS certs.
