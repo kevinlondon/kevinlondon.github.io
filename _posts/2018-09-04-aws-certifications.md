@@ -16,10 +16,9 @@ As a disclaimer, I don't work in the AWS organization and these views are my own
 
 I'd worked with AWS tools such as [EC2](https://aws.amazon.com/ec2/) and
 [VPCs](https://aws.amazon.com/vpc/) before working at Amazon but I'd never
-thought to get certified.
-
-I started studying because I wanted to both broaden and deepen my knowledge of
-AWS services. For example, I didn't know the difference between [AWS Simple
+thought to get certified. I started studying because I wanted to both broaden
+and deepen my knowledge of AWS services. For example, I didn't know the
+difference between [AWS Simple
 Workflow](https://aws.amazon.com/swf/) and [AWS Step
 Functions](https://aws.amazon.com/step-functions/).
 
@@ -37,14 +36,9 @@ For example, in [AWS Simple Queue
 Service](https://aws.amazon.com/sqs/), what's [long
 polling](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html)
 and how does it differ from the default?
-
 I've found that the certifications have helped me improve in both areas. If
 you're looking to learn more about AWS, it's worthwhile to get
 certified.
-
-[Mooner
-Rifai](https://hackernoon.com/3-reasons-why-you-should-get-aws-certified-this-year-7e44dbc51519)
-also wrote a good article on why he thinks you should get AWS certified.
 
 ## How to Get Certified
 
@@ -55,8 +49,6 @@ The basics for certification are easy:
 3. Pay for and schedule an in-person test on [AWS's Certification
    site](https://www.aws.training/certification?src=certification)
 4. Take the test
-
-We'll cover #1, #2, and #4 in more depth below.
 
 ## What Cert Do You Want?
 
@@ -79,14 +71,14 @@ cover how to build the networks for a Virtual Private Cloud (VPC).
 The certification gives you a base to build the rest of your knowledge and
 understanding of the AWS ecosystem.
 
-Developer - Associate focuses
+The Developer certification, at least in 2018, focuses
 on serverless technologies like AWS Lambda and API Gateway. It touches on the
 code-related suite of tools for AWS as well, such as CodeDeploy and
 CodePipeline.
 
 The SysOps Administrator certificate covers deploying, managing, and operating
 services.  The earlier versions of the certification covered similar ground to
-Solutions Architect. I suspect the 2018 update will focus on serverless
+Solutions Architect. I suspect the 2018 update will also include serverless
 technologies, like AWS X-Ray.
 
 ### Specialty Certifications
@@ -190,12 +182,9 @@ a service but, for me, there's no better way than using it a project.
 ## Is it worth it?
 
 It's worthwhile to [learn and be curious](https://www.amazon.jobs/principles).
+
 I'm glad that I've spent the time doing it. Learning more about the AWS
 ecosystem has allowed me to get up to speed on new projects in less time than
-before. In other words, the certification process gives you a good base. It's
-also helpful to get exposure to services like API Gateway, AWS Lambda, and
-DynamoDB.
-
-There’s anecdotal data that achieving the certificates can yield higher paying
-jobs. It’s better to pursue the certifications for the challenge and knowledge
-than to focus on the reward.
+before. The certification process gives you a good base in AWS. It's
+also satisfying to overcome a challenge so I'd do it again and plan to finish
+out the certs.
