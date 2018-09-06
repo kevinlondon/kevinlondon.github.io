@@ -36,8 +36,9 @@ For example, in [AWS Simple Queue
 Service](https://aws.amazon.com/sqs/), what's [long
 polling](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html)
 and how does it differ from the default?
+
 The certifications have helped me improve in both areas. If
-you want to learn more about AWS and do well with structure, it's worthwhile to get
+you want to learn more about AWS and like structure, it's worthwhile to get
 certified.
 
 ## How to Get Certified
@@ -59,15 +60,13 @@ following order:
 ### Associate-level Certifications
 
 1. [Solutions Architect](https://aws.amazon.com/certification/certified-developer-associate/)
-2.
-[Developer](https://aws.amazon.com/certification/certified-developer-associate/)
-3. [SysOps
-   Administrator](https://aws.amazon.com/certification/certified-sysops-admin-associate/)
+2. [Developer](https://aws.amazon.com/certification/certified-developer-associate/)
+3. [SysOps Administrator](https://aws.amazon.com/certification/certified-sysops-admin-associate/)
 
 #### Why?
 
 Solutions Architect introduces you to most AWS services. It may
-cover how to build the networks for a Virtual Private Cloud (VPC).
+cover how to build the networks for a Virtual Private Cloud (VPC), for instance.
 The certification gives you a base to build the rest of your knowledge and
 understanding of the AWS ecosystem.
 
@@ -78,7 +77,7 @@ CodePipeline.
 
 The SysOps Administrator certificate covers deploying, managing, and operating
 services.  The earlier versions of the certification covered similar ground to
-Solutions Architect. I suspect the 2018 update will also include serverless
+Solutions Architect. I suspect the 2018 update will include serverless
 technologies, like AWS X-Ray.
 
 ### Specialty Certifications
@@ -163,7 +162,7 @@ A good way to solidify your knowledge is to take practice tests. If you use
 A Cloud Guru or Linux Academy, they each have comprehensive practice exams you
 can take.
 
-AWS also offers a free practice exam with a few questions for each
+AWS offers a free practice exam with a few questions for each
 certification type. For example, click the "Download sample questions" link on
 [the Solutions Architect - Associate
 page](https://aws.amazon.com/certification/certified-solutions-architect-associate/).
