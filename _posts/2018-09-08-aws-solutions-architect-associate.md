@@ -240,7 +240,7 @@ around if you have time.
 * [Route53](https://aws.amazon.com/route53/)
 * [ElastiCache](https://aws.amazon.com/elasticache/): When to use, how it can helps with database performance.
 * [Storage Gateway](https://aws.amazon.com/storagegateway/): When to use, different types.
-* [RedShift](https://aws.amazon.com/redshift/)
+* [Redshift](https://aws.amazon.com/redshift/)
 * [Kinesis](https://aws.amazon.com/kinesis/): What's a data stream? How long are items retained?
 * [EMR](https://aws.amazon.com/emr/)
 * [CloudTrail](https://aws.amazon.com/cloudtrail/)
