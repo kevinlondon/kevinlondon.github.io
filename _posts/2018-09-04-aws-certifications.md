@@ -1,26 +1,28 @@
 ---
 layout: post
-title: AWS Certification Prep
+title: An Intro to AWS Certifications
 date: 2018-09-04 20:23:08
 ---
 
-I'm skeptical of certification programs, especially in the software industry.
+I'm skeptical of certification programs, especially in the software
+industry.
 [Uncle Bob
 Martin](https://en.wikipedia.org/wiki/Robert_C._Martin)
 has written about certifications programs and says ["Don't Waste Your
 Time!"](https://sites.google.com/site/unclebobconsultingllc/home/articles/certification---don-t-waste-your-time).
-Usually you spend a few days in seminars, get a piece of paper, spend some money,
-and go on your way. What do you actually get from it?
+Usually you spend a few days in seminars, spend some money,
+and go on your way. What do you actually get from it, aside from the piece of
+paper?
 
 [Amazon Web Services](https://aws.amazon.com/) certifications seemed different
 from the others because they focus on
-preparing for scenarios I may actually encounter. I started studying for them when
+how to build scalable and reliable services.
+I started studying for them when
 I joined [Amazon.com](http://amazon.com/) a few months ago. So far, I've
-completed the [Solution Architect
-- Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
-and [Developer
-- Associate](https://aws.amazon.com/certification/certified-developer-associate/)
-certifications. As a disclaimer, I don't work in the AWS organization and these
+completed the [Solution Architect - Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
+and [Developer - Associate](https://aws.amazon.com/certification/certified-developer-associate/)
+certifications. As a disclaimer, although I work at Amazon, I don't work in the
+AWS organization and these
 views are my own.
 
 It's been a worthwhile investment to get certified. In this post, we'll talk about
@@ -31,7 +33,8 @@ why I think you should get certified and how to prepare for the tests.
 Before working at Amazon, I used AWS services like
 [EC2](https://aws.amazon.com/ec2/) and [VPCs](https://aws.amazon.com/vpc/) so
 I felt comfortable with those tools.  I didn't realize, however, how many AWS
-services I'd never even touched.
+services I'd never even touched. There's over 100 AWS services listed in the
+console!
 I wanted to learn more about what's available. For example, I didn't know the
 difference between [AWS Simple Workflow](https://aws.amazon.com/swf/) and [AWS
 Step Functions](https://aws.amazon.com/step-functions/).
@@ -53,7 +56,8 @@ and how does it differ from the default?
 
 The certification process helped me improve in both areas. If
 you want to learn more about AWS, it's helpful to get
-certified. Even if you're not sure if you'll do something ops-related, it's
+certified. Even if you're not sure if you'll do something related to ops or
+AWS, it's
 good to know what's available in case something comes up.
 
 ## How to Get Certified
@@ -92,6 +96,9 @@ cover how to build the networks for a Virtual Private Cloud (VPC), for instance.
 It also covers permissions, security, servers, database, and a general overview
 of your options in AWS. The certification gives you a solid base on which to
 build the rest of your knowledge and understanding of the AWS ecosystem.
+[I wrote a full guide with notes]({{ site.baseurl
+}}{% post_url 2018-09-08-aws-solutions-architect-associate %}) for this certification, if you'd like to
+know more.
 
 The Developer certification, at least in 2018, focuses
 on serverless technologies like AWS Lambda and API Gateway. It touches on the
@@ -113,9 +120,9 @@ the set of specialty certifications:
 2. [Advanced Networking](https://aws.amazon.com/certification/certified-advanced-networking-specialty/)
 3. [Big Data](https://aws.amazon.com/certification/certified-big-data-specialty/)
 
-The Security certificate is particularly valuable. Any of the other
-certifications may ask security questions and security is tricky. If you'd like
-to read more about the other certifications, the links above cover them well.
+The Security certificate is particularly valuable. Any of the certifications
+may ask security questions and they can be tricky to answer without prep. If
+you'd like to read more about the certs, the links above have more info.
 
 ### Professional-level Certifications
 
