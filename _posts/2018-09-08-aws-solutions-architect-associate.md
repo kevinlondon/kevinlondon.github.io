@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AWS Certified Solutions Architect - Associate Notes
-date: 2018-09-04 20:23:08
+date: 2018-09-08 16:23:08
 ---
 
 I recently passed the [Solutions Architect - Associate
