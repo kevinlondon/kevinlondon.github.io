@@ -42,12 +42,7 @@ individual decisions along the way. For example, how would we manage standing up
 servers?
 
 Well, we could use Ansible, which has a set of AWS modules, CloudFormation, or
-any other number of tools.
-
-
-#### How It Looks
-
-In a design document, I would write something like this:
+any other number of tools. In a design document, I would write something like this:
 
 > The infrastructure pipeline will use Terraform to create, manage, and update
 > servers with a manual review and approval step after generating the planned
@@ -55,7 +50,7 @@ In a design document, I would write something like this:
 
 And, in an appendix, a comparison like:
 
-##### Tooling Alternatives
+#### Tooling Alternatives
 
 **Terraform**
 
