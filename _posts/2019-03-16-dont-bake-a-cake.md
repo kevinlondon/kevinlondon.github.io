@@ -10,9 +10,8 @@ Carrot, apple, boysenberry. Dang, now I want to eat cake.
 In design, it can be frustrating to receive a cake. What do
 I mean by that? A baked cake can't change. If I make
 a carrot cake for your birthday only to find out you prefer Devil's Food... well,
-nothing we can do about that.
-
-If I finish writing a design to solve some problem, only to find when we're
+nothing we can do about that now.  If I finish writing a design to solve some
+problem, only to find when we're
 reviewing the design that one of the central design decisions doesn't make
 sense, it's too late.
 
@@ -26,7 +25,7 @@ had it drilled into your head from years of math classes. The instructor wanted
 to see the work so they could help correct mistakes made in the
 fundamental assumptions. It's much the same way in engineering.
 
-### An Example: Infrastructure Tooling
+### In Practice
 
 As an example, I once worked on a design for rearchitecting engineering
 infrastructure.
@@ -44,7 +43,7 @@ Well, we could use Ansible, which has a set of AWS modules, CloudFormation, or
 any other number of tools.
 
 
-#### In Practice
+#### How It Looks
 
 In a design document, I would write something like this:
 
@@ -54,9 +53,9 @@ In a design document, I would write something like this:
 
 And, in an appendix, a comparison like:
 
-> Infrastructure Tooling Choice
+##### Tooling Alternatives
 
-1. Terraform
+**Terraform**
 
 Pros:
 * Explains planned execution before making changes
@@ -76,7 +75,8 @@ Cons:
 This design favors Terraform because...
 
 
-2. Ansible
+**Ansible**
+
 Pros:
 * Can manage servers and provision them after creation
 * Python-based tooling; can customize if needed
@@ -86,7 +86,8 @@ Cons:
 * No real roll-back functionality
 * . . .
 
-3. CloudFormation
+**CloudFormation**
+
 Pros:
 * AWS-supported product
 * Runs as a service rather than a tool on a developer's desktop
@@ -108,33 +109,34 @@ Let's talk about short term and long term horizons on why this matters.
 For the short term, it helps drive alignment on the immediate decision. Have
 you ever given a presentation and had someone, after you've
 completed, say "Have you looked at X or Y?". Showing your work in the document
-will help people know that you've done your research. If you didn't know
-about something after having done your research, then it's great to find out! If
+will help people know that you've done your research. If
 you researched something then you'll wind up talking about it anyway,
-so you may as well document it. Also, you might've
+so you may as well document it.
+
+Also, you might've
 missed something! One of those alternatives may have something valuable
 that you didn't consider. For example, something I appreciate more now about
 CloudFormation is that it will roll back for you on failure. It's
-nice to have that option!
+nice to have that option.
 
-In the long term, I can't count the number of times I've wanted to know why
-something was build the way it is. Why is this weird thing built in this weird
-way? Having a document to help understand it helps with archaelogical
-discoveries (in engineering terms). Like it or not, most of us will not be around
-for the entire life of project. At some point, we'll need to read someone else
-in on it or help transition it to the next maintainers or custodians. Providing
-a historical narrative of why it is the way it is can be helpful.
+In the long term, I can't count the number of times I've looked at a service and
+asked "Why is this built this way?". Having a document to help understand it
+helps with archaelogical
+discoveries. Like it or not, most of us will not be around
+for the entire life of project. At some point, we'll need to introduce the
+service to someone else
+ or transition it to the next maintainers. Providing
+a historical narrative of why you've built it in a certain way can be helpful.
 
 Lastly, the constraints you worked with at the start of a design may change. For
 example, some service may support a max of 100 transactions per second and,
 years later, support greater throughput (see: [AWS
 S3](https://aws.amazon.com/about-aws/whats-new/2018/07/amazon-s3-announces-increased-request-rate-performance/)).
 
-PS: This works for optimizations or code reviews too!
-Sometimes I'll even do it for code changes and code
-reviews. Including what I worked on and then some context around it is something
-I've learned to appreciate doing.
+PS: This works for code reviews too!
+Introducing the code review with details about the context and alternatives
+I considered can be helpful.
 
 So, in conclusion, don't just bake a cake. Chart the path from A to Z. Show the
-work. Your audience will appreciate it and they may be able to help you build
-a better design if they know what you considered.
+work. Your audience will appreciate it and they may be able to help you better
+achieve your goals if they know what you considered.
