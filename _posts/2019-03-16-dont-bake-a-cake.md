@@ -48,7 +48,7 @@ any other number of tools. In a design document, I would write something like th
 > servers with a manual review and approval step after generating the planned
 > diff.
 
-And, in an appendix, a comparison like:
+And, in an appendix, a comparison (which I've omitted some details from) like:
 
 #### Tooling Alternatives
 
@@ -67,7 +67,6 @@ Cons:
 * No current way to import existing resources; will need to generate from
     scratch.
 * Some advanced features only available through subscription
-* . . .
 
 This design favors Terraform because...
 
@@ -77,18 +76,15 @@ This design favors Terraform because...
 Pros:
 * Can manage servers and provision them after creation
 * Python-based tooling; can customize if needed
-* . . .
 
 Cons:
-* No real roll-back functionality
-* . . .
+* No built-in roll-back functionality
 
 **CloudFormation**
 
 Pros:
-* AWS-supported product
+* AWS-managed and supported product
 * Runs as a service rather than a tool on a developer's desktop
-* . . .
 
 Cons:
 * Only supported in AWS
