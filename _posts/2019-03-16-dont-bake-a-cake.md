@@ -10,7 +10,9 @@ Carrot, apple, boysenberry. Dang, now I want to eat cake.
 In design, it can be frustrating to receive a cake. What do
 I mean by that? A baked cake can't change. If I make
 a carrot cake for your birthday only to find out you prefer Devil's Food... well,
-nothing we can do about that now.  If I finish writing a design to solve some
+nothing we can do about that now.
+
+If I finish writing a design to solve some
 problem, only to find when we're
 reviewing the design that one of the central design decisions doesn't make
 sense, it's too late.
