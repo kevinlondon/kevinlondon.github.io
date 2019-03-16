@@ -11,8 +11,8 @@ if color is 'red' or color is 'blue':
     do_something()
 {% endhighlight %}
 
-It felt wrong. In Python, we shouldn't be able to check if a color `is` another
-color, since that's checking references. I opened an interpreter:
+It felt wrong. In Python, we shouldn't be able to check if a string `is` another
+string, since that's checking references. I opened an interpreter:
 
 {% highlight python %}
 >>> color = 'red'
