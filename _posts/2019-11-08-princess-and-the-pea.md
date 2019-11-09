@@ -64,9 +64,9 @@ If you're interested in this topic, I have two strong recommendations for you:
    shoddily enough to allow for humans to make a mistake. That's a great
    example of this concept.
 1. [Dan Luu's Wat post](https://danluu.com/wat/) (aka Normalization of
-   Deviance). This covers how we become numb to the craziness of the workplace
-   and the stuff we put up with.
+   Deviance). This covers how we become numb to the bizarre workplace culture
+   we put up with.
 
 If you take anything away from this, I hope it's to be more sensitive to the
-pain of little things. We don't have to accept it. We can change it and it's
-worth changing. It's worth being like the Princess in the story.
+pain of little things. We don't have to accept it. We can change it. It's worth
+being more like the Princess.
