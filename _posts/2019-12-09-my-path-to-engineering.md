@@ -9,40 +9,43 @@ People often wonder about my unusual career path so I'd like to share how
 I wound up here.
 
 As a kid, the closest thing I did to programming was making custom maps for
-Starcraft, which is like programming small games. The year
-before I planned to start Comp Sci courses in High School, we moved to
-California. My new school didn't offer the same courses so I wound up taking
-film production classes and participating in the film club instead.
+Starcraft, which is like programming small games. We moved to California
+the year before I planned to start Comp Sci courses in High School.
+My new school didn't offer the same courses so I participated in the
+film production classes and club instead.
 
 After high school, I pursued Computer Science at a community college.
 As I finished my Associates Degree in Computer Science, my interests back
 shifted to photography and video. I took a break from school and freelanced on
-film sets in Los Angeles before transferring to California State University Long
+film sets in Los Angeles before transferring to California State University, Long
 Beach to major in film production.
 
-In my senior year, I had the opportunity to intern at Light Iron, which was, at
+In my senior year, I had the opportunity to intern at [Light
+Iron](https://lightiron.com/), which was, at
 the time, a small start-up post-production facility that specialized in color
-correction. It had 9 employees when I joined, including me, and
+correction. It had 9 employees when I joined (including me) and
 most of them were founders. The month I started, I attended the
-premiere of Light Iron's largest project to date -- The Social Network by David
+premiere of Light Iron's largest project to date -- [The Social
+Network](https://www.imdb.com/title/tt1285016/), directed by David
 Fincher. Though the company was small, they worked on big things.
-While interning at Light Iron, I had the opportunity to work in many different
-areas, from creative to technical. I continued working there beyond the
-internship and stayed on after graduating from Cal State Long Beach.
+While interning at Light Iron, I worked in many different areas of
+post-production, ranging from creative to technical. I continued working there
+beyond the internship and stayed on after graduating from Cal State Long Beach.
 
 After graduation, I asked the Chief Technology Officer if I could transition
 into a more technical role and he agreed. In my spare time, I learned about
-software engineering through Hackers News and Massively Online Open Courses
-(MOOCs). Over time, I picked up small scripting tasks at work to automate manual
-and inefficinet processes. I wrote applications to
+software engineering through [Hacker News](https://news.ycombinator.com/) and
+Massively Online Open Courses (MOOCs). Over time, I automated manual tasks and
+inefficient processes. As the need for automation grew, I wrote applications to
 handle tasks such as validating integrity of media and archiving footage to
 long-term tape storage.
 
 I decided to pursue software engineering full-time. I enrolled in
-Georgia Tech's Online Masters of Computer Science program when it debuted.
-I knew I could write applications and I understood some fundamentals from my
+Georgia Tech's [Online Masters of Computer
+Science](http://www.omscs.gatech.edu/) program when it debuted.
+I could write applications and I understood some fundamentals from my
 previous MOOC studies, so I viewed this as an opportunity to "eat my broccoli".
-It would be good for me even if it would be a little uncomfortable for a few
+It would be good for me even if it would be challenging for a few
 years. I moved on from Light Iron to work at a film-tech company as a full-time
 software engineer and started this blog while working there.
 
