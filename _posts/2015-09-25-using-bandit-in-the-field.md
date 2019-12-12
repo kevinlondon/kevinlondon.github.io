@@ -1,15 +1,18 @@
 ---
 layout: post
-title: Finding Insecure Python Code with Bandit
-date: 2015-09-10 22:17:10
+title: Using Bandit in the Field
+date: 2015-09-25 22:17:10
 ---
 
-TODO: Throw this away.
+> Late 2019 Note: This is a post I had sitting in my draft folder since 2015.
+> On review, I think it's complete enough to publish as-is for historical
+> perspective. Bandit has since moved out of the OpenStack umbrella but it's
+> still a useful way to find security holes in your applications.
 
 It's hard to keep track of all the ways we can shoot ourselves in the foot.  In
-C, they had stack overflow problems if you didn't check your bounds.  TODO: Go
-into stack overflows a bit more.  Eventually, the tooling (and compilers) caught
-up and started offering sane defaults. 
+C, they had stack overflow problems if you didn't check your memory bounds.
+Eventually, the tooling (and compilers) caught
+up and started offering sane defaults.
 
 In Python, we don't have a compiler, so we don't have any compile-time checking.
 Static analysis is also notoriously hard to do with a dynamic language.  It's
@@ -17,9 +20,8 @@ only been recently that we've even seen the introduction of types in Python with
 the changes coming in Python 3.5 for static typing. As such, finding any
 security holes in Python is, by its nature, a challenging task.
 
-OpenStack created a tool to solve this very problem - Bandit. Bandit is an open
-source tool that runs security checks for all the most common insecure Python
-functions in your code and gives you an output of the results.
+ Bandit is an open source tool that runs security checks for all the most common
+ insecure Python functions in your code and gives you an output of the results.
 
 Let's cover how we'd use Bandit, some results I found while testing it out, and
 some other thoughts on how to use Bandit to improve the security of your code.
@@ -27,7 +29,7 @@ some other thoughts on how to use Bandit to improve the security of your code.
 How to Use Bandit
 -----------------
 
-Their README is pretty good and helpful with walking through all the options.
+Their README is helpful with walking through all the options.
 Basically, when Bandit runs, it will scan a directory of your choice and look
 for a set of pre-defined vulnerabilities. If it finds them, it reports them to
 you.  You can specify the levels of feedback you'd like from the tool, ranging
@@ -129,10 +131,6 @@ Note: For the protection of the projects, I will change identities and sample
 code.
 
 
-Keepers
-=======
-
-
 >> Issue: Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
    Severity: Low   Confidence: High
    Location: monitoring/outputs/progress_bars.py:72
@@ -170,8 +168,7 @@ https://security.openstack.org/guidelines/dg_using-temporary-files-securely.html
 43          return pickle.loads(force_bytes(value))
 
 
->> Issue: Audit url open for permitted schemes. Allowing use of file:/ or
-custom schemes is often unexpected.
+>> Issue: Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
    Severity: Medium   Confidence: High
 
 165    try:
@@ -196,7 +193,7 @@ custom schemes is often unexpected.
 87          # Create ECC privatekey
 88          proc = subprocess.Popen(
 89              "%s ecparam -name prime256v1 -genkey -out %s/key-ecc.pem" % (self.openssl_bin, config.data_dir),
-90              shell=True, 
+90              shell=True,
 91          )
 
 
@@ -230,7 +227,7 @@ them whenever you want and it won't slow you down. The obvious downside to that
 is that you have to remember to run them. I know if I only ran
 [flake8](http://flake8.readthedocs.org/en/latest/index.html) when I explicitly
 ran the program as opposed to every save in Vim, I would never bother with the
-output. The key, I think, is to hold ourselves accountable. 
+output. The key, I think, is to hold ourselves accountable.
 
 If you're using something like TravisCI or another CI server, consider setting
 Bandit as one of the steps to a successful build. I'd recommend setting the
@@ -243,5 +240,4 @@ Extending Bandit
 ---------------
 
 Bandit's also extensible, so if you find that there's a vulnerability that's not
-adequately covered already in the project, you can easily add another one. 
-Let's pick one ourselves to include.
+adequately covered already in the project, you can easily add another one.
