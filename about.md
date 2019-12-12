@@ -10,7 +10,7 @@ Hello! I'm a software developer in Los Angeles.  I work at
 [Amazon](https://www.amazon.com) on Prime Video and finished a [Masters in Comp
 Sci](http://www.omscs.gatech.edu/) at Georgia Tech.  I wrote about [my path to
 software
-engineering](https://www.kevinlondon.com/2019/12/09/my-path-to-engineering.html)
+engineering](https://www.kevinlondon.com/2019/12/08/my-path-to-engineering.html)
 if you'd like to read more about it.
 
 You can [follow me](https://twitter.com/kevin_london) on Twitter or sign up
