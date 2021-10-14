@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Getting Unstuck as an Engineer
+title: Getting Unstuck
 date: 2021-10-13 20:00:01.000000000 -07:00
 ---
 
 One of the most frequent conversations that comes up when I'm working with
-other engineers is: how do I ask for help? How do I find what I need to locate
-if I don't know where to look? What do I do if I keep getting stuck?
+other software engineers is: how do I ask for help? How do I find what I need
+to locate if I don't know where to look? What do I do if I keep getting stuck?
 
 ### Try the Obvious
 
@@ -20,9 +20,9 @@ someone frustrating to call upon because I'd solve the problem
 and make the other person feel silly for asking for help
 (unintentional, I swear!). 
 
-What I've found is we tend to try the advanced solutions and assume
-that the problem is a complex one. It can be easy to overlook 
-a simple solution. This is part of what can make calling Tech
+What I've found is we tend to assume it's a complex problem which requires a
+complex solution. It can be easy to overlook 
+simpler solutions. This is part of what can make calling Tech
 Support lines so frustrating. Of course I've checked the power and
 tried rebooting the computer. 
 
