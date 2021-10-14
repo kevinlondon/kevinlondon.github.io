@@ -211,6 +211,6 @@ and [blog](https://www.destroyallsoftware.com/blog/2014/test-isolation-is-about-
 * Sandi Metz has a good talk on [The Magic Tricks of
     Testing](https://www.youtube.com/watch?v=URSWYvyc42M).
 * I've heard good things about [Growing Object-Oriented Software, Guided by
-    Tests](http://amzn.to/2sCKGj5).
+    Tests](https://amzn.to/3aCUXQT).
 * I enjoyed Roy Osherove's talks on testing, such as
     [Unit Testing Best Practices](https://www.youtube.com/watch?v=dJUVNFxrK_4).

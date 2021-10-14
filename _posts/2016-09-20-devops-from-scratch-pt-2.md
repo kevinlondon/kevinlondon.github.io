@@ -456,7 +456,7 @@ would we streamline it for deploys? We could separate the steps for provisioning
 the server (e.g. installing packages, etc) and deploying the actual code (e.g.
 installing dependencies, updating git repo).
 
-### Continuous Integration / [Continuous Delivery](http://amzn.to/2suQLPg)
+### Continuous Integration / [Continuous Delivery](https://amzn.to/3DxFDBw)
 
 It'd be great if we had something that would check that our code works every
 time we commit to the repository. For that, I'd start with

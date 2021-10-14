@@ -653,4 +653,4 @@ If you want to read even more, I like these articles:
 The [cscareerquestions subreddit](https://www.reddit.com/r/cscareerquestions/)
 has useful posts and discussion as well.
 
-[cct]: http://amzn.to/2toQN7u
+[cct]: https://amzn.to/2YRH8eY
