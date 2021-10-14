@@ -8,7 +8,7 @@ One of the most frequent conversations that comes up when I'm working with
 other engineers is: how do I ask for help? How do I find what I need to locate
 if I don't know where to look? What do I do if I keep getting stuck?
 
-### Stuck on a Known Error
+### Try the Obvious
 
 It can be maddening to work through an error that seems like it should
 be obvious. Why the heck isn't this thing working? 
@@ -18,24 +18,24 @@ industry as a Systems Administrator. That meant that my colleagues came to me
 when something didn't work as they expected. I got a reputation as
 someone frustrating to call upon because I'd solve the problem
 and make the other person feel silly for asking for help
-(unintentional, I swear!). In part, I got this reputation because I had 
-learned something important about my colleagues: they're clever.
+(unintentional, I swear!). 
 
-What I've found is clever people tend to try the advanced solutions and assume
-that their problem is a complex one. This is part of what can make calling Tech
-Support lines so frustrating sometimes. Of course you've checked the power and
+What I've found is we tend to try the advanced solutions and assume
+that the problem is a complex one. It can be easy to overlook 
+a simple solution. This is part of what can make calling Tech
+Support lines so frustrating. Of course I've checked the power and
 tried rebooting the computer. 
 
-One example I remember is when a colleague mentioned that their drive would not
+One example: A colleague mentioned that their hard drive would not
 mount. They tried unplugging and replugging it, moving it between
 computers, and restarting the machine. They tried different cables. They
 checked that it was showing in the disk utility and RAID tools. So what was
-it?  What they hadn't checked is whether it was the right drive.  In this case,
+it? They hadn't checked whether it was the right drive.  In this case,
 clients delivered two hard drives to our facility at roughly the same time.
 My colleague grabbed the wrong one by mistake, which I learned by 
 looking at the hard-drive and checking its barcode against in our inventory system.
 
-So often, when a colleague asks for help or when I get stuck, I start from
+So, when a colleague asks for help or when I get stuck, I start from
 first principles and do something like this:
 
 1. **Read and re-read the complete error message.** Is
@@ -68,7 +68,7 @@ minutes. If I'm still stuck, I ask for help,
 which can include asking a specific teammate, a chat channel, or posting to
  Stack Overflow. The format I've found most successful is this:
 
-1. What I'm trying to achieve and what you're seeing.  
+1. What I'm trying to achieve and what I'm experiencing
 1. What research I've consulted so far 
 1. What isn't working as I expect 
 1. What I've tried so far 
@@ -112,8 +112,8 @@ approach:
 
 ### What to Do If No One Can Help
 
-Sometimes, even after trying the steps and asking for help, you may not
-find someone who knows the answer to what you're looking for! Then we get to an
+Even after trying these steps and asking for help, I may not
+find someone who knows the answer to what I'm looking for. Then we get to an
 interesting fork in the road, where I'll do one of the following:
 
 1. Ask for a referral. Sometimes I can ask someone else for help, or the
@@ -131,7 +131,8 @@ person to ever do this. That's not a good sign! If
 you're doing something particularly unusual, it may be best to go back to more
 familiar ground and try a different approach.
 
-If you find yourself getting stuck or you're not sure where to start, it may be
+If you find yourself getting stuck multiple times a day or you're not sure
+where to start, it may be
 that you don't know the resources available to you. Perhaps there's a search
 engine you could use.  It may be worth asking your teammates how they look for
 resources and see if they have a different process for searching.
@@ -145,9 +146,9 @@ time and practice.
 
 The most common mistake I've seen is to avoid asking for help out of fear of
 judgement.  I've seen engineers try for a day or more to find a solution to
-something where a teammate could have helped shorten that time had they asked.
+something where a teammate could have helped shorten that time, had they asked.
 Even as you gain experience, this doesn't go away.  You'll still get stuck
-sometimes, and being able to admit that you don't know the answer is a kind of
+ and being able to admit that you don't know the answer is a kind of
 super power on its own. 
 
 With that, I wish you luck and I hope you find a solution to any challenges you
