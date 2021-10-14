@@ -4,27 +4,23 @@ title: Getting Unstuck
 date: 2021-10-13 20:00:01.000000000 -07:00
 ---
 
-One of the most frequent conversations that comes up when I'm working with
-other software engineers is: how do I ask for help? How do I find what I need
-to locate if I don't know where to look? What do I do if I keep getting stuck?
+Through the years of talking with engineers in one-on-ones, there's a common
+conversation that goes something like this:
+How do I ask for help? How do I find what I need
+if I don't know where to look? What do I do if I keep getting stuck?
 
 ### Try the Obvious
 
 It can be maddening to work through an error. Why the heck isn't this thing
-working? 
+working? Once it's fixed, it can feel so obvious looking back. It's hard
+to know what to try when stuck in the details.
 
 Prior to working as a Software Engineer, I started my career in the film
 industry as a Systems Administrator. That meant that my colleagues came to me
 when something didn't work as they expected. I got a reputation as
 someone frustrating to call upon because I'd solve the problem
 and make the other person feel silly for asking for help
-(unintentional, I swear!). 
-
-What I've found is we tend to assume we're working on a complex problem which
-requires a complex solution. It can be easy to overlook 
-simpler solutions. This is part of what can make calling Tech
-Support lines so frustrating. Of course I've checked the power and
-tried rebooting the computer. 
+because the fix would often be something simple.
 
 One example: A colleague mentioned that their hard drive would not
 mount. They tried unplugging and replugging it, moving it between
@@ -35,15 +31,21 @@ clients delivered two hard drives to our facility at roughly the same time.
 My colleague grabbed the wrong one by mistake, which I learned by 
 looking at the hard-drive and checking its barcode against in our inventory system.
 
-So, when a colleague asks for help or when I get stuck, I start from
+What I've found is we tend to assume we're working on a complex problem which
+requires a complex solution. It can be easy to overlook 
+simpler solutions. This is part of what can make calling Tech
+Support lines so frustrating. Of course I've checked the power and
+tried rebooting the computer. 
+
+So, when I get stuck or I'm helping a colleague, I start from
 first principles and do something like this:
 
 1. **Read and re-read the complete error message.** Is
 there something obvious it's saying I should do, hidden in a misleading error
-message? For example, we may see that a build failed only to find that it was
-due to a failed style check in the code. 
+message or long stack trace? For example, we may see that a build failed only
+to find that it was due to a failed style check in the code. 
 1. **Try the simplest thing that could fix it.** Could it be a network connection
-problem? Have I tried restarting the machine? Is the cable connected? What happens
+issue? Have I tried restarting the machine? Is the cable connected? What happens
 if I back out of my code change or `git stash` it, does it work then?
 1. **Do an internal search.** Do we have documentation which covers this
 edge case? Is this a known bug? Is another team working to resolve
