@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Unstuck
+title: Getting Unstuck as an Engineer
 date: 2021-10-13 20:00:01.000000000 -07:00
 ---
 
@@ -13,7 +13,7 @@ if I don't know where to look? What do I do if I keep getting stuck?
 It can be maddening to work through an error that seems like it should
 be obvious. Why the heck isn't this thing working? 
 
-First, a brief story. I started my career working in the post production
+Prior to working as a Software Engineer, I started my career in the film
 industry as a Systems Administrator. That meant that my colleagues came to me
 when something didn't work as they expected. I got a reputation as
 someone frustrating to call upon because I'd solve the problem
