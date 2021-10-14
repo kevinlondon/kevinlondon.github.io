@@ -29,7 +29,7 @@ checked that it was showing in the disk utility and RAID tools. So what was
 it? They hadn't checked whether it was the right drive.  In this case,
 clients delivered two hard drives to our facility at roughly the same time.
 My colleague grabbed the wrong one by mistake, which I learned by 
-looking at the hard-drive and checking its barcode against in our inventory system.
+looking at the hard-drive and checking its barcode against our inventory system.
 
 We assume when we're working on a complex problem that it 
 requires a complex solution and overlook the simple ones.
@@ -110,13 +110,13 @@ Even after trying these steps and asking for help, I may not
 find someone who knows the answer to what I'm looking for. Then we get to an
 interesting fork in the road, where I'll do one of the following:
 
-1. Ask for a referral. Sometimes I can ask someone else for help, or the
+1. **Ask for a referral.** Sometimes I can ask someone else for help, or the
 person whom I'm asking might be able to refer me to an expert on a particular
 topic. 
-1. Keep digging. In this case, I'll keep looking into the matter. Sometimes you
+1. **Keep digging.** Sometimes you
 are working at the edge of something that no one knows yet and it needs
-more time.
-1. Re-examine what got me here. In a rare case, I may encounter something
+more time and investigation.
+1. **Re-examine what got me here.** In a rare case, I may encounter something
 niche when I do something off the beaten path. This happened to me
 when I [embedded a Django application in a
 self-contained OSX executable](https://stackoverflow.com/a/16180619). I
