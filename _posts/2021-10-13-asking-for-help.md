@@ -10,8 +10,8 @@ to locate if I don't know where to look? What do I do if I keep getting stuck?
 
 ### Try the Obvious
 
-It can be maddening to work through an error that seems like it should
-be obvious. Why the heck isn't this thing working? 
+It can be maddening to work through an error. Why the heck isn't this thing
+working? 
 
 Prior to working as a Software Engineer, I started my career in the film
 industry as a Systems Administrator. That meant that my colleagues came to me
@@ -20,8 +20,8 @@ someone frustrating to call upon because I'd solve the problem
 and make the other person feel silly for asking for help
 (unintentional, I swear!). 
 
-What I've found is we tend to assume it's a complex problem which requires a
-complex solution. It can be easy to overlook 
+What I've found is we tend to assume we're working on a complex problem which
+requires a complex solution. It can be easy to overlook 
 simpler solutions. This is part of what can make calling Tech
 Support lines so frustrating. Of course I've checked the power and
 tried rebooting the computer. 
