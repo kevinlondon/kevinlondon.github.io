@@ -31,13 +31,9 @@ clients delivered two hard drives to our facility at roughly the same time.
 My colleague grabbed the wrong one by mistake, which I learned by 
 looking at the hard-drive and checking its barcode against in our inventory system.
 
-What I've found is we tend to assume we're working on a complex problem which
-requires a complex solution. It can be easy to overlook 
-simpler solutions. This is part of what can make calling Tech
-Support lines so frustrating. Of course I've checked the power and
-tried rebooting the computer. 
-
-So, when I get stuck or I'm helping a colleague, I start from
+We assume when we're working on a complex problem that it 
+requires a complex solution and overlook the simple ones.
+When I'm stuck or helping a colleague, I start from
 first principles and do something like this:
 
 1. **Read and re-read the complete error message.** Is
@@ -59,16 +55,12 @@ information on the error?
 If none of those things work, I'll ask for help from a teammate or someone I
 suspect may know the answer. 
 
-If these steps sound obvious, that's the point! It's easy to overlook
-these obvious-sounding fixes and assume the problem is more challenging than it
-is.
-
 ### How to Ask for Help
 
 If I'm trying to figure something out, I try the above steps for about 30
 minutes. If I'm still stuck, I ask for help, 
 which can include asking a specific teammate, a chat channel, or posting to
- Stack Overflow. The format I've found most successful is this:
+ Stack Overflow. Here's the format with which I've had the best success: 
 
 1. What I'm trying to achieve and what I'm experiencing
 1. What research I've consulted so far 
@@ -96,7 +88,7 @@ check).
 
 This may seem like a lot of work to ask for help! Can't we take a shortcut and
 just say, the build isn't passing? Yes, that can be a valid approach,
-particularly if the audience is amenable to that. Here's why I prefer this
+particularly depending upon the audience. Here's why I prefer this
 approach:
 
 1. Structuring my question this way shows that I respect the time of
@@ -125,8 +117,8 @@ topic.
 are working at the edge of something that no one knows yet and it needs
 more time.
 1. Re-examine what got me here. In a rare case, I may encounter something
-niche when I do something off the beaten path. For me, the most
-notable example of this is when I [embedded a Django application in a
+niche when I do something off the beaten path. This happened to me
+when I [embedded a Django application in a
 self-contained OSX executable](https://stackoverflow.com/a/16180619). I
  may have been the first
 person to ever do this. That's not a good sign! If 
@@ -142,15 +134,11 @@ resources and see if they have a different process for searching.
 
 ### There's No Shame in Asking For Help
 
-One last point I'd like to make is that asking for help or admitting you don't
-know something need not be a source of shame. Calibrating these skills takes
-time and practice.  
-
+Asking for help or admitting you don't know something need not be a source of shame. 
+Calibrating when and how to ask for help takes time and practice.
 The most common mistake I've seen is to avoid asking for help out of fear of
-judgement.  I've seen engineers try for a day or more to find a solution to
-something where a teammate could have helped shorten that time, had they asked.
-Even as you gain experience, this doesn't go away.  You'll still get stuck
- and being able to admit that you don't know the answer is a kind of
+judgement. Even as you gain experience, you'll still get stuck
+sometimes. Acknowledging that you don't know the answer is a kind of
 super power on its own. 
 
 With that, I wish you luck and I hope you find a solution to any challenges you
