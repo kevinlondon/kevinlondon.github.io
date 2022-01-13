@@ -15,8 +15,8 @@ could satisfy its requirements, a process known as load testing. We built the
 first version of the service, prepared a comprehensive load test, alerted
 everyone that we were going to run it, and started the test.
 
-We dialed up the load testing traffic to the service. It hit 5%... 10%... 15%...
-of its projected traffic without issue. At 20%, the service
+We dialed up the load testing traffic to the service. 5%... 10%... 15%...
+of its projected traffic. No issue. At 20%, the service
 completely fell over. We saw skyrocketing latency and dramtically increased
 errors. We pulled the plug on the test run and evaluated what to do next.
 
