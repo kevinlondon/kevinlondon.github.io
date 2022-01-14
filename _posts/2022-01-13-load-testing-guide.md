@@ -24,7 +24,7 @@ This can sound like a nightmare scenario but
 we built and ran the load test to tell us just this kind of
 information! If the service can't sustain its required load, I'd much rather
 find that out under a controlled circumstance than when
-customers go to use it and cannot.
+customers go to use it and can't.
 
 There's a line I think about from [The Zen of Python](https://www.python.org/dev/peps/pep-0020/):
 
@@ -43,16 +43,12 @@ traffic at scale.
 
 Perhaps we want to ensure our service is ready for a big initial launch,
 a high-profile event such as a big event or holiday sales spike, or large-scale
-data backfill. In any case, we can't assume that our service will work without
-first validating that it
-does.
+data backfill. In any case, we can't know that our service will work without
+testing that it does.
 
 We first need to consider what customer access patterns might look like for the
 service. We can then make some assumptions about the event
 and model traffic on a per-service and even per-API basis.
-
-Perhaps you went through a similar exercise while designing the service. If not,
-there's no better time than now!
 
 ### A Sample Application
 
@@ -60,7 +56,7 @@ For this post, we'll consider load testing a
 new service we're adding to a pre-existing food ordering website. We want to
 make sure it's ready to launch. This service,
 which we'll call MenuService, provides menus to customers and allows them to
-browse items they can order from the restaurant.
+browse items they can order from each restaurant.
 
 Let's assume we have the following APIs for our MenuService:
 1. `GetMenusForRestaurant`: Returns menus for the restaurant. This could include
@@ -76,16 +72,17 @@ On a typical day, let's say we receive 1 million orders.
 These orders likely aren't evenly distributed across the day. Perhaps our
 US-based service receives 80% of its traffic between 3 PM Pacific (6 PM
 Eastern) and 9 PM Pacific. That means our typical order volume is 80% * 1 million / 6 hours,
-or 133K orders per hour. That means our new service will
+or 133K orders per hour. Our new service will
 need to handle traffic to support about 40 orders per second on a typical day.
 
-We're launching MenuService in August. The business is nervous about launching
-before Halloween and would like assurance that it is ready for the
-traffic spike. In the US, Halloween is one of the [biggest online ordering
-days](https://get.doordash.com/en-us/blog/busiest-days-for-food-delivery), with
-volume significantly higher than usual.
+We're launching MenuService in August and the business is nervous about launching
+before Halloween. They'd like assurance that the service is ready for the
+traffic spike.
 
-Let's assume Halloween order volumes are 5x the average day, which gets us
+In the US, Halloween is one of the [biggest online ordering
+days](https://get.doordash.com/en-us/blog/busiest-days-for-food-delivery), with
+volume significantly higher than usual. Let's assume Halloween order volumes are
+5x the average day, which gets us
 to about 200 orders per second. How do we provide assurance to the business that
 the service can easily handle that order volume?
 
@@ -168,7 +165,8 @@ Questions we can ask:
 After we define SLAs, how can we check if the service meets them? We'll need
 metrics to help us find out.
 Does the service emit metrics on each API indicating how long it took and
-whether it was successful? If not, it's the perfect time to add profiling and
+whether it was successful? If not, it's the perfect time to add
+[profiling](https://en.wikipedia.org/wiki/Profiling_(computer_programming)) and
 metrics to your code.
 
 Profiling will help us dig more into the performance details. For example, we
