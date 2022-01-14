@@ -112,10 +112,11 @@ the ordering site. Possible customer scenarios to model:
 ### Traffic Projections
 
 Given our three APIs defined above (`GetMenusForRestaurant`, `GetMenuSummary`,
-`GetMenuItem`), we can model traffic for these scenarios. Ideally, we mimic how
-traffic will be in practice. This can include capturing different access
+`GetMenuItem`), we can mimic traffic for these scenarios.
+This can include capturing different access
 patterns such as a popular restaurant, where
-we distribute a higher percentage of requests to that restaurant during the load test.
+we distribute a higher percentage of requests to that restaurant during the load
+test.
 
 Let's make a few more assumptions about traffic. From our numbers
 before, we projected there will be 200 orders per second at projected peak. If
@@ -126,7 +127,7 @@ traffic projections on a per-API basis.
 ### Example Projections
 Prospective hungry diners hit the `GetMenusForRestaurant` API at least once per
 restaurant they browse. If we have 4000 customers on the site at any given time,
-and we assume a customer will load a menu once per minute, we only need to
+and we assume a customer will load a menu once per minute, we need to
 support ~70 requests per second (4000 / 60) request for this API.
 
 We can go through this exercise for all APIs and provide traffic projections.
@@ -138,12 +139,10 @@ we may end up with numbers like this at 100% traffic:
 * **GetMenuSummary**: 100 TPS
 * **GetMenuItem**: 500 TPS
 
-
 ## Defining Success
 Once we have our forecast for traffic during the load test, and a plan for how
 to distribute the traffic, we can think about what a successful load test looks
 like.
-
 
 ### Defining SLAs
 An SLA is a [Service-Level
@@ -187,11 +186,11 @@ A good start here would be to look at your SLAs and consider how quickly you'd
 like to know if you're in violation. Is a 5 minute delay before someone
 starts to look at the issue ok? 15 minutes? Longer?
 
-Something I like to do is build in layers of alarms. Perhaps it's something that
-should page us if it's well above SLA. If it's slightly, or inconsistently over
-SLA, we may want to know but during business hours. Having different alarm
-severities at different levels allows us to detect issues before they get too
-bad.
+Something I like to do is build in layers of alarms. We should likely get paged
+if we're well above SLA. If our service is almost out of SLA, or inconsistently
+above SLA, we may want our system to alert us during business hours.
+Having different alarm severities at different levels allows us to detect issues
+before things get too bad.
 
 ## Load Testing
 
@@ -349,4 +348,4 @@ Regardless of the size of service you're looking to launch, I hope you'll find
 at least a few of these practices helpful for ensuring that your service can
 meet its requirements and delight your customers.
 
-<sup><sub>Thanks to David Iola and Richard Cousart for providing feedback on this post.</sub></sup>
+*Thanks to David Iola and Richard Cousart for comments/corrections/discussion.*
