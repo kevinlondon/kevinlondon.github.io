@@ -75,8 +75,8 @@ We'll revisit these APIs in the next few sections.
 On a typical day, let's say we receive 1 million orders.
 These orders likely aren't evenly distributed across the day. Perhaps our
 US-based service receives 80% of its traffic between 3 PM Pacific (6 PM
-Eastern) and 9 PM Pacific. That means our typical order volume is 80%
-* 1 million / 6 hours, or 133K orders per hour. That means our new service will
+Eastern) and 9 PM Pacific. That means our typical order volume is 80% * 1 million / 6 hours,
+or 133K orders per hour. That means our new service will
 need to handle traffic to support about 40 orders per second on a typical day.
 
 We're launching MenuService in August. The business is nervous about launching
