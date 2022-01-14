@@ -126,11 +126,11 @@ we assume that there's a 20:1 conversion, that means there's approximately 4000
 customers active on the site at any time. From these assumptions, we can derive
 traffic projections on a per-API basis.
 
-### GetMenusForRestaurant Example Projections
-Prospective hungry diners hit this API at least once per restaurant they
-browse. If we have 4000 customers on the site at any given time, and we assume
-a customer will load a menu once per minute, we only need to support ~70
-requests per second (4000 / 60) request for this API.
+### Example Projections
+Prospective hungry diners hit the `GetMenusForRestaurant` API at least once per
+restaurant they browse. If we have 4000 customers on the site at any given time,
+and we assume a customer will load a menu once per minute, we only need to
+support ~70 requests per second (4000 / 60) request for this API.
 
 We can go through this exercise for all APIs and provide traffic projections.
 These traffic projections will help inform how we build our load tests as well.
@@ -147,8 +147,6 @@ Once we have our forecast for traffic during the load test, and a plan for how
 to distribute the traffic, we can think about what a successful load test looks
 like.
 
-What latency should customers be seeing at full traffic? What error rate?
-Under what criteria should we halt the test's execution?
 
 ### Defining SLAs
 An SLA is a [Service-Level
@@ -164,6 +162,7 @@ Questions we can ask:
 * What latency is acceptable for your service and at what
   [percentiles](https://blog.bramp.net/post/2018/01/16/measuring-percentile-latency/)?
   Is a 99th percentile request at 100 ms response acceptable for your service?
+* Under what criteria should we halt the test's execution?
 
 ### Instrumenting Code
 After we define SLAs, how can we check if the service meets them? We'll need
