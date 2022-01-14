@@ -226,6 +226,24 @@ S3](https://aws.amazon.com/s3/) or similar that the tests pull.
 * **Run outside of production if you can**. To reduce risk, it's best to run
   in a non-production environment such as a staging environment.
 
+* **Coordinate [Game
+  Days](https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/wat.concept.gameday.en.html)**.
+  When running a load test for a high traffic event, the
+  service under test will not be the only one experiencing higher than usual
+  traffic volumes. Consider running your load tests in coordination with your
+  dependencies to see how the overall customer experience will be.
+  Perhaps your service can handle its traffic in isolation. When your service and
+  your downstream dependency each have to handle increased request volume,
+  something may fall over.
+
+* **Minimize Variables**. When testing, try to isolate to a single variable
+  under test. For example, perhaps we'd like to validate how instance size (e.g.
+  memory or CPU) affects throughput. If a medium-sized instance can handle 100
+  TPS per instance, can a large handle 200? It's tempting to try to test
+  multiple things at once! If we test multiple changes at one time, it
+  can be hard to tell which change yielded the improvement (or regression), and
+  will wind up taking longer overall.
+
 ### Before Running the Test
 As we prepare for the load test, consider what can go wrong. Here's what I've done:
 
@@ -304,11 +322,18 @@ need to be full scale.
 
 ### Preventing Regressions
 
-After optimizing your service, a good way to ensure your service stays fast and
+A good way to ensure your service stays fast and
 healthy is to build in load testing as part of your [deployment
 process](https://continuousdelivery.com/). It'll help pinpoint if you make
 a code change which introduces a slowdown, and help prevent customers from
 seeing a performance regression.
+
+In addition, after completing load testing and ensuring the service can handle its projected traffic,
+we can test the service's resilience with chaos engineering. For example, we
+could inject latency into dependency calls, increase memory usage, or take out
+an availability zone. Chaos engineering is out of the scope of this post. One
+reference for further reading: [Chaos Engineering: the history, principles, and
+practice](https://www.gremlin.com/community/tutorials/chaos-engineering-the-history-principles-and-practice/).
 
 ## Load Testing Takes Time
 
@@ -325,3 +350,5 @@ many talented software engineers.
 Regardless of the size of service you're looking to launch, I hope you'll find
 at least a few of these practices helpful for ensuring that your service can
 meet its requirements and delight your customers.
+
+<sup><sub>Thanks to David Iola and Richard Cousart for providing feedback on this post.</sub></sup>
