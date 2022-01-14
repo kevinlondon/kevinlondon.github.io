@@ -56,9 +56,9 @@ there's no better time than now!
 
 ### A Sample Application
 
-For our discussion, we'll consider load testing a hypothetical online food
-ordering website. It's a small service we're adding to a pre-existing food
-ordering platform, and we want to make sure it's ready to launch. This service,
+For this post, we'll consider load testing a
+new service we're adding to a pre-existing food ordering website. We want to
+make sure it's ready to launch. This service,
 which we'll call MenuService, provides menus to customers and allows them to
 browse items they can order from the restaurant.
 
@@ -90,8 +90,8 @@ to about 200 orders per second. How do we provide assurance to the business that
 the service can easily handle that order volume?
 
 ### Translating Projections into API Traffic
-We have an assumption about how much business-based traffic we'll have. How does
-the order volume translate to service traffic?
+We have an assumption about how much orders the business will receive. How can
+we translate from order volume to service traffic?
 
 We can make some more assumptions and / or base it on pre-existing metrics. If
 we say that a customer will typically place an order 40% of the time they
@@ -116,19 +116,18 @@ the ordering site. Possible customer scenarios to model:
 
 Given our three APIs defined above (`GetMenusForRestaurant`, `GetMenuSummary`,
 `GetMenuItem`), we can model traffic for these scenarios. Ideally, we mimic how
-traffic will be in practice. This can include modeling different access
-patterns such as a very popular restaurant and a less popular restaurant, where
-we distribute more requests to fetch the popular restaurant during the load test.
+traffic will be in practice. This can include capturing different access
+patterns such as a popular restaurant, where
+we distribute a higher percentage of requests to that restaurant during the load test.
 
 Let's make a few more assumptions about traffic. From our numbers
 before, we projected there will be 200 orders per second at projected peak. If
 we assume that there's a 20:1 conversion, that means there's approximately 4000
-customers active on the site at any time.
-
-From these assumptions, we can derive traffic projections on a per-API basis.
+customers active on the site at any time. From these assumptions, we can derive
+traffic projections on a per-API basis.
 
 ### GetMenusForRestaurant Example Projections
-Prospective food orderers hit this API at least once per restaurant they
+Prospective hungry diners hit this API at least once per restaurant they
 browse. If we have 4000 customers on the site at any given time, and we assume
 a customer will load a menu once per minute, we only need to support ~70
 requests per second (4000 / 60) request for this API.
