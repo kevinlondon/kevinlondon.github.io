@@ -48,11 +48,10 @@ first validating that it
 does.
 
 We first need to consider what customer access patterns might look like for the
-service. We can then make some assumptions about the traffic patterns for that
-event and project what load to model on a per-service and even
-per-API basis.
+service. We can then make some assumptions about the event
+and model traffic on a per-service and even per-API basis.
 
-Hopefully you already have done this exercise while designing the service. If not,
+Perhaps you went through a similar exercise while designing the service. If not,
 there's no better time than now!
 
 ### A Sample Application
