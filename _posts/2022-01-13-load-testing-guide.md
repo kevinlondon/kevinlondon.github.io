@@ -28,7 +28,7 @@ customers go to use it and can't.
 
 There's a line I think about from [The Zen of Python](https://www.python.org/dev/peps/pep-0020/):
 
-> In the face of ambiguity, resist the temptation to guess.
+> In the face of ambiguity, refuse the temptation to guess.
 
 Load testing is one way to reduce ambiguity. It helps us avoid guessing if the
 service will meet our expectations. I'd like to share what we learned along the
