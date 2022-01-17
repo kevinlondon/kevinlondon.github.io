@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Load Testing and Lessons Learned
+title: Load Testing at Scale and Lessons Learned
 date: 2022-01-13 20:00:01.000000000 -07:00
 ---
 
 I once designed a service to handle hundreds of thousands of requests per
-second with a tight latency threshold. I theorized how to build such
-a system, and designed for it during the design process. I never
-built something that would actually need to handle that
-level of traffic. How would I know if it would work at scale?
+second with tight latency requirements. Any slowness or errors would negatively
+impact the customers' experience. How would I know if the service would work as
+designed at peak traffic? I never built something that would actually need to
+handle that kind of scale.
 
 We needed to simulate the projected traffic to the service to check if it
 could meet the requirements, a process known as load testing. We built the
-first version of the service, prepared a comprehensive load test, alerted
-everyone that we were going to run it, and started the test.
+first version of the service, prepared a comprehensive load
+test, alerted everyone that we were going to run it, and started the test.
 
-We dialed up the load testing traffic to the service. 5%... 10%... 15%...
-of its projected traffic. No issue. At 20%, the service
-fell over. We saw skyrocketing latency and a dramatically increased
-errors. We pulled the plug on the test run and evaluated what to do next.
+We dialed up the load testing traffic to the service. 5% of its projected
+traffic... no issue. 10%... 15%... still good. At 20%, however, latency skyrocketed.
+Errors increased. The service completely fell over. We pulled the plug on the
+test and evaluated what to do next.
 
-This can sound like a nightmare scenario but
-we built and ran the load test to tell us just this kind of
-information! If the service can't sustain its required load, I'd much rather
+This can sound like a nightmare scenario. We only hit 1/5 of the required
+traffic before it died? But we built and ran the load test to tell us just this kind of
+information! If the service can't sustain its required load, I'd rather
 find that out under a controlled circumstance than when
 customers go to use it and can't.
 
@@ -30,9 +30,10 @@ There's a line I think about from [The Zen of Python](https://www.python.org/dev
 
 > In the face of ambiguity, refuse the temptation to guess.
 
-Load testing is one way to reduce ambiguity. It helps us avoid guessing if the
-service will meet our expectations. I'd like to share what we learned along the
-way while building out our load tests and optimizing that service.
+Load testing helps us reduce ambiguity and avoid guessing if the
+service will be able to meet ours and our customers' expectations. I'd like to
+share what we learned along the way while load testing and optimizing that
+service.
 
 ## Working Backwards from the Customer
 
