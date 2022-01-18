@@ -5,26 +5,26 @@ date: 2022-01-13 20:00:01.000000000 -07:00
 ---
 
 I once designed a service to handle hundreds of thousands of requests per
-second with tight latency requirements. Any slowness or errors would negatively
-impact the customers' experience. How would I know if the service would work as
+second with tight latency requirements. Customers would notice any problems in
+the service. How would I know if the service would work as
 designed at peak traffic? I never built something that would actually need to
 handle that kind of scale.
 
-We needed to simulate the projected traffic to the service to check if it
+We simulated the projected traffic to the service to check if it
 could meet the requirements, a process known as load testing. We built the
 first version of the service, prepared a comprehensive load
 test, alerted everyone that we were going to run it, and started the test.
 
-We dialed up the load testing traffic to the service. 5% of its projected
-traffic... no issue. 10%... 15%... still good. At 20%, however, latency skyrocketed.
-Errors increased. The service completely fell over. We pulled the plug on the
+We dialed up the load testing traffic. 5% of projected
+traffic... no issue. 10%... 15%... still good. At 20%, however, response times
+skyrocketed. Errors increased. The service fell over. We pulled the plug on the
 test and evaluated what to do next.
 
 This can sound like a nightmare scenario. We only hit 1/5 of the required
-traffic before it died? But we built and ran the load test to tell us just this kind of
-information! If the service can't sustain its required load, I'd rather
-find that out under a controlled circumstance than when
-customers go to use it and can't.
+traffic before it died? We built and ran the load test to tell us just this kind
+of information! If the service can't sustain its required load, I'd rather find
+out under a controlled circumstance than when customers go to use it and
+can't.
 
 There's a line I think about from [The Zen of Python](https://www.python.org/dev/peps/pep-0020/):
 
@@ -37,27 +37,25 @@ service.
 
 ## Working Backwards from the Customer
 
-One lesson I've taken from my time at Amazon is
-to [work backwards from the customer](https://www.amazon.jobs/en/principles).
-We run load tests because we want to make sure the service is ready for customer
-traffic at scale.
+One lesson I've taken Amazon is to [work backwards from the customer](https://www.amazon.jobs/en/principles).
+In this case, we run load tests because we want to make sure the service is
+ready for customer traffic at scale. So what level of traffic *do* we need to support?
 
 Perhaps we want to ensure our service is ready for a big initial launch,
 a high-profile event such as a big event or holiday sales spike, or large-scale
 data backfill. In any case, we can't know that our service will work without
-testing that it does.
+testing it.
 
-We first need to consider what customer access patterns might look like for the
-service. We can then make some assumptions about the event
+We can consider what customer access patterns might look like for the
+service. We can then make some assumptions about the high traffic event
 and model traffic on a per-service and even per-API basis.
 
 ### A Sample Application
 
 For this post, we'll consider load testing a
-new service we're adding to a pre-existing food ordering website. We want to
-make sure it's ready to launch. This service,
-which we'll call MenuService, provides menus to customers and allows them to
-browse items they can order from each restaurant.
+new service we're adding to a pre-existing food ordering website.
+This service, which we'll call MenuService, provides menus to customers and
+allows them to browse items they can order from each restaurant.
 
 Let's assume we have the following APIs for our MenuService:
 1. `GetMenusForRestaurant`: Returns menus for the restaurant. This could include
@@ -91,14 +89,14 @@ the service can easily handle that order volume?
 We have an assumption about how much orders the business will receive. How can
 we translate from order volume to service traffic?
 
-We can make some more assumptions and / or base it on pre-existing metrics. If
-we say that a customer will typically place an order 40% of the time they
-browse, and the average customer to conversion ratio is something like 20:1, we
-can use that for modeling API traffic.
-
+We can make some more assumptions and / or base it on pre-existing metrics.
 We can capture our assumptions and confirm them with others. These values
 will be important for evaluating success, and making sure the service is
 successful when we need it.
+
+If we say that a customer will typically place an order 40% of the time they
+browse, and the average customer to conversion ratio is something like 20:1, we
+can use that for modeling API traffic.
 
 In our example, let's consider the typical call flows for a customer browsing
 the ordering site. Possible customer scenarios to model:
@@ -149,20 +147,21 @@ like.
 An SLA is a [Service-Level
 Agreement](https://en.wikipedia.org/wiki/Service-level_agreement). It's
 a contract to the business and your
-customers for how your service will behave, including uptime, latency, and so forth.
-To check whether our test is successful, we need to define the SLAs for it.
+customers for how your service will behave, including uptime, response times,
+and so forth. To check whether our test is successful, we need to define the
+SLAs and see if the service meets them under load.
 
 Questions we can ask:
 * How many errors are acceptable? Is there a percentage, such as 99.99% of
   requests are successful? An absolute threshold such as no more than 25 errors
   in a 5 minute period?
-* What latency is acceptable for your service and at what
+* What response time is acceptable for your service and at what
   [percentiles](https://blog.bramp.net/post/2018/01/16/measuring-percentile-latency/)?
-  Is a 99th percentile request at 100 ms response acceptable for your service?
+  Is a 99th percentile request at 100 ms response time acceptable for your service?
 * Under what criteria should we halt the test's execution?
 
 ### Instrumenting Code
-After we define SLAs, how can we check if the service meets them? We'll need
+How can we check if the service meets our SLAs? We'll need
 metrics to help us find out.
 Does the service emit metrics on each API indicating how long it took and
 whether it was successful? If not, it's the perfect time to add
@@ -180,8 +179,8 @@ not being able to find out what went wrong. At least when that happens, it's an
 opportunity to improve monitoring!
 
 ### Ensuring Alarm Coverage
-We want to know if our service is unable to meet its SLAs. That means it's
-time to build alarms that will let us or our on-call know if there's a problem.
+We want to know if our service is unable to meet its SLAs. That means ensuring
+we have alarms which alarms cover the SLAs and let us or the on-call know if there's an issue.
 
 A good start here would be to look at your SLAs and consider how quickly you'd
 like to know if you're in violation. Is a 5 minute delay before someone
@@ -189,7 +188,7 @@ starts to look at the issue ok? 15 minutes? Longer?
 
 Something I like to do is build in layers of alarms. We should likely get paged
 if we're well above SLA. If our service is almost out of SLA, or inconsistently
-above SLA, we may want our system to alert us during business hours.
+above SLA, we may want our system to alert us during business hours to investigate.
 Having different alarm severities at different levels allows us to detect issues
 before things get too bad.
 
