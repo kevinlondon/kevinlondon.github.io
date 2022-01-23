@@ -94,7 +94,7 @@ Then, when they visit the page, they may see the contents of
 
 1. If the site uses the Django administration panel, it can be accessed at the
    `/admin` route. If it uses the default theme, that's a dead giveaway.
-2. If the application has DEBUG = True and you go to an invalid page,
+2. If the application has `DEBUG = True` and you go to an invalid page,
    it will show diagnostic information, including the version of Django it uses.
 3. If the server responds with headers that include something like `Server:
    WSGIServer/0.1 Python/2.7.6`, that points to a Python-based web framework,
@@ -135,8 +135,8 @@ environment. It enables information leakage, has performance implications, and
 yields full tracebacks on error.
 
 * [ADMINS](https://docs.djangoproject.com/en/1.8/ref/settings/#admins): Django
-emails a full exception traceback on errors when DEBUG = False to the email
-addresses specified in the ADMINS tuple. If the company or individual that
+emails a full exception traceback on errors when `DEBUG = False` to the email
+addresses specified in the `ADMINS` tuple. If the company or individual that
 created the Django application does not control the email addresses specified,
 it cause an information leak.
 
