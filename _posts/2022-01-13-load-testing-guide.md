@@ -129,6 +129,12 @@ restaurant they browse. If we have 4000 customers on the site at any given time,
 and we assume a customer will load a menu once per minute, we need to
 support ~70 requests per second (4000 / 60) request for this API.
 
+Note that the requests per second chosen in this toy example may be able to run
+on a single instance with enough tuning or a simple access pattern. The
+exercises that follow work best when applied to a large system which requires
+significant infrastructure. Please feel free to substitute a service which has
+higher throughput if you like.
+
 We can go through this exercise for all APIs and provide traffic projections.
 These traffic projections will help inform how we build our load tests as well.
 If we go through these projections,
