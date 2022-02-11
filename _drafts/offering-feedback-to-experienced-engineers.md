@@ -71,3 +71,11 @@ all the feedback I've received over time and credit it with a lot of our growth.
 
 Even though it's uncomfortable to offer feedback to engineers with more experience,
 ultimately it is the best way for us to grow and get better.
+
+The book goes on to say:
+
+> Of course the person pointing out our mistakes himself may not be totally free
+from defects, but he can see our problems as we can see his faults, which he
+does not notice until we point them out to him.
+
+> Both pointing out shortcomings and responding to them should be done mindfully.
