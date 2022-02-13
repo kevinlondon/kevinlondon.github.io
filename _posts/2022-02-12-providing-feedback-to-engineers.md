@@ -44,14 +44,14 @@ normalized as reasonable processes.
 
 > Julia Evans described to me how this happens:
 
-> new person joins
-new person: WTF WTF WTF WTF WTF
-old hands: yeah we know we're concerned about it
-new person: WTF WTF wTF wtf wtf w...
-new person gets used to it
-new person #2 joins
-new person #2: WTF WTF WTF WTF
-new person: yeah we know. we're concerned about it.
+> * new person joins
+* new person: WTF WTF WTF WTF WTF
+* old hands: yeah we know we're concerned about it
+* new person: WTF WTF wTF wtf wtf w...
+* new person gets used to it
+* new person #2 joins
+* new person #2: WTF WTF WTF WTF
+* new person: yeah we know. we're concerned about it.
 
 So as a new person, when is it right to act on these WTF impulses? It's hard to
 know! This can lead to feeling uncertain about when to offer an opinion and it's
