@@ -6,28 +6,32 @@ date: 2022-02-12 21:53:01.000000000 -07:00
 
 I had a one-on-one discussion some time ago with a colleague who joined
 a new company and well-established team. During design and code reviews, they
-felt uneasy offering feedback to the experienced engineers and second-guessed
+felt uneasy offering feedback to the other engineers and second-guessed
 themselves. What feedback could they offer to a team that knows
-what they're doing? Haven't the engineers already considered any
+what they're doing? Haven't the other engineers already considered any
 points they might bring up?
 
-I go through this too. I've joined new teams and had a hard time
-figuring out how to engage with my teammates and what I could offer.
-In this post, we'll explore what's behind the discomfort and ways to overcome
- it.
+I experience this too when I join new teams. I have a hard time figuring out how
+to engage with my teammates and what I can offer. In this post, we'll explore
+what's behind the discomfort and ways to overcome it.
 
 
 ## Understanding
 
-Let's first attempt to look behind this feeling and see what might be at root.
-What leads to these feelings of discomfort?
+Let's first attempt to look behind the discomfort. In my experience, it usually comes from:
+
+1. New environments
+2. Impostor syndrome
+3. or Venn diagram knowledge differences
+
+Let's dig into those.
 
 ### New Environments
 
-When you're new on a team, or when something isn't established, it's hard to
+When joining a team, or when something isn't established, it's hard to
 know what the rules are. How do people handle themselves in this environment?
-Should I adhere to that or do my own thing? Do I wait to say something's wrong
-or do I try to understand it first?
+Should I follow the standard way or suggest something different? How long should
+I wait before I try to change it?
 
 Dan Luu wrote a post on
 [the Normalization of Device](https://danluu.com/wat/, where he talks about the
@@ -49,17 +53,19 @@ new person #2 joins
 new person #2: WTF WTF WTF WTF
 new person: yeah we know. we're concerned about it.
 
-So as a new person, when is it right to act on these WTF impulses? It's hard to know!
+So as a new person, when is it right to act on these WTF impulses? It's hard to
+know! This can lead to feeling uncertain about when to offer an opinion and it's
+normal to experience in new environments.
 
-### impostor Syndrome
+### Impostor Syndrome
 
 When I start something new such as switching companies, teams, or even
 projects, I feel dread. Will my colleagues see that I'm figuring it out as
 I go and I don't have the answers? Will this be the time I'm found out as
 a fraud? Will they judge me for not measuring up to their expectations or skill?
 
-These feelings may come from "impostor syndrome", which [Psychology Today
-defines](https://www.psychologytoday.com/us/basics/imposter-syndrome):
+These feelings may come from "impostor syndrome". [Psychology Today
+defines](https://www.psychologytoday.com/us/basics/imposter-syndrome) says:
 
 > People who struggle with impostor syndrome believe that they are undeserving of
 their achievements and the high esteem in which they are, in fact, generally
@@ -69,39 +75,39 @@ think—and that soon enough, people will discover the truth about them.
 One step towards dealing with impostor syndrome is noticing the internal
 voice and doubts start to appear. I've [written about impostor
 syndrome](https://www.kevinlondon.com/2015/05/27/impostor-syndrome-and-me) and
-sometimes refer to it when I'm feeling underwater.
+go back to it when I'm feeling underwater.
 
 ### Venn Diagram Knowledge
 
-When I'm talking with someone, I'm sometimes blown away by how much it feels
-like they know versus what I know. How did they learn so much about this topic?
-Something that helps me to keep in mind is that knowledge is like a Venn
-Diagram. Here's an illustration:
+Sometimes when I talk with someone, I'm blown away by how much they know. How
+did they learn so much? I start to doubt myself.
+It helps me to frame knowledge as like a Venn Diagram. Here's an illustration of
+how I think about it:
 
 ![Knowledge Venn Diagram](/assets/knowledge_venn_diagram.png)
 
-On the left, we have an area of what I know, which feels worthless, and on the right we
-have what you know, which requires genius to understand. Sometimes what feels
-like genius to me is actually someone that has a Venn Diagram with different
-coverage than I.
+What can feel like genius may be encountering someone with a wildly different
+Venn Diagram from my own. It doesn't necessarily mean they know more overall,
+just that they have a different coverage area. And even if someone does know more, that's ok too!
 
-So the discomfort from offering feedback could come from looking at someone
-else's knowledge circle and considering what to say. How could I offer feedback?
-That's where the genius stuff lives! Or at least, that's how it feels.
+Discomfort from offering feedback could come from looking at someone
+else's knowledge circle and feeling intimidated. If they know an area and I
+I don't yet, how can I offer useful feedback?
 
 ## Overcoming
 
 One strategy for overcoming these uncomfortable feelings is to pay attention to
-them. Sometimes noticing when I'm starting negative self-talk or feeling anxious
+them. Noticing when I'm starting negative self-talk or feeling anxious
 can help me realize that it's one of the causes above. Realizing that I'm in
 a loop or falling into a pattern can help knock me out of it.
 
 Let's explore a few other suggestions.
 
 ### Ask Open-Ended Questions
-One technique I've found helpful for offering feedback is exploring rather than recommending.
-Let's consider I'm reviewing a design document and notice there's no client-side
-cache and I'm concerned about request latency. Here's a few ways I could comment:
+One technique I've found helpful for offering feedback is to explore instead of
+recommend. Let's consider I'm reviewing a design document and notice there's no
+client-side cache and I'm concerned about request latency. Here's a few ways
+I could comment:
 
 * **Recommending**: I'd use a distributed cache like Redis here to speed up requests.
 * **Exploring**: What latency requirements do we have? What options can we use
@@ -115,7 +121,7 @@ In the recommending example, I'm making a few assumptions:
 
 But maybe you looked into this! Maybe
 the service isn't latency sensitive and it's ok if it takes a little longer to
-resolve a request. When I'm exploring, I hoping to learn.
+resolve a request. When I explore, I hope to learn.
 
 I've written about [code
 reviews](https://www.kevinlondon.com/2015/05/05/code-review-best-practices) and
