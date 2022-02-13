@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Providing Feedback to Engineers
+title: Providing Feedback
 date: 2022-02-12 21:53:01.000000000 -07:00
 ---
 
@@ -12,26 +12,17 @@ what they're doing? Haven't the other engineers already considered any
 points they might bring up?
 
 I experience this too when I join new teams. I have a hard time figuring out how
-to engage with my teammates and what I can offer. In this post, we'll explore
-what's behind the discomfort and ways to overcome it.
-
-
-## Understanding
-
-Let's first attempt to look behind the discomfort. In my experience, it usually comes from:
+to engage and what I can offer. In my experience, discomfort comes from:
 
 1. New environments
 2. Impostor syndrome
-3. or Venn diagram knowledge differences
-
-Let's dig into those.
+3. Venn diagram knowledge differences
 
 ### New Environments
 
-When joining a team, or when something isn't established, it's hard to
-know what the rules are. How do people handle themselves in this environment?
-Should I follow the standard way or suggest something different? How long should
-I wait before I try to change it?
+When joining a team, or when there's no process, it's challenging to
+know what to do. Should I suggest something different? How long should
+I wait before I champion a process change?
 
 Dan Luu wrote a post on
 [the Normalization of Device](https://danluu.com/wat/, where he talks about the
@@ -88,25 +79,21 @@ how I think about it:
 
 What can feel like genius may be encountering someone with a wildly different
 Venn Diagram from my own. It doesn't necessarily mean they know more overall,
-just that they have a different coverage area. And even if someone does know more, that's ok too!
-
-Discomfort from offering feedback could come from looking at someone
-else's knowledge circle and feeling intimidated. If they know an area and I
-I don't yet, how can I offer useful feedback?
+just that they have a different coverage area.
 
 ## Overcoming
 
-One strategy for overcoming these uncomfortable feelings is to pay attention to
-them. Noticing when I'm starting negative self-talk or feeling anxious
-can help me realize that it's one of the causes above. Realizing that I'm in
+One strategy for overcoming these uncomfortable feelings is by paying attention
+to them. When I'm starting negative self-talk or feeling anxious, noticing it
+can help me realize that it's one of the causes above. Catching the start of
 a loop or falling into a pattern can help knock me out of it.
 
-Let's explore a few other suggestions.
-
 ### Ask Open-Ended Questions
-One technique I've found helpful for offering feedback is to explore instead of
-recommend. Let's consider I'm reviewing a design document and notice there's no
-client-side cache and I'm concerned about request latency. Here's a few ways
+One technique I've found helpful for offering feedback is to approach
+discussions through exploration instead of recommendation.
+
+Perhaps I'm reviewing a design document and notice there's no
+client-side cache. I'm concerned about request latency. Here's a few ways
 I could comment:
 
 * **Recommending**: I'd use a distributed cache like Redis here to speed up requests.
@@ -127,19 +114,24 @@ I've written about [code
 reviews](https://www.kevinlondon.com/2015/05/05/code-review-best-practices) and
 [offering
 feedback](https://www.kevinlondon.com/2018/06/05/more-code-review-best-practices)
-before if you'd like to read more.
+before if you'd like to read more. Julia Galef wrote [The Scout Mindset: Why
+Some People See Things Clearly and Others
+Don't](https://www.amazon.com/dp/B089CJ6SVS) which has concrete suggestions for
+changing approach too.
 
 ### Be Kind to Future-You
 
 Imagine that you're in an [on-call
 rotation](https://www.pagerduty.com/resources/learn/call-rotations-schedules)
-and you're paged awake at 3 AM. You turn off your phone and open your computer
-to look at the code or service. How much mental processing will we capable of
-under those conditions? How will we figure out what went wrong?
+and your pager wakes up everyone in the house at 3 AM.
+You acknowledge the page and open your computer.
+How much mental processing will you be capable of under those conditions?
+How will you figure out what went wrong?
 
 Another lens: In 6 months, will what's under review still make sense? I've lost
 count of times I've looked at code, wondered who wrote it because it caused
-a bug or I had a hard time understanding it, and it turned out to be me.
+a bug or I had a hard time understanding it, and it turned out to be something
+I wrote.
 
 This is all to say that offering feedback now can help make what's still under
 construction easier to reason and think about, which makes it easier to fix
