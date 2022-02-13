@@ -11,7 +11,7 @@ themselves. What feedback could they offer to a team that knows
 what they're doing? Haven't the engineers already considered any
 points they might bring up?
 
-I think this experience is common! I've joined new teams and had a hard time
+I go through this too. I've joined new teams and had a hard time
 figuring out how to engage with my teammates and what I could offer.
 In this post, we'll explore what's behind the discomfort and ways to overcome
  it.
@@ -29,7 +29,7 @@ know what the rules are. How do people handle themselves in this environment?
 Should I adhere to that or do my own thing? Do I wait to say something's wrong
 or do I try to understand it first?
 
-Dan Luu wrote a post I think about often on
+Dan Luu wrote a post on
 [the Normalization of Device](https://danluu.com/wat/, where he talks about the
 process of strange things becoming normal over time and how that
 happens. From his post:
@@ -54,7 +54,7 @@ So as a new person, when is it right to act on these WTF impulses? It's hard to 
 ### impostor Syndrome
 
 When I start something new such as switching companies, teams, or even
-projects, I feel anxious. Will my colleagues see that I'm figuring it out as
+projects, I feel dread. Will my colleagues see that I'm figuring it out as
 I go and I don't have the answers? Will this be the time I'm found out as
 a fraud? Will they judge me for not measuring up to their expectations or skill?
 
@@ -69,14 +69,14 @@ think—and that soon enough, people will discover the truth about them.
 One step towards dealing with impostor syndrome is noticing the internal
 voice and doubts start to appear. I've [written about impostor
 syndrome](https://www.kevinlondon.com/2015/05/27/impostor-syndrome-and-me) and
-sometimes refer back to it when I'm feeling underwater.
+sometimes refer to it when I'm feeling underwater.
 
 ### Venn Diagram Knowledge
 
 When I'm talking with someone, I'm sometimes blown away by how much it feels
 like they know versus what I know. How did they learn so much about this topic?
 Something that helps me to keep in mind is that knowledge is like a Venn
-Diagram. To illustrate, here's how I think about it:
+Diagram. Here's an illustration:
 
 ![Knowledge Venn Diagram](https://imgur.com/9xwNXOs)
 
@@ -90,20 +90,18 @@ else's knowledge circle and considering what to say. How could I offer feedback?
 That's where the genius stuff lives! Or at least, that's how it feels.
 
 ## Overcoming
-I have three suggestions for overcoming this feeling:
-1. **Notice it**: Pay attention to when you're feeling uncomfortable. Sometimes
-   just noticing is helpful for identifying how to fix it or manage the
-   feelings.
-2. **Ask questions**: Offering feedback doesn't need to be pointing out
-   someone's wrong. We can open a discussion.
-3. **Think about feedback as growth**: Offering and receiving feedback is one of the best ways to grow as an engineer.
 
-Let's explore these suggestions further!
+One strategy for overcoming these uncomfortable feelings is to pay attention to
+them. Sometimes noticing when I'm starting negative self-talk or feeling anxious
+can help me realize that it's one of the causes above. Realizing that I'm in
+a loop or falling into a pattern can help knock me out of it.
+
+Let's explore a few other suggestions.
 
 ### Ask Open-Ended Questions
 One technique I've found helpful for offering feedback is exploring rather than recommending.
 Let's consider I'm reviewing a design document and notice there's no client-side
-cache and I think it needs it. Here's a few ways I could comment:
+cache and I'm concerned about request latency. Here's a few ways I could comment:
 
 * **Recommending**: I'd use a distributed cache like Redis here to speed up requests.
 * **Exploring**: What latency requirements do we have? What options can we use
@@ -115,12 +113,15 @@ In the recommending example, I'm making a few assumptions:
 3. This specific technology is the right one to pick
 4. My way is the right way
 
-But maybe there's you've already looked into this and I just don't know! Maybe
+But maybe you looked into this! Maybe
 the service isn't latency sensitive and it's ok if it takes a little longer to
-resolve a request. In the exploring example, I'm opening a discussion and I'm
-hoping to come away learning something too.
+resolve a request. When I'm exploring, I hoping to learn.
 
-I've written about [code reviews](https://www.kevinlondon.com/2015/05/05/code-review-best-practices) and [offering feedback](https://www.kevinlondon.com/2018/06/05/more-code-review-best-practices), so so you can read more about it if you like.
+I've written about [code
+reviews](https://www.kevinlondon.com/2015/05/05/code-review-best-practices) and
+[offering
+feedback](https://www.kevinlondon.com/2018/06/05/more-code-review-best-practices)
+before if you'd like to read more.
 
 ### Be Kind to Future-You
 
@@ -139,15 +140,10 @@ construction easier to reason and think about, which makes it easier to fix
 or maintain even under duress.
 
 I love receiving comments and questions on code reviews or design documents.
-I treat it as signal that I could express myself more clearly in code or words
-and lower the barrier to understanding.
+I treat it as signal that I could better express myself
+and make it easier to understand.
 
 ### Feedback as Growth
-
-The last suggestion I'd like to make about overcoming this feeling is about how
-we think about feedback.
-Changing how I think about feedback has been instrumental to changing how I feel when
-I receive it.
 
 Much of my growth and career development has come from offering
 and receiving feedback from others. I can't overstate how much it's helped me
