@@ -78,7 +78,7 @@ like they know versus what I know. How did they learn so much about this topic?
 Something that helps me to keep in mind is that knowledge is like a Venn
 Diagram. Here's an illustration:
 
-![Knowledge Venn Diagram](https://imgur.com/9xwNXOs)
+![Knowledge Venn Diagram](/assets/knowledge_venn_diagram.png)
 
 On the left, we have an area of what I know, which feels worthless, and on the right we
 have what you know, which requires genius to understand. Sometimes what feels
