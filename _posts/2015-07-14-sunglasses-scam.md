@@ -13,25 +13,29 @@ Before we get into that, though, I think I need to provide a little backstory.
 About Ragnarok
 ==============
 
-Ragnarok Online is an [MMORPG](https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game) 
-that debuted in Korea and had a brief moment of popularity in the US around
-2003.  There's a pretty good 
-[Wikipedia article](https://en.wikipedia.org/wiki/Ragnarok_Online) on it.
+Ragnarok Online is an [MMORPG](https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game)
+that debuted in Korea and had a brief moment of popularity in the US around 2003.
+There's an extensive [Wikipedia article](https://en.wikipedia.org/wiki/Ragnarok_Online) on it.
 
 As with most Korean MMOs I've played, Ragnarok is built around killing monsters
-repeatedly until you get a rare item. Your character in Ragnarok can be
-customized in small ways. You can color your character's armor, change your
-headgear, or change your facial wear. That's it. As such, hats and facial
+repeatedly for rare items. Your character in Ragnarok can be
+customized in how they look by:
+
+1. Dyeing your character's armor
+2. Wearing headgear
+3. Equipping facial wear (such as a mask)
+
+That's all the customization possible. As such, hats and facial
 wear held positions of great importance.
 
 ![Character Selection](/assets/ragnarok_characters.PNG)
 
 In the game, you could sell items to other players using a Vending mode.
 You'd put a number of items in your virtual inventory to sell with a set
-price and open your store. Usually you'd turn off your monitor after 
+price and open your store. Usually you'd turn off your monitor after
 opening the store because it could take a long time to sell out an inventory.
 There was basically one main store-front in the
-game in the main town, Prontera where everyone lined up to sell their wares. 
+game in the main town, Prontera where everyone lined up to sell their wares.
 
 ![Prontera Vendors](/assets/ragnarok_vendors.jpg)
 
@@ -49,7 +53,7 @@ The Sunglasses
 One day, I listed my usual inventory and, at the bottom, added a pair of plain
 old sunglasses that you could buy from a vendor in a distant town. I had picked
 up a pair just because I thought they'd be interesting and they only ran
-5000 Zeny (the in-game currency) from the non-player merchant. 
+5000 Zeny (the in-game currency) from the non-player merchant.
 
 ![The Sunglasses](/assets/ragnarok_sunglasses.PNG)
 
@@ -66,22 +70,24 @@ little profit. I opened my store and walked away.
 These sunglasses could be purchased an in-game vendor. Why were people buying
 them from me at these prices?
 
-I loaded up another inventory full of sunglasses. This time, I wanted to 
-experiment. What would happen if I listed them at staggered prices? 
-I listed them for 13K, 14K, 15K, etc, all the way up to 20K and 
+I loaded up another inventory full of sunglasses. This time, I wanted to
+experiment. What would happen if I listed them at staggered prices?
+I listed them for 13K, 14K, 15K, etc, all the way up to 20K and
 opened the store. I got up and went to get a snack.
 By the time I came back, again, they were all gone.
 
 Okay, let's see how far we can take this. I opened my store front again and
-listed the glasses at prices ranging from 20K to 40K. 
+listed the glasses at prices ranging from 20K to 40K.
 
-They didn't sell. At least, not at first. This time, it took a few hours to sell
+They didn't sell. At least, not at first.
+
+This time, it took a few hours to sell
 them out. Of course, the lowest priced glasses sold the quickest, followed
 by the next lowest. Eventually, some poor soul purchased the 40K pair. He
 probably didn't know that he had missed out on a comparative deal, though.
 He was probably still excited by the sunglasses.
 
-The next day, I logged in and found myself in in-game jail 
+The next day, I logged in and found myself in in-game jail
 (which I did not know existed!). The game master
 had stuck me there as punishment for what he called scamming. If I continued,
 he said, I would be banned permanently. Instead, I was stuck in in-game jail
@@ -93,28 +99,33 @@ other players did not. Maybe they thought they were buying the more expensive
 cousin of the plain sunglasses, the slotted sunglasses. Either way, I never
 sold another pair of sunglasses.
 
-The interesting part, to me, is that it worked at all. How was it that I 
-was able to convince people to pay such a high mark-up? I have a hypothesis.
+The interesting part, to me, is that it worked at all. How was it that I
+was able to convince people to pay such a high mark-up?
 
 My hypothesis on why it worked
 ------------------------------
 
-I am reading a book called _Thinking Fast and Slow_. Daniel Kahneman, the author,
-suggests based on a lifetime of research that we have two primary modes 
-of thinking: System 1 and System 2. System 1 processes information subconsciously.
-System 2 is active, conscious thought. We use System 2 thinking when we
+I'm reading _Thinking Fast and Slow_ by Daniel Kahneman. The author
+suggests (based on a lifetime of research) that we have two primary modes
+of thinking: System 1 and System 2.
+
+1. ystem 1 processes information subconsciously.
+2. System 2 is active, conscious thought.
+
+We use System 2 thinking when we
 face hard problems. Most people associate their mental "selves" as being
 their System 2 mode of thinking. In reality, much of our lives are governed
 by how effective our System 1 mode of thinking processes information.
+
 And it's easily tricked.
 
 
 Cognitive Ease
 ==============
 
-If conscious thought 
+If conscious thought
 had been engaged, for example if I had been charging more for the sunglasses,
-such as 500K, then the sales would have been prevented. 
+such as 500K, then the sales would have been prevented.
 "Those probably don't actually cost that much." The would-be
 buyer might say. They might consult a price list and find out how
 outrageous the prices were, for example. I think of the 500K sunglasses
@@ -123,7 +134,7 @@ sell XBox boxes on eBay for the same price as an XBox because the buyer
 did not pay attention.
 
 In _Thinking Fast and Slow_, Kahneman mentions that when information looks
-relatively normal and we're enjoying a feeling of cognitive ease, we tend to 
+relatively normal and we're enjoying a feeling of cognitive ease, we tend to
 rely upon our System 1 mode of thinking to handle many assessments for us.
 It's taxing to use System 2 thinking so we tend not to engage it until
 we have to or we encounter something surprising. By keeping the price of the
@@ -135,23 +146,20 @@ aggregation site, for a number of years off and on.  Members post "deals" which
 range from something like $100 off a set of new tires to a discount on
 headphones. I've noticed, over time, that the frequency that I check the site
 is linked to how many purchases I make. Is it still a deal if I'm purchasing
-more things than I need? Am I "saving money" if I'm spending it more often? 
+more things than I need? Am I "saving money" if I'm spending it more often?
 
 
 Anchoring
 =========
 
 In some studies that Kahneman mentions,
-they found that if they started any discussion with a higher number, 
-participants were more likely to believe the number and use it 
-(consciously or otherwise) as their starting point. 
+they found that if they started any discussion with a higher number,
+participants were more likely to believe the number and use it
+(consciously or otherwise) as their starting point.
 There's an excellent example from the book:
 
-> Is the height of the tallest redwood more or less than 1,200 feet? 
+> Is the height of the tallest redwood more or less than 1,200 feet?
 > What is your best guess about the height of the tallest redwood?
->
-> -- Kahneman, Daniel (2011-10-25). Thinking, Fast and Slow (p. 123). Farrar, Straus
-and Giroux. Kindle Edition. 
 
 They found that when they used the "high anchor" of 1200 feet, the average
 person guessed that the tallest tree was 844 feet tall. Conversely, with a "low
@@ -168,18 +176,17 @@ a vending window, it looks them all over and thinks "Okay, the sunglasses
 range from 30K to 40K.  Based on my understanding of other vendors in the
 area, and conventions of vending, I suspect that its actual price is probably
 somewhere around 30K. If I buy that 30K pair, I'm getting a deal.  If it
-turns out to be cheaper somewhere else, 30K is still not all that much money." 
-This train of thought happens mostly subconsciously, 
-which is why System 1 thinking can be so powerful. 
+turns out to be cheaper somewhere else, 30K is still not all that much money."
+This train of thought happens mostly subconsciously,
+which is why System 1 thinking can be so powerful.
 
-I'd recommend _Thinking Fast and Slow_, I've certainly enjoyed it. I'll be
+I recommend _Thinking Fast and Slow_, I've enjoyed it. I'll be
 writing a few more articles related to it shortly, particularly as it relates to
 software engineering and clean code. If you'd like to find out when they're
 posted, please sign up for the mailing list below and I'll send you a note.
 
 It's easy to short-circuit our normal thought processes, especially if we're not
-aware that we're being manipulated. I'd recommend that you think critically
-if you think you're getting a great deal. It's possible that it's not so
-wonderful.
+aware that we're being manipulated. Think carefull about
+if you think you're getting a great deal. It might not be so great.
 
 Discussion on [Hacker News](https://news.ycombinator.com/item?id=9889789)
