@@ -1,22 +1,35 @@
 ---
 layout: post
-title: Providing Feedback
+title: Giving Feedback When You're New
 date: 2022-02-12 21:53:01.000000000 -07:00
 ---
 
-I had a one-on-one discussion some time ago with a colleague who joined
-a new company and well-established team. During design and code reviews, they
-felt uneasy offering feedback to the other engineers and second-guessed
-themselves. What feedback could they offer to a team that knows
-what they're doing? Haven't the other engineers already considered any
-points they might bring up?
+I had a chat with an engineer who joined a new company and well-established
+team. During design and code reviews, they felt uneasy offering feedback to the
+other engineers and second-guessed themselves. What feedback could they offer to
+a team that knows what they're doing? Haven't the other engineers already
+considered any points they might bring up?
 
 I experience this too when I join new teams. I have a hard time figuring out how
 to engage and what I can offer. In my experience, discomfort comes from:
 
+3. Venn diagram knowledge
 1. New environments
 2. Impostor syndrome
-3. Venn diagram knowledge differences
+
+### Venn diagram knowledge
+
+Sometimes when I talk with someone, I'm blown away by how much they know. How
+did they learn so much? I start to doubt myself.
+It helps me to frame knowledge as like a Venn diagram. Here's an illustration of
+how I think about it:
+
+![Knowledge Venn diagram](/assets/knowledge_venn_diagram.png)
+
+What can feel like genius may be encountering someone with a wildly different
+Venn diagram from my own. It doesn't necessarily mean they know more overall,
+just that they have a different coverage area.
+
 
 ### New Environments
 
@@ -67,19 +80,6 @@ One step towards dealing with impostor syndrome is noticing the internal
 voice and doubts start to appear. I've [written about impostor
 syndrome](https://www.kevinlondon.com/2015/05/27/impostor-syndrome-and-me) and
 go back to it when I'm feeling underwater.
-
-### Venn Diagram Knowledge
-
-Sometimes when I talk with someone, I'm blown away by how much they know. How
-did they learn so much? I start to doubt myself.
-It helps me to frame knowledge as like a Venn Diagram. Here's an illustration of
-how I think about it:
-
-![Knowledge Venn Diagram](/assets/knowledge_venn_diagram.png)
-
-What can feel like genius may be encountering someone with a wildly different
-Venn Diagram from my own. It doesn't necessarily mean they know more overall,
-just that they have a different coverage area.
 
 ## Overcoming
 
