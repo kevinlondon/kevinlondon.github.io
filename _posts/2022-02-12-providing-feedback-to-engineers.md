@@ -5,13 +5,16 @@ date: 2022-02-12 21:53:01.000000000 -07:00
 ---
 
 I had a chat with an engineer who joined a new company and well-established
-team. During design and code reviews, they felt uneasy offering feedback to the
-other engineers and second-guessed themselves. What feedback could they offer to
+team. They felt uneasy offering feedback during design and code reviews to the
+other engineers and second-guessed each comment. What feedback could they offer to
 a team that knows what they're doing? Haven't the other engineers already
 considered any points they might bring up?
 
 I experience this too when I join new teams. I have a hard time figuring out how
-to engage and what I can offer. In my experience, discomfort comes from:
+to engage and what I can offer. In this post, we'll look at possible causes and
+steps to overcome feeling anxious giving feedback when you're newer.
+
+Let's start with causes. In my experience, discomfort comes from:
 
 3. Venn diagram knowledge
 1. New environments
@@ -26,16 +29,22 @@ how I think about it:
 
 ![Knowledge Venn diagram](/assets/knowledge_venn_diagram.png)
 
-What can feel like genius may be encountering someone with a wildly different
-Venn diagram from my own. It doesn't necessarily mean they know more overall,
-just that they have a different coverage area.
+We each have an area that covers what we know. Encountering someone with
+a wildly different Venn diagram coverage circle can feel like meeting a genius.
+It doesn't necessarily mean they know more than us, just that we have different
+coverage. As we learn more, our knowledge circle shifts and grows.
+
+In the diagram, I label what I know as "worthless knowledge". I think it's
+common to discount what we've learned. If you can, try to appreciate what you
+already know and that others might be as impressed by your Venn diagram
+coverage.
 
 
 ### New Environments
 
 When joining a team, or when there's no process, it's challenging to
-know what to do. Should I suggest something different? How long should
-I wait before I champion a process change?
+know what to do. Why do we do things the way that we do? Should I suggest
+something different? How long should I wait before I try to change the process?
 
 Dan Luu wrote a post on
 [the Normalization of Device](https://danluu.com/wat/, where he talks about the
@@ -63,7 +72,7 @@ normal to experience in new environments.
 
 ### Impostor Syndrome
 
-When I start something new such as switching companies, teams, or even
+When I make a change such as switching companies, teams, or even
 projects, I feel dread. Will my colleagues see that I'm figuring it out as
 I go and I don't have the answers? Will this be the time I'm found out as
 a fraud? Will they judge me for not measuring up to their expectations or skill?
@@ -76,8 +85,7 @@ their achievements and the high esteem in which they are, in fact, generally
 held. They feel that they aren’t as competent or intelligent as others might
 think—and that soon enough, people will discover the truth about them.
 
-One step towards dealing with impostor syndrome is noticing the internal
-voice and doubts start to appear. I've [written about impostor
+I've [written more about impostor
 syndrome](https://www.kevinlondon.com/2015/05/27/impostor-syndrome-and-me) and
 go back to it when I'm feeling underwater.
 
