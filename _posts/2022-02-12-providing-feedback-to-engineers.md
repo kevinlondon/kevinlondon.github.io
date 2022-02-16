@@ -12,7 +12,7 @@ considered any points they might bring up?
 
 I experience this too when I join new teams. I have a hard time figuring out how
 to engage and what I can offer. In this post, we'll look at possible causes and
-steps to overcome feeling anxious giving feedback when you're newer.
+steps to become more comfortable with giving feedback.
 
 Let's start with causes. In my experience, discomfort comes from:
 
