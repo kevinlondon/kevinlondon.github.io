@@ -24,21 +24,20 @@ Let's start with causes. In my experience, discomfort comes from:
 
 Sometimes when I talk with someone, I'm blown away by how much they know. How
 did they learn so much? I start to doubt myself.
-It helps me to frame knowledge as like a Venn diagram. Here's an illustration of
-how I think about it:
+It helps me to frame knowledge as like a Venn diagram, where we each have an
+area that covers what we know.
+Here's an illustration of how I think about it:
 
 ![Knowledge Venn diagram](/assets/knowledge_venn_diagram.png)
 
-We each have an area that covers what we know. Encountering someone with
-a wildly different Venn diagram coverage circle can feel like meeting a genius.
-It doesn't necessarily mean they know more than us, just that we have different
-coverage. As we learn more, our knowledge circle shifts and grows.
+Encountering someone with a wildly different Venn diagram coverage circle can
+feel like meeting a genius. It doesn't necessarily mean they know more than us,
+just that we have different areas that we know. As we learn more, our knowledge
+circle shifts and grows.
 
 In the diagram, I label what I know as "worthless knowledge". I think it's
 common to discount what we've learned. If you can, try to appreciate what you
-already know and that others might be as impressed by your Venn diagram
-coverage.
-
+already know and that others might be as impressed by what you've learned.
 
 ### New Environments
 
@@ -93,8 +92,8 @@ go back to it when I'm feeling underwater.
 
 One strategy for overcoming these uncomfortable feelings is by paying attention
 to them. When I'm starting negative self-talk or feeling anxious, noticing it
-can help me realize that it's one of the causes above. Catching the start of
-a loop or falling into a pattern can help knock me out of it.
+can help me take steps to fix it. Catching the start of
+a loop or falling into a pattern can prevent thought loops.
 
 ### Ask Open-Ended Questions
 One technique I've found helpful for offering feedback is to approach
@@ -104,9 +103,9 @@ Perhaps I'm reviewing a design document and notice there's no
 client-side cache. I'm concerned about request latency. Here's a few ways
 I could comment:
 
-* **Recommending**: I'd use a distributed cache like Redis here to speed up requests.
-* **Exploring**: What latency requirements do we have? What options can we use
-  if we're not meeting our service expectations?
+* **Recommending**: "I'd use a distributed cache like Redis here to speed up requests."
+* **Exploring**: "What latency requirements do we have? What options can we use
+  if we're not meeting our service expectations?"
 
 In the recommending example, I'm making a few assumptions:
 1. The service or implementation isn't going to meet its latency requirements
@@ -152,10 +151,9 @@ and make it easier to understand.
 ### Feedback as Growth
 
 Much of my growth and career development has come from offering
-and receiving feedback from others. I can't overstate how much it's helped me
-grow as an engineer and continues to do so. I still learn from colleague
-comments on CR and I'm grateful that they care enough to help me build better
-software and systems for our customers.
+and receiving feedback from others. I cannot overstate how much it's helped me.
+I still learn from my colleague's comments and I'm grateful we're working
+together to build better systems and software for our customers.
 
 I want to receive hear from newer
 engineers if there's something we could improve or is unclear! In [Mindfulness
@@ -175,9 +173,9 @@ them out to us. When they point out our faults, we should be grateful to them
 like the Venerable Sariputta, who said: "Even if a seven-year-old novice monk
 points out my mistakes, I will accept them with utmost respect for him."
 
-Everyone has areas they can work on to improve, even those with less experience.
-Even though it feels uncomfortable to offer feedback to others,
-it offers an invaluable opportunity to grow.
+Everyone has areas they can work on to improve and I think those new to the
+team have a valuable and unique perspective. Even though it feels uncomfortable
+to offer feedback to others, it offers an invaluable opportunity to grow.
 
 With that, I hope you feel a little better about offering feedback to other
 engineers. Please let me know if you have any other suggestions that work for you.
