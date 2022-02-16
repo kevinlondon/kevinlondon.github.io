@@ -10,48 +10,48 @@ I talked about how to calibrate and offer feedback as a new teammate.
 What about when you're established? Surely that's easier right? Maybe!
 While you may gain the benefit of experience, that can now mean a few things:
 
-1. It takes longer to find out when we're wrong
+1. Feedback loops grow longer so it takes longer to find out when we're wrong
 2. People may be more inclined to think you're right even when you're not
 3. If someone thinks you're wrong, they may feel less comfortable telling you
 
 So how do we deal with these challenges?
 
-I should preface this by saying I'm not sure I'm in a great spot to provide
-feedback on this! I'm still learning too and my transition to a senior engineer
-role, at least at Amazon, happened last year and so feels recent. In some
-regards, it's still a bit hard to wrap my head around others wanting to hear
-what I have to say. Some of what's here is me figuring it out and it seems
-likely I'll change my opinion on this over time.
-
 ### Dealing with Long Feedback Loops
-As we get more experience, the feedback loops get longer, so it can take time to
-find out if a project went well. We may have to scratch or scrounge for signs
-that a choice we made was the right one. Similarly, if we make a poor decision, it
-could be a long time until we see that decision come home to roost!
+Imagine putting a hand on a hot stove. We immediately find out it's a bad idea
+and pull our hand away. What if you couldn't feel that the heat for 5-10
+seconds? That's the danger of a long feedback loop.
 
-At Amazon, the engineers on the engineering ladder have focuses something like:
+As we get more engineering experience, the feedback loops get longer, so it can
+take time to find out if a project went well.
+Similarly, if we make a poor decision, it could be a long time until we see that
+decision come home to roost!
 
-* **SDE I**: Task / features
-* **SDE II**: Component / service level with some team-level involvement.
-* **Senior Engineer**: Team level with some cross-team involvement.
+At Amazon, for example, the engineers on the engineering ladder have scope roughly like:
+
+* **Software Development Engineer I (SDE I)**: Tasks / features / small components
+* **SDE II**: Component / service level with some team leadership
+* **Senior SDE**: Team level with some cross-team alignment
 * **Principal Engineer**: Organization level+
 
-So naturally, as we move up the ladder, these feedback loops are going to
-get longer. As a Senior Engineer, maybe we make a decision that doesn't
-materialize for 6 months to a year! I'm not at the Principal Engineer level.
-I can only imagine what's that's like.
+As we move up the ladder, these feedback loops increase in time and consequences grow.
+A newer enginer may be able to find out if their idea works in
+hours to days. A typical task for an SDE II might span a week to a few
+months for larger projects. A Senior SDE-scope project could have a feedback
+loop ranging from a few months to a year or more. I can only imagine what it's
+like at the Principal Engineer level.
 
 What if we predicted improperly and it won't pan out? We have to be more
-cautious as we move up the ladder, because we're more likely to make a decision
-that could be challenging to back out of without incurring timeline delays. At
+cautious as we grow. We're more likely to make a decision
+that could be difficult to reverse. At
 Amazon, these are called ["one-way door
 decisions"](https://www.inc.com/jeff-haden/amazon-founder-jeff-bezos-this-is-how-successful-people-make-such-smart-decisions.html).
-
 Having a short feedback loop is critical for improving and making the right decisions.
 
-What does this mean in practice? *Find out where you could be wrong while it's cheap!*
-It's much cheaper and easier to discover a hole or fault in a plan while it's
-still in the planning stage.
+So what should we do as the feedback loops get longer? *Find out where you could
+be wrong while it's cheap!* It's easier to discover a plan's faults
+during planning than after delivery.
+
+Here's a few recommendations:
 
 * **Coordinate with the stakeholders**. Keeping a close line of communication
   with those most involved in your project or initiative can help course
@@ -93,11 +93,9 @@ This also comes up regularly on the Staff Eng podcast.
 ___
 
 As we gain experience, it becomes increasingly difficult to see the faults in
-our thinking and to avoid making blunders. We have to take care to avoid
+our thinking and the decisions grow in consequence. We have to take care to avoid
 mistakes because it could take a while for us to see them as such. We need to
-work harder at letting others speak and take the lead, and balancing what they
-share against our prior conceptions. Lastly, we need to actively request
-feedback and acknowledge when we're wrong.
+encourage others to others to speak and take the lead, and listen to what they say.
+ Lastly, we need to actively request feedback and acknowledge when we're wrong.
 
-By taking these steps, hopefully it helps us avoid falling into the trappings of
-experience and hubris which can come with it, if we're not careful.
+By taking these steps, we can hopefully avoid falling into the trappings of experience.
