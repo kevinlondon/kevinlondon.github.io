@@ -46,7 +46,7 @@ know what to do. Why do we do things the way that we do? Should I suggest
 something different? How long should I wait before I try to change the process?
 
 Dan Luu wrote a post on
-[the Normalization of Device](https://danluu.com/wat/], where he talks about the
+[the Normalization of Device](https://danluu.com/wat/), where he talks about the
 process of strange things becoming normal over time and how that
 happens. From his post:
 
