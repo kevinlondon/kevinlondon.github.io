@@ -1,22 +1,17 @@
 ---
 layout: post
 title: Reflections on my Amazon Career
-date: 2022-06-02 15:53:01.000000000 -07:00
+date: 2022-06-03 07:53:01.000000000 -07:00
 ---
 
-After four years at Amazon, my last day is June 3rd. I start another
-adventure soon. For now, I'd like to look back
-upon the last four years and share my take-aways.
+After four years at Amazon, today is my last day.
+I'd like to look back and share my take-aways.
 
 When I joined Amazon, I wanted to learn what made Amazon successful across so
-many industries. I've learned more than
-I anticipated at the beginning of my journey. Amazon's
+many industries. After four years, I can say Amazon's
 engineering culture and infusion of [Leadership
-Principles](https://www.amazon.jobs/en/principles) (LPs) has led to its
-success. In particular, Amazon's willingness to serve its customers
-and make big bets have proven particularly fruitful.
-
-Here's what I'm taking away from my time here, in LP language:
+Principles](https://www.amazon.jobs/en/principles) (LPs) makes it successful.
+Here's what I'm taking from my time, in LP language:
 
 #### Customer Obsession
 
@@ -35,7 +30,7 @@ do we need to address?". This feedback helped me focus on how to best serve the
 customer.
 
 At Amazon, there's more things to do and problems to solve than time to do them.
-Prioritizing what to build boils down to finding ways to solve the most
+Prioritizing what to build boils down to determining the most
 impactful customer challenges.
 
 #### Ownership
@@ -44,21 +39,21 @@ impactful customer challenges.
 for short-term results. They act on behalf of the entire company, beyond just
 their own team. They never say “that’s not my job."
 
-I've never heard "That's not my job"
-from successful folks at Amazon. At Amazon, engineering owns end-to-end development, including:
+At Amazon, engineering owns end-to-end development, including:
 1. Pitching an idea
-2. Designing it and aligning with other teams
-4. Planning and implementing it
+2. Design and aligning with other teams
+4. Planning and implemention
 5. Project launch and maintenance
 
 I've learned so much from leading projects through the end-to-end software
-development lifecycle.
+development lifecycle. And I've never heard "that's not my job"
+from successful folks at Amazon.
 
-For [Amp](https://www.onamp.com/), I led "call-in", which is a feature that
-allows listeners to become a part of the Amp show.
-At launch, we handed off the project to new owners who have been wonderful. I've
+For [Amp](https://www.onamp.com/), I led call-in, which is a feature that
+allows listeners to become a participant on a live Amp show.
+At launch, we handed off the project to new owners, who have been wonderful. I've
 participated in follow-up discussions about how we can keep making call-in
-better for our customers, even though I'm no longer owning or leading it. I'm
+better for our customers, even though I no longer owning or lead it. I'm
 looking forward to see how call-in continues to improve over time!
 
 #### Learn and Be Curious
@@ -69,7 +64,6 @@ are curious about new possibilities and act to explore them.
 I've had moments at Amazon where I needed to
 immediately understand an unfamiliar domain. For example, on call-in, we needed
 to write the front end iOS app components in [Swift](https://developer.apple.com/swift/).
-
 I had no professional experience working in the language and needed to lead the
 effort for our team. We learned and taught ourselves the language and idioms
 through online resources as we came across the problems.
@@ -87,9 +81,8 @@ whether that be at Amazon or elsewhere.
 
 One final lesson I take away is how much your team and manager impacts your
 happiness. I've been fortunate to have worked with a wonderful team and managers
-in my time at Amazon. Watching the team grow, lead with empathy, and have fun at
-work has been gratifying. Working with my team is one of the things I'll miss
-most about Amazon.
+in my time at Amazon. Watching the team grow, lead with empathy, and build
+relationships has been gratifying. I'll miss working with my team.
 
 ### What's Next
 
