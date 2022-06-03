@@ -33,7 +33,7 @@ I updated this article in early 2018 when I joined the Amazon Prime
 Video team as a software engineer. I used many of the tips in this guide and
 added a few new ones.
 
-In addition, I have interviewed 35ish technical candidates, so I have seen the
+In addition, I interview technical candidates, so I have seen the
 interview process from both the candidate and interviewer's perspective.
 
 **Finding Jobs**

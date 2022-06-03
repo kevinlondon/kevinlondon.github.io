@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Feedback When You're Established
+title: Feedback Loops
 date: 2022-02-18 21:53:01.000000000 -07:00
 ---
 
@@ -87,31 +87,10 @@ podcast. In particular, [Rich Lafferty of
 PagerDuty](https://podcast.staffeng.com/1687069/9043003-rich-lafferty-pagerduty)
 talks about seeking early feedback and growing a feedback group over time.
 
-### Appearing Right When We're Wrong
-
-#### Overcoming the Halo Effect
-
-#### Lean on Active Listening
-Active Listening, in short, is hearing what the other person is saying rather
-than focusing on what we're going to say next. It can be hard to be present!
-
-#### Acknowledge Mistakes
-
-### Ask for Feedback
-
-#### Stay Present
-
-#### Beware Defensiveness
-
-#### Use the Beginner's Mind
-
-___
-
 As we gain experience, it becomes increasingly difficult to see the faults in
 our thinking and the decisions grow in consequence. We have to take care to
 avoid mistakes because it could take a while for us to see them as such. We need
-to encourage others to others to speak and take the lead, and listen to what
+to encourage others to others to speak and take the lead through sponsorship and mentorship, and listen to what
 they say. Lastly, we need to actively request feedback and acknowledge when
-we're wrong.
-
-By taking these steps, we can hopefully avoid falling into the trappings of experience.
+we're wrong. By taking these steps, we can more effectively navigate
+feedback loops.
