@@ -29,8 +29,8 @@ their first questions: "What customer problem are we solving? What use cases
 do we need to address?". This feedback helped me focus on how to best serve the
 customer.
 
-At Amazon, there's more things to do and problems to solve than time to do them.
-Prioritizing what to build boils down to determining the most
+At Amazon, there's more things to do and problems to solve than time available.
+Prioritizing what to build boils down to finding the most
 impactful customer challenges.
 
 ### Ownership
@@ -42,8 +42,10 @@ their own team. They never say “that’s not my job."
 At Amazon, engineering owns end-to-end development, including:
 1. Pitching an idea
 2. Design and aligning with other teams
-4. Planning and implemention
-5. Project launch and maintenance
+4. Planning
+5. Implementation
+6. Launching
+7. Maintenance and operations
 
 I've learned so much from leading projects through the end-to-end software
 development lifecycle. And I've never heard "that's not my job"
@@ -51,10 +53,10 @@ from successful folks at Amazon.
 
 For [Amp](https://www.onamp.com/), I led call-in, which is a feature that
 allows listeners to become a participant on a live Amp show.
-At launch, we handed off the project to new owners, who have been wonderful. I've
+We handed off the project at launch to new owners, who have been wonderful. I've
 participated in follow-up discussions about how we can keep making call-in
-better for our customers, even though I no longer owning or lead it. I'm
-looking forward to see how call-in continues to improve over time!
+better for our customers, even though I no longer own or lead it. I'm
+looking forward to see how Amp and call-in continues to improve over time!
 
 ### Learn and Be Curious
 
@@ -64,8 +66,8 @@ are curious about new possibilities and act to explore them.
 I've had moments at Amazon where I needed to
 immediately understand an unfamiliar domain. For example, on call-in, we needed
 to write the front end iOS app components in [Swift](https://developer.apple.com/swift/).
-I had no professional experience working in the language and needed to lead the
-effort for our team. We learned and taught ourselves the language and idioms
+I had no professional experience working in the language at the start. We
+learned and taught ourselves the language and idioms
 through online resources as we came across the problems.
 To Amazon's credit, they encourage learning and growth
 and I'm hoping to bring that with me too.
@@ -81,11 +83,11 @@ whether that be at Amazon or elsewhere.
 
 One final lesson I take away is how much your team and manager impacts your
 happiness. I've been fortunate to have worked with a wonderful team and managers
-in my time at Amazon. Watching the team grow, lead with empathy, and build
-relationships has been gratifying. I'll miss working with my team.
+in my time at Amazon. Watching the team grow, build relationships, and lead with
+empathy has been gratifying. I'll miss working with my team.
 
 ### What's Next
 
-I had a wonderful time at Amazon over the last four years. If you're curious to hear
-more, or have questions, feel free to reach out. I'm happy to chat. I'm
+I had a wonderful time at Amazon over the last four years. If you're curious to
+hear more, or have questions, feel free to reach out. I'm happy to chat. I'm
 looking forward to starting my next adventure and sharing more soon!
