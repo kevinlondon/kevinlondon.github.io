@@ -13,7 +13,7 @@ engineering culture and infusion of [Leadership
 Principles](https://www.amazon.jobs/en/principles) (LPs) makes it successful.
 Here's what I'm taking from my time, in LP language:
 
-#### Customer Obsession
+### Customer Obsession
 
 > Leaders start with the customer and work backwards. They work vigorously to
 earn and keep customer trust. Although leaders pay attention to competitors,
@@ -33,7 +33,7 @@ At Amazon, there's more things to do and problems to solve than time to do them.
 Prioritizing what to build boils down to determining the most
 impactful customer challenges.
 
-#### Ownership
+### Ownership
 
 > Leaders are owners. They think long term and don’t sacrifice long-term value
 for short-term results. They act on behalf of the entire company, beyond just
@@ -56,7 +56,7 @@ participated in follow-up discussions about how we can keep making call-in
 better for our customers, even though I no longer owning or lead it. I'm
 looking forward to see how call-in continues to improve over time!
 
-#### Learn and Be Curious
+### Learn and Be Curious
 
 > Leaders are never done learning and always seek to improve themselves. They
 are curious about new possibilities and act to explore them.
@@ -70,7 +70,7 @@ through online resources as we came across the problems.
 To Amazon's credit, they encourage learning and growth
 and I'm hoping to bring that with me too.
 
-#### Strive to be Earth's Best Employer
+### Strive to be Earth's Best Employer
 
 > Leaders work every day to create a safer, more productive, higher performing,
 more diverse, and more just work environment. They lead with empathy, have fun
