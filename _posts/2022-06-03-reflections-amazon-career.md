@@ -40,12 +40,12 @@ for short-term results. They act on behalf of the entire company, beyond just
 their own team. They never say “that’s not my job."
 
 At Amazon, engineering owns end-to-end development, including:
+
 1. Pitching an idea
-2. Design and aligning with other teams
-4. Planning
-5. Implementation
-6. Launching
-7. Maintenance and operations
+2. Design and alignment with other teams
+3. Planning
+4. Implemention and testing
+3. Project launch and maintenance
 
 I've learned so much from leading projects through the end-to-end software
 development lifecycle. And I've never heard "that's not my job"
