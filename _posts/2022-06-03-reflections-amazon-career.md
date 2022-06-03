@@ -82,9 +82,9 @@ Leaders have a vision for and commitment to their employees' personal success,
 whether that be at Amazon or elsewhere.
 
 One final lesson I take away is how much your team and manager impacts your
-happiness. I've been fortunate to have worked with a wonderful team and managers
-in my time at Amazon. Watching the team grow, build relationships, and lead with
-empathy has been gratifying. I'll miss working with my team.
+happiness. I've been fortunate to have worked with fantastic teams and managers
+in my time at Amazon. Watching teams grow, build relationships, and lead with
+empathy has been gratifying. I'll miss working with these Amazonians.
 
 ### What's Next
 
