@@ -4,22 +4,20 @@ title: Backfill Considerations
 date: 2022-11-30 20:57:01.000000000 -07:00
 ---
 
-When I joined Amazon, I inherited a system which had just launched into
-production. For my first task, I needed to perform a big migration by running
-all the production records through this service, also known as backfilling.
 
-A backfill is a process to retroactively apply updates or changes to data. It
-can be challenging and a resource-intensive operation, which can affect
-performance and availability. So I had one big problem: how do I backfill
-millions of items through our system?
+When I joined Amazon, I was tasked with backfilling millions of items through
+our new system. For those who may not be familiar, a backfill is a process to
+retroactively apply updates or changes to data. It can be challenging and
+resource-intensive, which is why it's important to plan carefully, communicate
+with stakeholders, and test the process on a smaller scale before running it on
+the full production system.
 
-In this post, I'll share what I learned about backfilling, including how to
-write, execute, and verify a large-scale backfill.
+I learned a few key things during my backfill experience that I'd like to share.
 
-## Step Overview
+## Backfill Steps
 
-I learned quickly that I needed a plan when executing the backfill. At a high
-level, these are the steps I recommend for the backfill:
+I learned quickly that I needed a plan for the backfill. This is what I did (and
+recommend):
 
 1. **Plan** carefully, considering the potential impacts on the system and its
    users.
@@ -27,65 +25,72 @@ level, these are the steps I recommend for the backfill:
    planned backfill and any potential disruptions it may cause.
 3. **Test** the process on a smaller scale to ensure it will work as expected on
    the full production system.
-4. **Monitor** the backfill process closely to make sure it is running smoothly
-   and to identify and address any potential issues that may arise.
+4. Run and **monitor** the backfill process closely to
+   identify and address any potential issues that may arise.
 5. Once the backfill is complete, **verify** that the data has been updated as
    expected and that the system is functioning properly.
 6. **Document** the process and any issues that were encountered, as this
    information will be useful for future reference.
 
+It's easy to overlook one of these steps, and risky to skip one! For example,
+neglecting to communicate to a stakeholder could cause problems when you go to
+run the backfill without their knowledge and they get paged. Would they know
+to reach out to you?
+
 By following these steps, developers can help ensure that the backfill process
 is successful and has minimal impact on the production system and its users.
+Let's go through each step in more detail.
 
 ## Plan
 
 As I started thinking about backfilling the production system, I realized
-I needed to consider
-many different aspects before I could get alignment on the approach. I wrote
-a design document that covered the following areas:
+I needed to consider many different aspects before I could get alignment on the
+approach. I wrote a design document that covered the following areas:
 
 ### How will the backfill work?
 
-Which systems need to be involved in backfilling? Do I know who owns those
-systems, and how I can get ahold of them if something goes wrong?
+Some questions I addressed in the design include:
 
-How can I get a complete list of all the records which I need to run through the
-backfill? What data do I need from each to submit it for backfilling? In my
-case, I could export the IDs associated with each production record and collect
-them into batches for submission.
+* Which systems need to be involved in backfilling? Do I know who owns those
+  systems, and how I can get ahold of them if something goes wrong?
+* How can I get a complete list of all the records which I need to run through
+  the backfill? What data do I need from each record to submit for backfilling?
+  In my case, I could export the IDs associated with each production record and
+  collect them into batches for submission.
+* Where will we run the backfill? Is the data small enough or will the backfill
+  be short enough that it can be run in a background process from a laptop? Are
+  there security concerns which prevent local execution of the backfill?
+* How will we pipe the records into the production system for backfilling? Does
+  it take records into a queue? What authentication is required to submit the
+  records?
+* What does a success backfill look like? Do you need to process 100% of
+  records, or is it acceptable if the backfill completes with 99.99%? This
+  becomes important when evaluating if the backfill is done or needs to be
+  re-run, and the level of rigor you'll need to apply during and after the
+  backfill.
 
-Where will we run the backfill? Is the data small enough or will the backfill be
-short enough that it can be run in a background process from a laptop? Are there
-security concerns which prevent local execution of the backfill?
-
-How will we pipe the records into the production system for backfilling? Does it
-take records into a queue? What authentication is required to submit the
-records?
+This is a non-exhaustive list!
 
 ### What can go wrong?
 
-What if the backfill starts taking down a production
-service? Is there a way to turn off the backfill, or throttle the rate at which
-it's providing records?
+Once we have a [happy path](https://en.wikipedia.org/wiki/Happy_path) flow and
+diagrams of affected systems, consider which parts can fail. Some starting
+considerations:
 
-What if there's an issue in execution and it stops halfway through? Will it be
-possible to resume, or does it require starting all again? Thinking about how to
-checkpoint or resume a partially-successfully operation can prove invaluable for if
-(when!) it fails 2/3 through an 18-hour backfill. Not that it's happened to me...
-
-What if one record failed to submit through the system? How will you know that
-it still requires backfill?
-
-Is it safe to re-run the backfill on each record or destructive? Ideally,
-backfills are [idempotent](https://en.wikipedia.org/wiki/Idempotence) and
-re-running individual records after the backfill is a safe operation.
-
-### Define What Success Looks Like
-
-In addition, define what your threshold for
-success is. Is it 100%, with every record? Are you willing to accept a backfill
-that successfully processes 99.99%? These kinds of questions will become
-important when you're determining how successful the backfill went.
+* **Production Impact**: What if the backfill causes too much load on a production
+  service? Is there a way to turn off the backfill, or throttle the rate at
+  which it's providing records?
+* **Partial Failure**: What if there's an issue in execution and it stops
+  halfway through? Will it be possible to resume, or does it require starting
+  all again? Thinking about how to checkpoint or resume a partially-successfully
+  operation can prove invaluable for if (when!) it fails 2/3 through an 18-hour
+  backfill. Not that it's happened to me...
+* **Single Record Failure**: What if one record failed to submit through the
+  system? How will you know that it still requires backfill?
+* **Idempotency**: Is it safe to re-run the backfill on each record or
+  destructive? Ideally, backfills are
+  [idempotent](https://en.wikipedia.org/wiki/Idempotence) and re-running
+  individual records after the backfill is a safe operation.
 
 ### Prepare for Edge Cases
 
@@ -100,17 +105,6 @@ You won't be able to anticipate all of these edge cases. It's worthwhile to
 plan time to diagnose and work through the edge cases which will inevitably show
 up.
 
-### Order of Operations Matters!
-
-If you're backfilling something because it is changing, I recommend rolling out
-the steady-state changes first, then backfilling the records which pre-date your
-rolled out change. In this model, new data will get automatically updated and
-you won't have to consider what to do about the incoming data.
-
-If you neglect to do this, what happens is that you backfill and then need to
-backfill again. And hopefully in that case, you could identify the new records,
-or you have to do the *whole* thing again.
-
 ## Communicate
 
 Create a plan that outlines the
@@ -124,7 +118,7 @@ troubleshooting and fixing common issues, as well as a plan for how to roll back
 the backfill if necessary.
 
 If you've run through all the planning steps, it should be straight-forward to
-write and plan it.
+write the execution plan.
 
 ### Solicit Feedback!
 
@@ -139,7 +133,7 @@ might be able to point out potential blind spots. When reviewing designs with
 others, something I try to keep in mind is that the goal is to build a better or
 more resilient design. Feedback is a good thing!
 
-## [Test](Test)
+## Test
 
 Once you've planned how to run the backfill, and how it will work, the next
 phase is running small-scale tests.
@@ -195,6 +189,8 @@ Overall, effective monitoring of a production backfill requires a combination of
 monitoring tools, real-time monitoring, and a plan for responding to any issues
 that arise.
 
+When you're running the backfill, having this monitoring in place offers
+peace-of-mind.
 
 ## Verify
 
