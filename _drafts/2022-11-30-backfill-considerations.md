@@ -4,7 +4,6 @@ title: Backfill Considerations
 date: 2022-11-30 20:57:01.000000000 -07:00
 ---
 
-
 When I joined Amazon, I was tasked with backfilling millions of items through
 our new system. For those who may not be familiar, a backfill is a process to
 retroactively apply updates or changes to data. It can be challenging and
@@ -16,8 +15,7 @@ I learned a few key things during my backfill experience that I'd like to share.
 
 ## Backfill Steps
 
-I learned quickly that I needed a plan for the backfill. This is what I did (and
-recommend):
+This is what I did (and recommend):
 
 1. **Plan** carefully, considering the potential impacts on the system and its
    users.
@@ -37,15 +35,12 @@ neglecting to communicate to a stakeholder could cause problems when you go to
 run the backfill without their knowledge and they get paged. Would they know
 to reach out to you?
 
-By following these steps, developers can help ensure that the backfill process
-is successful and has minimal impact on the production system and its users.
 Let's go through each step in more detail.
 
 ## Plan
 
-As I started thinking about backfilling the production system, I realized
 I needed to consider many different aspects before I could get alignment on the
-approach. I wrote a design document that covered the following areas:
+backfill approach. I wrote a design document that covered the following areas:
 
 ### How will the backfill work?
 
@@ -94,16 +89,14 @@ considerations:
 
 ### Prepare for Edge Cases
 
-Though not specific to a backfill, edge cases have a way of showing up when
+Edge cases have a way of showing up when
 you're processing millions of items. Something that happens once in a million is
-a real edge case that you'll need to consider, especially if the backfill
+a real case to consider, especially if the backfill
 requires 100% coverage over the data set. 100% includes *every* edge case,
-conceivably including malformed data, one-offs, or regional quirks related to
-the business.
+including malformed data or one-offs.
 
-You won't be able to anticipate all of these edge cases. It's worthwhile to
-plan time to diagnose and work through the edge cases which will inevitably show
-up.
+You won't be able to anticipate all of these edge cases.
+Plan time to diagnose and address them, as they'll inevitably show up.
 
 ## Communicate
 
@@ -117,21 +110,18 @@ any issues that arise during the backfill. This could include steps for
 troubleshooting and fixing common issues, as well as a plan for how to roll back
 the backfill if necessary.
 
-If you've run through all the planning steps, it should be straight-forward to
-write the execution plan.
-
 ### Solicit Feedback!
 
 Once you finish the plan for your backfill, validate it with others.
 
-At minimum, it's a good idea to run it by the stakeholders for up- or down-stream
-systems from yours. For example, if you're planning to query another service to
-get all the production records, do they know that? Are they ok with it?
+At minimum, run it by the stakeholders for potentially impacted systems
+systems. For example, if you're planning to query another service to
+get all the production records, is the service owner with that approach?
 
-Another good group is teammates, local experts, or more senior engineers who
-might be able to point out potential blind spots. When reviewing designs with
-others, something I try to keep in mind is that the goal is to build a better or
-more resilient design. Feedback is a good thing!
+Another good group to target is teammates, local experts, or more senior
+engineers who might be able to point out potential blind spots. When reviewing
+designs with others, something I try to keep in mind is that the goal is to
+build a better or more resilient design. Feedback is a good thing!
 
 ## Test
 
@@ -140,9 +130,9 @@ phase is running small-scale tests.
 
 ### Create a Test Environment
 
-You should first create a test environment that closely mirrors the production
-environment. This will ensure that the test results accurately reflect how the
-backfill will behave in production. This could include a "shadow" or staging
+Create a test environment that closely mirrors the production
+environment. This ensures that the test results accurately reflect how the
+backfill will behave in production. It could include a "shadow" or staging
 environment which looks and acts similar to production.
 
 If that's not possible, what about creating a test of test identifiers?
@@ -155,8 +145,8 @@ A dry-run mode is a way of writing the production backfill logic or scripts such
 that it logs what will normally be logged but importantly **without** making the
 production change.
 
-The dry run should be the default - running production change should be hard to do
-on accident, eespecially if it will cause problems. I've seen many a production
+The dry run should be the default option. Running production change should be hard to do
+on accident, especially if it can cause problems. I've seen many a production
 backfill accidentally started earlier than expected because of a forgotten
 `--dry-run` or ``--test` flag. I recommend instead making the production mode
 flag the one you have to opt into, for exmaple using `--production` or
@@ -174,23 +164,20 @@ backfill steps and treat it as you would the full production backfill.
 
 ## Monitor
 
-To monitor a production backfill, you should first establish a set of metrics
-that will help you understand the backfill's performance. These metrics may
+To monitor a production backfill, first establish a set of metrics
+that will help understand the backfill's performance. These metrics may
 include the amount of data that has been processed, the speed at which the
 backfill is running, and any errors or issues that arise during the backfill.
 
-Once you have established these metrics, set up a system for
-monitoring the backfill in real-time. This could involve using monitoring tools
-to track the backfill's performance, setting up alerts to notify you of any
-issues that arise, and regularly checking in on the backfill to ensure that it
-is running smoothly.
+Then, set up a system for monitoring the backfill in real-time. This could
+involve using monitoring tools to track the backfill's performance, setting up
+alerts to notify you of any issues that arise, and regularly checking in on the
+backfill to ensure that it's running smoothly.
 
-Overall, effective monitoring of a production backfill requires a combination of
+Effective monitoring of a production backfill requires a combination of
 monitoring tools, real-time monitoring, and a plan for responding to any issues
-that arise.
-
-When you're running the backfill, having this monitoring in place offers
-peace-of-mind.
+that arise. When you're running the backfill, having this monitoring in place
+offers peace-of-mind.
 
 ## Verify
 
@@ -203,8 +190,7 @@ a way for me to check that everything had been processed by the backfill
 application.
 
 Unfortunately, I found on the day of execution that simply knowing if it *had
-executed* is not the same as knowing if it did what I intended by starting on
-the process.
+executed* is not the same as knowing if it did what I wanted.
 
 Tooling is your friend here. Build a way to verify that the solution is what you
 expect to see once the backfill has been executed on a record. This could be
@@ -222,7 +208,7 @@ enduring value far past the initial backfill.
 
 ## Document
 
-Now that you've successfully executed the backfill, you've probably learned all
+Once you've successfully executed the backfill, you've probably learned all
 sorts of interesting things you didn't know at the start. It's at this time,
 before declaring victory, that it's best to capture the results of what you've
 done.
@@ -241,17 +227,17 @@ Ideas for what to capture:
    backfill is complete (for example, creating a more robust test environment or
    consistent staging environment)?
 
-Lastly, send out an announcement that backfill is complete! You've earned it,
-trumpet your success. One advantage of sending out an announcement is that it
-encourages you to gather a concrete set of metrics, which is something that's
-helpful when you're filling in annual performance reviews or promotion
-documents.
+Lastly, send out an announcement that backfill is complete! You've earned it.
+One advantage of sending out an announcement is that it
+encourages you to gather a concrete set of metrics and impact, which is
+something that's helpful when you're filling in annual performance reviews or
+promotion documents.
 
-Overall, testing a large-scale production backfill requires careful planning and
-execution, and it is important to monitor the backfill in order to ensure that
-it will be successful in production.
+## Wrapping Up
 
-In my case, I learned many lessons the hard way and I hope this can help you
-avoid some of the challenges that come with backfilling a large production
-system. I eventually completed the backfill, and gained many long-term useful
-tools along the way. I wish you luck on your next production backfill!
+Overall, executing a large-scale production backfill requires careful planning,
+and it is important to monitor the backfill and verify the results.
+
+Following these steps helped me successfully backfill the production
+records at Amazon. I hope sharing my experience can help others navigate this
+challenging and important process. I wish you luck on your next backfill!
