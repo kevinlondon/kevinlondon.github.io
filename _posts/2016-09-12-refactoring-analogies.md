@@ -4,11 +4,10 @@ title:  "The Two Trains and Other Refactoring Analogies"
 date:   2016-09-12 21:18:08
 ---
 
-Legacy code -- the mere mention of it can strike fear into the hearts of software
-devs. It's brittle, hard to change, hard to work with. It may not have
-tests. It's not fun to work with.
+Legacy code can be intimidating for software developers. It can be difficult to
+change and work with, and may not have any tests.
 
-It's an easy thing to create legacy code. It happens in moments of weakness and
+It's easy to create legacy code. It happens in moments of weakness and
 as a [matter of
 entropy](http://firstround.com/review/forget-technical-debt-heres-how-to-build-technical-wealth/).
 Someone asks for a feature that needs to get shipped out by 5 PM.  We start
@@ -45,7 +44,7 @@ cleaning things up, refactoring - these pay dividends
 over time. It doesn't have to be perfect. Making things a little better will be
 a huge improvement.
 
-I worked with a legacy codebase that no one wanted to work with. As a team, we
+I worked with a legacy codebase that no one wanted to touch. As a team, we
 didn't write tests or care about code quality because we had thought that it
 "was going away soon". It didn't.
 
@@ -178,11 +177,10 @@ Legacy code offers an opportunity to improve and to build code that will pay us
 dividends over time.
 If we change the way we think about legacy code, we can slowly transform it from
 an obligation to an asset.
- We
-can build something that we're proud of and that doesn't get thrown away.
+We can build something of which we're proud. Something that's not thrown away.
 
 If you're looking to read more about working with legacy code, Martin Fowler
 & Kent Beck's
 [Refactoring](https://amzn.to/2XahfpU).
-book is excellent as is Michael Feather's [Working Effectively With Legacy
+book is excellent, as is Michael Feather's [Working Effectively With Legacy
 Code](https://amzn.to/3lFdwKo).
