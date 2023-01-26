@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Amazon Promotion: From Confusion to Clarity
+title: My Experience Navigating the Amazon Promotion Process
 date: 2023-01-24 11:20:00 -07:00
 ---
 
