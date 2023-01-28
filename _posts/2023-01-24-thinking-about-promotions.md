@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My Experience Navigating the Amazon Promotion Process
+title: My Experience with the Amazon Promotion Process
 date: 2023-01-24 11:20:00 -07:00
 ---
 
