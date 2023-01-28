@@ -44,5 +44,4 @@ through!
 In conclusion, the promotion process can be a long and sometimes frustrating
 journey. With a better understanding of the company’s perspective and
 a willingness to learn and improve, you can increase your chances of success.
-Keep pushing and striving to improve and you will (hopefully!) be recognized for
-your efforts.
+I hope you will be recognized for your efforts!
