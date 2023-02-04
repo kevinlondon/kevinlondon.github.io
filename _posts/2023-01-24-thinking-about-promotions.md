@@ -4,7 +4,7 @@ title: My Experience with the Amazon Promotion Process
 date: 2023-01-24 11:20:00 -07:00
 ---
 
-When I worked at Amazon, I initally found the promotion process mysterious. How
+When I worked at Amazon, I initially found the promotion process mysterious. How
 does the business decide who to promote? What criteria do they use? And why
 would they ever want to promote *me*, an engineer suffering from [impostor
 syndrome](https://www.kevinlondon.com/2015/05/27/impostor-syndrome-and-me)?
