@@ -150,15 +150,14 @@ Additional resources:
 ### Find companies of interest
 
 My list of potential companies was about 30 at this point. Of these companies,
-I had a set of companies that I wanted to work for most, so I selected 10
-of those to contact first.
+I talked to 10 of them.
 
 **Do not waste anyone's time**. If you cannot see yourself working for a company, or
 you're only interviewing to get a competing offer, don't reach out or cancel the
 interviews as soon as you feel that way. Interviews are expensive for both the
-company and you. If you don't see it going anywhere, don't bother.
+company and you.
 
-### If you can, ramp up participation in hiring at work
+### Participate in the Hiring Process
 
 Participating in interview panels at your current employer is a great way to
 get more comfortable talking with others in a 1:1 basis. You also have to explore
@@ -184,12 +183,13 @@ discussions with most of the 10 companies I identified.
 
 ### On-Site Day
 
-On the day of the onsite interview, you should be well-rested, have a clear
-head, and be ready to tackle the day's challenges. Some key factors to
-keep in mind include being on time, dressing appropriately, and maintaining a
-positive attitude throughout the day.
+On the day of the onsite interview, be well-rested, have a clear
+head, and get ready to tackle the day's challenges.
+Maintain a positive attitute throughout the day, even if you encounter setbacks.
+You could be doing well even if it doesn't feel like it in the moment.
 
-- Be friendly, be confident. Demonstrate a genuine interest in the company and role.
+- Be friendly.
+- Demonstrate a genuine interest in the company and role.
 - Be prepared to answer questions about yur past work, thought process, and approach.
 - Don't forget to ask questions and try to learn more about the company!
 
