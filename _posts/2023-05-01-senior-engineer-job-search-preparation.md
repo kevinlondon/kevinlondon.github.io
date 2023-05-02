@@ -7,7 +7,6 @@ date: 2023-05-01 19:53:01.000000000 -07:00
 ### Editor's Note
 
 I wrote this entry shortly after concluding my job search in spring 2022.
-Most of this entry is as-written at the time, with minor additions to wrap up unfinished portions.
 The economic landscape looked different then, and some of the advice may feel out of place in the current climate.
 I hope the process and strategies prove helpful for your next search.
 
