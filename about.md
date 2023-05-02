@@ -6,15 +6,16 @@ permalink: /about/
 
 ![The Author]({{ site.gravatar }}?s=150)
 
-Hello! I'm a software developer in Los Angeles.  I work at
-[Amazon](https://www.amazon.com) on Prime Video and finished a [Masters in Comp
-Sci](http://www.omscs.gatech.edu/) at Georgia Tech.  I wrote about [my path to
-software
+Hello! I'm a software developer in Orange County, CA. I work at
+[Snapchat](https://www.snapchat.com/) and previously worked at
+[Amazon](https://www.amazon.com) on Prime Video. I graduated with a [Masters in Comp
+Sci](http://www.omscs.gatech.edu/) from Georgia Tech.
+
+I wrote about [my path to software
 engineering](https://www.kevinlondon.com/2019/12/08/my-path-to-engineering.html)
 if you'd like to read more about it.
 
-You can [follow me](https://twitter.com/kevin_london) on Twitter or sign up
-below if you'd like to hear when I post new articles.
+Please sign up below if you'd like to hear when I post new articles.
 
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
@@ -32,6 +33,7 @@ below if you'd like to hear when I post new articles.
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_42a57bf47c6deb9cd4a5564af_8db7747f05" tabindex="-1" value=""></div>
     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
+
 </form>
 </div>
 
