@@ -41,24 +41,24 @@ what you'd like from your next role.
 
 Plan to spend time each day working through sample
 problems, writing clean and maintainable code, and solving the problems in an
-optimal or near optimal runtime. The best site I've found for this is
+optimal or near optimal runtime. The best sites I've found for this are
 [LeetCode](https://www.leetcode.com) and
 [neetcode.io](https://neetcode.io/).
 
-I would start with the original "Blind 75" list tab, work
+I recommend starting with the original "Blind 75" list tab, working
 through each category, and then, if you still have time, go to the 150
 recommended.
 
-It's valuable to go through the exercises and try your best to
-understand them. I tried each problem for ~30
-minutes. If I couldn't find a solution, I read through the
+Try your best to understand each problem.
+I worked on each problem for ~30 minutes.
+If I couldn't find a solution, I read through the
 discussion to find what worked for others. Sometimes reading what others
 tried and implementing it helped me understand it.
 
 If I needed to look at the discussion solution to solve the problem,
 I added it to a list to retry within a few days to make sure
 I understood it. I liked watching a video walkthrough for problems where
-I felt particularly stuck or confused so that it fit in my head better.
+I felt particularly stuck or confused.
 
 By the end of my search, I completed ~300 LeetCode (LC) problems, with the
 distribution as roughly 1/3 Easy, 1/2 Medium, rest Hard. Hard LCs utilize a
@@ -85,7 +85,7 @@ Here are some useful resources for system design:
   guide](https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF)
   by Alex Xu. A helpful guide for getting a feel for
   a framework and kinds of problems you might see in a System Design interview.
-  I recommend reading through all the resources linked at the end of each
+  Read through all the resources linked at the end of each
   chapter to cement your learnings.
 - [System Design Interview – An Insider's Guide: Volume 2](https://www.amazon.com/System-Design-Interview-Insiders-Guide/dp/1736049119) by Alex Xu and Sahn Lam. Came out in early March 2022. Fantastic resource which goes into greater depth than the first System Design book. Same recommendations apply.
 
