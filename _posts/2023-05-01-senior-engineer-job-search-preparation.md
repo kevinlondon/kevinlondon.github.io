@@ -33,8 +33,8 @@ tenets:
 
 ### Determine What You Want
 
-I recommend working through the guidance in https://www.jobsearch.dev/ to determine
-what you'd like from your next role.
+I recommend working through the guidance on [jobsearch.dev](https://www.jobsearch.dev/)
+to determine what you'd like from your next role.
 
 ### Coding
 
