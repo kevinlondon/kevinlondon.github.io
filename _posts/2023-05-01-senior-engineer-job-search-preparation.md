@@ -189,7 +189,7 @@ You could be doing well even if it doesn't feel like it in the moment.
 
 - Be friendly.
 - Demonstrate a genuine interest in the company and role.
-- Be prepared to answer questions about yur past work, thought process, and approach.
+- Be prepared to answer questions about your past work, thought process, and approach.
 - Don't forget to ask questions and try to learn more about the company!
 
 ### Conclusion
