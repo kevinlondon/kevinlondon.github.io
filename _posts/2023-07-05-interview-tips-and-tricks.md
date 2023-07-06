@@ -19,7 +19,7 @@ the interview so the candidate is familiar with what we're going to cover.
 Here's what I like to cover:
 
 1. **Overview**: Outline for the topics we'll discuss in the interview.
-2. **Brief introductions**: Backgrounds in brief.
+2. **Brief introductions**
 3. **Behavioral and situational questions**: Exploring scenarios to evaluate behavioral skills.
 4. **Technical questions**: Delving into system design / coding.
 5. **Candidate questions**: Giving the candidate an opportunity to interview me.
