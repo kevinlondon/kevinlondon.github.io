@@ -7,8 +7,8 @@ date: 2023-07-05 19:53:01.000000000 -07:00
 Preparing for technical interviews can feel overwhelming!
 There's so much to learn and keep in mind.
 I'm helping a friend prepare for technical interviews by running mock interviews
-with them and offering feedback. I wanted to share some of the feedback
-and guidance from those mock interviews.
+with them and offering feedback. I wanted to share some feedback
+and guidance those interviews
 
 ## The Interviewer's Responsibility
 
@@ -38,8 +38,8 @@ and relevant background.
 
 Here's my sample introduction as an interviewer:
 
-> My name is Kevin London. I'm a Software Engineer at Snapchat and I've been here
-> for a little over a year. I'm on the A/B team and we build tools
+> My name is Kevin London. I'm a Software Engineer at Snapchat
+> on the A/B team. We build tools
 > for internal teams to determine whether customers enjoy changes
 > before we launch them more broadly. I've worked as a software engineer for about
 > ten years at companies including startups and Amazon before joining Snap.
@@ -173,7 +173,10 @@ more hints than normal, that could be a concern as well.
 
 ### Do Mocks!
 
-Ask a friend to do mock interviews with you. Once you're done with the interview,
+Ask a friend to do mock interviews with you.
+I've used [Pramp](https://www.pramp.com/) to do mock interviews as a free option.
+
+Once you're done with the interview,
 if you're the candidate, think about what you could do better and offer
 this to see if you're aligned with the mock interviewer.
 
