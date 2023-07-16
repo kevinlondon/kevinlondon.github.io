@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Strategies and Tips for Tech Interviews"
+title: "Tech Interview Tips and Strategies"
 date: 2023-07-05 19:53:01.000000000 -07:00
 ---
 
@@ -114,24 +114,25 @@ And here is a fictional specific answer:
 
 > For example, I led a design to build a new thumbnail generation system at a
 > previous company. I wrote a design document for it and presented it to the team.
-> One teammate asked questions about how it would scale and disagreed with the
+> One teammate asked questions about how it would scale and questioned the
 > overall approach in the document. I offered to follow-up with them offline and
 > scheduled a 1:1.
 
 > When we discussed, they pointed out a few areas where the
-> service wouldn't scale well, such as if we had a batch upload or if one of our
+> service could have trouble, such as if we had a batch upload or if one of our
 > dependencies went down. I thanked them and incorporated their feedback in the
 > design. They had some concerns about the architecture as well, so I walked them
-> through the decisionmaking process and how I arrived at that conclusion. At the
+> through the decision-making process and how I arrived at that conclusion. At the
 > end, they agreed with the overall approach and we decided to move forward.
 
 > I built out the service, and I'm grateful they identified the
-> scaling gap. We were able to handle a huge batch of images uploaded before Black
-> Friday and the thumbnailing system worked without issue."
+> scaling gap. We were able to handle a huge batch of images uploaded before a major
+> sales event and the new thumbnailing system worked without issue."
 
 In the first example, as an interviewer, I get limited feedback about how
 this person handles conflict. I understand how they like to handle conflict but
-not necessarily what they do. The second gives me a clearer picture.
+not necessarily what they do. The second gives me a clearer picture, as well as
+what specific actions the candidate took to resolve the conflict.
 
 ### Favor "I" over "We"
 
