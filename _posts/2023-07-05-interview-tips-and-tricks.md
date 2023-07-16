@@ -164,13 +164,12 @@ them to be comfortable writing loops, control statements, variables, etc.
 
 ### Hints
 
-The interviewer may offer hints if you encounter difficulties.
+I'll only offer hints if we've been stuck in one part of the exercise for a while.
 
-Pause and consider what they might be trying to tell you.
+Pause and consider what the interviewer might be trying to tell you.
 If a candidate ignores hints and continues on their existing
 path, that can be a concern for interviewers. Likewise, if a candidate requires
-more hints than normal, that could be a concern as well. I'll only offer a hint
-if we've been stuck in one place for a while.
+more hints than normal, that could be a concern as well.
 
 ### Do Mocks!
 
