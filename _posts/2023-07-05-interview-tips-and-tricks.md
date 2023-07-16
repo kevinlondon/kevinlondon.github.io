@@ -14,14 +14,11 @@ and guidance from those mock interviews.
 
 As an interviewer, it's on me to create a comfortable
 and collaborative environment that helps you to perform your best.
-It can be difficult / stressful to interview!
+It can be difficult and stressful to interview!
 I want to leave candidates with a positive feeling
-about the company even if it doesn't work out.
+about the company I represent, even if it doesn't work out.
 
 ## Sample Agenda
-
-My goal is to capture as much info as possible to help the company make an
-informed hiring decision.
 
 When I lead interviews (mock or no), I like to start by offering an agenda for
 the interview. Here's what I like to cover:
@@ -36,14 +33,14 @@ I'll offer some advice for each of these areas.
 ## Brief Introductions
 
 Be brief and offer the interviewer the chance to ask more if they're interested.
-In about 30 seconds to one minute, aim to cover your name, position, career summary,
+In about 30 to 60 seconds, aim to cover your name, position, career summary,
 and relevant background.
 
 Here's my sample introduction as an interviewer:
 
 > My name is Kevin London. I'm a Software Engineer at Snapchat and I've been here
-> for about a year. I'm on the A/B team and we build tools
-> for internal teams to run tests to evaluate whether customers enjoy changes
+> for a little over a year. I'm on the A/B team and we build tools
+> for internal teams to determine whether customers enjoy changes
 > before we launch them more broadly. I've worked as a software engineer for about
 > ten years at companies including startups and Amazon before joining Snap.
 
@@ -168,12 +165,11 @@ them to be comfortable writing loops, control statements, variables, etc.
 
 The interviewer may offer hints if you encounter difficulties.
 
-Pause and consider what they might be trying to tell you. 
+Pause and consider what they might be trying to tell you.
 If a candidate ignores hints and continues on their existing
 path, that can be a concern for interviewers. Likewise, if a candidate requires
 more hints than normal, that could be a concern as well. I'll only offer a hint
-if we've been stuck in one place for a while, and I'll note it that I did so for
-evaluation.
+if we've been stuck in one place for a while.
 
 ### Do Mocks!
 
@@ -183,14 +179,13 @@ this to see if you're aligned with the mock interviewer.
 
 ## Closing Thoughts
 
-Mastering technical interviews requires a combination of preparation, practice,
-and effective storytelling. By following the strategies in this post, you can increase your chances of securing your dream job. Interviews are not only about
-showcasing your technical skills but also about demonstrating your ability to
-collaborate, adapt, and grow as a professional.
-
-Good luck!
+Clearing technical interviews requires a combination of preparation, practice,
+and effective storytelling. By following the strategies in this post, I hope you'll
+increase your chances of success.
 
 If you'd like to read more posts about interviewing, I wrote
 [How to Land the Right Tech Job for You](https://www.kevinlondon.com/2016/01/21/job-hunt-guide) and, more
 recently,
 [Senior Engineer Job Search Preparation](https://www.kevinlondon.com/2023/05/02/senior-engineer-job-search-preparation).
+
+Good luck!
