@@ -127,7 +127,7 @@ And here is a fictional specific answer:
 
 > I built out the service, and I'm grateful they identified the
 > scaling gap. We were able to handle a huge batch of images uploaded before a major
-> sales event and the new thumbnailing system worked without issue."
+> sales event and the new thumbnailing system worked without issue.
 
 In the first example, as an interviewer, I get limited feedback about how
 this person handles conflict. I understand how they like to handle conflict but
