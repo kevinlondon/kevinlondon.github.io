@@ -91,7 +91,7 @@ Even if a story reflects a challenging experience, remember to showcase your
 resilience and growth. Consider how you recovered from failure and emphasize the
 positive outcomes or lessons learned.
 
-![Phoenix art](/assets/phoenix.jpeg)
+![Phoenix art](/assets/phoenix_sm.jpeg)
 
 A phoenix is a mythological bird that dies and is reborn from its ashes.
 Think of these stories as your personal "phoenix stories" that demonstrate
