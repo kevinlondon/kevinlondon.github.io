@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Launching Effective One-on-One Meetings"
-date: 2023-11-04 07:41:01.000000000 -07:00
+date: 2023-11-06 07:41:01.000000000 -07:00
 ---
 
 At Amazon, I had the privilege of leading a team of 8 talented software engineers
