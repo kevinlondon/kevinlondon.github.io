@@ -8,21 +8,22 @@ I came across a bit of Python code that checked if a color was in a list this wa
 
 {% highlight python %}
 if color is 'red' or color is 'blue':
-    do_something()
+do_something()
 {% endhighlight %}
 
 It felt wrong. In Python, we shouldn't be able to check if a string `is` another
 string, since that's checking references. I opened an interpreter:
 
 {% highlight python %}
->>> color = 'red'
->>> color is 'red'
-True
-{% endhighlight %}
 
-That feels like it shouldn't work. After some more research, I came across
+> > > color = 'red'
+> > > color is 'red'
+> > > True
+> > > {% endhighlight %}
+
+That feels like it shouldn't work! After some more research, I came across
 a StackOverflow question that talked about this some more and it got me
-interested in it. I tweeted out the following:
+interested in it. I tweeted:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a
 href="https://twitter.com/hashtag/Python?src=hash">#Python</a>
@@ -37,24 +38,29 @@ charset="utf-8"></script>
 
 Why does it work this way? What's Python doing under the hood?
 
+[Editor's Note: This blog post is originally from 2017, and I didn't finish it until 2024.
+It's Python 2-centric, though I still think it's interesting!]
+
 ## What's Python Doing?
 
 The simplest answer to this is that the `is` comparison checks the unique IDs of
-the references to those pointers. In other words, {% highlight python %}color is 'red'{% endhighlight %} is checking
+the references to those pointers. 
+In other words, {% highlight python %}color is 'red'{% endhighlight %} is checking
 if {% highlight python %} id(color) == id(red) {% endhighlight %}.
 
 Here's what the above scenario looks like in an interpreter:
 
 {% highlight python %}
->>> id('red')
-4397469120
->>> id(color)
-4397468952
->>> id('red') == id('red')
-True
->>> id(color) == id('red')
-False
-{% endhighlight %}
+
+> > > id('red')
+> > > 4397469120
+> > > id(color)
+> > > 4397468952
+> > > id('red') == id('red')
+> > > True
+> > > id(color) == id('red')
+> > > False
+> > > {% endhighlight %}
 
 The `color` variable is the constructed
 result of joining a list. Even though the values are the same, the reference
@@ -65,7 +71,6 @@ That explains the scenario above. We're comparing the IDs of each and, since the
 reference to `'red'` is different than the reference to `color`, we get a False
 value returned.
 
-
 ## String Interning and How it Works
 
 https://stackoverflow.com/questions/15541404/python-string-interning
@@ -74,24 +79,24 @@ In Python 2, this is a global method while in Python 3, the intern call lives
 on the sys module.
 
 {% highlight python %}
->>> color is 'red'
-False
->>> import sys
->>> interned_color = sys.intern(color)
->>> interned_color
-'red'
->>> interned_color is 'red'
-True
-{% endhighlight %}
+
+> > > color is 'red'
+> > > False
+> > > import sys
+> > > interned_color = sys.intern(color)
+> > > interned_color
+> > > 'red'
+> > > interned_color is 'red'
+> > > True
+> > > {% endhighlight %}
 
 Adrien Guillo wrote an [excellent
 explanation](http://guilload.com/python-string-interning/) on how Python handles
-string interning.  The short version is that strings of length 0 and 1 are all
+string interning. The short version is that strings of length 0 and 1 are all
 interned, and the rest are interned at compile time.
 
 As such, the IDs of the two items are different since once one was created at
 compile time and the other at runtime.
-
 
 ## More Complications
 
@@ -105,13 +110,14 @@ https://stackoverflow.com/questions/3877230/why-does-id-id-and-id-id-in-cpython
 Now here's an example that really bends my brain.
 
 {% highlight python %}
->>> id('red'), id('red')
-(4397469008, 4397469008)
->>> id(id('red')), id(id('red'))
-(4394823536, 4394823536)
->>> id('red') is id('red')
-False
-{% endhighlight %}
+
+> > > id('red'), id('red')
+> > > (4397469008, 4397469008)
+> > > id(id('red')), id(id('red'))
+> > > (4394823536, 4394823536)
+> > > id('red') is id('red')
+> > > False
+> > > {% endhighlight %}
 
 If the IDs are the same, then why does the id comparison fail? What's different
 about this?
