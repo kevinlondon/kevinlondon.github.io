@@ -1,10 +1,10 @@
 ---
 layout: post
-title: In Python, Rose == 'Red', Violet is not 'Blue'
-date: 2017-06-14 22:17:10
+title: In Python, `Rose == 'Red'`, `Violet is not 'Blue'`
+date: 2024-06-14 22:17:10
 ---
 
-I came across a bit of Python code that checked if a color was in a list this way:
+I came across a bit of Python code that checked if a color was in a list like this:
 
 {% highlight python %}
 if color is 'red' or color is 'blue':
@@ -12,7 +12,7 @@ do_something()
 {% endhighlight %}
 
 It felt wrong. In Python, we shouldn't be able to check if a string `is` another
-string, since that's checking references. I opened an interpreter:
+string, since that's checking their references. I opened a Python interpreter:
 
 {% highlight python %}
 
@@ -21,9 +21,9 @@ string, since that's checking references. I opened an interpreter:
 > > > True
 > > > {% endhighlight %}
 
-That feels like it shouldn't work! After some more research, I came across
-a StackOverflow question that talked about this some more and it got me
-interested in it. I tweeted:
+That feels like it shouldn't work! After research, I came across
+a StackOverflow question that talked about this and it got me
+interested. I tweeted:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a
 href="https://twitter.com/hashtag/Python?src=hash">#Python</a>
@@ -44,7 +44,7 @@ It's Python 2-centric, though I still think it's interesting!]
 ## What's Python Doing?
 
 The simplest answer to this is that the `is` comparison checks the unique IDs of
-the references to those pointers. 
+the references to those pointers.
 In other words, {% highlight python %}color is 'red'{% endhighlight %} is checking
 if {% highlight python %} id(color) == id(red) {% endhighlight %}.
 
