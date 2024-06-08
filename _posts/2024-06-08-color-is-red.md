@@ -1,7 +1,7 @@
 ---
 layout: post
-title: In Python, `Rose == 'Red'`, `Violet is not 'Blue'`
-date: 2024-06-14 22:17:10
+title: In Python, Rose == 'Red', Violet is not 'Blue'
+date: 2024-06-08 09:57:10
 ---
 
 I came across a bit of Python code that checked if a color was in a list like this:
@@ -45,8 +45,10 @@ It's Python 2-centric, though I still think it's interesting!]
 
 The simplest answer to this is that the `is` comparison checks the unique IDs of
 the references to those pointers.
-In other words, {% highlight python %}color is 'red'{% endhighlight %} is checking
-if {% highlight python %} id(color) == id(red) {% endhighlight %}.
+In other words,
+{% highlight python %}color is 'red'{% endhighlight %}
+is checking if
+{% highlight python %} id(color) == id(red) {% endhighlight %}.
 
 Here's what the above scenario looks like in an interpreter:
 
@@ -73,10 +75,14 @@ value returned.
 
 ## String Interning and How it Works
 
-https://stackoverflow.com/questions/15541404/python-string-interning
+String interning is a method of storing only one copy of each distinct string
+value, which must be immutable. Python interns strings of length 0 and 1 and
+other strings at compile time to optimize memory usage and speed up comparisons
+(see more
+[here](https://stackoverflow.com/questions/15541404/python-string-interning)).
 
-In Python 2, this is a global method while in Python 3, the intern call lives
-on the sys module.
+In Python 2, string interning is global. In Python 3, the `intern` call lives
+in the `sys` module.
 
 {% highlight python %}
 
@@ -95,15 +101,19 @@ explanation](http://guilload.com/python-string-interning/) on how Python handles
 string interning. The short version is that strings of length 0 and 1 are all
 interned, and the rest are interned at compile time.
 
-As such, the IDs of the two items are different since once one was created at
+As such, the IDs of the two items are different since one was created (interned) at
 compile time and the other at runtime.
 
 ## More Complications
 
 Why does comparing sometimes yield a different result in a script as compared to an interpreter?
-https://stackoverflow.com/questions/1504717/why-does-comparing-strings-in-python-using-either-or-is-sometimes-produce
+When you run a script, Python optimizes certain operations differently than in
+the interactive interpreter.
 
-https://stackoverflow.com/questions/3877230/why-does-id-id-and-id-id-in-cpython
+For example, consider these StackOverflow discussions:
+
+- [Why does comparing strings in Python using either '==' or 'is' sometimes produce different results?](https://stackoverflow.com/questions/1504717/why-does-comparing-strings-in-python-using-either-or-is-sometimes-produce)
+- [Why does id() == id() and id() is id() produce different results in CPython?](https://stackoverflow.com/questions/3877230/why-does-id-id-and-id-id-in-cpython)
 
 ## Deeper Down the Rabbit Hole
 
@@ -120,10 +130,28 @@ Now here's an example that really bends my brain.
 > > > {% endhighlight %}
 
 If the IDs are the same, then why does the id comparison fail? What's different
-about this?
+about this? This discrepancy arises because the id function itself returns a new
+integer object each time it is called, even if the integer values are the same.
 
 ## It all leads to `dis`
 
-http://akaptur.com/blog/2013/11/17/introduction-to-the-python-interpreter-3/
+To truly understand what’s happening under the hood, we need to look at the
+disassembled bytecode. The `dis` module can show us how Python translates our code
+into lower-level instructions.
 
-String comparison in Python: https://stackoverflow.com/questions/2988017/string-comparison-in-python-is-vs
+Here’s a good read on this topic: [Introduction to the Python Interpreter](http://akaptur.com/blog/2013/11/17/introduction-to-the-python-interpreter-3/).
+
+### String Comparison in Python
+
+Finally, here’s an additional resource on string comparison in Python: [String comparison in Python: '==' vs 'is'](https://stackoverflow.com/questions/2988017/string-comparison-in-python-is-vs).
+
+## Conclusion
+
+Understanding the nuances of string comparison and interning in Python can be
+tricky, but it’s essential for writing efficient and bug-free code.
+The `is` operator should generally be avoided for string comparison because it checks for
+object identity, not equality. Instead, use `==` to compare string values.
+
+By learning how Python handles strings, you can write more efficient code and avoid subtle bugs.
+
+Thanks for reading, and I hope this deep dive into Python string interning was enlightening!
