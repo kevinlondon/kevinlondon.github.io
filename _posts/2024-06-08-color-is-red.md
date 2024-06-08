@@ -19,7 +19,7 @@ string, since that's checking their references. I opened a Python interpreter:
 > > > color = 'red'
 > > > color is 'red'
 > > > True
-> > > {% endhighlight %}
+{% endhighlight %}
 
 That feels like it shouldn't work! After research, I came across
 a StackOverflow question that talked about this and it got me
@@ -62,7 +62,7 @@ Here's what the above scenario looks like in an interpreter:
 > > > True
 > > > id(color) == id('red')
 > > > False
-> > > {% endhighlight %}
+{% endhighlight %}
 
 The `color` variable is the constructed
 result of joining a list. Even though the values are the same, the reference
