@@ -1,7 +1,7 @@
 ---
 layout: post
 title: In Python, Rose == 'Red', Violet is not 'Blue'
-date: 2024-06-08 09:57:10
+date: 2024-06-08 09:57:10 -07:00
 ---
 
 I came across a bit of Python code that checked if a color was in a list like this:
@@ -38,8 +38,8 @@ charset="utf-8"></script>
 
 Why does it work this way? What's Python doing under the hood?
 
-[Editor's Note: This blog post is originally from 2017, and I didn't finish it until 2024.
-It's Python 2-centric, though I still think it's interesting!]
+\*\*[Editor's Note: This blog post is originally from 2017, and I didn't finish it until now.
+It's Python 2-centric, though I still think it's interesting!]\*\*
 
 ## What's Python Doing?
 
@@ -70,19 +70,18 @@ that the variable's pointing to differs from the string literal of `'red'`
 constructed earlier.
 
 That explains the scenario above. We're comparing the IDs of each and, since the
-reference to `'red'` is different than the reference to `color`, we get a False
+reference to `'red'` is different than the reference to `color`, we get a `False`
 value returned.
 
 ## String Interning and How it Works
 
 String interning is a method of storing only one copy of each distinct string
-value, which must be immutable. Python interns strings of length 0 and 1 and
-other strings at compile time to optimize memory usage and speed up comparisons
-(see more
-[here](https://stackoverflow.com/questions/15541404/python-string-interning)).
+value, which must be immutable. Interning is done to optimize memory usage and
+speed up comparisons
+(see more [here](https://stackoverflow.com/questions/15541404/python-string-interning)).
 
 In Python 2, string interning is global. In Python 3, the `intern` call lives
-in the `sys` module.
+in the `sys` module. Coming back to our example, using Python 3:
 
 {% highlight python %}
 
@@ -94,7 +93,8 @@ in the `sys` module.
 > > > 'red'
 > > > interned_color is 'red'
 > > > True
-> > > {% endhighlight %}
+
+{% endhighlight %}
 
 Adrien Guillo wrote an [excellent
 explanation](http://guilload.com/python-string-interning/) on how Python handles
@@ -107,10 +107,7 @@ compile time and the other at runtime.
 ## More Complications
 
 Why does comparing sometimes yield a different result in a script as compared to an interpreter?
-When you run a script, Python optimizes certain operations differently than in
-the interactive interpreter.
-
-For example, consider these StackOverflow discussions:
+Here's a few interesting discussions:
 
 - [Why does comparing strings in Python using either '==' or 'is' sometimes produce different results?](https://stackoverflow.com/questions/1504717/why-does-comparing-strings-in-python-using-either-or-is-sometimes-produce)
 - [Why does id() == id() and id() is id() produce different results in CPython?](https://stackoverflow.com/questions/3877230/why-does-id-id-and-id-id-in-cpython)
@@ -127,10 +124,11 @@ Now here's an example that really bends my brain.
 > > > (4394823536, 4394823536)
 > > > id('red') is id('red')
 > > > False
-> > > {% endhighlight %}
+
+{% endhighlight %}
 
 If the IDs are the same, then why does the id comparison fail? What's different
-about this? This discrepancy arises because the id function itself returns a new
+about this? This discrepancy arises because the `id()` function returns a new
 integer object each time it is called, even if the integer values are the same.
 
 ## It all leads to `dis`
@@ -140,8 +138,6 @@ disassembled bytecode. The `dis` module can show us how Python translates our co
 into lower-level instructions.
 
 Here’s a good read on this topic: [Introduction to the Python Interpreter](http://akaptur.com/blog/2013/11/17/introduction-to-the-python-interpreter-3/).
-
-### String Comparison in Python
 
 Finally, here’s an additional resource on string comparison in Python: [String comparison in Python: '==' vs 'is'](https://stackoverflow.com/questions/2988017/string-comparison-in-python-is-vs).
 
