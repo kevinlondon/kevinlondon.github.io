@@ -8,7 +8,7 @@ I came across a bit of Python code that checked if a color was in a list like th
 
 {% highlight python %}
 if color is 'red' or color is 'blue':
-do_something()
+    do_something()
 {% endhighlight %}
 
 It felt wrong. In Python, we shouldn't be able to check if a string `is` another
