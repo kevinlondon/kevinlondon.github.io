@@ -39,5 +39,4 @@ seriously, addressed the gaps, and resubmitted. This time, the promotion was app
 
 The promotion process can be long and sometimes frustrating. However, by
 understanding the company’s perspective and remaining open to feedback and
-improvement, you can increase your chances of success. I hope this insight helps
-you get recognized for your efforts!
+improvement, you can increase your chances of success.

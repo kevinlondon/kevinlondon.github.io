@@ -111,20 +111,20 @@ For example, here is a broad answer:
 And here is a fictional specific answer:
 
 > I like to make sure we understand each other's viewpoint when there's conflict.
-
+>
 > For example, I led a design to build a new thumbnail generation system at a
 > previous company. I wrote a design document for it and presented it to the team.
 > One teammate asked questions about how it would scale and questioned the
 > overall approach in the document. I offered to follow-up with them offline and
 > scheduled a 1:1.
-
+>
 > When we discussed, they pointed out a few areas where the
 > service could have trouble, such as if we had a batch upload or if one of our
 > dependencies went down. I thanked them and incorporated their feedback in the
 > design. They had some concerns about the architecture as well, so I walked them
 > through the decision-making process and how I arrived at that conclusion. At the
 > end, they agreed with the overall approach and we decided to move forward.
-
+>
 > I built out the service, and I'm grateful they identified the
 > scaling gap. We were able to handle a huge batch of images uploaded before a major
 > sales event and the new thumbnailing system worked without issue.
@@ -171,7 +171,7 @@ If a candidate ignores hints and continues on their existing
 path, that can be a concern for interviewers. Likewise, if a candidate requires
 more hints than normal, that could be a concern as well.
 
-### Do Mocks!
+### Do Mocks
 
 Ask a friend to do mock interviews with you.
 I've used [Pramp](https://www.pramp.com/) to do mock interviews as a free option.
