@@ -6,18 +6,18 @@ date: 2024-06-08 09:25:00 -07:00
 
 Learning about personal finance can change your life for the better.
 As a software engineer, I love learning about systems,
-and money is a system that affects us all.
+and personal finance is a system that affects us all.
 
 It's hard to see how choices we make early in life can change our future.
 For example, we learn not to touch a hot stove because it hurts right away.
-With money, mistakes may not hurt until later.
+With personal finance, mistakes may not hurt until later.
 
 Take compound interest, for example. If Person A invests $100 a month
 from age 25 to 35, and Person B else invests $100 a month from age 35 to 65,
 they'll both have about the same amount at 65. That's the power of starting early!
 
-The earlier you start, the better chance you have to reach your goals.
 Good habits can help you but debt can grow quickly and work against you.
+The earlier you start, the better chance you have to reach your goals.
 
 ## Disclaimers
 
@@ -29,14 +29,14 @@ Good habits can help you but debt can grow quickly and work against you.
   good option, because they don't make money by managing your investments.
   [NAPFA](https://www.napfa.org/) is a place to find them.
 - **Not just for engineers**: Even though I'm a software engineer, this advice
-  works for everyone.
+  should work for everyone.
 - **US-centric perspective**. I know more about the US, so if you live
   elsewhere, it may differ.
 
 ## Make a budget
 
 One of the first steps in managing your money is making a budget.
-I know it's not the most exciting thing. Without a budget, it's easy
+I know it's not exciting or fun. Without a budget, it's easy
 to spend more than you realize.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Food $200<br>Data
@@ -52,15 +52,14 @@ Budgeting Tools:
 1. Spreadsheet or pen-and-paper. Simple and effective.
 2. [You Need a
    Budget](https://www.ynab.com/): Helps you track your income and spending.
-   Great for specific goals
-   like buying a house.
+   Great for specific goals like buying a house.
 3. [Monarch](https://www.monarchmoney.com/referral/gogh9rwmnl) (affiliate link):
   I use this to keep track of accounts and spending.
 
 ## Pay yourself first
 
-Try to spend less than you
-earn each month. When you get a raise, increase your savings instead of
+Try to spend less than you earn each month.
+When you get a raise, increase your savings instead of
 your spending.
 
 Setting up automatic payments and investments can help.
@@ -72,7 +71,7 @@ Investing in yourself, like education or health, is also a good way to spend wis
 ## Make a Plan
 
 Do you have goals like buying a car or getting out
-of debt? Your goals will help you decide how to spend and save.
+of debt? Your goals help you decide how to spend and save.
 
 Once you have a budget, you can follow [a
 flowchart](https://www.reddit.com/r/personalfinance/comments/4gdlu9/how_to_prioritize_spending_your_money_a_flowchart/)
@@ -89,19 +88,20 @@ In short:
 
 Having a plan helps! An [Investment Policy Statement
 (IPS)](https://www.bogleheads.org/wiki/Investment_policy_statement) can
-outline your goals and how you want to manage your money.
+outline how you want to manage your money.
 If you want to make changes, write them down and wait 30-90 days before
 acting. This can help you avoid making decisions based on emotions.
 
 ### Dealing with emotion
 
-Money can be emotional. Even if you think you can handle a big loss,
+Speaking of emotions, money can be emotional.
+Even if you think you can handle a big loss,
 seeing it happen can feel very different. The best way to makange this
 is to stick to your plan.
 
 ## Long term savings: Pretax vs Post Tax vs Taxable
 
-When saving for retirement, it's good to know the difference between
+When saving for retirement, it's helpful to know the difference between
 pre-tax, post-tax, and taxable accounts.
 
 These are the most common accounts you'll use:
@@ -117,7 +117,9 @@ These are the most common accounts you'll use:
 When you're ready to invest, here are a few things to keep in mind:
 
 - **Diversify**: Spread your investments across different types of investments to lower risk.
-- **Stock vs bond**: Stocks can make more money and are riskier. Bonds are safer and typically earn less.
+- **Stock vs bond**: Stocks can make more money and are riskier. Bonds are safer
+and typically earn less. Choose a balance between these based on your risk
+tolerance.
 - **US vs International**: Investing in other countries can give you more
 opportunities and diversification.
 - **Passive funds over active management**:
@@ -129,7 +131,7 @@ opportunities and diversification.
 Want to go deeper? Here are some advanced topics to explore:
 
 - **Company stock**: If you get stock from your job, think carefully
-  about how much to keep. Too much could be risky if the company has problems.
+  about how much to keep. Holding company stock could be risky if the company has problems. You could be laid off and lose your investments at the same time.
 - **Backdoor Roth IRA**: A way for high earners to contribute to a Roth IRA,
   even if they wouldn't normally qualify.
 - **Mega Backdoor Roth**: A way to save even more in a Roth account through
