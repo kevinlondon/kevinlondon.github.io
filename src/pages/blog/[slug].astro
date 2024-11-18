@@ -1,26 +1,49 @@
 ---
-import { getCollection } from 'astro:content';
+import { readFile } from 'fs/promises';
+import { marked } from 'marked';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
   const posts = await import.meta.glob('../../../_posts/*.md', { eager: true });
   
-  return Object.entries(posts).map(([filepath, post]: [string, any]) => {
+  return Object.entries(posts).map(([filepath, _]: [string, any]) => {
     const filename = filepath.split('/').pop()!;
     const [...slugParts] = filename.replace('.md', '').split('-').slice(3);
     const slug = slugParts.join('-');
     
     return {
-      params: { slug },
-      props: { post }
+      params: { slug }
     };
   });
 }
 
-const { post } = Astro.props;
-const { Content } = await post.default();
+const { slug } = Astro.params;
+const allPosts = await import.meta.glob('../../../_posts/*.md');
+const postPath = Object.keys(allPosts).find(path => path.includes(slug));
+
+if (!postPath) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found'
+  });
+}
+
+const fileContent = await readFile(new URL(postPath, import.meta.url), 'utf-8');
+const [frontmatter, ...contentParts] = fileContent.split('---').filter(Boolean);
+const content = contentParts.join('---');
+const htmlContent = marked(content);
+
+// Parse YAML frontmatter
+const frontmatterLines = frontmatter.trim().split('\n');
+const metadata = frontmatterLines.reduce((acc: any, line) => {
+  const [key, ...valueParts] = line.split(':');
+  if (key && valueParts.length) {
+    acc[key.trim()] = valueParts.join(':').trim();
+  }
+  return acc;
+}, {});
 ---
 
-<BlogPost content={post.frontmatter}>
-  <Content />
+<BlogPost content={metadata}>
+  <div set:html={htmlContent} />
 </BlogPost>
