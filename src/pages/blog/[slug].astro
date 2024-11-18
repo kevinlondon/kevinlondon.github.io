@@ -4,7 +4,7 @@ import { marked } from 'marked';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
-  const posts = await import.meta.glob('/_posts/*.md', { as: 'raw' });
+  const posts = await import.meta.glob('../../../_posts/*.md', { as: 'raw' });
   
   return Object.entries(posts).map(([filepath, _]) => {
     const filename = filepath.split('/').pop()!;
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 }
 
 const { filepath } = Astro.props;
-const fileContent = await readFile(new URL(filepath, import.meta.url), 'utf-8');
+const fileContent = await readFile(new URL(`../../../${filepath}`, import.meta.url), 'utf-8');
 const [frontmatter, ...contentParts] = fileContent.split('---').filter(Boolean);
 const content = contentParts.join('---');
 const htmlContent = marked(content);
