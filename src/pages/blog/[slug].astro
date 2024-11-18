@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 }
 
 const { filepath } = Astro.props;
-const fileContent = await readFile(new URL(`../../../${filepath}`, import.meta.url), 'utf-8');
+const fileContent = await readFile(new URL(`../../../../${filepath}`, import.meta.url), 'utf-8');
 const [frontmatter, ...contentParts] = fileContent.split('---').filter(Boolean);
 const content = contentParts.join('---');
 const htmlContent = marked(content);
