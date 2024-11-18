@@ -4,31 +4,22 @@ import { marked } from 'marked';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
-  const posts = await import.meta.glob('../../../_posts/*.md', { eager: true });
+  const posts = await import.meta.glob('../../../_posts/*.md', { as: 'raw' });
   
-  return Object.entries(posts).map(([filepath, _]: [string, any]) => {
+  return Object.entries(posts).map(([filepath, _]) => {
     const filename = filepath.split('/').pop()!;
     const [...slugParts] = filename.replace('.md', '').split('-').slice(3);
     const slug = slugParts.join('-');
     
     return {
-      params: { slug }
+      params: { slug },
+      props: { filepath }
     };
   });
 }
 
-const { slug } = Astro.params;
-const allPosts = await import.meta.glob('../../../_posts/*.md');
-const postPath = Object.keys(allPosts).find(path => path.includes(slug));
-
-if (!postPath) {
-  return new Response(null, {
-    status: 404,
-    statusText: 'Not found'
-  });
-}
-
-const fileContent = await readFile(new URL(postPath, import.meta.url), 'utf-8');
+const { filepath } = Astro.props;
+const fileContent = await readFile(new URL(`../../../${filepath}`, import.meta.url), 'utf-8');
 const [frontmatter, ...contentParts] = fileContent.split('---').filter(Boolean);
 const content = contentParts.join('---');
 const htmlContent = marked(content);
