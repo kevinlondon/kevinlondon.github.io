@@ -1,5 +1,6 @@
 ---
 import MainLayout from './layouts/MainLayout.astro';
+const posts = await Astro.glob('./posts/*.md');
 ---
 <MainLayout>
   <div class="home">
