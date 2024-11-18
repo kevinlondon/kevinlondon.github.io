@@ -1,0 +1,47 @@
+---
+import type { BlogPost } from '../utils/posts';
+import { getBlogPosts } from '../utils/posts';
+
+const posts = await getBlogPosts();
+---
+
+<section>
+  <h2>Recent Blog Posts</h2>
+  <ul>
+    {posts.map((post: BlogPost) => (
+      <li>
+        <a href={post.url}>
+          {post.title}
+        </a>
+        <time datetime={post.date.toISOString()}>
+          {post.date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })}
+        </time>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  section {
+    margin: 2rem 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 1rem 0;
+  }
+  
+  time {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+  }
+</style>

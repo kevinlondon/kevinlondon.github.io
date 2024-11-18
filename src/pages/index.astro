@@ -1,10 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BlogPosts from '../components/BlogPosts.astro';
 ---
 
 <Layout title="Kevin London">
 	<main>
 		<h1>Welcome to Kevin London's Website</h1>
+		<p>
+			I'm a software engineer who writes about engineering leadership, 
+			code quality, and career development.
+		</p>
+		<BlogPosts />
 	</main>
 </Layout>
 
@@ -13,5 +19,10 @@ import Layout from '../layouts/Layout.astro';
 		margin: auto;
 		padding: 1rem;
 		max-width: 800px;
+	}
+
+	p {
+		color: #444;
+		line-height: 1.5;
 	}
 </style>
