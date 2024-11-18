@@ -6,7 +6,7 @@ export interface BlogPost {
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
   // Use Astro's glob import to get all markdown files
-  const posts = await import.meta.glob('../../_posts/*.md', { as: 'raw' });
+  const posts = await import.meta.glob('/src/_posts/*.md', { as: 'raw' });
   
   return Object.entries(posts).map(([filepath, _]) => {
     const filename = filepath.split('/').pop()!;
