@@ -1,7 +1,3 @@
-import fs from 'fs/promises';
-import path from 'path';
-import matter from 'gray-matter';
-
 export interface BlogPost {
   title: string;
   url: string;
@@ -9,28 +5,22 @@ export interface BlogPost {
 }
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
-  const postsDirectory = path.join(process.cwd(), '_posts');
-  const files = await fs.readdir(postsDirectory);
-  
-  const posts = await Promise.all(
-    files.map(async (filename) => {
-      const filePath = path.join(postsDirectory, filename);
-      const fileContent = await fs.readFile(filePath, 'utf-8');
-      const { data } = matter(fileContent);
-      
-      // Parse the filename to get the date and slug
-      // Format: YYYY-MM-DD-title.md
+  // Use Astro's glob import to get all markdown files
+  const posts = await import.meta.glob('../../_posts/*.md', {
+    eager: true,
+  });
+
+  return Object.entries(posts)
+    .map(([filepath, post]: [string, any]) => {
+      const filename = filepath.split('/').pop()!;
       const [year, month, day, ...slugParts] = filename.replace('.md', '').split('-');
       const slug = slugParts.join('-');
       
       return {
-        title: data.title || slug,
-        url: `/${year}/${month}/${day}/${slug}/`,
+        title: post.frontmatter.title || slug,
+        url: `/blog/${slug}`,
         date: new Date(`${year}-${month}-${day}`)
       };
     })
-  );
-
-  // Sort posts by date, newest first
-  return posts.sort((a, b) => b.date.getTime() - a.date.getTime());
+    .sort((a, b) => b.date.getTime() - a.date.getTime());
 }

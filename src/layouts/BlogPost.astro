@@ -1,0 +1,41 @@
+---
+import Layout from './Layout.astro';
+import type { MarkdownInstance } from 'astro';
+
+interface Props {
+  content: {
+    title: string;
+    date: Date;
+  };
+}
+
+const { content } = Astro.props;
+---
+
+<Layout title={content.title}>
+  <article>
+    <h1>{content.title}</h1>
+    <time datetime={content.date.toISOString()}>
+      {new Date(content.date).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })}
+    </time>
+    <slot />
+  </article>
+</Layout>
+
+<style>
+  article {
+    margin: auto;
+    padding: 1rem;
+    max-width: 800px;
+  }
+
+  time {
+    color: #666;
+    display: block;
+    margin: 1rem 0;
+  }
+</style>
