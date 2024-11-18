@@ -12,14 +12,21 @@
 
 .site-title {
     font-size: 26px;
+    font-weight: 300;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    transition: 0.3s;
 
     &,
     &:visited {
         color: $grey-color-dark;
+    }
+    
+    &:hover {
+        color: $brand-color;
+        text-decoration: none;
     }
 }
 
@@ -162,7 +169,17 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: $spacing-unit*2 0;
+}
+
+.wrapper {
+    max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
+    max-width:         calc(800px - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
 }
 
 .page-heading {
@@ -203,12 +220,17 @@
     line-height: 1;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 32px;
+    }
+    
+    @include media-query($on-palm) {
+        font-size: 28px;
     }
 }
 
 .post-content {
     margin-bottom: $spacing-unit;
+    line-height: 1.8;
 
     h2 {
         font-size: 32px;
