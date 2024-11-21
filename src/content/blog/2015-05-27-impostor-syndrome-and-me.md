@@ -2,6 +2,8 @@
 layout: post
 title:  "Impostor Syndrome and Me"
 date:   2015-05-27 21:18:08
+pubDatetime: 2015-05-27T21:18:08Z
+description: "Personal reflections on dealing with impostor syndrome as a software developer"
 ---
 
 I get scared when I start new things. What if I'm not any good?
