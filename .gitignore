@@ -40,3 +40,5 @@ build/
 *.swo
 
 .DS_Store
+.aider*
+.env
