@@ -3,6 +3,7 @@ layout: post
 title: Python / Django Talks
 date: 2014-08-18 19:51:38.000000000 -07:00
 pubDatetime: 2014-08-18T19:51:38-07:00
+description: "Notes and insights from recent Python and Django conference talks"
 ---
 Recently I've been listening to Django and Python talks on the way in to work. It's about 100x better than listening to music or avoiding morning DJs.
 
