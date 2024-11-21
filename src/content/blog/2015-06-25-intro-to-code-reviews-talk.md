@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Intro to Code Reviews talk"
-date:   2015-06-25 15:54:08
+pubDatetime: 2015-06-25T15:54:08
+description: A talk introducing code reviews, their benefits, and how to get started with them on your team
 ---
 
 

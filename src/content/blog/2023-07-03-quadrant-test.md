@@ -1,7 +1,7 @@
 ---
-layout: post
 title: The Quadrant Test
-date: 2023-07-03 19:53:01.000000000 -07:00
+pubDatetime: 2023-07-03T19:53:01
+description: "A discussion of a decision making technique called the quadrant test"
 ---
 
 A few years ago, an old manager reached out to me and asked if I would consider

@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Two Trains Talk"
-date:   2016-08-29 15:54:08
+pubDatetime: 2016-08-29T15:54:08
+description: "A talk about the dangers of technical debt"
 ---
 
 Have you ever heard someone say, 'This code sucks. We need to rewrite it.'?

@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Python / Django Talks
-date: 2014-08-18 19:51:38.000000000 -07:00
 pubDatetime: 2014-08-18T19:51:38-07:00
 description: "Notes and insights from recent Python and Django conference talks"
 ---

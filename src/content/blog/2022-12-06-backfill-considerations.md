@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Backfill Considerations
-date: 2022-12-06 11:20:00 -07:00
+pubDatetime: 2022-12-06T11:20:00
+description: "A discussion of considerations for running a backfill"
 ---
 
 When I joined Amazon, I needed to send millions of production records through

@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Dangerous Python Functions, Part 1"
-date:   2015-07-26 19:54:08
+pubDatetime: 2015-07-26T19:54:08
+description: A discussion of dangerous Python functions and how to avoid them
 ---
 
 Certain Python functions should not be used or should be used only with

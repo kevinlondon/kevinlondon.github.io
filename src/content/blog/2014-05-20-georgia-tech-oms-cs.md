@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Georgia Tech OMS CS
-date: 2014-05-20 02:00:01.000000000 -07:00
 pubDatetime: 2014-05-20T02:00:01-07:00
 description: "Starting my journey in Georgia Tech's Online Master's in Computer Science program"
 ---

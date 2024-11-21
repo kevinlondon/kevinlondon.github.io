@@ -1,7 +1,7 @@
 ---
-layout: post
 title: In Python, Rose == 'Red', Violet is not 'Blue'
-date: 2024-06-08 09:57:10 -07:00
+pubDatetime: 2024-06-08T09:57:10
+description: "A discussion of how Python handles string interning"
 ---
 
 I came across a bit of Python code that checked if a color was in a list like this:

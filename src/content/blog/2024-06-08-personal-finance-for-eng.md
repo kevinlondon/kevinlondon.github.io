@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "Personal Finance for Software Engineers"
-date: 2024-06-08 09:25:00 -07:00
+pubDatetime: 2024-06-08T09:25:00
+description: "A discussion of personal finance for software engineers"
 ---
 
 Learning about personal finance can change your life for the better.

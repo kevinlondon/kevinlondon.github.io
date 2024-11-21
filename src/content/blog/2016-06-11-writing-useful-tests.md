@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Strategies for Writing Useful Tests"
-date:   2016-05-11 13:54:09
+pubDatetime: 2016-05-11T13:54:09
+description: "Strategies for writing useful tests"
 ---
 
 I hated writing tests. It felt like a waste of time. I had no idea what

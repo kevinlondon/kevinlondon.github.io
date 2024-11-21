@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "How to Prepare for Talks"
-date:   2015-11-01 22:09:00
+pubDatetime: 2015-11-01T22:09:00
+description: "A process for preparing for talks"
 ---
 
 Are you thinking about giving a talk but unsure where to start? That's usually

@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Programmer Resources
-date: 2018-05-02 22:50:08
+pubDatetime: 2018-05-02T22:50:08
+description: "A list of resources that have helped me grow as a software engineer"
 ---
 
 A friend recently asked me what I've used to improve as a software engineer.

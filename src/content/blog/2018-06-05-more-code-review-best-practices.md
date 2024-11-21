@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "More Code Review Best Practices"
-date:   2018-06-05 20:54:08
+pubDatetime: 2018-06-05T20:54:08
+description: "A few more code review best practices"
 ---
 
 A few years ago, I wrote about [Code Review Best

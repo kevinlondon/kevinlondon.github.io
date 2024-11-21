@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Answers to Django Security Questions"
-date:   2015-10-16 13:56:04
+pubDatetime: 2015-10-16T13:56:04
+description: "Answers to Django security questions"
 ---
 
 How much do you know about Django's security protections? Do you feel

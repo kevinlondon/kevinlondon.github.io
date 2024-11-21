@@ -1,7 +1,7 @@
 ---
-layout: post
 title: An Intro to AWS Certifications
-date: 2018-09-04 20:23:08
+pubDatetime: 2018-09-04T20:23:08
+description: "A discussion of AWS certifications and why they can be valuable"
 ---
 
 I'm skeptical of certification programs, especially in the software

@@ -1,7 +1,7 @@
 ---
-layout: post
 title: My Experience with the Amazon Promotion Process
-date: 2023-01-24 11:20:00 -07:00
+pubDatetime: 2023-01-24T11:20:00
+description: "A discussion of my experience with the Amazon promotion process"
 ---
 
 When I started at Amazon, the promotion process felt like a mystery. How

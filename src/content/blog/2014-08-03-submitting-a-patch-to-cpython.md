@@ -1,7 +1,5 @@
 ---
-layout: post
 title: Why I submitted my first CPython patch
-date: 2014-08-03 14:05:24.000000000 -07:00
 pubDatetime: 2014-08-03T14:05:24-07:00
 description: "My experience optimizing UUID generation in Python's core library"
 ---

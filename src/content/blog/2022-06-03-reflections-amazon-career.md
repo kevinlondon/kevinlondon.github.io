@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Reflections on my Amazon Career
-date: 2022-06-03 07:57:01.000000000 -07:00
+pubDatetime: 2022-06-03T07:57:01
+description: "A discussion of what I learned during my time at Amazon"
 ---
 
 After four years at Amazon, today is my last day.

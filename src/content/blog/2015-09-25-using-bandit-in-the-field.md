@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Using Bandit in the Field
-date: 2015-09-25 22:17:10
+pubDatetime: 2015-09-25T22:17:10
+description: "A discussion of using Bandit to find vulnerabilities in Python code"
 ---
 
 > Late 2019 Note: This is a post I had sitting in my draft folder since 2015.

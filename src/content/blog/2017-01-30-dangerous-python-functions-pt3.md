@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Dangerous Python Functions, Part 3"
-date:   2017-01-30 17:30:08
+pubDatetime: 2017-01-30T17:30:08
+description: "A brief update to the earlier posts about insecure Python functions"
 ---
 
 A brief update to the

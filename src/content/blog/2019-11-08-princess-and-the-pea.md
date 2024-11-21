@@ -1,7 +1,7 @@
 ---
-layout: post
 title: The Princess and the Pea
-date: 2019-11-08 17:35:08
+pubDatetime: 2019-11-08T17:35:08
+description: "A discussion of how to be sensitive to pain"
 ---
 
 Hans Christian Andersen wrote a short story called the [Princess and the

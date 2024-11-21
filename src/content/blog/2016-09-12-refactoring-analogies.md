@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "The Two Trains and Other Refactoring Analogies"
-date:   2016-09-12 21:18:08
+pubDatetime: 2016-09-12T21:18:08
+description: "Analogies for refactoring legacy code"
 ---
 
 Legacy code can be intimidating for software developers. It can be difficult to

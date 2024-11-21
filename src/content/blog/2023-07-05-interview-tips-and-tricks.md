@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "Tech Interview Tips and Strategies"
-date: 2023-07-05 19:53:01.000000000 -07:00
+pubDatetime: 2023-07-05T19:53:01
+description: "A discussion of tips and strategies for technical interviews"
 ---
 
 Preparing for technical interviews can feel overwhelming!

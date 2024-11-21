@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Load Testing at Scale and Lessons Learned
-date: 2022-01-13 20:00:01.000000000 -07:00
+pubDatetime: 2022-01-13T20:00:01
+description: "A discussion of how to load test a service at scale"
 ---
 
 I once designed a service to handle hundreds of thousands of requests per

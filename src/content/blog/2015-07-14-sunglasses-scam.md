@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "The Sunglasses Scam"
-pubDatetime:  "2015-07-14T21:09:00"
+pubDatetime: 2015-07-14T21:09:00
+description: "A story about an accidental scam in Ragnarok Online and what it taught me about human psychology"
 ---
 I've only been banned once in an internet game. According to the Game Master,
 I scammed some of the other users by selling them sunglasses in Ragnarok Online.

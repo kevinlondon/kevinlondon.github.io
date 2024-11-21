@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Senior Engineer Job Search Preparation
-date: 2023-05-01 19:53:01.000000000 -07:00
+pubDatetime: 2023-05-01T19:53:01
+description: "A discussion of how I prepared for a senior engineer job search"
 ---
 
 ### Editor's Note

@@ -1,7 +1,7 @@
 ---
-layout: post
 title: AWS Certified Solutions Architect - Associate Notes
-date: 2018-09-08 16:23:08
+pubDatetime: 2018-09-08T16:23:08
+description: "Notes on preparing for the AWS Certified Solutions Architect - Associate certification"
 ---
 
 I recently passed the [Solutions Architect - Associate

@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Dangerous Python Functions, Part 2"
-date:   2015-08-15 15:22:08
+pubDatetime: 2015-08-15T15:22:08
+description: "A discussion of dangerous Python functions and how to avoid them"
 ---
 
 As mentioned in the [first part of this series](http://kevinlondon.com/2015/07/26/dangerous-python-functions.html),

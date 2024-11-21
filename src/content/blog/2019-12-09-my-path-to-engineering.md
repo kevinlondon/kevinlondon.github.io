@@ -1,7 +1,7 @@
 ---
-layout: post
 title: My Path to Software Engineering
-date: 2019-12-08 20:35:08
+pubDatetime: 2019-12-08T20:35:08
+description: "A discussion of how I wound up in software engineering"
 ---
 
 I've gone between software engineering and film for most of my career.

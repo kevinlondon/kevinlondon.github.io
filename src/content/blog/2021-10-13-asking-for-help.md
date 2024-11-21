@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Getting Unstuck
-date: 2021-10-13 20:00:01.000000000 -07:00
+pubDatetime: 2021-10-13T20:00:01
+description: "A discussion of how to get unstuck when you're working on a problem"
 ---
 
 Through the years of talking with engineers in one-on-ones, there's a common

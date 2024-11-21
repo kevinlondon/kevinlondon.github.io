@@ -1,7 +1,7 @@
 ---
-layout: post
 title:  "Finding Vulnerabilities with Bandit Talk"
-date:   2015-09-24 13:23:08
+pubDatetime: 2015-09-24T13:23:08
+description: "A talk about using Bandit to find vulnerabilities in Python code"
 ---
 
 Security is tough. It's so easy to forget something or get a couple

@@ -1,7 +1,5 @@
 ---
-layout: post
 title: "DevOps from Scratch, Part 2: Amazon & Terraform"
-date:  2016-09-20 12:32:00
 pubDatetime: 2016-09-20T12:32:00-07:00
 description: "Learn how to deploy applications to AWS and automate infrastructure with Terraform"
 ---
