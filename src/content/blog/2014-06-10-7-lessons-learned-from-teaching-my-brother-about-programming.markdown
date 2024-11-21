@@ -2,6 +2,7 @@
 layout: post
 title: 6 lessons learned from teaching my brother about programming
 date: 2014-06-10 21:45:56.000000000 -07:00
+pubDatetime: 2014-06-10T21:45:56-07:00
 ---
 ## Background
 For the last year and a half, I've been teaching my  brother, Leo, how to
