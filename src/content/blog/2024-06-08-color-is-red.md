@@ -2,24 +2,26 @@
 title: In Python, Rose == 'Red', Violet is not 'Blue'
 pubDatetime: 2024-06-08T09:57:10
 description: "A discussion of how Python handles string interning"
+tags:
+  - python
+  - interning
 ---
 
 I came across a bit of Python code that checked if a color was in a list like this:
 
-{% highlight python %}
+```
 if color is 'red' or color is 'blue':
     do_something()
-{% endhighlight %}
+```
 
 It felt wrong. In Python, we shouldn't be able to check if a string `is` another
 string, since that's checking their references. I opened a Python interpreter:
 
-{% highlight python %}
-
+```
 > > > color = 'red'
 > > > color is 'red'
 > > > True
-{% endhighlight %}
+```
 
 That feels like it shouldn't work! After research, I came across
 a StackOverflow question that talked about this and it got me
@@ -44,16 +46,12 @@ It's Python 2-centric, though I still think it's interesting!]\*\*
 ## What's Python Doing?
 
 The simplest answer to this is that the `is` comparison checks the unique IDs of
-the references to those pointers.
-In other words,
-{% highlight python %}color is 'red'{% endhighlight %}
-is checking if
-{% highlight python %} id(color) == id(red) {% endhighlight %}.
+the references to those pointers. In other words, `color is 'red'` is checking
+if `id(color) == id(red)`.
 
 Here's what the above scenario looks like in an interpreter:
 
-{% highlight python %}
-
+```
 > > > id('red')
 > > > 4397469120
 > > > id(color)
@@ -62,7 +60,7 @@ Here's what the above scenario looks like in an interpreter:
 > > > True
 > > > id(color) == id('red')
 > > > False
-{% endhighlight %}
+```
 
 The `color` variable is the constructed
 result of joining a list. Even though the values are the same, the reference
@@ -83,8 +81,8 @@ speed up comparisons
 In Python 2, string interning is global. In Python 3, the `intern` call lives
 in the `sys` module. Coming back to our example, using Python 3:
 
-{% highlight python %}
 
+```
 > > > color is 'red'
 > > > False
 > > > import sys
@@ -93,8 +91,7 @@ in the `sys` module. Coming back to our example, using Python 3:
 > > > 'red'
 > > > interned_color is 'red'
 > > > True
-
-{% endhighlight %}
+```
 
 Adrien Guillo wrote an [excellent
 explanation](http://guilload.com/python-string-interning/) on how Python handles
@@ -116,16 +113,15 @@ Here's a few interesting discussions:
 
 Now here's an example that really bends my brain.
 
-{% highlight python %}
 
+```
 > > > id('red'), id('red')
 > > > (4397469008, 4397469008)
 > > > id(id('red')), id(id('red'))
 > > > (4394823536, 4394823536)
 > > > id('red') is id('red')
 > > > False
-
-{% endhighlight %}
+```
 
 If the IDs are the same, then why does the id comparison fail? What's different
 about this? This discrepancy arises because the `id()` function returns a new

@@ -74,12 +74,10 @@ what the code does as well.
 To run it, we'll first need a few packages. From your command line,
 within the directory of our `flask-hello-world` project, run:
 
-{% highlight bash %}
-
+```bash
 $ easy_install pip
 $ pip install flask gunicorn
-
-{% endhighlight %}
+```
 
 Alternatively, you can run `pip install -r requirements.txt` from the cloned Git
 directory to install the requirements.
@@ -145,16 +143,14 @@ our virtual machine (from here, referred to as a VM).
 
 In your VM's Terminal, run the following:
 
-{% highlight bash %}
-
+```bash
 sudo apt-get update
 sudo apt-get install git python-pip
 git clone https://github.com/kevinlondon/flask-hello-world.git
 cd flask-hello-world
 sudo pip install -r requirements.txt
 python app.py
-
-{% endhighlight %}
+```
 
 This is pretty much the same set of steps that we had followed above when we
 manually set up our environment.
@@ -219,14 +215,12 @@ Now that we have the playbook defined, we'll need to tell our VM to use it when
 setting itself up. In your `Vagrantfile`, uncomment the bottom-most section on
 provisioning and change it to look like this:
 
-{% highlight bash %}
-
+```bash
   config.vm.provision 'ansible' do |ansible|
     ansible.playbook = 'site.yml'
     ansible.verbose = 'v'
   end
-
-{% endhighlight %}
+```
 
 We're telling Vagrant to use the `site.yml` file we created and to use
 verbose output. Then, let's reprovision your host. This will run all the
@@ -243,12 +237,10 @@ up` to recreate the VM and to provision it in one go.
 When it comes back up, we should be able to `vagrant ssh` into our VM and run the
 following to get our server up and going again:
 
-{% highlight bash %}
-
+```bash
 cd flask-hello-world
 python app.py
-
-{% endhighlight %}
+```
 
 Nice! I love automation.
 
@@ -273,11 +265,9 @@ to your `requirements.txt` file.
 
 After it's been installed, you should be able to run the following:
 
-{% highlight bash %}
-
+```bash
 $ gunicorn --bind 0.0.0.0:8000 app:app
-
-{% endhighlight %}
+```
 
 This will use gunicorn to serve your application through WSGI, which is the
 traditional way that Python webapps are served. It replaces our usual `python
@@ -297,8 +287,7 @@ We're going to use a slightly modified script from the
 Create this file in the VM in `/etc/init/hello-world.conf`.
 
 
-{% highlight bash %}
-
+```bash
 description "hello-world"
 
 start on (filesystem)
@@ -310,8 +299,7 @@ setgid nogroup
 chdir /home/vagrant/flask-hello-world
 
 exec gunicorn app:app --bind 0.0.0.0:8000
-
-{% endhighlight %}
+```
 
 When you've created the file, you should be able to run `sudo service
 hello-world start` to start the task, go in your browser, and then view
@@ -339,8 +327,7 @@ it as a [Jinja2](http://jinja.pocoo.org/) template.
 All that said, let's look at the new file we'll write:
 
 
-{% highlight bash %}
-
+```bash
 description "hello-world"
 
 start on (filesystem)
@@ -352,8 +339,7 @@ setgid nogroup
 chdir {% raw %}{{ repository_path }}{% endraw %}
 
 exec gunicorn app:app --bind 0.0.0.0:8000
-
-{% endhighlight %}
+```
 
 Subtle difference, right? We're plugging in the same variable that we're using
 in our `site.yml` file into this one.
@@ -363,15 +349,14 @@ into the same directory as we used when doing it manually.
 
 Let's add a section to the bottom of our `site.yml` file in the `tasks` section:
 
-{% highlight bash %}
-
+```bash
     - name: Copy Upstart configuration
       template: src=hello-world.upstart.j2 dest=/etc/init/hello-world.conf
 
     - name: Make sure our server is running
       service: name=hello-world state=started
 
-{% endhighlight %}
+```
 
 We're using Ansible's
 [template](http://docs.ansible.com/ansible/template_module.html) and
@@ -425,13 +410,11 @@ gunicorn server is running properly, should be accessible!
 
 At this point, if we do a `sudo service nginx restart`, we see this:
 
-{% highlight bash %}
-
+```bash
 $ sudo service nginx restart
  * Restarting nginx nginx
    ...fail!
-
-{% endhighlight %}
+```
 
 
 Oh right, the unix socket. Ok, let's make a few more changes to the way gunicorn
@@ -449,8 +432,7 @@ look at that file.
 If we do `sudo tail -n 10 /var/log/nginx/error.log`, we see the following:
 
 
-{% highlight bash %}
-
+```bash
 sudo tail -f -n 100 /var/log/nginx/error.log
 2016/03/05 23:15:54 [emerg] 6249#0: bind() to 0.0.0.0:80 failed (98: Address
 already in use)
@@ -463,8 +445,7 @@ already in use)
 2016/03/05 23:15:54 [emerg] 6249#0: bind() to 0.0.0.0:80 failed (98: Address
 already in use)
 2016/03/05 23:15:54 [emerg] 6249#0: still could not bind()
-
-{% endhighlight %}
+```
 
 Ah, so there's a server that's already running and it can't get access to the
 port. Right. Well, in this case, it's a problem with the `default` site

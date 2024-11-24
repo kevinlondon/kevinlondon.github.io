@@ -57,7 +57,7 @@ I'm going to use an example from Lincoln Loop's
 and expand upon it. In our example, we will serialize a command to call the
 command-line utility `ls` and deserialize it with `pickle.loads()`.
 
-{% highlight python %}
+```python
 import os
 import cPickle
 
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     shellcode = serialize_exploit()
     print('Yar, here be yer files.')
     insecure_deserialize(shellcode)
-{% endhighlight %}
+```
 
 In this case, we only wanted to list the files in the directory using the
 `ls` command. We could have used almost any shell command.
@@ -146,13 +146,13 @@ on the host machine.
 
 In `exploit.yml`:
 
-{% highlight yaml %}
+```yaml
 your_files: !!python/object/apply:subprocess.check_output ['ls']
-{% endhighlight %}
+```
 
 In a Python script (after perhaps running `pip install pyyaml`):
 
-{% highlight python %}
+```python
 import yaml
 
 with open('exploit.yml') as exploit_file:
@@ -160,7 +160,7 @@ with open('exploit.yml') as exploit_file:
     your_files = contents['your_files'].splitlines()
     for your_file in your_files:
         print(your_file)
-{% endhighlight %}
+```
 
 Again, we can provide many different commands to subprocess, including those
 that we discussed in 
@@ -210,7 +210,7 @@ risks that we talked about with untrusted input above also apply here.
 
 As a quick example, here's how someone could exploit this:
 
-{% highlight python %}
+```python
 import sqlite3
 
 def get_user_by_name(name, cursor):
@@ -222,7 +222,7 @@ if __name__ == '__main__':
     cursor = conn.cursor()
     malicious_name = "Joe'; DROP TABLE users; --"
     get_user_by_name(malicious_name, conn) 
-{% endhighlight %}
+```
 
 If you ran this example against a real database, the malicious name would drop
 the user's table. Not great.

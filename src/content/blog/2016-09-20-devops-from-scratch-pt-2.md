@@ -80,8 +80,7 @@ the brackets, of course). This will try to use the private key we downloaded
 from Amazon to log in as the `ubuntu` user that's included in the image we used
 to start the instance. We'll see something like this:
 
-{% highlight bash %}
-
+```bash
 $ ssh -i /Users/kevinlondon/Downloads/flask-hello-world.pem 54.172.44.73
 The authenticity of host '54.172.44.73 (54.172.44.73)' can't be established.
 ECDSA key fingerprint is SHA256:Br7lA5pReSmk+WVcr9xKwPKZrs5uLaUOg1eAngkZNxU.
@@ -96,7 +95,7 @@ This private key will be ignored.
 Load key "/Users/kevinlondon/Downloads/flask-hello-world.pem": bad permissions
 Permission denied (publickey).
 
-{% endhighlight %}
+```
 
 Well... oops. Okay let's change the permissions on it. Run
 `chmod 400 <your-key-path>/flask-hello-world.pem`. That'll change the file so that only our
@@ -116,12 +115,10 @@ Ansible knows about our server.
 Create a file called `hosts` in your Ansible directory. It'll be quite short for
 now!
 
-{% highlight bash %}
-
+```bash
 [webservers]
 <your-server-ip>
-
-{% endhighlight %}
+```
 
 In this file, we're describing a group of servers (`webservers`), with a single
 host: the server IP we grabbed above. Once you've saved the file, you can run
@@ -129,7 +126,7 @@ the following command:
 
 Run `ansible -m ping webservers --private-key=<your-key-path>/flask-hello-world.pem --inventory=hosts --user=ubuntu`. Here's what I saw:
 
-{% highlight bash %}
+```bash
 $ ansible -m ping webservers --private_key=~/Downloads/flask-hello-world.pem
 --inventory=hosts --user=ubuntu
 
@@ -137,8 +134,7 @@ $ ansible -m ping webservers --private_key=~/Downloads/flask-hello-world.pem
     "changed": false,
     "ping": "pong"
 }
-
-{% endhighlight %}
+```
 
 It's similar to what we did for `ssh`ing into the box, and with good
 reason. Ansible is entirely built upon SSH. That said, this is dumb right?
@@ -149,14 +145,12 @@ file](http://docs.ansible.com/ansible/intro_configuration.html) to automate most
 of that. Create a file named `ansible.cfg` in your directory that contains the
 following:
 
-{% highlight bash %}
-
+```bash
 [defaults]
 inventory = hosts
 remote_user = ubuntu
 private_key_file = <your-key-path>/flask-hello-world.pem
-
-{% endhighlight %}
+```
 
 Now, we should be able to run `ansible ping -m all` or `ansible ping -m
 webservers` without specifying the private key or user. Give it a try!
@@ -174,12 +168,10 @@ same state as your Vagrant virtual machine.
 
 At the end, we should see something like this:
 
-{% highlight bash %}
-
+```bash
 PLAY RECAP *********************************************************************
 54.172.44.73               : ok=9    changed=8    unreachable=0    failed=0
-
-{% endhighlight %}
+```
 
 Then let's go to your server at `http://<your-server-ip>` annndddd....
 
@@ -322,8 +314,7 @@ key and the keys we need for AWS, we should be good to go!
 To preview the changes we'd make, run `terraform plan`. You should see something
 like this:
 
-{% highlight bash %}
-
+```bash
 $ terraform plan
 
 Refreshing Terraform state prior to plan...
@@ -377,8 +368,7 @@ plan.
     name:                                 "" => "web"
     owner_id:                             "" => "<computed>"
     vpc_id:                               "" => "<computed>"
-
-{% endhighlight %}
+```
 
 Once we're satisfied with our plan, we can apply it by running `terraform
 apply`. Go ahead and do that now.

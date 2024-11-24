@@ -2,6 +2,7 @@
 title: "Personal Finance for Software Engineers"
 pubDatetime: 2024-06-08T09:25:00
 description: "A discussion of personal finance for software engineers"
+tags: ["personal finance"]
 ---
 
 Learning about personal finance can change your life for the better.

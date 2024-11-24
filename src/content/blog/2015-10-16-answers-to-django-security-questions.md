@@ -36,9 +36,9 @@ Answers
 
 ### What is wrong with the following template snippet?
 
-{% highlight html %}
+```html
     <a href="http://www.google.com/" class={% raw %}{{ user_class }}{% endraw %} >Google</a>
-{% endhighlight %}
+```
 
 If the user defines what goes into `{% raw %}{{ user_class }}{% endraw %}`,
 an attacker could use the variable to introduce a cross-site scripting bug.
@@ -61,8 +61,7 @@ before the snippet, Django would not try to escape it.
 
 ### Identify the security vulnerability in the following code. What is it? How can it be exploited?
 
-{% highlight python %}
-
+```python
 class CatViewer(TemplateView):
     template_name = 'view_cats.html'
 
@@ -80,8 +79,7 @@ class CatViewer(TemplateView):
             'form': kwargs['form'] if 'form' in kwargs else CatViewForm(),
             'cat_pics': CatView.objects.all(),
         }
-
-{% endhighlight %}
+```
 
 The `urlopen()` call poses the most danger because it can open
 arbitrary urls

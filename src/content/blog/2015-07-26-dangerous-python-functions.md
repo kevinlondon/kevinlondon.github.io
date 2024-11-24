@@ -53,14 +53,14 @@ into a different format. We ask the user where to find the file on disk and
 then run it through [ffmpeg](https://www.ffmpeg.org/) to transcode it. What
 could go wrong?
 
-{% highlight python %}
+```
 import subprocess
 
 def transcode_file():
     filename = raw_input('Please provide the path for the file to transcode: ')
     command = 'ffmpeg -i "{source}" output_file.mpg'.format(source=filename)
     subprocess.call(command, shell=True)  # a bad idea!
-{% endhighlight %}
+```
 
 What if someone provides a file with a name like `"; rm -rf /`?  If the host
 machine runs the Python process as a privileged user, that could delete all

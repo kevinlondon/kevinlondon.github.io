@@ -65,8 +65,7 @@ Personal Results
 
 I ran this on an old program that I wrote, out of curiosity.
 
-{% highlight python %}
-
+```
     kevin$ bandit -r  ~/programming/my_old_app
     [bandit]    INFO    using config: ~/.virtualenvs/bandit/etc/bandit/bandit.yaml
     [bandit]    INFO    running on Python 2.7.6
@@ -95,8 +94,7 @@ I ran this on an old program that I wrote, out of curiosity.
     229 def get_hex_digest(f, blocksize):
     230     checksum = hashlib.md5()
     231     while 1:
-
-{% endhighlight %}
+```
 
 In this case, we have three results. One of them is low severity with a high
 confidence. In other words, Bandit's certain we're doing something questionable
