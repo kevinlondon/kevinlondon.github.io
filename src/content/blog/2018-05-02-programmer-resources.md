@@ -2,6 +2,9 @@
 title: Programmer Resources
 pubDatetime: 2018-05-02T22:50:08
 description: "A list of resources that have helped me grow as a software engineer"
+tags:
+  - resources
+  - software
 ---
 
 A friend recently asked me what I've used to improve as a software engineer.

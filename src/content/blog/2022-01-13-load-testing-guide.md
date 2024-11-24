@@ -2,6 +2,9 @@
 title: Load Testing at Scale and Lessons Learned
 pubDatetime: 2022-01-13T20:00:01
 description: "A discussion of how to load test a service at scale"
+tags:
+  - load testing
+  - process
 ---
 
 I once designed a service to handle hundreds of thousands of requests per

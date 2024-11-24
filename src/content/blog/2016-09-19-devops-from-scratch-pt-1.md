@@ -2,6 +2,10 @@
 title: "DevOps from Scratch, Part 1: Vagrant & Ansible"
 pubDatetime: 2016-09-19T12:32:00-07:00
 description: "A comprehensive guide to setting up development environments with Vagrant and Ansible automation"
+tags:
+  - devops
+  - vagrant
+  - ansible
 ---
 
 Let's say you're at a startup and everything is going great. Your app is

@@ -2,6 +2,9 @@
 title: Don't Just Bake Me a Cake
 pubDatetime: 2019-03-16T10:35:08
 description: "A discussion of how to bake a cake in design documents"
+tags:
+  - design
+  - analogies
 ---
 Let's talk about baking cakes. Cakes are
 great! Not everyone likes sweets but once in a while a cake can taste great.

@@ -2,6 +2,9 @@
 title: My Path to Software Engineering
 pubDatetime: 2019-12-08T20:35:08
 description: "A discussion of how I wound up in software engineering"
+tags:
+  - career
+  - software
 ---
 
 I've gone between software engineering and film for most of my career.

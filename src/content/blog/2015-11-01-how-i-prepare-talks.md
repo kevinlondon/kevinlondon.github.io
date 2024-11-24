@@ -2,6 +2,9 @@
 title:  "How to Prepare for Talks"
 pubDatetime: 2015-11-01T22:09:00
 description: "A process for preparing for talks"
+tags:
+  - talks
+  - process
 ---
 
 Are you thinking about giving a talk but unsure where to start? That's usually

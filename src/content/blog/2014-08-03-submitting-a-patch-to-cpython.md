@@ -2,6 +2,9 @@
 title: Why I submitted my first CPython patch
 pubDatetime: 2014-08-03T14:05:24-07:00
 description: "My experience optimizing UUID generation in Python's core library"
+tags:
+  - python
+  - cpython
 ---
 As part of my work at [Wiredrive](http://www.wiredrive.com), I investigated how to best utilize UUIDs in a MySQL database for referencing our objects instead of primary IDs. Ultimately, we chose to go a different way. I did, however, find a way to optimize a tiny piece of core Python along the way so I wanted to submit a patch.
 

@@ -2,6 +2,9 @@
 title: 10 Software Talks to Listen to on Your Way to Work
 pubDatetime: 2015-09-10T22:17:10
 description: "A list of software talks that I've found useful"
+tags:
+  - software
+  - talks
 ---
 
 I worked as a solo developer for a few years so, when I joined a team, I felt

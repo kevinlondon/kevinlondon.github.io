@@ -2,6 +2,10 @@
 title: "DevOps from Scratch, Part 2: Amazon & Terraform"
 pubDatetime: 2016-09-20T12:32:00-07:00
 description: "Learn how to deploy applications to AWS and automate infrastructure with Terraform"
+tags:
+  - devops
+  - aws
+  - terraform
 ---
 
 Welcome to the second part of the DevOps from Scratch series!

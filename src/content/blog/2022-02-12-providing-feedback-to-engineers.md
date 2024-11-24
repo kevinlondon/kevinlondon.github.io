@@ -2,6 +2,9 @@
 title: Giving Feedback When You're New
 pubDatetime: 2022-02-12T21:53:01
 description: "A discussion of how to give feedback when you're new to a team"
+tags:
+  - feedback
+  - onboarding
 ---
 
 I had a chat with an engineer who joined a new company and well-established

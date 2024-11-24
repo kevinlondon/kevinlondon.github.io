@@ -2,6 +2,9 @@
 title:  "Strategies for Writing Useful Tests"
 pubDatetime: 2016-05-11T13:54:09
 description: "Strategies for writing useful tests"
+tags:
+  - testing
+  - process
 ---
 
 I hated writing tests. It felt like a waste of time. I had no idea what

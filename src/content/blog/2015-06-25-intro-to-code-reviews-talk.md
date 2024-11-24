@@ -2,6 +2,9 @@
 title:  "Intro to Code Reviews talk"
 pubDatetime: 2015-06-25T15:54:08
 description: A talk introducing code reviews, their benefits, and how to get started with them on your team
+tags:
+  - talks
+  - code reviews
 ---
 
 

@@ -2,6 +2,8 @@
 title: "Launching Effective One-on-One Meetings"
 pubDatetime: 2023-11-06T07:41:01
 description: "A discussion of how to run effective one-on-one meetings"
+tags:
+  - process
 ---
 
 At Amazon, I had the privilege of leading a team of 8 talented software engineers

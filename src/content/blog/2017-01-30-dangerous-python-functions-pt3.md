@@ -2,6 +2,9 @@
 title:  "Dangerous Python Functions, Part 3"
 pubDatetime: 2017-01-30T17:30:08
 description: "A brief update to the earlier posts about insecure Python functions"
+tags:
+  - python
+  - security
 ---
 
 A brief update to the

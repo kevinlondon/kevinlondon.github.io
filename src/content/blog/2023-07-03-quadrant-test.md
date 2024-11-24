@@ -2,6 +2,9 @@
 title: The Quadrant Test
 pubDatetime: 2023-07-03T19:53:01
 description: "A discussion of a decision making technique called the quadrant test"
+tags:
+  - decision making
+  - analogies
 ---
 
 A few years ago, an old manager reached out to me and asked if I would consider

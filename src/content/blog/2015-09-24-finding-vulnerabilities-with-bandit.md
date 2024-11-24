@@ -2,6 +2,10 @@
 title:  "Finding Vulnerabilities with Bandit Talk"
 pubDatetime: 2015-09-24T13:23:08
 description: "A talk about using Bandit to find vulnerabilities in Python code"
+tags:
+  - python
+  - security
+  - talks
 ---
 
 Security is tough. It's so easy to forget something or get a couple

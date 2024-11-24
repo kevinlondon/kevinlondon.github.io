@@ -2,6 +2,10 @@
 title: Python / Django Talks
 pubDatetime: 2014-08-18T19:51:38-07:00
 description: "Notes and insights from recent Python and Django conference talks"
+tags:
+  - python
+  - django
+  - talks
 ---
 Recently I've been listening to Django and Python talks on the way in to work. It's about 100x better than listening to music or avoiding morning DJs.
 

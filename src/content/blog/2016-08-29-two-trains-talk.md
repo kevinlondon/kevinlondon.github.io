@@ -2,6 +2,11 @@
 title:  "Two Trains Talk"
 pubDatetime: 2016-08-29T15:54:08
 description: "A talk about the dangers of technical debt"
+tags:
+  - talks
+  - legacy code
+  - refactoring
+  - analogies
 ---
 
 Have you ever heard someone say, 'This code sucks. We need to rewrite it.'?

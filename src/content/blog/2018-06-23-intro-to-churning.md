@@ -2,6 +2,9 @@
 title: "What is Churning and Why Should I Care?"
 pubDatetime: 2018-06-23T12:32:00
 description: "A discussion of churning and why it can be a valuable hobby"
+tags:
+  - churning
+  - hobby
 ---
 
 A few years ago, I started researching into credit card bonuses and it's become

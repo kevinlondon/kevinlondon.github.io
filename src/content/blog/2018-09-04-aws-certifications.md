@@ -2,6 +2,9 @@
 title: An Intro to AWS Certifications
 pubDatetime: 2018-09-04T20:23:08
 description: "A discussion of AWS certifications and why they can be valuable"
+tags:
+  - aws
+  - certifications
 ---
 
 I'm skeptical of certification programs, especially in the software

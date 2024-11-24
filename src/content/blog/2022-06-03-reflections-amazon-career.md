@@ -2,6 +2,8 @@
 title: Reflections on my Amazon Career
 pubDatetime: 2022-06-03T07:57:01
 description: "A discussion of what I learned during my time at Amazon"
+tags:
+  - career
 ---
 
 After four years at Amazon, today is my last day.

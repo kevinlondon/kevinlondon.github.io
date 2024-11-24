@@ -2,6 +2,9 @@
 title: My Experience with the Amazon Promotion Process
 pubDatetime: 2023-01-24T11:20:00
 description: "A discussion of my experience with the Amazon promotion process"
+tags:
+  - career
+  - amazon
 ---
 
 When I started at Amazon, the promotion process felt like a mystery. How

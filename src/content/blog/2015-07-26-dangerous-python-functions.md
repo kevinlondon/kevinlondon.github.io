@@ -2,6 +2,9 @@
 title:  "Dangerous Python Functions, Part 1"
 pubDatetime: 2015-07-26T19:54:08
 description: A discussion of dangerous Python functions and how to avoid them
+tags:
+  - python
+  - security
 ---
 
 Certain Python functions should not be used or should be used only with
@@ -53,7 +56,7 @@ into a different format. We ask the user where to find the file on disk and
 then run it through [ffmpeg](https://www.ffmpeg.org/) to transcode it. What
 could go wrong?
 
-```
+```python
 import subprocess
 
 def transcode_file():

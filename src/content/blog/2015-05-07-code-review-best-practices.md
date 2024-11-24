@@ -2,6 +2,9 @@
 title:  "Code Review Best Practices"
 pubDatetime: 2015-05-05T15:54:08Z
 description: "A comprehensive guide to conducting effective code reviews and writing reviewable code"
+tags:
+  - code reviews
+  - process
 ---
 
 At my current company,
