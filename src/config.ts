@@ -5,11 +5,11 @@ export const SITE: Site = {
   author: "Kevin London",
   profile: "https://kevinlondon.com/",
   desc: "A collection of thoughts and ideas from Kevin London",
-  title: "Kevin London's Writing",
+  title: "Kevin London",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerIndex: 4,
-  postPerPage: 3,
+  postPerIndex: 10,
+  postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: true,
 };
