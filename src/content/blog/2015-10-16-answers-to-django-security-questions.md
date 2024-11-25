@@ -1,6 +1,7 @@
 ---
 title:  "Answers to Django Security Questions"
 pubDatetime: 2015-10-16T13:56:04
+description: "Answers to Django security questions"
 tags:
   - django
   - security

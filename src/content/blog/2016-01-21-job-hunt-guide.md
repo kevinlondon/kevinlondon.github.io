@@ -1,6 +1,7 @@
 ---
 title:  "How to Land the Right Tech Job for You [updated in 2018]"
 pubDatetime: 2016-01-21T20:45:08
+description: "How to land the right tech job for you"
 tags:
   - job hunting
   - process
