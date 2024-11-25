@@ -14,8 +14,8 @@ a few dangerous categories of Python functions and some alternatives.  If you
 see these used in the wild, it may not be bad but we should pay close attention
 to their usage.
  
-![Dangerous Python Functions](/assets/dangerous_python_function_cards-min.png){: .center-image }
-*Illustration by Carissa Sandoval*{: .image-attribution }
+![Dangerous Python Functions](/assets/dangerous_python_function_cards-min.png)
+*Illustration by Carissa Sandoval*
 
 
 The Command Injection Series
