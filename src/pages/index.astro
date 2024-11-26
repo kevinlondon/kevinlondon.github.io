@@ -9,6 +9,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SITE, SOCIALS } from "@config";
+import { formatPostPath } from "@utils/formatPostPath";
 
 const posts = await getCollection("blog");
 
@@ -60,10 +61,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           <section id="featured">
             <h2>Featured</h2>
             <ul>
-              {featuredPosts.map(({ data, slug }) => (
+              {featuredPosts.map(post => (
                 <Card
-                  href={`/posts/${slug}/`}
-                  frontmatter={data}
+                  href={formatPostPath(post)}
+                  frontmatter={post.data}
                   secHeading={false}
                 />
               ))}
@@ -80,11 +81,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           <h2>Recent Posts</h2>
           <ul>
             {recentPosts.map(
-              ({ data, slug }, index) =>
+              (post, index) =>
                 index < SITE.postPerIndex && (
                   <Card
-                    href={`/posts/${slug}/`}
-                    frontmatter={data}
+                    href={formatPostPath(post)}
+                    frontmatter={post.data}
                     secHeading={false}
                   />
                 )
@@ -97,10 +98,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
         All Posts
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z" />
         </svg>
       </LinkButton>
     </div>

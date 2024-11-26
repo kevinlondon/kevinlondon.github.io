@@ -1,10 +1,12 @@
 ---
-import { getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import TagPosts from "@layouts/TagPosts.astro";
 import getUniqueTags from "@utils/getUniqueTags";
 import getPostsByTag from "@utils/getPostsByTag";
 import type { GetStaticPathsOptions } from "astro";
 import { SITE } from "@config";
+import { slugifyStr } from "@utils/slugify";
+import { formatPostPath } from "@utils/formatPostPath";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const posts = await getCollection("blog");

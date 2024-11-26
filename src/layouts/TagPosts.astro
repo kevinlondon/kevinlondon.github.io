@@ -8,6 +8,7 @@ import Pagination from "@components/Pagination.astro";
 import { SITE } from "@config";
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
+import { formatPostPath } from "@utils/formatPostPath";
 
 export interface Props {
   page: Page<CollectionEntry<"blog">>;
@@ -28,8 +29,8 @@ const { page, tag, tagName } = Astro.props;
     <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
     <ul>
       {
-        page.data.map(({ data, slug }) => (
-          <Card href={`/posts/${slug}/`} frontmatter={data} />
+        page.data.map(post => (
+          <Card href={formatPostPath(post)} frontmatter={post.data} />
         ))
       }
     </ul>
