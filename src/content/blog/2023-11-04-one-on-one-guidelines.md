@@ -1,80 +1,85 @@
 ---
 title: "Launching Effective One-on-One Meetings"
-pubDatetime: 2023-11-06T07:41:01
-description: "A practical framework for structuring one-on-one meetings,
-including templates, guidelines, and lessons learned from collaborating with
-engineering teams"
+pubDatetime: 2023-11-06T07:41:01-07:00
+description: "When I took over one-on-ones for a team of 8 engineers at Amazon, I needed a framework to make these meetings valuable. Here's the template I've refined over 20+ introductory sessions to build trust and foster meaningful discussions."
 tags:
   - process
 ---
 
-At Amazon, I had the privilege of leading a team of 8 talented software engineers
-alongside a more experienced colleague. My colleague conducted one-on-one
-meetings with each engineer. When they went on leave, it was my turn to
-set up a one-on-one meeting series with everyone. It was my first time setting up
-such sessions outside of a mentorship context. To ensure a smooth transition,
-I conducted research and prepared an introductory speech for our first meetings.
+When I took over one-on-ones for a team of 8 engineers at Amazon, I needed a framework to make these meetings valuable. Here's the template I've refined over 20+ introductory sessions.
 
-Since then, I've refined those guidelines and disclaimers, and I've delivered
-this introduction about 20 times. I've reproduced it below:
+### Before the First Meeting
+
+1. **Block Regular Time**: Schedule a consistent time slot
+2. **Choose the Right Duration**: 30-45 minutes usually works well
+3. **Find a Good Space**: Pick a quiet location or ensure reliable video setup
+4. **Review Context**: Understand their current projects and recent work
+
+### First Meeting Structure
+
+Here's what I cover in our first session:
+
+1. **Goals and Expectations**: 
+   - What would you like to achieve through these meetings?
+   - How can these meetings help your growth?
+   - What's worked well (or not) in past one-on-ones?
+
+2. **Communication Style**:
+   - How do you prefer to receive feedback?
+   - What's the best way to share concerns?
+   - Should we keep a shared document for topics?
+
+3. **Current Challenges**:
+   - What immediate challenges are you facing?
+   - Where could you use support?
+   - What's blocking your progress?
+
+### Meeting Formats
+
+Our sessions can be structured or unstructured, based on your preference:
+
+**Structured Format**:
+- Follow a regular agenda
+- Track progress on [SMART goals](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals)
+- Regular check-ins on career development
+
+**Unstructured Format**:
+- Open discussion about current work
+- Space to explore new ideas
+- Flexible agenda based on immediate needs
+
+### Documentation
+
+I take brief notes during our meetings to:
+- Track action items
+- Remember key discussion points
+- Follow up on previous topics
+
+These notes remain private and aren't shared externally.
+
+### Strategic vs Tactical Focus
+
+I aim to focus on strategic, long-term topics rather than day-to-day tactical issues:
+
+**Strategic Topics**:
+- Career development
+- Team collaboration improvements
+- Work-life balance
+- Long-term technical growth
+
+**Tactical Topics** (better suited for other channels):
+- Code reviews
+- Current bug fixes
+- Immediate technical questions
+
+### Information Sharing Guidelines
+
+What we discuss remains confidential, with three exceptions:
+
+1. Common team concerns that can be anonymized
+2. Information that you explicitly agree to share
+3. Serious concerns about harm to yourself or others (I've never needed to use this clause)
 
 ---
 
-### Our First Meeting
-
-Here's what I'd like to cover today, after we talk about the agenda:
-
-1. **Goals and Expectations**: What are your goals? What would you like to achieve
-   through these meetings?
-2. **Feedback and Communication**: Do you have any preferences for how you like
-   to receive or offer feedback?
-3. **Challenges and Concerns**: What immediate challenges are you facing?
-   What's on your mind?
-
-These questions will help us frame our next few sessions together.
-
-#### Formats
-
-Our one-on-one series can take different forms, tailored to your preferences and
-needs.
-
-- Our sessions can be structured or unstructured. In a structured format, like
-  in a mentorship arrangement, we can discuss values and establish
-  [SMART goals](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals)
-  for your growth. In a less structured format, we can talk about whatever is on your
-  mind for the week without a formal agenda.
-- While I'm not a therapist, I'm willing to listen and provide support, especially
-  on challenging days. If you're considering pursuing therapy, I recommend it!
-  Our medical plan likely provides access to professional help, and I've found  
-  talking to a therapist can be helpful.
-
-#### Taking Notes
-
-I like to write notes for our sessions so to ensure we remember what we discussed.
-Rest assured, these notes won't be shared externally.
-If you think of something between our meetings, don't hesitate to reach out,
-or feel free to add it to our shared document for future discussions.
-
-#### Strategic over Tactical
-
-I prefer to focus on strategic, overarching challenges, rather than tactical ones.
-For example, a tactical issue may be a bug in the code, which we could discuss
-in other channels or meetings. In contrast, strategic topics could encompass
-finding better ways to collaborate with partner teams, improving productivity,
-advancing your career goals, or maintaining a healthy work-life balance.
-
-### Information Terms and Conditions
-
-In our initial meeting, I like to cover our data terms and conditions.
-What we discuss remains strictly between you and I, except in the following scenarios:
-
-1. If what we discuss can be anonymized because it's a common concern within the team.
-2. If I think sharing the information could be beneficial and I receive your permission.
-3. In rare cases, if I believe there may be a risk to yourself or others, we may need to take
-   appropriate steps. I've never had to use this clause.
-
----
-
-If you're embarking on setting up a one-on-one series, I hope you find this to be a helpful
-reference. If you're a colleague I've sent this to because we're setting up a one-on-one,
-I'm looking forward to working with you!
+If you're starting your own one-on-one series, I hope this framework helps. If we're about to start our one-on-ones together, I'm looking forward to our discussions!

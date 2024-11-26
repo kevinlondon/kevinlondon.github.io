@@ -1,7 +1,7 @@
 ---
 title: "Personal Finance for Software Engineers"
-pubDatetime: 2024-06-08T09:25:00
-description: "A comprehensive guide to managing money as a software engineer, from investing basics to advanced strategies for maximizing your financial future"
+pubDatetime: 2024-06-08T09:25:00-07:00
+description: "A practical guide to personal finance for software engineers, covering budgeting, investing, tax optimization, equity compensation, and building long-term wealth through financial decisions"
 tags:
   - personal finance
 ---

@@ -1,6 +1,6 @@
 ---
 title: The Quadrant Test
-pubDatetime: 2023-07-03T19:53:01
+pubDatetime: 2023-07-03T19:22:01-07:00
 description: "A decision-making framework for evaluating career choices and
 major life decisions, with examples from tech industry transitions"
 tags:
