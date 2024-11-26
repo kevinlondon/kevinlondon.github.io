@@ -1,7 +1,7 @@
 ---
 title:  "Strategies for Writing Useful Tests"
 pubDatetime: 2016-05-11T13:54:09
-description: "Strategies for writing useful tests"
+description: "Strategies for writing maintainable and effective software tests, focusing on what to test and how to structure test cases"
 tags:
   - testing
   - process

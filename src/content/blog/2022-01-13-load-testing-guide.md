@@ -1,7 +1,7 @@
 ---
 title: Load Testing at Scale and Lessons Learned
 pubDatetime: 2022-01-13T20:00:01
-description: "A discussion of how to load test a service at scale"
+description: "Real-world strategies for load testing services at scale, including how to plan, execute, and analyze results for high-traffic applications"
 tags:
   - load testing
   - process

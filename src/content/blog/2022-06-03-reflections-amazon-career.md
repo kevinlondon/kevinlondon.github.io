@@ -1,7 +1,7 @@
 ---
 title: Reflections on my Amazon Career
 pubDatetime: 2022-06-03T07:57:01
-description: "A discussion of what I learned during my time at Amazon"
+description: "Lessons learned from four years at Amazon, including insights on leadership principles, ownership, and growing successful engineering teams"
 tags:
   - career
 ---

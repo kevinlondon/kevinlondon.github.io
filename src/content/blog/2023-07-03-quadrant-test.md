@@ -1,7 +1,8 @@
 ---
 title: The Quadrant Test
 pubDatetime: 2023-07-03T19:53:01
-description: "A discussion of a decision making technique called the quadrant test"
+description: "A decision-making framework for evaluating career choices and
+major life decisions, with examples from tech industry transitions"
 tags:
   - decision making
   - analogies

@@ -1,7 +1,9 @@
 ---
 title: "Tech Interview Tips and Strategies"
 pubDatetime: 2023-07-05T19:53:01
-description: "A discussion of tips and strategies for technical interviews"
+description: "A guide to technical interviews, from behavioral questions to
+coding challenges, with practical strategies from both sides of the interview
+table"
 tags:
   - interviews
 ---

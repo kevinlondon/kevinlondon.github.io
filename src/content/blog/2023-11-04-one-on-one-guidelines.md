@@ -1,7 +1,9 @@
 ---
 title: "Launching Effective One-on-One Meetings"
 pubDatetime: 2023-11-06T07:41:01
-description: "A discussion of how to run effective one-on-one meetings"
+description: "A practical framework for structuring one-on-one meetings,
+including templates, guidelines, and lessons learned from collaborating with
+engineering teams"
 tags:
   - process
 ---
