@@ -1,0 +1,155 @@
+---
+---
+<div class="newsletter-container">
+  <div class="newsletter-content">
+    <div class="newsletter-text">
+      <h3>Subscribe for new posts</h3>
+      <p>
+        Software engineering stories and lessons from my experience at Amazon, Snapchat, and beyond.<br />
+        Delivered to your inbox about once a month.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Mailchimp Signup Form -->
+  <div id="mc_embed_signup">
+    <form
+      action="https://kevinlondon.us10.list-manage.com/subscribe/post?u=42a57bf47c6deb9cd4a5564af&amp;id=8db7747f05&amp;f_id=005cefe4f0" 
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      class="validate"
+      target="_blank"
+    >
+      <div class="form-content">
+        <div class="input-group">
+          <input
+            type="email"
+            name="EMAIL"
+            class="required email"
+            id="mce-EMAIL"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" class="button">
+            Subscribe
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Bot protection field -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_XXXXX_REPLACE_THIS_XXXXX" tabindex="-1" value="" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  .newsletter-container {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 12px;
+    background: linear-gradient(to right, var(--theme-accent), var(--theme-accent-2, var(--theme-accent)));
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .newsletter-content {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .newsletter-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: white;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .form-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  input[type="email"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  input[type="email"]:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .button:hover {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (max-width: 640px) {
+    .input-group {
+      flex-direction: column;
+    }
+    
+    .button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style> 

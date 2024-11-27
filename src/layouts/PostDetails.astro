@@ -8,6 +8,7 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
+import NewsletterSignup from "@components/NewsletterSignup.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -89,6 +90,8 @@ const nextPost =
     <article id="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
+
+    <NewsletterSignup />
 
     <ul class="my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
