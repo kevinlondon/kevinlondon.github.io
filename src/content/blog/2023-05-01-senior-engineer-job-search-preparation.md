@@ -1,7 +1,7 @@
 ---
 title: Senior Engineer Job Search Preparation
 pubDatetime: 2023-05-01T19:53:01
-description: "A preparation guide for senior engineering interviews, covering system design, coding challenges, and behavioral questions based on experience"
+description: "A detailed guide to preparing for senior engineering interviews, based on my experience interviewing at major tech companies in 2022."
 tags:
   - career
   - interviews 

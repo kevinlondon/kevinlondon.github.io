@@ -1,7 +1,7 @@
 ---
 title: "Launching Effective One-on-One Meetings"
 pubDatetime: 2023-11-06T07:41:01-07:00
-description: "When I took over one-on-ones for a team of 8 engineers at Amazon, I needed a framework to make these meetings valuable. Here's the template I've refined over 20+ introductory sessions to build trust and foster meaningful discussions."
+description: "When I took over one-on-ones for a team engineers at Amazon, I needed a framework to make these meetings valuable. Here's the template I've refined over 20+ introductory sessions."
 tags:
   - process
 ---

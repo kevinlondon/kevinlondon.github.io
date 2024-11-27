@@ -1,10 +1,11 @@
 ---
 title:  "Code Review Best Practices"
 pubDatetime: 2015-05-05T15:54:08Z
-description: "A comprehensive guide to conducting effective code reviews and writing reviewable code"
+description: "Code reviews can be challenging! How do you make them valuable without being a burden? Here's what I've learned about making code reviews effective for both reviewers and authors."
 tags:
   - code reviews
   - process
+  - popular
 ---
 
 At my current company,

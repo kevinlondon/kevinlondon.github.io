@@ -1,7 +1,7 @@
 ---
 title: In Python, Rose == 'Red', Violet is not 'Blue'
 pubDatetime: 2024-06-08T09:57:10-07:00
-description: "Let's deep dive into Python's string interning behavior and why 'is' comparisons with strings can yield surprising results"
+description: "A deep dive into Python's string interning behavior, exploring why identical strings sometimes share memory locations and why this matters for performance and correctness."
 tags:
   - python
   - interning

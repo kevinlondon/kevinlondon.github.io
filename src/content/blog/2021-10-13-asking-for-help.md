@@ -1,7 +1,7 @@
 ---
 title: Getting Unstuck
 pubDatetime: 2021-10-13T20:00:01
-description: "Through the years of talking with engineers in one-on-ones, there's a common conversation about asking for help: How do I find what I need if I don't know where to look? What do I do if I keep getting stuck?"
+description: "Through the years of talking with engineers in one-on-ones, there's a common conversation about asking for help: How do I find what I need if I don't know where to look?"
 tags:
   - problem solving
   - process

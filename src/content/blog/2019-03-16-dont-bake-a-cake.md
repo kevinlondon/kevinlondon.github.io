@@ -1,7 +1,7 @@
 ---
 title: Don't Just Bake Me a Cake
 pubDatetime: 2019-03-16T10:35:08
-description: "A discussion of how to bake a cake in design documents"
+description: "In design, it can be frustrating to receive a cake - a finished product that can't change. Instead, I find it more effective to include examples of the forks in the road and alternatives."
 tags:
   - design
   - analogies

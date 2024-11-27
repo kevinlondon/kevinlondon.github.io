@@ -1,8 +1,7 @@
 ---
 title: The Quadrant Test
 pubDatetime: 2023-07-03T19:22:01-07:00
-description: "A decision-making framework for evaluating career choices and
-major life decisions, with examples from tech industry transitions"
+description: "A simple but effective framework for making difficult career decisions, based on evaluating best and worst case scenarios in both short and long term."
 tags:
   - decision making
   - analogies

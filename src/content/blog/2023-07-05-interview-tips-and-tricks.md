@@ -1,9 +1,7 @@
 ---
 title: "Tech Interview Tips and Strategies"
 pubDatetime: 2023-07-05T19:53:01
-description: "A guide to technical interviews, from behavioral questions to
-coding challenges, with practical strategies from both sides of the interview
-table"
+description: "Preparing for technical interviews can feel overwhelming! There's so much to learn and keep in mind. Here's what I've learned from running mock interviews and offering feedback."
 tags:
   - interviews
 ---
