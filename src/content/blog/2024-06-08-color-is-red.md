@@ -9,7 +9,7 @@ tags:
 
 I came across a bit of Python code that checked if a color was in a list like this:
 
-```
+```python
 if color is 'red' or color is 'blue':
     do_something()
 ```
@@ -17,10 +17,10 @@ if color is 'red' or color is 'blue':
 It felt wrong. In Python, we shouldn't be able to check if a string `is` another
 string, since that's checking their references. I opened a Python interpreter:
 
-```
-> > > color = 'red'
-> > > color is 'red'
-> > > True
+```python
+>>> color = 'red'
+>>> color is 'red'
+True
 ```
 
 That feels like it shouldn't work! After research, I came across
@@ -51,15 +51,15 @@ if `id(color) == id(red)`.
 
 Here's what the above scenario looks like in an interpreter:
 
-```
-> > > id('red')
-> > > 4397469120
-> > > id(color)
-> > > 4397468952
-> > > id('red') == id('red')
-> > > True
-> > > id(color) == id('red')
-> > > False
+```python
+>>> id('red')
+4397469120
+>>> id(color)
+4397468952
+>>> id('red') == id('red')
+True
+>>> id(color) == id('red')
+False
 ```
 
 The `color` variable is the constructed
@@ -82,15 +82,15 @@ In Python 2, string interning is global. In Python 3, the `intern` call lives
 in the `sys` module. Coming back to our example, using Python 3:
 
 
-```
-> > > color is 'red'
-> > > False
-> > > import sys
-> > > interned_color = sys.intern(color)
-> > > interned_color
-> > > 'red'
-> > > interned_color is 'red'
-> > > True
+```python
+>>> color is 'red'
+False
+>>> import sys
+>>> interned_color = sys.intern(color)
+>>> interned_color
+'red'
+>>> interned_color is 'red'
+True
 ```
 
 Adrien Guillo wrote an [excellent
@@ -114,13 +114,13 @@ Here's a few interesting discussions:
 Now here's an example that really bends my brain.
 
 
-```
-> > > id('red'), id('red')
-> > > (4397469008, 4397469008)
-> > > id(id('red')), id(id('red'))
-> > > (4394823536, 4394823536)
-> > > id('red') is id('red')
-> > > False
+```python
+>>> id('red'), id('red')
+(4397469008, 4397469008)
+>>> id(id('red')), id(id('red'))
+(4394823536, 4394823536)
+>>> id('red') is id('red')
+False
 ```
 
 If the IDs are the same, then why does the id comparison fail? What's different
