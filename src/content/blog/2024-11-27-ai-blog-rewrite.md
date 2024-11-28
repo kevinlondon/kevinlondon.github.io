@@ -6,7 +6,7 @@ pubDatetime: 2024-11-28T11:00:00-7:00
 
 **TL;DR**: I migrated my blog to Astro using AI tools. Aider burned $10 in API credits, while Cursor helped complete the migration in 3-4 hours - about half the time of a manual migration.
 
-My blog needed an update. Over the years, I'd moved from Wordpress to Jekyll (a static site generator powering GitHub Pages), tried Ghost for a bit, and ended up back with a basic Jekyll setup. It worked, but it felt dated.
+I needed to update my blog. Over the years, I'd moved from Wordpress to Jekyll (a static site generator powering GitHub Pages), tried Ghost for a bit, and ended up back with a basic Jekyll setup. It worked, but it felt dated.
 
 Astro caught my attention as a newer static site generator optimized for content-focused sites. A few things stood out:
 
@@ -15,7 +15,7 @@ Astro caught my attention as a newer static site generator optimized for content
 - Modern development experience
 - Growing ecosystem
 
-Here's what I started with:
+My starting point:
 
 <img src="/assets/ai-blog/blog-home.png" alt="Blog homepage and post list" />
 <img src="/assets/ai-blog/blog-post.png" alt="Blog post" />
@@ -52,8 +52,6 @@ I started with Aider. My first request: "Convert this Jekyll blog to Astro." The
 
 <img src="/assets/ai-blog/aider-homepage.png" alt="Aider homepage" />
 
-Here's what it looked like in action:
-
 <figure>
     <iframe 
         width="560" 
@@ -67,7 +65,7 @@ Here's what it looked like in action:
         class="border border-skin-line rounded-lg shadow-md">
     </iframe>
     <figcaption class="text-center mt-2 text-sm text-gray-600">
-        Here's what happened when I let Aider run with it - lots of dev server restarts and changes without much progress.
+        Aider attempting the migration - lots of dev server restarts and changes without much progress.
     </figcaption>
 </figure>
 
@@ -113,8 +111,6 @@ Even with a narrower focus, the automated approach still needed more hand-holdin
 ### Using Cursor
 
 Then I tried Cursor with Claude 3.5 Sonnet and everything clicked. The autocomplete kicked in right away, I could see exactly what it planned to do, and the whole thing felt responsive. After dealing with Copilot's lag in IntelliJ, this felt like a real upgrade.
-
-Here's a video of autocomplete in action:
 
 <figure>
     <iframe 
@@ -184,7 +180,7 @@ export async function getStaticPaths() {
 }
 ```
 
-The metadata conversion impressed me even more. I asked Cursor to "Migrate the date field and add descriptions for the blog posts" and here's what it came up with:
+The metadata conversion impressed me even more. I asked Cursor to "Migrate the date field and add descriptions for the blog posts" and it delivered:
 
 Before:
 
@@ -234,7 +230,7 @@ And here's the new site:
 
 ### Lessons Learned
 
-If you're thinking about trying something similar, here's what I learned: start with a clean template / baseline. I made the rookie mistake of keeping Jekyll and Astro files in the same branch - turns out AI tools don't deal well with that kind of ambiguity.
+Starting a similar migration? Start with a clean template / baseline. I made the rookie mistake of keeping Jekyll and Astro files in the same branch - turns out AI tools don't deal well with that kind of ambiguity.
 
 These AI tools shine at repetitive tasks - updating frontmatter, reformatting code, fixing common patterns. But don't expect them to make big architectural decisions. Let them handle the mechanical work while you focus on the important choices.
 
