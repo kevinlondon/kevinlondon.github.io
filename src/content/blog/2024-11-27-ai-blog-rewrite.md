@@ -187,4 +187,6 @@ A few things I learned along the way:
 
 ### Looking Forward
 
-AI tools aren't quite ready to handle full migrations on their own, but they're amazing at cutting down repetitive work. The way they're improving, who knows - maybe in a few months this whole thing could be done with one prompt. For now though, the sweet spot is letting AI handle the mechanical stuff while you keep an eye on the overall direction. And honestly? I'm just glad I didn't have to write 43 blog descriptions by hand.
+AI tools aren't quite ready to handle full migrations on their own, but they're amazing at cutting down repetitive work. The way they're improving, who knows - maybe in a few months this whole thing could be done with one prompt. For now though, the sweet spot is letting AI handle the mechanical stuff while you keep an eye on the overall direction.
+
+And honestly? I'm just glad I didn't have to write 43 blog descriptions by hand.
