@@ -1,6 +1,6 @@
 ---
-title: "Jekyll to Astro: AI vs Manual Migration"
-description: "A hands-on comparison of using AI tools vs manual approaches to migrate 43 Jekyll posts to Astro, including code examples and practical lessons learned."
+title: "Jekyll to Astro: An AI-Assisted Migration"
+description: "How I used AI tools to migrate 43 blog posts to Astro, with real examples and lessons from both successful and failed approaches"
 pubDatetime: 2024-11-28T11:00:00-7:00
 ---
 
