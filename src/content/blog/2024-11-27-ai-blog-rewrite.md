@@ -6,9 +6,12 @@ pubDatetime: 2024-11-27T11:00:00-7:00
 
 I've been blogging for a few years. I started with Wordpress, then moved to Jekyll for a while. I experimented with Ghost and ultimately scrapped it. Anyway, it's a been a long time and it was overdue since I was still using the base Jekyll installation. 
 
-You can see the starting point here: https://kevinlondon.github.io/.
+You can see the starting point here:
 
-So given that it was time to rewrite, I wanted to try something new. I determined Astro is basically what I anted to use and looked into the swap.
+<img src="/assets/ai-blog/blog-home.png" alt="Blog homepage and post list" />
+<img src="/assets/ai-blog/blog-post.png" alt="Blog post" />
+
+So given that it was time to rewrite, I wanted to try something new. I determined Astro is basically what I wanted to use and looked into the swap.
 
 ### What I would've done traditionally
 
