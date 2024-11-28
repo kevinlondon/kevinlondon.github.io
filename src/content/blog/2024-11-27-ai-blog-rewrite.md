@@ -60,7 +60,19 @@ I basically had no input while it was running. I was just a spectator.
 
 Actually, let me just show you the basic experience of Aider.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8-lzzK6dRAU?si=4kBtY0LP2n8_IK6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figure>
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/8-lzzK6dRAU" 
+        title="Demo of Aider attempting blog migration"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        aria-label="Video demonstration of Aider migration attempt">
+    </iframe>
+    <figcaption>Demonstration of Aider attempting the initial migration</figcaption>
+</figure>
 
 It may be a little hard to see what's happening here. I asked it to generate a index of posts for the homepage. It generated some changes, applied them to ... files? And then asked me if I wanted to use Jekyll to serve them (no thank you). After responding a few more times, it ended and I was left with my homepage as it was. 
 
@@ -107,11 +119,37 @@ I switched to Cursor and had a good experience almost immediately. From speed of
 
 In particular, comparing against Copilot, I found the UI and responsiveness to be shockingly faster. I didn't realize how accustomed I'd become to the delay of Copilot.
 
+I used Cursor primarily with Claude 3.5 Sonnet. 
+
 Here's a video of using Cursor to fix the url structure:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_V636f5giM?si=4kBtY0LP2n8_IK6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 As mentioned earlier, the migration would break the URL structure, so I asked Cursor to match production behavior. Initially, it rewrote some other files which linked to the posts, but did not rewrite the post URL itself. A subsequent edit fixed that.
+
+Here's the final URL rewriting logic in `src/pages/[...slug]/index.astro`:
+
+```ts
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+  return posts.map(post => {
+    console.log(`Processing post: ${post.slug}`);
+    
+    const [year, month, day, ...titleParts] = post.slug.split('-');
+    const slug = `${titleParts.join('-')}.html`;
+    
+    console.log(`Generated path: /${year}/${month}/${day}/${slug}`);
+    
+    return {
+      params: { year, month, day, slug },
+      props: { post },
+    };
+  });
+}
+```
+
+Not terribly complicated, though I appreciated that it handled the pathing for me as well.
 
 Additionally, I mentioend needing to replace post metadata. It did two things I really liked. One: when I asked it to replace metadata, it not only did that for multiple posts, but it applied a pretty thoughtful transformation. 
 
@@ -144,7 +182,6 @@ tags:
 
 _and_ it applied this transformation to several posts.
 
-
 Lastly, Cursor's autocomplete is great and it's easy to see what's happening.
 For example, I started editing a post for the color is red post. It had Python shell code in it, and Cursor was able to highlight the code and provide autocomplete for the Python code.
 
@@ -155,24 +192,39 @@ Also, it's so fast that you almost cannot tell that it's auto-completing, but I 
 
 ### Conclusion
 
-1. **Cost Effectiveness**:
+In the end, I was able to migrate the blog with Cursor in about 3-4 hours, including updating descriptions for 43 posts, fixing the URL structure, and tweaking styling / icons / etc.
+
+Notably, this doesn't include the manual steps I added at the beginning, though I think I could've skipped some of the tutorial steps given how much the tooling helps.
+
+I'm happier with the CSS and styling, and it gets better [Page Speed Insights](https://pagespeed.web.dev/) scores than it did before. 
+
+Here's the final initial result:
+
+<img src="/assets/ai-blog/blog-newhome.png" alt="Final homepage" />
+<img src="/assets/ai-blog/blog-newpost.png" alt="Final post" />
+
+Here's a summary of the cost and times:
+
+### Cost Effectiveness
+
    - Aider/Claude: ~$10 for partial migration attempts
    - Cursor: Basically zero, I used the trial version and was able to do the migration without any additional cost.
    - Manual Migration: Estimated 8-10 hours of work
 
 
-2. **Best Practices**:
+### Best Practices
    - Start with a working template
    - Use AI tools for repetitive tasks rather than full migration
    - Keep human oversight for important decisions
    - Test thoroughly after automated changes
 
-3. **Tool Comparison**:
+### Tool Comparison
    - Aider: Better for targeted code changes, struggles with bulk operations
    - Cursor: Excelled at repetitive tasks, provided better context awareness
    - Traditional Methods: More time-consuming but predictable
 
-4. **Final Thoughts**:
+### Final Thoughts
+
 The migration showed that AI tools can significantly speed up certain aspects of web development, but they're not yet ready to handle complete migrations autonomously. Cursor proved to be the more practical tool for this specific use case, offering better control and faster iterations without the cost overhead of API calls.
 
 For developers considering a similar migration, I'd recommend:
@@ -180,3 +232,7 @@ For developers considering a similar migration, I'd recommend:
 - Using AI tools for specific, repetitive tasks rather than the entire migration
 - Maintaining careful version control
 - Verifying all AI-generated changes
+
+
+AI tools like Cursor show tremendous promise for simplifying migrations, but they still require human input for critical decisions. Developers considering similar projects should approach AI as a helpful assistant rather than a complete solution.
+

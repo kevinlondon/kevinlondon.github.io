@@ -115,6 +115,20 @@
     font-weight: var(--shiki-dark-font-weight) !important;
     text-decoration: var(--shiki-dark-text-decoration) !important;
   }
+
+  img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* YouTube video embeds */
+  .prose iframe {
+    width: 100%;
+    max-width: 800px;  /* Limit maximum width */
+    aspect-ratio: 16/9;
+    margin: 1.5rem auto;
+  }
 }
 
 @layer components {
