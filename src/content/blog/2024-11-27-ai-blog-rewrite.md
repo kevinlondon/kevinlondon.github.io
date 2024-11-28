@@ -4,7 +4,18 @@ description: "I used AI tools to migrate from Jekyll to Astro. Here's what worke
 pubDatetime: 2024-11-27T11:00:00-7:00
 ---
 
-I've been blogging for years, starting with Wordpress, moving to Jekyll, and briefly experimenting with Ghost. My Jekyll setup was still using the base installation and needed an update. Here's what the old site looked like:
+**TL;DR**: I migrated my blog to Astro using AI tools. Aider was frustrating and burned $10 in API credits, but Cursor turned out to be surprisingly effective. The whole migration took about 3-4 hours instead of the estimated 8-10 hours manually.
+
+I've been blogging for years, trying different platforms along the way. Started with Wordpress, moved to Jekyll (a static site generator that powers GitHub Pages), and briefly experimented with Ghost. My Jekyll setup was still using the base installation and needed an update. 
+
+I'd been hearing good things about Astro, a newer static site generator that's optimized for content-focused sites. It caught my attention for a few reasons:
+
+- Built-in Markdown support
+- Fast build times
+- Modern development experience
+- Growing ecosystem
+
+Here's what I started with:
 
 <img src="/assets/ai-blog/blog-home.png" alt="Blog homepage and post list" />
 <img src="/assets/ai-blog/blog-post.png" alt="Blog post" />
