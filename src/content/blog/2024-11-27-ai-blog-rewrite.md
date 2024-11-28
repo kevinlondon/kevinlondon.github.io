@@ -4,53 +4,24 @@ description: "A hands-on comparison of using AI tools vs manual approaches to mi
 pubDatetime: 2024-11-28T11:00:00-7:00
 ---
 
-**TL;DR**: I migrated my blog to Astro using AI tools. Aider burned $10 in API credits, while Cursor helped complete the migration in 3-4 hours - about half the time of a manual migration.
+**TL;DR**: I used AI tools to move my blog from Jekyll to Astro. Cursor helped me finish in about 3-4 hours (half the usual time), and I spent $10 testing out Aider. The site's faster and easier to maintain now.
 
-I needed to update my blog. Over the years, I'd moved from Wordpress to Jekyll (a static site generator powering GitHub Pages), tried Ghost for a bit, and ended up back with a basic Jekyll setup. It worked, but it felt dated.
+My Jekyll blog worked fine but felt a bit dated. I decided to switch to Astro after hearing good things about how it handles Markdown and builds pages quickly. Here's what I started with:
 
-Astro caught my attention as a newer static site generator optimized for content-focused sites. A few things stood out:
-
-- Built-in Markdown support
-- Fast build times
-- Modern development experience
-- Growing ecosystem
-
-My starting point:
-
-<img src="/assets/ai-blog/blog-home.png" alt="Blog homepage and post list" />
-<img src="/assets/ai-blog/blog-post.png" alt="Blog post" />
-
-I decided to try Astro for the rewrite and wanted to experiment with AI tools to help with the migration.
+<img src="/assets/ai-blog/blog-home.png" alt="Blog homepage and post list" width="560" />
+<img src="/assets/ai-blog/blog-post.png" alt="Blog post" width="560" />
 
 ### The Traditional Approach
 
-I started with the official [Astro migration guide](https://docs.astro.build/en/guides/migrate-to-astro/from-jekyll/). It covers the basics but leaves many questions unanswered:
+I started with the [Astro migration guide](https://docs.astro.build/en/guides/migrate-to-astro/from-jekyll/). It's helpful but leaves a lot of details up to you. The community filled in some gaps with guides about [migration trade-offs](https://www.kooslooijesteijn.net/blog/jekyll-or-astro-which-is-better-static-site-generator) and [URL structures](https://humanwhocodes.com/blog/2023/03/astro-jekyll-blog-post-url/). Still, it looked like a lot of manual work ahead. 
 
-> Much of your existing HTML page content can be converted into Astro pages
-
-> Astro does not have a permalink property that accepts placeholders. You may need to read more about Astro’s page routing if you want to keep your existing URL structure. Or, consider setting redirects at a host like Netlify.
-
-Reading between the lines: I'd need to figure out the URL rewrites and content formatting on my own.
-
-I found some helpful community guides too. One covers [migration trade-offs](https://www.kooslooijesteijn.net/blog/jekyll-or-astro-which-is-better-static-site-generator), and another author wrote about [URL migration](https://humanwhocodes.com/blog/2023/03/astro-jekyll-blog-post-url/) along with creating an [astro-jekyll](https://github.com/humanwhocodes/astro-jekyll) package to help.
-
-Nice resources, but I'd still need to do most of the heavy lifting myself. That got me thinking about AI tools.
-
-### Experimenting with AI
-
-I use AI tools heavily at work - mostly OpenAI for high-level discussions and
-GitHub Copilot for code completion. Copilot can be slow, especially in
-IntelliJ where there's often a noticeable delay before it starts generating.
-
-I wanted to try something different, so I tested two tools:
-1. [Aider](https://www.aider.chat/) - An AI coding assistant using Claude
-2. [Cursor](https://www.cursor.com/) - A code editor with built-in AI (coincidentally, also Claude)
+Instead of doing everything by hand, I decided to try some AI tools: [Aider](https://www.aider.chat/) (powered by Claude) and [Cursor](https://www.cursor.com/) (also Claude).
 
 ### Using Aider
 
 I started with Aider. My first request: "Convert this Jekyll blog to Astro." The result:
 
-<img src="/assets/ai-blog/aider-homepage.png" alt="Aider homepage" />
+<img src="/assets/ai-blog/aider-homepage.png" alt="Aider homepage" width="560" />
 
 <figure>
     <iframe 
@@ -69,17 +40,7 @@ I started with Aider. My first request: "Convert this Jekyll blog to Astro." The
     </figcaption>
 </figure>
 
-**Video Summary (0:45)**: First attempt with Aider:
-1. Asked it to convert Jekyll to Astro
-2. Got some config change suggestions
-3. Hit a loop of dev server restarts
-4. Couldn't get past the server output
-
-The automated approach made it clear: migrations need more than just AI making educated guesses.
-
---- 
-
-The experience proved frustrating. Aider kept asking to start the dev server (`npm run dev`), which blocked any other input. I couldn't guide it or course-correct - I just watched it make decisions.
+The experience was frustrating. Aider kept asking to start the dev server, which blocked other input. I couldn't guide it or course-correct beyond answering yes/no - I just watched it make decisions.
 
 I tried again with a smaller scope. This time, I cleaned up my branch and focused on metadata conversion:
 
@@ -100,17 +61,11 @@ I tried again with a smaller scope. This time, I cleaned up my branch and focuse
     </figcaption>
 </figure>
 
-**Video Summary (0:35)**: Second attempt, keeping it simple:
-1. Just asked for frontmatter updates
-2. Let it look at the Jekyll metadata
-3. Watched it work on date formats
-4. Tried to follow its config changes
-
-Even with a narrower focus, the automated approach still needed more hand-holding than I'd hoped.
+Even with the narrower scope, the automated approach required significant manual intervention. While it managed to update a few posts, I lost track of which files still needed changes and hit API throttling issues.
 
 ### Using Cursor
 
-Then I tried Cursor with Claude 3.5 Sonnet and everything clicked. The autocomplete kicked in right away, I could see exactly what it planned to do, and the whole thing felt responsive. After dealing with Copilot's lag in IntelliJ, this felt like a real upgrade.
+Cursor clicked right away. The autocomplete was snappy, I could see exactly what it planned to do, and everything just felt smooth.
 
 <figure>
     <iframe 
@@ -129,9 +84,7 @@ Then I tried Cursor with Claude 3.5 Sonnet and everything clicked. The autocompl
     </figcaption>
 </figure>
 
-**Video Summary (0:40)**: I started editing [this post](https://www.kevinlondon.com/2024/06/08/color-is-red/) to format Python interpreter output. I started removing extra spaces between the carats and it anticipated the other changes I'd make with distinguishing between command and output. I hit tab to accept changes.
-
-Moving on to metadata, I tackled fixing the URL structure first:
+After seeing how smoothly that went, I moved on to something more challenging: the URL structure.
 
 <figure>
     <iframe 
@@ -149,14 +102,6 @@ Moving on to metadata, I tackled fixing the URL structure first:
         Check out how quickly Cursor handles the URL conversion - no waiting around, just clean transforms from Jekyll to Astro format.
     </figcaption>
 </figure>
-
-**Video Summary (0:30)**: URL conversion process:
-1. Started with Jekyll's /posts/YYYY-MM-DD-title format
-2. Wrote a function to pull out the dates
-3. Built new /YYYY/MM/DD/title.html paths
-
-The whole thing took maybe 30 seconds - exactly the kind of quick wins I'd hoped for with AI tools.
----
 
 The URL rewrite came together nicely:
 
@@ -211,33 +156,35 @@ Not only did it handle the format conversion, it also wrote reasonable descripti
 
 ### Cost and Time
 
-The whole thing took about 3-4 hours with Cursor, including updating descriptions for all 43 posts, fixing URLs, and tweaking styles. I burned $10 on those early Aider experiments, but honestly - sometimes you need to try things to know what doesn't work. For comparison, doing this manually would've eaten up 8-10 hours easily.
+The whole thing took about 3-4 hours with Cursor. In that time, I:
+- Moved all 43 posts to the new format
+- Fixed up the URL structure
+- Added descriptions for every post
+- Updated the styling
 
-The results exceeded my expectations. The site loads faster, looks cleaner, and scores better on [Page Speed Insights](https://pagespeed.web.dev/). Take a look:
+A manual migration would've easily taken 8-10 hours. Sure, I spent $10 testing Aider first, but sometimes you need to experiment to find what works.
 
-<img src="/assets/ai-blog/blog-newhome.png" alt="Final homepage" />
-<img src="/assets/ai-blog/blog-newpost.png" alt="Final post" />
+The site's better now - faster loads, cleaner look, and better scores on [Page Speed Insights](https://pagespeed.web.dev/):
 
-For pagespeed comparison, here's the old site:
+<img src="/assets/ai-blog/blog-newhome.png" alt="Final homepage" width="560" />
+<img src="/assets/ai-blog/blog-newpost.png" alt="Final post" width="560" />
 
-<img src="/assets/ai-blog/pagespeed-old-mobile.png" alt="Original pagespeed for mobile" />
-<img src="/assets/ai-blog/pagespeed-old-desktop.png" alt="Original pagespeed for desktop" />
+For pagespeed comparison (mobile, desktop):
 
-And here's the new site:
-<img src="/assets/ai-blog/pagespeed-new-mobile.png" alt="New pagespeed for mobile" />
-<img src="/assets/ai-blog/pagespeed-new-desktop.png" alt="New pagespeed for desktop" />
+<img src="/assets/ai-blog/pagespeed-old-mobile.png" alt="Original pagespeed for mobile" width="560" />
+<img src="/assets/ai-blog/pagespeed-old-desktop.png" alt="Original pagespeed for desktop" width="560" />
 
+And the new site:
+<img src="/assets/ai-blog/pagespeed-new-mobile.png" alt="New pagespeed for mobile" width="560" />
+<img src="/assets/ai-blog/pagespeed-new-desktop.png" alt="New pagespeed for desktop" width="560" />
 
 ### Lessons Learned
 
-Starting a similar migration? Start with a clean template / baseline. I made the rookie mistake of keeping Jekyll and Astro files in the same branch - turns out AI tools don't deal well with that kind of ambiguity.
-
-These AI tools shine at repetitive tasks - updating frontmatter, reformatting code, fixing common patterns. But don't expect them to make big architectural decisions. Let them handle the mechanical work while you focus on the important choices.
-
-Each tool has its strength. Aider handles targeted changes well when you know exactly what you want. Cursor excels at repetitive tasks and keeps you in the loop. Sometimes the manual approach still makes sense - it just takes longer.
+A few things I learned along the way:
+- Keep your branches clean. Mixing Jekyll and Astro files confused the AI tools
+- Let the AI handle the repetitive stuff - it's great at that
+- Try different tools. Cursor worked better for me than Aider, but your mileage may vary
 
 ### Looking Forward
 
-The pace of AI tool improvements is remarkable. While they can't handle a full migration by themselves yet, they significantly reduce time spent on repetitive tasks. In a few months, this whole process might need just a single prompt.
-
-For now, the balance is clear: let AI handle the mechanical work while you guide the overall migration. I won't miss writing those 43 blog descriptions by hand.
+AI tools aren't quite ready to handle full migrations on their own, but they're amazing at cutting down repetitive work. The way they're improving, who knows - maybe in a few months this whole thing could be done with one prompt. For now though, the sweet spot is letting AI handle the mechanical stuff while you keep an eye on the overall direction. And honestly? I'm just glad I didn't have to write 43 blog descriptions by hand.
