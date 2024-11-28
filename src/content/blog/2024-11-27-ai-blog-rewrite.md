@@ -4,7 +4,6 @@ description: "I used AI to swap blog platforms. Here's how it went."
 pubDatetime: 2024-11-27T11:00:00-7:00
 ---
 
-
 I've been blogging for a few years. I started with Wordpress, then moved to Jekyll for a while. I experimented with Ghost and ultimately scrapped it. Anyway, it's a been a long time and it was overdue since I was still using the base Jekyll installation. 
 
 You can see the starting point here: https://kevinlondon.github.io/.
@@ -101,13 +100,49 @@ I would like to say again that it's more likely I'm not using Aider correctly, o
 
 ### Using Cursor
 
-I've been really impressed.
+I switched to Cursor and had a good experience almost immediately. From speed of autocomplete to the ease of seeing what was happening, it felt like a better feedback loop.
+
+In particular, comparing against Copilot, I found the UI and responsiveness to be shockingly faster. I didn't realize how accustomed I'd become to the delay of Copilot.
 
 Here's a video of using Cursor to fix the url structure:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_V636f5giM?si=4kBtY0LP2n8_IK6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Cursor's autocomplete is great and it's easy to see what's happening.
+As mentioned earlier, the migration would break the URL structure, so I asked Cursor to match production behavior. Initially, it rewrote some other files which linked to the posts, but did not rewrite the post URL itself. A subsequent edit fixed that.
+
+Additionally, I mentioend needing to replace post metadata. It did two things I really liked. One: when I asked it to replace metadata, it not only did that for multiple posts, but it applied a pretty thoughtful transformation. 
+
+Here's what I asked:
+
+> Migrate the date field and provide a description for the blog posts
+
+Before:
+
+```
+---
+layout: post
+title: Reflections on my Amazon Career
+date: 2022-06-03 07:57:01.000000000 -07:00
+---
+```
+
+After:
+```
+---
+title: Reflections on my Amazon Career
+pubDatetime: 2022-06-03T07:57:01-07:00
+description: "After four years at Amazon, I wanted to share what made Amazon successful across so many industries. Here's what I learned about engineering culture, Leadership Principles, and building customer-focused teams."
+tags:
+  - career
+  - amazon
+  - leadership
+---
+```
+
+_and_ it applied this transformation to several posts.
+
+
+Lastly, Cursor's autocomplete is great and it's easy to see what's happening.
 For example, I started editing a post for the color is red post. It had Python shell code in it, and Cursor was able to highlight the code and provide autocomplete for the Python code.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tWZBZLbR_TA?si=4kBtY0LP2n8_IK6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -117,12 +152,11 @@ Also, it's so fast that you almost cannot tell that it's auto-completing, but I 
 
 ### Conclusion
 
-After experimenting with both approaches, here's what I learned:
-
 1. **Cost Effectiveness**:
    - Aider/Claude: ~$10 for partial migration attempts
-   - Cursor: Basically zero, I used the trial version and was able to do the migration without any additional cost
+   - Cursor: Basically zero, I used the trial version and was able to do the migration without any additional cost.
    - Manual Migration: Estimated 8-10 hours of work
+
 
 2. **Best Practices**:
    - Start with a working template
