@@ -15,7 +15,7 @@ So given that it was time to rewrite, I wanted to try something new. I determine
 
 ### What I would've done traditionally
 
-Traditionally, I would've relied upon blog posts and the like to help me to do the migration. These are two well-known platforms, so they should have an easy migration path. While the official Astro site [has a guide](https://docs.astro.build/en/guides/migrate-to-astro/from-jekyll/) for migrating, it basically has a ["draw the owl"](https://xkcd.com/927/) approach. For example:
+I would've relied upon blog posts and the like to help me to do the migration. These are two well-known platforms, so they should have an easy migration path. While the official Astro site [has a guide](https://docs.astro.build/en/guides/migrate-to-astro/from-jekyll/) for migrating, it basically has a ["draw the owl"](https://xkcd.com/927/) approach. For example:
 
 > Much of your existing HTML page content can be converted into Astro pages
 
@@ -149,7 +149,7 @@ export async function getStaticPaths() {
 }
 ```
 
-Not terribly complicated, though I appreciated that it handled the pathing for me as well.
+Not terribly complicated, though I appreciated that it handled the pathing for me as well as linking to the files.
 
 Additionally, I mentioend needing to replace post metadata. It did two things I really liked. One: when I asked it to replace metadata, it not only did that for multiple posts, but it applied a pretty thoughtful transformation. 
 
@@ -172,7 +172,9 @@ After:
 ---
 title: Reflections on my Amazon Career
 pubDatetime: 2022-06-03T07:57:01-07:00
-description: "After four years at Amazon, I wanted to share what made Amazon successful across so many industries. Here's what I learned about engineering culture, Leadership Principles, and building customer-focused teams."
+description: "After four years at Amazon, I wanted to share what made Amazon
+successful across so many industries. Here's what I learned about engineering
+culture, Leadership Principles, and building customer-focused teams."
 tags:
   - career
   - amazon
@@ -180,9 +182,11 @@ tags:
 ---
 ```
 
-_and_ it applied this transformation to several posts.
+_and_ it applied this transformation to several posts. It's a little clickbaity,
+but it's a good starting point. And when you need to do 40+ descriptions in one go,
+it's nice to have.
 
-Lastly, Cursor's autocomplete is great and it's easy to see what's happening.
+Lastly, Cursor's autocomplete is great -- notably speedy and it's easy to see what's happening.
 For example, I started editing a post for the color is red post. It had Python shell code in it, and Cursor was able to highlight the code and provide autocomplete for the Python code.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tWZBZLbR_TA?si=4kBtY0LP2n8_IK6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -213,12 +217,16 @@ Here's a summary of the cost and times:
 
 
 ### Best Practices
+My advice:
    - Start with a working template
    - Use AI tools for repetitive tasks rather than full migration
    - Keep human oversight for important decisions
    - Test thoroughly after automated changes
+   - If migrating, don't include the old and new frameworks in the same branch. I think Aider got confused by having both Jekyll and Astro in the same branch.
 
 ### Tool Comparison
+
+Based on a very limited sample size, here's my take:
    - Aider: Better for targeted code changes, struggles with bulk operations
    - Cursor: Excelled at repetitive tasks, provided better context awareness
    - Traditional Methods: More time-consuming but predictable
@@ -227,12 +235,4 @@ Here's a summary of the cost and times:
 
 The migration showed that AI tools can significantly speed up certain aspects of web development, but they're not yet ready to handle complete migrations autonomously. Cursor proved to be the more practical tool for this specific use case, offering better control and faster iterations without the cost overhead of API calls.
 
-For developers considering a similar migration, I'd recommend:
-- Starting with a working template
-- Using AI tools for specific, repetitive tasks rather than the entire migration
-- Maintaining careful version control
-- Verifying all AI-generated changes
-
-
-AI tools like Cursor show tremendous promise for simplifying migrations, but they still require human input for critical decisions. Developers considering similar projects should approach AI as a helpful assistant rather than a complete solution.
-
+We're not yet at the point where we can just hand the entire migration to AI. The rate of improvement has been rapid, and I bet this will change in a few months. 
