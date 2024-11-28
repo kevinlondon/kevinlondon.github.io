@@ -4,9 +4,9 @@ description: "I used AI tools to migrate from Jekyll to Astro. Here's what worke
 pubDatetime: 2024-11-27T11:00:00-7:00
 ---
 
-**TL;DR**: I migrated my blog to Astro using AI tools. Aider was frustrating and burned $10 in API credits, but Cursor turned out to be surprisingly effective. The whole migration took about 3-4 hours instead of the estimated 8-10 hours manually.
+**TL;DR**: I migrated my blog to Astro using AI tools. Aider burned $10 in API credits with little progress, while Cursor helped complete the migration in 3-4 hours instead of the estimated 8-10 hours manually.
 
-I've been blogging for years, trying different platforms along the way. Started with Wordpress, moved to Jekyll (a static site generator that powers GitHub Pages), and briefly experimented with Ghost. My Jekyll setup was still using the base installation and needed an update. 
+I needed to update my blog. Over the years, I'd moved from Wordpress to Jekyll (a static site generator powering GitHub Pages), tried Ghost for a bit, and ended up back with a basic Jekyll setup. It worked, but it felt dated.
 
 I'd been hearing good things about Astro, a newer static site generator that's optimized for content-focused sites. It caught my attention for a few reasons:
 
@@ -71,22 +71,86 @@ Here's what it looked like in action:
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-        aria-label="Video demonstration of Aider migration attempt">
+        aria-label="Video demonstration of Aider migration attempt"
+        class="border border-skin-line rounded-lg shadow-md">
     </iframe>
-    <figcaption>Demonstration of Aider attempting the initial migration</figcaption>
+    <figcaption class="text-center mt-2 text-sm text-gray-600">
+        Here's what happened when I let Aider run with it - lots of dev server restarts and changes without much progress.
+    </figcaption>
 </figure>
 
-I want to be fair - it's likely I wasn't using Aider correctly, or this wasn't the right use case. Many developers love Aider, but this particular experience wasn't great.
+<div class="prose mt-4 mb-6 text-sm text-gray-700">
+    **Video Summary (0:45)**: My first try with Aider went like this:
+    1. Asked it to convert Jekyll to Astro
+    2. Got some config change suggestions
+    3. Hit a loop of dev server restarts
+    4. Couldn't get past the server output
+    
+    It's pretty clear that automated migrations need more than just AI making educated guesses.
+</div>
+
+I figured I'd try again with a smaller scope. This time, I cleaned up my branch by removing the Jekyll files and just asked Aider to handle the metadata conversion:
+
+<figure>
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/q8q_DWUOCA8?si=4kBtY0LP2n8_IK6Y" 
+        title="Aider attempting metadata updates"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        class="border border-skin-line rounded-lg shadow-md">
+    </iframe>
+    <figcaption class="text-center mt-2 text-sm text-gray-600">
+        Round two with Aider - focused just on metadata but still hit some snags.
+    </figcaption>
+</figure>
+
+<div class="prose mt-4 mb-6 text-sm text-gray-700">
+    **Video Summary (0:35)**: Second attempt, keeping it simple:
+    1. Just asked for frontmatter updates
+    2. Let it look at the Jekyll metadata
+    3. Watched it work on date formats
+    4. Tried to follow its config changes
+    
+    Even with a narrower focus, the automated approach still needed more hand-holding than I'd hoped.
+</div>
 
 ### Using Cursor
 
-Switching to Cursor was immediately better. The autocomplete was fast, the feedback loop was tight, and I could actually see what was happening. After getting used to Copilot's delay in IntelliJ, Cursor's responsiveness was shocking.
+Then I tried Cursor - what a difference. The autocomplete kicked in right away, I could see exactly what it planned to do, and the whole thing felt responsive. After dealing with Copilot's lag in IntelliJ, this felt like a real upgrade.
 
 I used Cursor with Claude 3.5 Sonnet. Here's an example of fixing the URL structure:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Y_V636f5giM?si=4kBtY0LP2n8_IK6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figure>
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/Y_V636f5giM?si=4kBtY0LP2n8_IK6Y" 
+        title="Cursor fixing URL structure"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        class="border border-skin-line rounded-lg shadow-md">
+    </iframe>
+    <figcaption class="text-center mt-2 text-sm text-gray-600">
+        Check out how quickly Cursor handles the URL conversion - no waiting around, just clean transforms from Jekyll to Astro format.
+    </figcaption>
+</figure>
 
-The URL rewrite was pretty straightforward. Here's the final code:
+<div class="prose mt-4 mb-6 text-sm text-gray-700">
+    **Video Summary (0:30)**: Quick look at URL handling:
+    1. Started with Jekyll's /posts/YYYY-MM-DD-title format
+    2. Wrote a function to pull out the dates
+    3. Built new /YYYY/MM/DD/title.html paths
+    
+    The whole thing took maybe 30 seconds - exactly the kind of quick wins I'd hoped for with AI tools.
+</div>
+
+The URL rewrite turned out pretty clean. Here's what the code looked like:
 
 ```ts
 export async function getStaticPaths() {
@@ -108,7 +172,7 @@ export async function getStaticPaths() {
 }
 ```
 
-What impressed me most was how Cursor handled metadata updates. When I asked it to "Migrate the date field and provide a description for the blog posts", it did something clever:
+But here's where Cursor & Claude excelled - the metadata updates. I asked it to "Migrate the date field and add descriptions for the blog posts" and it did something clever:
 
 Before:
 
@@ -135,27 +199,27 @@ tags:
 ---
 ```
 
-Not only did it handle the format conversion, but it wrote reasonable descriptions and added relevant tags. Sure, the descriptions are a bit formulaic, but when you need to update 40+ posts, it's a great starting point.
+Not only did it handle the format conversion, it also wrote reasonable descriptions and added relevant tags. Sure, the descriptions are a bit formulaic, but when you need to update 40+ posts, it's a great starting point.
 
 ### Cost and Time
 
-The migration took about 3-4 hours with Cursor, including updating descriptions for 43 posts, fixing URLs, and tweaking styles. I spent about $10 on Aider/Claude attempts before that, though I probably could have skipped those steps. For comparison, I estimate this would have taken 8-10 hours to do manually.
+The whole thing took about 3-4 hours with Cursor, including updating descriptions for all 43 posts, fixing URLs, and tweaking styles. I burned $10 on those early Aider experiments, but honestly - sometimes you need to try things to know what doesn't work. For comparison, doing this manually would've eaten up 8-10 hours easily.
 
-I'm happy with the results - the site is faster, looks better, and even gets better [Page Speed Insights](https://pagespeed.web.dev/) scores. Here's how it turned out:
+The end result? Better than expected! The site loads faster, looks cleaner, and even scores better on [Page Speed Insights](https://pagespeed.web.dev/). Take a look:
 
 <img src="/assets/ai-blog/blog-newhome.png" alt="Final homepage" />
 <img src="/assets/ai-blog/blog-newpost.png" alt="Final post" />
 
 ### Lessons Learned
 
-If you're considering a similar migration, start with a working template. I made the mistake of having both Jekyll and Astro files in the same branch, which confused the AI tools. Keep your migrations clean and focused.
+If you're thinking about trying something similar, here's what I learned: start with a clean template / baseline. I made the rookie mistake of keeping Jekyll and Astro files in the same branch - turns out AI tools don't deal well with that kind of ambiguity.
 
-AI tools excel at repetitive tasks like updating frontmatter or reformatting code. They're not great at making architectural decisions or handling complete migrations. Let them handle the boring parts while you focus on the important decisions.
+These AI tools shine at the repetitive stuff - updating frontmatter, reformatting code, that sort of thing. But don't expect them to make big architectural decisions. Let them handle the boring parts while you focus on the important choices.
 
-Each tool has its strengths. Aider is great for targeted code changes but struggles with bulk operations. Cursor shines at repetitive tasks and provides better context awareness. Traditional methods take longer but are more predictable.
+Each tool has its sweet spot. Aider works great for targeted changes when you know exactly what you want. Cursor excels at repetitive tasks and keeps you in the loop. And sometimes the manual approach still makes sense - it just takes longer.
 
 ### Looking Forward
 
-The pace of improvement in AI tools is remarkable. While they're not ready to handle complete migrations yet, they're already incredibly useful for speeding up repetitive tasks. I wouldn't be surprised if, in a few months, this entire process could be automated.
+The speed of AI tool improvements has impressed me. While they can't handle a full migration by themselves yet, they already save tons of time on repetitive tasks. Give it a few months and maybe this whole process will just need a single prompt.
 
-For now, though, the sweet spot is using AI to accelerate specific tasks while maintaining human oversight of the overall migration. And hey, at least we don't have to write 43 blog post descriptions by hand anymore.
+For now though, the sweet spot seems clear: let AI handle the tedious parts while you keep an eye on the big picture. And hey - at least we'll never have to write 43 blog descriptions by hand again.
