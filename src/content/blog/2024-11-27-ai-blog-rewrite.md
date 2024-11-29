@@ -1,5 +1,5 @@
 ---
-title: "Jekyll to Astro: An AI-Assisted Migration"
+title: "Jekyll to Astro: an AI-assisted migration"
 description: "How I used AI tools to migrate 43 blog posts to Astro, with real examples and lessons from both successful and failed approaches"
 pubDatetime: 2024-11-28T11:00:00-7:00
 ---
@@ -11,7 +11,7 @@ My Jekyll blog worked fine but felt a bit dated. I decided to switch to Astro af
 <img src="/assets/ai-blog/blog-home.png" alt="Blog homepage and post list" width="560" />
 <img src="/assets/ai-blog/blog-post.png" alt="Blog post" width="560" />
 
-### The Traditional Approach
+### The traditional approach
 
 I started with the [Astro migration guide](https://docs.astro.build/en/guides/migrate-to-astro/from-jekyll/). It's helpful but leaves a lot of details up to you. The community filled in some gaps with guides about [migration trade-offs](https://www.kooslooijesteijn.net/blog/jekyll-or-astro-which-is-better-static-site-generator) and [URL structures](https://humanwhocodes.com/blog/2023/03/astro-jekyll-blog-post-url/). Still, it looked like a lot of manual work ahead. 
 
@@ -154,7 +154,7 @@ tags:
 
 Not only did it handle the format conversion, it also wrote reasonable descriptions and added relevant tags. Sure, the descriptions are a bit formulaic, but when you need to update 40+ posts, it's a great starting point.
 
-### Cost and Time
+### Cost and time
 
 The whole thing took about 3-4 hours with Cursor. In that time, I:
 - Moved all 43 posts to the new format
@@ -178,14 +178,14 @@ And the new site:
 <img src="/assets/ai-blog/pagespeed-new-mobile.png" alt="New pagespeed for mobile" width="560" />
 <img src="/assets/ai-blog/pagespeed-new-desktop.png" alt="New pagespeed for desktop" width="560" />
 
-### Lessons Learned
+### Lessons learned
 
 A few things I learned along the way:
 - Keep your branches clean. Mixing Jekyll and Astro files confused the AI tools
 - Let the AI handle the repetitive stuff - it's great at that
 - Try different tools. Cursor worked better for me than Aider, but your mileage may vary
 
-### Looking Forward
+### Looking forward
 
 AI tools aren't quite ready to handle full migrations on their own, but they're amazing at cutting down repetitive work. The way they're improving, who knows - maybe in a few months this whole thing could be done with one prompt. For now though, the sweet spot is letting AI handle the mechanical stuff while you keep an eye on the overall direction.
 
