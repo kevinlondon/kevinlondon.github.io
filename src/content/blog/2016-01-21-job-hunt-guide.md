@@ -65,13 +65,8 @@ Sites I use to find new opportunities:
   companies through here and did not find any good fits.
 * **[Stack Overflow Careers](http://careers.stackoverflow.com/)**: Good
     and easy to browse. Stack Overflow supports itself through its career page.
-* **[Triplebyte](https://triplebyte.com/iv/ccFNsAA/cp)**: A startup / recruiting company. If
-    you pass their interviews, they help you apply to tech companies.
-    That currently means you can bypass the application and initial phone screen.
-    Triplebyte offers a low-risk opportunity to prepare for your technical
-    interviews. This is a referral link.
-* **[Hired](https://hired.com/x/4egcf)**: Similar to Triplebyte. Apply once, get
-    offers from a few companies. This is a referral link too.
+
+[E: 2024 - removed Hired and Triplebyte]
 
 If you prefer to work remote:
 
