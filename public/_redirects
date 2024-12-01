@@ -1,0 +1,6 @@
+# Redirect old Jekyll URLs to new Astro format
+/posts/:year-:month-:day-:slug.html /:year/:month/:day/:slug 301
+/:year/:month/:day/:slug.html /:year/:month/:day/:slug 301
+
+# Handle both potential old formats
+/20:year/:month/:day/:slug.html /:year/:month/:day/:slug 301 
