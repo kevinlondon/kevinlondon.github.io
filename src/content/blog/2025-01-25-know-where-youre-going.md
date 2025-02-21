@@ -1,74 +1,77 @@
 ---
-title: "Find your path and stay open to change"
-description: "A short story of an experience I had in film school and how it informed my approach moving forward."
-pubDatetime: 2025-01-25T13:39:00-7:00
-isDraft: true
+title: "Find your path and stay open to change" description: "A short story of
+an experience I had in film school and how it informed my approach moving
+forward." pubDatetime: 2025-01-25T13:39:00-7:00 isDraft: true
 ---
 
 I have had a bit of a strange career history. 
 
-In community college, I studied computer science and photography before shifting
-into film production because I was drawn to visual storytelling. I wanted to
-become a cinematographer.  I made a deal with myself: if applying to film school
-didn’t work out, I’d still find a way into the industry. I wasn't accepted, so
-I embraced Plan B.
+## Taking an Alternate Route
 
-I moved to LA with just enough savings from restaurant work to have a temporary
-safety net. Like other hopeful filmmakers at the time, I started with unpaid Craigslist
-gigs. My first break came as a production assistant on a feature film that paid
-$75 a week -— barely enough for gas in LA. In my first week on that set, I gravitated to the
-lighting department and asked if I could work more closely with them. The Best
-Boy Electric took me under his wing, and I learned a great deal from working
-alongside him.
+In community college, I studied computer science and photography before getting
+hooked on visual storytelling. I decided I wanted to be a cinematographer. When
+film school rejected me initially, I took an alternate route: move to LA and try
+to make it in the film industry anyway.
 
-Those early gigs—small movies, ad shoots, and a few Hallmark films—didn’t pay much, but they taught me the basics of working on set.
+I arrived in LA with restaurant-job savings as my safety net. Like many film
+hopefuls, I applied to unpaid Craigslist gigs. My first real break was as a
+production assistant on a feature film. It paid $75 a week – barely enough for
+gas. During my first week on set, I connected with the lighting crew and asked
+to shadow them. The Best Boy Electric took me under his wing, and suddenly I
+found my niche.
 
-Halfway through this year, I decided I would apply to film school again for the coming year.
-If things were going well, I would turn down the opportunity to go back to school if I got in.
-This time I did manage to get in! 
+Over the next year, I built experience working on small films, commercials, and
+Hallmark movies (which I loved—efficient, predictable, and well-run). I
+reapplied to film school and got in.
 
-When I started in film school, I had a huge advantage - I had worked professionally in the film industry
-for a year prior to starting in film school. That's not to say I knew everything about lighting, camera, etc,
-but that it gave me a slight edge on how film sets worked, how to get things done, and how to work with a crew.
-More importantly, I knew *what I wanted*. I wanted to be a Cinematgrapher, and at this point I had 
-experience in the lighting and grip department. In the beginning, I was able to establish a kind of 
-niche for myself on these sets where folks knew that I wanted to be a Cinematographer and had this particular skill set.
-They eventually started to call on me for that, which built up a bit of momentum and helped me extend
-my advantage and get to know more folks in the film school.
+## Finding My Focus
 
-So why share this story? It's important to know what you want and where you're heading. 
-In film school, those without clear goals often got typecast into whatever others saw them doing well.
-If you're always the script supervisor but want to write, how much writing experience are you getting?
-If you don't pick what you want, someone else will choose for you.
+When I started film school, I had an advantage: actual set experience and, more
+importantly, clarity about what I wanted. I'd worked lighting and grip
+departments, and I wanted to be a cinematographer. Because I had a clear focus,
+I found more opportunities.
 
-Basically everyone wanted ot be a director or writer. Not many people set out to be a sound person, a cinematographer, or any of the other myriad roles on set. Establishing that niche help sets you apart, and more importantly gives you an opportunity to work towards what you actually want to do rather than what people think you may be good at, or how they see you.
+Everyone wanted to direct or write. Few people deliberately chose paths like
+sound, cinematography, or the dozen other essential roles. Having a specific
+focus helped me find consistent work in the area where I had interest, rather
+than bouncing between whatever roles others thought I should fill.
 
-This applies professionally as well. I'm in software now (happily!) and have
-been a software engineer for 12+ years. In one-on-ones, I ask folks
-what they want to do, where they want to grow, what they're interested in doing more of.
-It's a hard question! Do you want to focus on infrastructure? AI? Front-end? 
-If you're interested in backend, do you care more about a particular language? Domain?
-Do you want to become a manager? These require real soul-searching.
+In film school, those without clear goals often got typecast into whatever roles
+others thought they fit best. If your passion is directing but you keep getting
+asked to do other roles (even valuable ones) how much directing experience will
+you actually get? If you don't assert what you want, someone else will make
+those choices for you.
 
+This principle carried over into software engineering, where I've now worked for
+12+ years. In one-on-ones, I ask folks what they want to focus on.
+Infrastructure? AI? Front-end? A specific language? Management track? It's hard
+to answer and, I think, essential. 
 
+## When Your Path Changes
 
-OK, I actually have a coda to this. It may not surprise you that "what I want" has changed dramatically over time. I'm obviously not a cinematographer now, and I'm not a colorist either. So what happened? 
+Ironically, my own "what I want" has changed dramatically over time. I'm not a
+cinematographer. How did that happen?
 
-I have a post with more background in [My Path to Software Engineering](https://www.kevinlondon.com/2019/12/09/my-path-to-engineering/), but I want to zoom in one on example:
->In my senior year, I had the opportunity to intern at Light Iron, which was, at the time, a small start-up post-production facility that specialized in color correction. It had 9 employees when I joined (including me) and most of them were founders. . . .
+My senior year, I interned at Light Iron, a post-production startup specializing
+in color correction. I told them I wanted to become a colorist, who partners
+with a cinematographer to polish the film's finished look. They started training
+me on the standard path – first becoming a Conform Artist (essentially a
+colorist's assistant who assembles the pieces for color work).
 
-> After graduation, I asked the Chief Technology Officer if I could transition into a more technical role and he agreed. 
+As I started training, I hit a snag: I found it boring. It's challenging work –
+like an intricate puzzle – but it just didn't click for me. Meanwhile, I'd been
+helping their CTO with network racks, computer fixes, and firmware flashing. I
+found myself drawn to those tasks.
 
-There's some backstory I initially didn't share here! I had started learning how to be a colorist.,
-So I had been very clear that I wanted to be a colorist when I joined, and indeed that is what I wanted at the time. So they started to train me to be a colorist to achieve that goal. 
+I approached the CTO and simply said, "I want to work with you and do more of
+what you do." Thankfully, he agreed. Around this time, I'd been reading Hacker
+News and getting increasingly interested in tech. His mentorship changed my
+trajectory completely.
 
- And the process to do that is to learn to be a Conform Artist. Basically, if a colorist is like the person who applies Photoshop to a film, the Conform Artist is kind of like their assistant or editor. They work with editorial to take the finished cut of a movie, take the original source material, and marry them together. If Visual Effects delivers some more shots or changes to existing shots, the conform artist cuts those in too.
-
- As Is tarte dtraining to be a conform artist, I had a big challenge. I found it... boring? It's a challegning job, and it is pleasing - like putting together a puzzle. But for me personally, it wasn't what I wound up wanting. So I spoke to the CTO about a budding interest I had in technical areas, I had been working with him to set up the network racks, fix small computer issues for the staff, asist with flashing custom firmware on things, and basically I said to him "I want to work with you and do more of what you do", which I'm still eternally grateful that he said yes. At the time, (late 2012, early 2013) I had been reading hacker news and enjoyed learning about tech, so I was grateful that he was willing to put me under his wing.
-
-The lesson here? It's vital to know what you want - but it's also okay to change your mind
-as you grow and learn. Sometimes the path that leads us in one direction can shift and
-guide us somewhere even better.
+Know what you want – it gives you direction and focus – but stay open to
+changing your mind as you grow. Sometimes the path you start on leads somewhere
+unexpected but better suited to who you're becoming. It's okay to change course,
+especially if you're excited or curious about the new area and intentional.
 
 
 #film #career
