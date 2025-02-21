@@ -15,8 +15,9 @@ I have had a bit of a strange career history. Looking back, I think it's a story
 
 In community college, I studied computer science and photography before getting
 hooked on visual storytelling. I decided I wanted to be a cinematographer. When
-film school rejected me initially, I took an alternate route: I moved to LA and
-tried to make it in the film industry anyway.
+my film school applications didn’t work out, I took
+an alternate route: I moved to LA and tried to make it in the film industry
+anyway.
 
 I arrived in LA with restaurant-job savings as my safety net. Like many film
 hopefuls, I applied to unpaid Craigslist gigs. My first real break was as a
