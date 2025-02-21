@@ -3,6 +3,10 @@ title: "Know where you're going (and be open to change)"
 description: "How having clear direction—while remaining open to change—shaped my journey from film school to software engineering, and why both focus and flexibility matter in any career."
 pubDatetime: 2025-02-20T22:30:00-7:00 
 isDraft: false
+tags:
+- film 
+- career 
+- software
 ---
 
 I have had a bit of a strange career history. Looking back, I think it's a story about the importance of having clear direction, and being willing to change course when something better comes along.
@@ -87,5 +91,3 @@ growing curiosity and excitement about technology.
 Your career path doesn't have to be a straight line. What matters is staying
 true to your interests while remaining open to unexpected opportunities along
 the way.
-
-#film #career #software
