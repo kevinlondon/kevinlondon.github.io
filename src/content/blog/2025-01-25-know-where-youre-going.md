@@ -1,11 +1,11 @@
 ---
-title: "Find your path and stay open to change" 
-description: "A short story on my unexpected career journey from film school to software engineering, and how staying open to change led to new opportunities." 
+title: "Know where you're going (and be open to change)" 
+description: "How having clear direction—while remaining open to change—shaped my journey from film school to software engineering, and why both focus and flexibility matter in any career."
 pubDatetime: 2025-02-20T22:30:00-7:00 
 isDraft: false
 ---
 
-I have had a bit of a strange career history. 
+I have had a bit of a strange career history. Looking back, I think it's a story about the importance of having clear direction, and being willing to change course when something better comes along.
 
 ## Taking an Alternate Route
 
@@ -71,8 +71,21 @@ I approached the CTO and simply said, "I want to work with you and do more of
 what you do." Thankfully, he agreed. His mentorship changed my
 trajectory completely.
 
-## Final Thoughts
+## Learning to Embrace Change
 
-Know what you want — it gives you direction and focus — but stay open to changing your mind as you grow. Sometimes the path you start on leads somewhere unexpected but more fulfilling. It's okay to change course, especially if you're excited or curious about the new area and intentional about where you want to go next.
+Know what you want — it gives you direction and focus — but stay open to
+changing your mind as you grow. Sometimes the path you start on leads somewhere
+unexpected but more fulfilling. It's okay to change course, especially when you
+find yourself genuinely excited about a new direction.
 
-#film #career
+The key is intentionality: whether you're staying the course or pivoting to
+something new, make it a conscious choice rather than letting circumstances or
+others choose for you. My journey from cinematography to software engineering
+wasn't a failure of my original plan — it was a deliberate choice to follow my
+growing curiosity and excitement about technology.
+
+Your career path doesn't have to be a straight line. What matters is staying
+true to your interests while remaining open to unexpected opportunities along
+the way.
+
+#film #career #software
