@@ -65,11 +65,13 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
     year: "numeric",
     month: "short",
     day: "numeric",
+    timeZone: "America/Los_Angeles",
   });
 
   const time = myDatetime.toLocaleTimeString(LOCALE.langTag, {
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: "America/Los_Angeles",
   });
 
   return (

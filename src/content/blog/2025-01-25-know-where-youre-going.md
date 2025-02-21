@@ -1,7 +1,7 @@
 ---
 title: "Know where you're going (and be open to change)" 
 description: "How having clear direction—while remaining open to change—shaped my journey from film school to software engineering, and why both focus and flexibility matter in any career."
-pubDatetime: 2025-02-20T22:30:00-7:00 
+pubDatetime: 2025-02-20T22:30:00-8:00 
 isDraft: false
 tags:
 - film 
