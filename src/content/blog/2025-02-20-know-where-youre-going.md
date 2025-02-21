@@ -9,7 +9,7 @@ tags:
 - software
 ---
 
-I have had a bit of a strange career history. Looking back, I think it's a story about the importance of having clear direction, and being willing to change course when something better comes along.
+I have had a bit of a strange career history. Looking back, I think it's a story about the importance of having clear direction and being willing to change course when something better comes along.
 
 ## Taking an Alternate Route
 
@@ -56,7 +56,7 @@ It's hard to answer, but I think it's essential.
 
 ## When Your Path Changes
 
-Ironically, my own "what I want" has changed dramatically over time. While
+Ironically, my 'what I want' has changed dramatically over time. While
 having a direction is important, sometimes the best opportunities come when you
 allow yourself to pivot. I'm not a cinematographer. What happened? 
 
@@ -80,15 +80,15 @@ trajectory completely.
 
 Know what you want — it gives you direction and focus — but stay open to
 changing your mind as you grow. Sometimes the path you start on leads somewhere
-unexpected but more fulfilling. It's okay to change course, especially when you
-find yourself genuinely excited about a new direction.
+unexpected but more fulfilling. It's okay to change direction, especially when
+you find yourself genuinely excited about a new opportunity.
 
-The key is intentionality: whether you're staying the course or pivoting to
-something new, make it a conscious choice rather than letting circumstances or
-others choose for you. My journey from cinematography to software engineering
-wasn't a failure of my original plan — it was a deliberate choice to follow my
-growing curiosity and excitement about technology.
+The key is intentionality: whether you're sticking with your current path or
+shifting to something new, make it a conscious choice rather than letting
+circumstances or others decide for you. My journey from cinematography to
+software engineering wasn't a failure of my original plan — I made a deliberate
+choice to pursue a growing curiosity about technology.
 
-Your career path doesn't have to be a straight line. What matters is staying
-true to your interests while remaining open to unexpected opportunities along
+Your career doesn't have to follow a straight line. What matters is staying true
+to your interests while remaining receptive to unexpected opportunities along
 the way.
