@@ -96,11 +96,10 @@ Nothing is wasted, even when the path changes completely.  My film background
 still plays a role in my career in software engineering today, though I'm not
 directly applying it anymore. For example, success on a film set depends on
 anticipating needs and communicating with colleagues, which apply in software
-development as well. 
-
-As a cinematographer, I had to plan details including lighting, crew, gear,
-scheduling, and logistics before production began.  That same structured
-approach helps me execute projects in software development today.
+development as well.  As a cinematographer, I had to plan details including
+lighting, crew, gear, scheduling, and logistics before production began.  That
+same structured approach helps me execute projects in software development
+today.
 
 In some ways, my career came full circle to those early computer science classes
 I took before film captured my attention. Sometimes our journeys loop back to
