@@ -72,9 +72,12 @@ helping their CTO with network racks, computer fixes, and firmware flashing. I
 found myself drawn to those tasks. Around this time, I'd been reading Hacker
 News and getting increasingly interested in tech. 
 
-I approached the CTO and simply said, "I want to work with you and do more of
-what you do." Thankfully, he agreed. His mentorship changed my
-trajectory completely.
+I approached the CTO and said, "I want to work with you and do more of what you
+do." He shared a story from his career about how he once asked himself what
+skills he wanted to develop over the next five years.  He asked me what I wanted
+and it helped me think more deeply about my long-term goals.
+When I confirmed that I wanted to switch to a more technical track and
+work with him, he agreed and his mentorship helped set me on my current path.
 
 ## Learning to Embrace Change
 
@@ -89,6 +92,19 @@ circumstances or others decide for you. My journey from cinematography to
 software engineering wasn't a failure of my original plan — I made a deliberate
 choice to pursue a growing curiosity about technology.
 
-Your career doesn't have to follow a straight line. What matters is staying true
-to your interests while remaining receptive to unexpected opportunities along
-the way.
+Nothing is wasted, even when the path changes completely.  My film background
+still plays a role in my career in software engineering today, though I'm not
+directly applying it anymore. For example, success on a film set depends on
+anticipating needs and communicating with colleagues, which apply in software
+development as well. 
+
+As a cinematographer, I had to plan details including lighting, crew, gear,
+scheduling, and logistics before production began.  That same structured
+approach helps me execute projects in software development today.
+
+In some ways, my career came full circle to those early computer science classes
+I took before film captured my attention. Sometimes our journeys loop back to
+earlier interests, but with a different perspective from the detours we've taken.
+
+Your career doesn't have to follow a straight line. The best paths may be
+unexpected.
