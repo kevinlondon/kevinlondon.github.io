@@ -30,7 +30,7 @@ const { page, tag, tagName } = Astro.props;
     <ul>
       {
         page.data.map(post => (
-          <Card href={formatPostPath(post)} frontmatter={post.data} />
+          <Card href={formatPostPath(post.slug)} frontmatter={post.data} />
         ))
       }
     </ul>

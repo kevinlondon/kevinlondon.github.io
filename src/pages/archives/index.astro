@@ -7,6 +7,7 @@ import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import getPostsByGroupCondition from "@utils/getPostsByGroupCondition";
+import { formatPostPath } from "@utils/formatPostPath";
 
 // Redirect to 404 page if `showArchives` config is false
 if (!SITE.showArchives) {
@@ -33,7 +34,7 @@ const MonthMap: Record<string, string> = {
 
 <Layout title={`Archives | ${SITE.title}`}>
   <Header activeNav="archives" />
-  <Main pageTitle="Archives" pageDesc="All the articles I've archived.">
+  <Main pageTitle="Archives" pageDesc="All the articles I've posted.">
     {
       Object.entries(
         getPostsByGroupCondition(posts, post =>
@@ -60,7 +61,7 @@ const MonthMap: Record<string, string> = {
                   </div>
                   <ul>
                     {monthGroup.map(({ data, slug }) => (
-                      <Card href={`/posts/${slug}`} frontmatter={data} />
+                      <Card href={`${formatPostPath(slug)}`} frontmatter={data} />
                     ))}
                   </ul>
                 </div>
