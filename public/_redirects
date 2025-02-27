@@ -4,3 +4,4 @@
 
 # Handle both potential old formats
 /20:year/:month/:day/:slug.html /:year/:month/:day/:slug 301 
+/2015/05/07/code-review-best-practices/	/2015/05/05/code-review-best-practices/ 301
