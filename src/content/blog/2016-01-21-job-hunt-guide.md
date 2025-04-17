@@ -5,6 +5,7 @@ description: "How to land the right tech job for you"
 tags:
   - job hunting
   - process
+  - interviews
 ---
 
 Job hunting can feel like shopping for a new car. At first, it's exciting. Over

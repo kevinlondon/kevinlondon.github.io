@@ -12,11 +12,9 @@ some functions in Python can be dangerous if you're not aware of their risks.
 In this installment, we'll cover deserializing data with pickle and yaml and 
 information leakage.
 
-Pickle and friends
-------------------------------------------
+## Pickle and friends
 
-Why it's useful
-==================
+### Why it's useful
 
 [`pickle`](https://docs.python.org/3/library/pickle.html) enables you to store
 state and Python objects to disk so that you can later restore them. Pickle can
@@ -27,8 +25,7 @@ In the past, I've used pickle to support pause and resume functionality for
 large file transfers. I saved the progress to a pickle file and then, 
 on resume, picked up where it left off and removed the pickle.
 
-Why it's dangerous
-=====================
+### Why it's dangerous
 
 Pickle has the same weaknesses as `exec` and `eval`
 , which we covered in [part 1](http://kevinlondon.com/2015/07/26/dangerous-python-functions.html).
@@ -52,8 +49,7 @@ used `pickle` before version 1.6 to store session information. There's a
 about how that can go wrong.
 
 
-A dangerous example
-===================
+### A dangerous example
 
 I'm going to use an example from Lincoln Loop's 
 [Playing with Pickle Security](https://lincolnloop.com/blog/playing-pickle-security/)
@@ -92,8 +88,7 @@ In this case, we only wanted to list the files in the directory using the
 `ls` command. We could have used almost any shell command.
 
 
-What to use instead
-===================
+### What to use instead
 
 You could use [`json`](https://docs.python.org/3/library/json.html) to
 serialize data or, if you must, `yaml`. If you use `yaml`, please read the
@@ -103,25 +98,21 @@ If you're using Celery or Django, you should upgrade to a version that
 does not use `pickle` for serialization.
 
 
-If you must use it...
-=======================
+### If you must use it...
 
 Be careful with your input! Never trust a pickle that has gone over
 the network or come from someone else. It's too easy to exploit.
 
 
-Additional references
-=======================
+### Additional references
 
 * [Arbitrary code execution with Python pickles](https://www.cs.jhu.edu/~s/musings/pickle.html)
 * [Sour Pickles](https://media.blackhat.com/bh-us-11/Slaviero/BH_US_11_Slaviero_Sour_Pickles_WP.pdf)
 
 
-Loading YAMLs
-------------------------
+## Loading YAMLs
 
-Why it's useful
-==================
+### Why it's useful
 
 YAML files offer another option for serializing and deserializing data.  They
 are useful for storing configuration or other immutable values.  I have used
@@ -133,16 +124,14 @@ configuration differs depending upon the environment we're deploying to
 does not live in the standard library but seems like the
 most popular way to parse YAMLs in Python.
 
-Why it's dangerous
-=====================
+### Why it's dangerous
 
 The simplest way to load a YAML file is with `yaml.load()`.  Unfortunately,
 `yaml.load()` is an unsafe operation that, you guessed it, enables maliciously
 crafted files to execute arbitrary code on the host machine. 
 
 
-A dangerous example
-===================
+### A dangerous example
 
 As with pickle, we'll setup an example where we read the files in a directory
 on the host machine.
@@ -170,8 +159,7 @@ that we discussed in
 [part 1](http://kevinlondon.com/2015/07/26/dangerous-python-functions.html).
 
 
-What to use instead
-===================
+### What to use instead
 
 The `yaml` module has a safe way to load yaml files: `yaml.safe_load()`.
 I wish the package had the safe method as the default, rather than the
@@ -185,28 +173,24 @@ As Ned Batchelder says:
 > have to decide to do the dangerous thing. 
 
 
-If you must use it...
-=======================
+### If you must use it...
 
 Use `yaml.safe_load()`. If you *must* use `yaml.load()` directly, then you
 should be careful about which files you load and trust.
 
 
-Additional references
-=======================
+### Additional references
 
 * [War is Peace](http://nedbatchelder.com/blog/201302/war_is_peace.html)
 * [Rails' Remote Code Execution Vulnerability Explained](http://blog.codeclimate.com/blog/2013/01/10/rails-remote-code-execution-vulnerability-explained/)
 
 
-A few more dangers
-------------------
+## A few more dangers
 
 I wanted to briefly touch on a few other things to keep in mind while writing
 Python code.
 
-SQL Injection
-=============
+### SQL Injection
 
 SQL Injection is basically untrusted input meets your database. All the same
 risks that we talked about with untrusted input above also apply here. 
@@ -241,8 +225,7 @@ one in [Django](https://www.djangoproject.com/) or
 * [OWASP SQL Injection](https://www.owasp.org/index.php/SQL_Injection)
 
 
-Information Leakage
-===================
+### Information Leakage
 
 The `print` function and `logging` module are useful but potentially risky.
 Ideally, any log files that we write have their permissions configured to allow
@@ -258,8 +241,7 @@ that I add this section.
 * [Good logging practice in Python](http://victorlin.me/posts/2012/08/26/good-logging-practice-in-python)
 
 
-In Conclusion
--------------
+## In Conclusion
 
 In this series, we've covered a few different ways in which Python functions
 can be dangerous. Python's documentation is good about letting you know when

@@ -191,6 +191,6 @@ increase your chances of success.
 If you'd like to read more posts about interviewing, I wrote
 [How to Land the Right Tech Job for You](https://www.kevinlondon.com/2016/01/21/job-hunt-guide) and, more
 recently,
-[Senior Engineer Job Search Preparation](https://www.kevinlondon.com/2023/05/02/senior-engineer-job-search-preparation).
+[Senior Engineer Job Search Preparation](https://www.kevinlondon.com/2023/05/01/senior-engineer-job-search-preparation).
 
 Good luck!
