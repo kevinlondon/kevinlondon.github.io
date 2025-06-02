@@ -9,49 +9,32 @@ tags:
 - meta
 ---
 
-Last weekend I spent $20 on Cursor credits and built a game about software development. The weird part? Building the game felt more like playing a game than most games I've actually played recently.
+I don't think of myself as a game developer - because I've never really made a
+game. As a kid, I made some games in the Starcraft and Warcraft III map engines.
+I'd often provide feedback to friends making their own games. I took a game dev
+class in community college and built an insane 3D Breakout where you play as the
+paddle and have the POV as the paddle.
 
-I kept thinking about this while working on "Velocity," which is a sprint-based game where you manage tasks and make tech tree investments. The irony wasn't lost on me—I was building a game about building software while using AI tools that made the building process feel like a game. The meta-layers kept stacking.
+So yeah, not a game developer.
 
-## The feedback loop
+I have enjoyed games for a while though. And in particular, I love game demos. Small proofs of concept, little commitment. Just a fun way to go through some example. I'd love those game demo disks of the late 90s where you'd have 40-50 demos, and most of them were insanely bad. So yeah, novelty is a good thing.
 
-When I ask Cursor to "create a task card component with click handlers" and watch it generate exactly what I need, there's a satisfying hit. When the component works on the first try, it feels like landing a combo in a fighting game.
+This weekend, I decided to start trying to make my own game.
 
-Traditional games give you: action → result → progress → action. AI-assisted development creates a similar loop: prompt → code → iterate → prompt. Each working feature unlocks new possibilities. Getting the basic game loop running opens up balancing decisions. Implementing the tech tree leads to questions about player agency.
+In the past, how I'd approach this was:
+1. Choose some game engine based on what people seem to like at the time
+2. Read through tutorials, and make a game over the course of a week or so, mostly working at night
+3. Completely lose interest in the original thing I wanted to make by the time I had sufficient preparation to make it.
 
-The progression system is there too. The complexity scales naturally, just like a well-designed game.
+With that loop in mind, I decided to try this a different way, this time instead starting with the idea that I could leverage some of the advanced in AI dev, particularly Cursor and Claude 4.
 
-## Different value proposition
+Claude 4 has gotten much better than Claude 3. Like - much better. It has its own tool usage, it runs its own tests. So with its new-found autonomy, it makes a good partner for building the game. 
 
-Twenty dollars used to buy you a finished product—maybe 10-20 hours of gameplay. That same $20 for Cursor got me:
+I started out with the hypothesis  that investing $20 in Cursor for Claude was kind of like what I might spend on some random game. And, interestingly, that is how it felt!
 
-- 20+ hours of development experience
-- A working prototype at the end
-- Skills that transfer to future projects
-- The satisfaction of creating something from nothing
+Granted, the feedback loop is longer. 
 
-It's like buying a game that comes with mod tools, except the mod tools are the game. The line between playing and making has blurred.
 
-## Collaborative AI
+Fill in the middle section with feedback about what I iterated on, how I started with the game dev itself, including ideation, the feedback loop, and ultimately building and shipping a thing.
 
-Tools like godot-mcp take this further. The AI can manage its own launch sequences, update dependencies, and orchestrate workflows. I've had moments where I'll ask Cursor to implement a feature, and it suggests architectural improvements I hadn't considered.
-
-At some point, you're not really "using" the AI anymore—you're collaborating with it. It becomes less like a tool and more like a co-player who happens to be really good at the technical execution while you focus on the design decisions.
-
-## Removing friction
-
-Building Velocity with AI assistance has been genuinely fun in a way that coding projects usually aren't for me. The rapid iteration creates an addictive flow state. I'll think "what if tasks had different risk/reward profiles?" and twenty minutes later I'm playtesting that exact mechanic.
-
-The traditional friction points—setting up boilerplate, debugging syntax errors, reading documentation—mostly disappear. What remains is the pure creative problem-solving that drew me to programming in the first place, but with the gratification timeline compressed from hours to minutes.
-
-This changes the barrier to entry for game development. The traditional path required years of learning engines, programming languages, art pipelines, and sound design. Now you can start with an idea and have something playable in hours.
-
-More than that, the process of building becomes accessible as entertainment. You don't need to be a "game developer" to enjoy game development. The AI handles enough of the technical complexity that the creative and design challenges become the primary loop.
-
-## Looking ahead
-
-I suspect we're in the early stages of this shift. The AI tools will get better, the feedback loops will get tighter, and the line between consumption and creation will continue to blur.
-
-Maybe in a year, the idea of passively consuming entertainment will feel as outdated as going to a video rental store. If you're curious about trying it yourself, the barrier to entry has never been lower. Grab $20 worth of AI credits and see what you can build in a weekend.
-
-For now, I'm enjoying the game of making games. And who knows? By the time you finish reading this, the tools might be even better than when I started writing it. 
+I don't know exactly how I feel about this now that I've done it. It is fun, and it takes real artistry to make a game, most of which I've sidestepped. I think as AI takes a larger role in what we do, it also means that we have to be better collaborators and wear a more critical hat when providing feedback. Tastemaking becomes significantly more important if we're doing less of the active contribtuion. Telling it what we want or don't want for example.
