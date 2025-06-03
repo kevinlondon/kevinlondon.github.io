@@ -1,7 +1,7 @@
 ---
 title: "I made a game with AI and I don't know how to feel about it"
 description: "What happens when the $20 you spend on Cursor becomes like buying a game where the gameplay is building the game itself? Exploring the meta-loop of AI-assisted game development."
-pubDatetime: 2025-01-15T10:00:00-8:00
+pubDatetime: 2025-06-02T18:00:00-8:00
 tags:
 - gamedev
 - ai
@@ -9,7 +9,7 @@ tags:
 - meta
 ---
 
-A few days ago, I inexplicably hurt my toe (probably from cycling) and had to rest over the weekend. With all this new freetime, and no kid (yet!), I played some Monster Train 2 on the first day. On the second day, I got a bit bored and decided to look at making a game instead of playing one, since it felt like we were getting further along in the AI space. 
+A few days ago, I inexplicably hurt my toe (probably from cycling) and had to rest over the weekend. With all this unexpected freetime, and no kid (yet!), I played some Monster Train 2 on the first day. On the second day, I got a bit bored and decided to look at making a game instead of playing one, since it felt like we were getting further along in the AI space. 
 
 While I am a professional software engineer, I don't think of myself as a game developer - because I've never really made a
 game. As a kid, I made some games in the Starcraft and Warcraft III map engines.
@@ -71,9 +71,17 @@ Also, interestingly, it had no idea how to structure the code, so it tried to ma
 
 The next day, when I woke up, I realized that probably I'm incurring a lot of additional complexity making the app in Godot when it could be essentially a Javascript / HTML app instead. 
 
-So I re-wrote it as a Javascript game in a single prompt, and then swapped to Vue.js in another. Probably I should've been in Javascript land the whole time. 
+So I re-wrote it as a Javascript game **in a single prompt**. It just... worked? Without even a JS structure. I know it's simple, but still? 
 
-For JS dev, I added an MCP Server as well, but, for me, it didn't want to use it as much. Ultimately, that's OK, I'm happy just leaving it as it is. 
+<rewritten image demo>
+
+Then swapped to Vue.js in another. 
+
+<another example>
+
+Probably I should've been in Javascript land the whole time. 
+
+For JS dev, I added a browser MCP Server as well, but, for me, it didn't want to use it as much. Ultimately, that's OK, I'm happy just leaving it as it is. 
 
 After swapping to JS, it ran much more quickly and iteration went more smoothly. 
 
