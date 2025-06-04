@@ -9,49 +9,46 @@ tags:
 - meta
 ---
 
-I spent $20 on Cursor to build a game and realized the actual game I got out of it was the meta-game where the gameplay is building the game itself.
+I spent $20 on Cursor to build a game and realized the actual game was the gameplay of building the game itself.
 
-A few days ago, I inexplicably hurt my toe (probably from cycling) and had to rest over the weekend. With all this unexpected freetime, and no kid (yet!), I played some Monster Train 2 on the first day. On the second day, I got a bit bored and decided to look at making a game instead of playing one, since it felt like we were getting further along in the AI space. 
+A few days ago, I inexplicably hurt my toe (probably from cycling) and had to rest over the weekend. With all this unexpected freetime, I played games on the first day. On the second day, I got bored and decided try making a game instead of playing one.
 
-While I am a professional software engineer, I don't think of myself as a game developer - because I've never really made a
-game. As a kid, I made some games in the Starcraft and Warcraft III map engines.
-I'd often provide feedback to friends making their own games. 
+While I am a professional software engineer, I don't think of myself as a game developer. I've never really made a game. As a kid, I made some games in the Starcraft and Warcraft III map engines.
+I'd often provide feedback to friends making their own games. But never my own.
 
 So yeah, not a game developer.
 
-I have enjoyed games for a while though. And in particular, I love game demos. Small proofs of concept, little commitment. Just a fun way to go through some example. I'd love those game demo disks of the late 90s where you'd have 40-50 demos, and most of them were insanely bad. So yeah, novelty is a good thing.
+In the past, how I'd approach this has been:
+1. Choose a game engine based on what people seem to like at the time
+2. Read through tutorials, and make a tutorial game over the course of a week or so
+3. Completely lose interest in the original thing I wanted to make by the time I had finished the tutorial
 
-This weekend, I decided to start trying to make my own game.
-
-In the past, how I'd approach this was:
-1. Choose some game engine based on what people seem to like at the time
-2. Read through tutorials, and make a game over the course of a week or so, mostly working at night
-3. Completely lose interest in the original thing I wanted to make by the time I had sufficient preparation to make it.
-
-With that loop in mind, I decided to try this a different way, this time instead starting with the idea that I could leverage some of the advanced in AI dev, particularly Cursor and Claude 4.
-
-Claude 4 has gotten much better than Claude 3. Like - much better. It has its own tool usage, it runs its own tests. So with its new-found autonomy, it makes a good partner for building the game. 
-
-I started out with the hypothesis  that investing $20 in Cursor for Claude was kind of like what I might spend on some random game. And, interestingly, that is how it felt!
-
-Granted, the feedback loop is longer. 
+With that loop in mind, I decided to try this a different way and wanted to
+leverage some of the more agentic AI systems. For example, Claude 4 has become
+better at operating with minimal supervision than Claude 3.5/3.7. It has its own
+tool usage, it runs its own tests. So with its new-found autonomy, it makes a
+good partner for building the game. 
 
 ### Coming up with ideas
 
-I engaged with the AI from the start, since I didn't know exactly what I wanted to make exactly. 
+I started out with AI since I didn't know exactly what I wanted to make exactly. 
 
-<Screenshot of chatting with AI>
+![ideation](/assets/ai-game/ideation-1.png)
 
-Over the course of discussion, the idea I settled on was making a game that sort of replicated a sprint process (like I mentioned, professional software engineer). In film, they say write what you know and, ... I know JIRA boards haha. 
+Over the course of discussion, the idea I settled on was making a game that sort of replicated a sprint process (like I mentioned, professional software engineer). In film, they say write what you know and, ... I know JIRA boards. 
+
+![more bad ideas](/assets/ai-game/ideation-2.png)
 
 After iterating a for a while, I landed on a basic concept. You're playing as an engineer at a software place, trying to meet some deadline. You have tasks on a sprint board that can succeed or not. There's things to research. A good place to start.
 
 ### The Godot Phase
 
-Initially I had to pick a game engine, so I just kind of picked Godot. I remember people liking it, and I didn't want to go down the Unity path again.
+I still needed to choose a gmae engine, so I just kind of picked Godot. I remember people liking it, and I didn't want to go down the Unity path again.
 
 At first, I tried making some thing basic in Godot and was not getting very far.
-I've used Cursor before (link to past blog post about making blog), so that was my next choice.
+I've [used Cursor
+before](https://www.kevinlondon.com/2024/11/27/ai-blog-rewrite/), so that was my
+next choice.
 I looked at using Cursor and, on the base model, it was at best ok at helping me
 get the game dev done. Auto mode was not cutting it, though it was free. Also,
 it didn't launch the game or know when things worked, so I needed to go back and
@@ -60,7 +57,6 @@ forth to fix things and paste error messages, which added a lot of ovehread.
 I've heard a lot about MCP lately and hadn't messed around with it. After doing a bit of reading, it basically exposes a programmatic / agentic interface for an Agent to do some things, so I looked into if there was an MCP server for Godot. 
 
 Initially, I found two different MCP servers for Godot. The first one worked great in Claude Desktop but not in Cursor. Then I found [godot-mcp](https://github.com/Coding-Solo/godot-mcp) which worked in Cursor after I figured out the settings.  
-
 
 How the MCP operates is it acts as an AI-friendly entrypoint for the LLM Agent to act on your behalf. For the Godot MCP, it knows how to start and stop the game, ask for debug info, and a few other additional functions. Getting the debug info on its own is helpful, and prevents needing to go between tools and copy/paste error traces and metadata - it gives the agent enough info to act autonomously and do a lot of work for me. 
 
@@ -124,6 +120,10 @@ I liked to prompt multiple areas at once, as Cursor is quite good at working wit
 Here you can see that my prompt contains multiple directives. Here's a summary of the response after providing a bunch of feedback:
 
 ![AI response showing completed items](/assets/ai-game/game-response.png)
+
+Or, if you prefer a short video, here it is chunking through examples from another prompt:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i5QqmshGwAY?si=ZVby4ORmMI0wVisX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 I've still been poking at it and playing it, but here we go, this is where I wound up:
 
