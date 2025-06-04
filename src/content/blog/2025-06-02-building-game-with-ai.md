@@ -57,7 +57,9 @@ get the game dev done. Auto mode was not cutting it, though it was free. Also,
 it didn't launch the game or know when things worked, so I needed to go back and
 forth to fix things and paste error messages, which added a lot of ovehread.
 
-I've heard a lot about MCP lately and hadn't messed around with it. After doing a bit of reading, it basically exposes a programmatic / agentic interface for an Agent to do some things, so I looked into if there was an MCP server for Godot. 
+#### MCP
+
+I've heard a lot about [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)  (or MCP) lately and hadn't messed around with it. After doing a bit of reading, it basically exposes a programmatic / agentic interface for an Agent to do some things, so I looked into if there was an MCP server for Godot. 
 
 Initially, I found two different MCP servers for Godot. The first one worked great in Claude Desktop but not in Cursor. Then I found [godot-mcp](https://github.com/Coding-Solo/godot-mcp) which worked in Cursor after I figured out the settings.  
 
@@ -136,7 +138,7 @@ https://kevinlondon.itch.io/velocity
 
 ### But is it fun?
 
-I'm no <neal.fun>, but I don't know, it was still a satisfying exercise! 
+I don't know! It was still a satisfying exercise! 
 
 Is it fun? Well, that's for the viewer to decide. I think there's something satisfyingly puzzle-ish about it. I have a hard time playing Satisfactory or Factorio, but they scratch a somewhat similar itch maybe? Maybe that's too self-aggrandizing. Anyway, I think it's kind of an interesting puzzle, we'll leave it at that.
 
@@ -149,6 +151,7 @@ I'm not sure how legibile it is to someone outside of tech, it is a little tech 
 
 Thought I'd collect some basic stats about usage on Cursor for this exercise. Over the course of all the prompting, it used about 120 "premium requests" out of 500. It also generated (lol) about 57K lines of code, most of which I tossed or edited out. But the final repo is pretty big. 
 
+As dev went on, the feedback loop got longer (sound familiar?). It took longer to propagate changes, context switching became a challenge, and I'd need to remember to catch up with whatever it had done.
 
 ### The Meta
 
@@ -156,4 +159,14 @@ I don't know exactly how I feel about this now that I've done it. It is fun to m
 
 I've described our role in the AI space as basically being an editor. I think there's something to that. 
 
-If I think about how this might affect the industry moving forward, I'm not sure. I can imagine these things getting better, to the point where it doesnt even need to run locally and can be agentic through some central UI (indeed, Gemini claims you can make a game directly in the UI, and so does Claude). It's kind of interesting that we're living closer to a world of [Bret Victor's Inventing in Principle](https://www.youtube.com/watch?v=PUv66718DII). I'm not sure where we go from here!
+If I think about how this might affect the industry moving forward, I'm not sure. I can imagine these things getting better, to the point where it doesnt even need to run locally and can be agentic through some central UI (indeed, Gemini claims you can make a game directly in the UI, and so does Claude). 
+
+But wouldn't this normally have required a team of people? Probably? It's a little unsettling to think about for more than a few moments, again as someone in the industry.
+
+Bret Victor talked in [Inventing in Principle](https://www.youtube.com/watch?v=PUv66718DII) about this idea of building something that llows for rapid prototyping, perhaps even in realtime, and that could be a kind of game or entertainment itself. I think we're living in that reality now. From his talk:
+
+> Creators need an immediate connection to what they create. And what I mean by that is when you’re making something, if you make a change, or you make a decision, you need to see the effect of that immediately. There can’t be a delay, and there can’t be anything hidden. Creators have to be able to see what they’re doing. 
+
+We're at least getting closer to it. I'm curious to see how it feels in a few years when it _can_ be instant, and I don't need to step away to make a cup of tea while I wait for an agent to do something. What would it be like to not even need to batch my suggestions? To see the results immediately? It doesn't feel like we're far from that. Will this still be fun? Will humans even be doing it?
+
+The line between playing games and building games is blurring. When the tools become the game, what does that mean for both developers and players?
