@@ -11,41 +11,44 @@ tags:
 
 I spent $20 on Cursor to build a game and realized the actual game was the gameplay of building the game itself.
 
-A few days ago, I inexplicably hurt my toe (probably from cycling) and had to rest over the weekend. With all this unexpected freetime, I played games on the first day. On the second day, I got bored and decided try making a game instead of playing one.
+A few days ago, I inexplicably hurt my toe (probably from cycling) and had to rest over the weekend. With all this unexpected freetime, I played games on the first day. On the second day, I felt bored and decided try making a game instead of playing one.
 
-While I am a professional software engineer, I don't think of myself as a game developer. I've never really made a game. As a kid, I made some games in the Starcraft and Warcraft III map engines.
-I'd often provide feedback to friends making their own games. But never my own.
+While I am a professional software engineer, I'm not a game developer. As a kid, I made some games in the Starcraft and Warcraft III map engines and I'd often provide feedback to friends making their own games. But never my own.
 
-So yeah, not a game developer.
-
-In the past, how I'd approach this has been:
+In the past, how I'd approach making a game has been:
 1. Choose a game engine based on what people seem to like at the time
-2. Read through tutorials, and make a tutorial game over the course of a week or so
+2. Read through tutorials
+3. Make a tutorial game over the course of a week or so
 3. Completely lose interest in the original thing I wanted to make by the time I had finished the tutorial
 
-With that loop in mind, I decided to try this a different way and wanted to
-leverage some of the more agentic AI systems. For example, Claude 4 has become
-better at operating with minimal supervision than Claude 3.5/3.7. It has its own
-tool usage, it runs its own tests. So with its new-found autonomy, it makes a
-good partner for building the game. 
+With that in mind, I decided to try a different way and build it with an
+LLM-based agent as my collaborator. Claude 4 has gotten better at operating with
+minimal supervision than Claude 3 series. So with its new-found autonomy, it
+makes a better partner for building a game. 
 
 ### Coming up with ideas
 
-I started out with AI since I didn't know exactly what I wanted to make exactly. 
+I didn't know exactly what I wanted to make initially, so AI collaboration kicked off at the start, with my clueless ass trying to figure out what to build:
 
 ![ideation](/assets/ai-game/ideation-1.png)
-
-Over the course of discussion, the idea I settled on was making a game that sort of replicated a sprint process (like I mentioned, professional software engineer). In film, they say write what you know and, ... I know JIRA boards. 
+*Some initial ideas*
 
 ![more bad ideas](/assets/ai-game/ideation-2.png)
+*Still figuring it out*
 
-After iterating a for a while, I landed on a basic concept. You're playing as an engineer at a software place, trying to meet some deadline. You have tasks on a sprint board that can succeed or not. There's things to research. A good place to start.
+I settled on making a game that replicated part of the software development process. Specifically, figuring out what tasks to take on in a two week period called a sprint (write what you know and all that). 
+
+I landed on a basic concept. You're playing as an engineer at a software place,
+trying to meet some deadline. You have tasks on a sprint board that can succeed
+or not. There's things to research. The deadline looms. A decent place to start.
+Now, how to make it? And how to make it fun?
 
 ### The Godot Phase
 
-I still needed to choose a gmae engine, so I just kind of picked Godot. I remember people liking it, and I didn't want to go down the Unity path again.
+I still needed to choose a gmae engine, so I picked Godot. I remember people liking it, and I didn't want to go down the Unity path again.
 
-At first, I tried making some thing basic in Godot and was not getting very far.
+At first, I tried making something very basic in Godot and was not getting very far. At this point, I again engaged my AI collaborator. 
+
 I've [used Cursor
 before](https://www.kevinlondon.com/2024/11/27/ai-blog-rewrite/), so that was my
 next choice.
