@@ -109,11 +109,10 @@ Also, interestingly, it had no idea how to structure the code, so it tried to ma
 
 ### Javascript Breakthrough
 
-After playing with the Godot implementation for the day, I went to sleep. In the
-morning had a bit of a realization. The Godot complexity was getting to be too
-much.  I was dealing with `.tscn` scene files, GDScript syntax, and UI layout
-issues that felt more complicated than they needed to be for what was
-essentially a card-based board game. I thought it might be easier to build it as
+After messing with the Godot implementation for the day, I went to sleep and, in the morning, 
+had a realization. Godot felt too complex for this game, and I didn't need its feature set.
+ I wrangled `.tscn` scene files, GDScript syntax, and UI layout
+for what was essentially a card-based board game. I thought it might be easier to build it as
 a HTML / CSS / JS game instead. 
 
 So I re-wrote it as a Javascript game **in a single prompt**. It just... worked? Without even a JS structure. I know it's simple, but still? 
