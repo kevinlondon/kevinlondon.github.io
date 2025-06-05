@@ -124,7 +124,7 @@ In an attempt to build something more maintainable, a second prompt converted it
 to [Vue.js](https://vuejs.org/) and generated all the components, wiring, package.json, etc. 
 
 ![Converting to JS](/assets/ai-game/convert-to-vue.png)
-*To Vue*
+*To Vue (with sychophancy from me this time)*
 
 After swapping to JS, it ran much more quickly and iteration went more smoothly. 
 
@@ -142,7 +142,7 @@ Or, if you prefer a short video, here is an agent chunking through another promp
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i5QqmshGwAY?si=ZVby4ORmMI0wVisX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-As with my memory of game dev (and, well, normal dev), there's two main parts to the project: the first 90% and the second 90%. I spent a lot of time (a _lot_) trying to get the loop tuned, tweaking balance between task types and research, adjusting UI elements, and ... 
+As with my memory of game dev (and, well, normal dev), there's two main parts to the project: the first 90% and the second 90%. I spent a lot of time (a _lot_) trying to tune the gameplay loop, tweaking balance between task types and research, adjusting UI elements, and ... 
 
 ![Tweaking gameplay and UI](/assets/ai-game/more-tweaks.png)
 *Indecisive tweaks*
@@ -151,8 +151,7 @@ As with my memory of game dev (and, well, normal dev), there's two main parts to
 
 ### UI rewrite
 
-As I neared the end of the project (or so I thought!) I decided to revise the UI to be more like a mockup style UI with sticky notes - basically using some of the setup for a normal dev process.
-
+As I neared the end of the project (or so I thought!), I decided to revise the UI to be more like a mockup style UI with sticky notes.
 
 ![Old UI](/assets/ai-game/old-ui.png)
 *Before*
@@ -169,7 +168,7 @@ I've still been poking at it and playing it, but here we go, this is where I wou
 
 ### But is it fun?
 
-That's for the viewer to decide! There's something satisfyingly puzzle-ish about it. I have a hard time playing Satisfactory or Factorio, but they scratch a somewhat similar itch maybe? Maybe that's too self-aggrandizing. Anyway, I think it's kind of an interesting puzzle, we'll leave it at that. And what makes something fun? 
+That's for the viewer to decide! There's something satisfyingly puzzle-ish about it. I have a hard time playing Satisfactory or Factorio, but they scratch a similar itch. I think it's an interesting puzzle. 
 
 The elements I think work: picking the stories, eventually realizing I should prioritize impact more highly, then realizing that story points and tech debt matter because tasks will start failing. There's an interesting realization journey.
 
