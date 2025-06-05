@@ -27,15 +27,17 @@ This time, I decided to build it in collaboration with AI instead.
 
 I didn't know exactly what I wanted to make, so I started by brainstorming with Claude:
 
-![ideation](/assets/ai-game/ideation-1.png)
+![ideation](/assets/ai-game/ideation-1.jpg)
 *Initial ideas with a side of sycophancy*
 
-![more bad ideas](/assets/ai-game/ideation-2.png)
+![more bad ideas](/assets/ai-game/ideation-2.jpg)
 *Still figuring it out*
 
 I settled on making a game that replicated the software development process. Specifically, figuring out what tasks to take on in a two-week sprint (write what you know). 
 
 Basic concept: You're playing as a software engineer trying to meet deadlines. You have tasks on a sprint board that can succeed or fail. There's research to do, and choices to make between priorities. A decent place to start. Now, how to make it? And how to make it fun?
+
+I decided to call it Velocity, the sprint planning game where you balance story points, technical debt, and deadlines.
 
 ### The Godot Phase
 
@@ -103,7 +105,7 @@ a HTML / CSS / JS game instead.
 
 So I re-wrote it as a Javascript game **in a single prompt**.
 
-![Converting to JS](/assets/ai-game/convert-to-js.png)
+![Converting to JS](/assets/ai-game/convert-to-js.jpg)
 *Conversion prompting*
 
 ![Homepage](/assets/ai-game/rewrite-1.png)
@@ -123,7 +125,7 @@ recommendation. But still impressive for a one-shot conversion! And instantly be
 In an attempt to build something more maintainable, a second prompt converted it
 to [Vue.js](https://vuejs.org/) and generated all the components, wiring, package.json, etc. 
 
-![Converting to JS](/assets/ai-game/convert-to-vue.png)
+![Converting to JS](/assets/ai-game/convert-to-vue.jpg)
 *To Vue (with sychophancy from me this time)*
 
 After swapping to JS, it ran much more quickly and iteration went more smoothly. 
@@ -132,10 +134,10 @@ After swapping to JS, it ran much more quickly and iteration went more smoothly.
 
 I liked to make changes to multiple areas in one prompt, as Cursor is quite good at working with Claude 4 to sequence a collection of changes in Agent mode. For example, here's a prompt I used, which jammed a bunch of somewhat unrelated ideas together:
 
-![Game development prompt with multiple feedback points](/assets/ai-game/game-prompt.png)
+![Game development prompt with multiple feedback points](/assets/ai-game/game-prompt.jpg)
 *Prompt with multiple directives*
 
-![AI response showing completed items](/assets/ai-game/game-response.png)
+![AI response showing completed items](/assets/ai-game/game-response.jpg)
 *Response after implementing feedback*
 
 Or, if you prefer a short video, here is an agent chunking through another prompt:
@@ -144,7 +146,7 @@ Or, if you prefer a short video, here is an agent chunking through another promp
 
 As with my memory of game dev (and, well, normal dev), there's two main parts to the project: the first 90% and the second 90%. I spent a lot of time (a _lot_) trying to tune the gameplay loop, tweaking balance between task types and research, adjusting UI elements, and ... 
 
-![Tweaking gameplay and UI](/assets/ai-game/more-tweaks.png)
+![Tweaking gameplay and UI](/assets/ai-game/more-tweaks.jpg)
 *Indecisive tweaks*
 
 ... yeah. A lot of that.
@@ -156,7 +158,7 @@ As I neared the end of the project (or so I thought!), I decided to revise the U
 ![Old UI](/assets/ai-game/old-ui.png)
 *Before*
 
-![Prompting to change UI](/assets/ai-game/ui-rewrite.png)
+![Prompting to change UI](/assets/ai-game/ui-rewrite.jpg)
 *Prompts to change the UI. Not shown: many follow-up prompts.*
 
 ![New UI](/assets/ai-game/old-ui.png)
@@ -178,7 +180,7 @@ I had fun making it and exploring. Writing this post was fun too.
 
 ### Stats for this exercise
 
-![Cursor stats](/assets/ai-game/cursor-stats.png)
+![Cursor stats](/assets/ai-game/cursor-stats.jpg)
 *Cursor stats*
 
 Over the course of all the prompting, I used about 150 "premium requests" and generated about 57K lines of code during iterations. Diffs, attempted fixes, additional logic, animations, etc. I tossed out a good chunk, but the final repo is still pretty big. 
@@ -186,6 +188,13 @@ Over the course of all the prompting, I used about 150 "premium requests" and ge
 As dev went on, the feedback loop slowed down (sound familiar?). It took longer
 to propagate changes, context switching became a challenge, and I'd need to
 remember to catch up with whatever it had done.
+
+### Lessons learned summary
+
+1. Choose your AI collaborators carefully. Free / auto modes didn't work well for me, and switching to tools with better context (e.g. MCP) made a big difference.
+2. Use the right tool for the problem. Moving from Godot to HTML / JS made it less complex and sped up my iteration cycles.
+3. Batch feedback. Giving multiple changes in one prompt worked well for me, and kept prompt usage down.
+4. Expect the "two 90%s problem". Just like in normal dev, polishing and balancing took longer than the initial work.
 
 ### The Meta
 
@@ -201,7 +210,11 @@ Bret Victor talked in [Inventing in Principle](https://www.youtube.com/watch?v=P
 
 > Creators need an immediate connection to what they create. And what I mean by that is when you're making something, if you make a change, or you make a decision, you need to see the effect of that immediately. There can't be a delay, and there can't be anything hidden. Creators have to be able to see what they're doing. 
 
-We're getting closer to it. I'm curious to see how it feels in a few years when
+The immediate feedback loop (seeing changes instantly) is what I saw when
+switching from Godot to the web version. The faster I could iterate, the more it
+felt like play rather than work.
+
+I'm curious to see how it feels in a few years when
 it _can_ be instant, and I don't need to step away to make a cup of tea while I
 wait for an agent to do something. 
 
@@ -211,5 +224,3 @@ far from that. Will this still be fun? Will humans even be doing it?
 
 The line between playing games and building games is blurring. When the tools
 become the game, what does that mean for both developers and players? 
-
-I'm still not sure.
