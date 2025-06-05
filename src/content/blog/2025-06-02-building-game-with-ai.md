@@ -52,6 +52,7 @@ I still needed to choose a game engine, so I picked [Godot](https://godotengine.
 
 At first, I tried making something basic in Godot and did not get far, so I considered going through the Godot tutorials again. Instead, I engaged my AI collaborator. 
 
+
 I've [used Cursor
 before](https://www.kevinlondon.com/2024/11/27/ai-blog-rewrite/), so that was my
 next choice.
@@ -81,11 +82,8 @@ Here you can see me poking around with the Agent mode, with Cursor booting up th
 
 With engine and collaborator figured out, I could skip much of the tutorial-into-disinterest death spiral and get to the part of making the game itself.
 
-<TODO: An early prompt>
-*Initial prompting*
-
-![early game](/assets/ai-game/early-game.png)
-*An early iteration*
+![Game start](/assets/ai-game/game-start.png)
+*First compiling version*
 
 This process went back and forth for a while over much of the day.
 In the end, after iterating with it for a lot of the day (over ~80-90 prompts),
@@ -94,6 +92,8 @@ step back. For example, I'd get it to split the game into two swim lanes to
 represent a sprint, but then the swim lanes would clip, or going between cards
 wouldn't work.
 
+![early game](/assets/ai-game/early-game.png)
+*An early iteration*
 
 At one point, I spent probably 20 prompts just trying to get task cards to properly move between "Available" and "Selected" containers. The AI would implement drag-and-drop that looked right but broke the selection logic. Or it would fix the selection but break the visual feedback. Whack-a-mole debugging with a debugging partner that sometimes forgets what it implemented three prompts ago.
 
@@ -120,8 +120,14 @@ So I re-wrote it as a Javascript game **in a single prompt**. It just... worked?
 ![Converting to JS](/assets/ai-game/convert-to-js.png)
 *Conversion prompting*
 
-<rewritten image demo>
-*Ta-da!*
+![Homepage](/assets/ai-game/rewrite-1.png)
+*Game splash screen*
+
+![Epic page](/assets/ai-game/rewrite-2.png)
+*Epic selection page*
+
+![Sprint board](/assets/ai-game/rewrite-3.png)
+*Sprint board*
 
 Granted, it initially generated it in three large-ish files without a discrete
 recommendation. But still impressive for a one-shot conversion! Instantly better.
@@ -132,30 +138,26 @@ to Vue and generated all the components, wiring, package.json, etc.
 ![Converting to JS](/assets/ai-game/convert-to-vue.png)
 *To Vue*
 
-So, I probably should've started there.
-
-I tried using a browser MCP, though it played less of an important role for the LLM (it rarely called via the MCP).
-
 After swapping to JS, it ran much more quickly and iteration went more smoothly. 
 
 ### Development Loop
 
-I liked to prompt multiple areas at once, as Cursor is quite good at working with Claude 4 to sequence a collection of changes in Agent mode. For example, here's a prompt I used, which jammed a bunch of somewhat unrelated ideas together:
+I liked to make changes multiple areas in one prompt, as Cursor is quite good at working with Claude 4 to sequence a collection of changes in Agent mode (and Cursor bills per prompt, so combining them is a nice way to get more out of a single request). For example, here's a prompt I used, which jammed a bunch of somewhat unrelated ideas together:
 
 ![Game development prompt with multiple feedback points](/assets/ai-game/game-prompt.png)
-
-Here you can see that my prompt contains multiple directives. Here's a summary of the response after providing a bunch of feedback:
+*Prompt with multiple directives*
 
 ![AI response showing completed items](/assets/ai-game/game-response.png)
+*Response after implementing feedback*
 
-Or, if you prefer a short video, here it is chunking through examples from another prompt:
+Or, if you prefer a short video, here is an agent chunking through another prompt:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i5QqmshGwAY?si=ZVby4ORmMI0wVisX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 As with my memory of game dev (and, well, normal dev), there's two main parts to the project - the first 90% and the second 90%. I spent a lot of time (a _lot_) trying to get the loop tuned, tweaking balance between task types and research, adjusting UI elements, and ... yeah. A lot of that.
 
 ![Tweaking gameplay and UI](/assets/ai-game/more-tweaks.png)
-(I'm indecisive when collaborating off the cuff, and spelling not so great here.)
+*Indecisive tweaks*
 
 ### UI rewrite
 
