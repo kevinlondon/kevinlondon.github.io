@@ -191,9 +191,9 @@ remember to catch up with whatever it had done.
 
 I don't know exactly how I feel about this now that I've done it. It is fun to make games, and it takes real artistry to make a game, most of which I've sidestepped. 
 
-As AI takes a larger role in what we do, we have to be better collaborators and wear a more critical hat when providing feedback. Tastemaking becomes significantly more important if we're doing less of the active contribution. I've described our role in the AI space as basically being an editor. I think there's something to that. 
+As AI takes a larger role in what we do, we have to be better collaborators and wear a more critical hat when providing feedback. Tastemaking becomes significantly more important if we're doing less of the manual work. I've described our role in the AI space as basically being an editor. 
 
-If I think about how this might affect the industry moving forward, I'm not sure. I can imagine these things getting better, to the point where it doesn't even need to run locally and can be agentic through some central UI (Gemini and Claude both claim you can make games directly in their interfaces). 
+I'm not sure how this might affect the industry moving forward. I can imagine these things getting better, to the point where it doesn't even need to run locally and can be agentic through a web UI (Gemini and Claude both claim you can make games directly in their interfaces). 
 
 This probably would've taken me much, much longer to build on my own without an AI collaborator. It's a little unsettling to think about for more than a few moments, again as someone in the industry. 
 

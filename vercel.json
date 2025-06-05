@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "/_astro/*.css",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css"
+        }
+      ]
+    }
+  ]
+} 

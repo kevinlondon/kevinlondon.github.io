@@ -1,0 +1,5 @@
+/_astro/*.css
+  Content-Type: text/css
+
+/assets/*.css  
+  Content-Type: text/css 
