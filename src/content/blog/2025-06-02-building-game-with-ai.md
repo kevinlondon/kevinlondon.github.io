@@ -36,10 +36,7 @@ kicked off at the start, trying to figure out what to build with Claude:
 
 I settled on making a game that replicated part of the software development process. Specifically, figuring out what tasks to take on in a two week period called a sprint (they say you should write what you know). 
 
-Basic concept: You're playing as an software engineer,
-trying to meet deadlines. You have tasks on a sprint board that can succeed
-or not. There's things to research, and choices to make between priorities. A decent place to start.
-Now, how to make it? And how to make it fun?
+Basic concept: You're playing as a software engineer trying to meet deadlines. You have tasks on a sprint board that can succeed or fail. There's research to do, and choices to make between priorities. A decent place to start. Now, how to make it? And how to make it fun?
 
 ### The Godot Phase
 
@@ -61,9 +58,7 @@ Protocol](https://www.anthropic.com/news/model-context-protocol)  (or MCP)
 lately and hadn't messed around with it. I learned that it
 exposes a programmatic / agentic interface for an agent to take actions on your behalf,
 essentially exposing an API for apps or websites that may not have one.
-I looked around for an MCP server for Godot. 
-
-Initially, I found two different MCP servers for Godot. The first one worked great in Claude Desktop but not at all in Cursor. Then I found [godot-mcp](https://github.com/Coding-Solo/godot-mcp).
+I looked around for an MCP server for Godot and found two options. The first worked great in Claude Desktop but not at all in Cursor. Then I found [godot-mcp](https://github.com/Coding-Solo/godot-mcp).
 
 `godot-mcp` knows how to start and stop the game, collect debug info, and a few other additional functions. Getting the debug info on its own is helpful, and prevents needing to go between tools and copy/paste error traces and metadata. It gives the agent enough info to act without requiring me in the loop as much. 
 
@@ -170,7 +165,7 @@ As I neared the end of the project (or so I thought!) I decided to revise the UI
 <TODO: Replace below image>
 
 ![New UI](/assets/ai-game/old-ui.png)
-*After.*
+*After. (Yes, it's the same image - the "after" shot didn't turn out as dramatic as hoped.)*
 
 I've still been poking at it and playing it, but here we go, this is where I wound up:
 
@@ -180,9 +175,9 @@ https://kevinlondon.itch.io/velocity
 
 That's for the viewer to decide! There's something satisfyingly puzzle-ish about it. I have a hard time playing Satisfactory or Factorio, but they scratch a somewhat similar itch maybe? Maybe that's too self-aggrandizing. Anyway, I think it's kind of an interesting puzzle, we'll leave it at that. And what makes something fun? 
 
-The elements I think work are picking the stories, and eventually realizing that actually, I should be prioritizing impact more highly. Then realizing that the story points and tech debt matter, because it will start failing tasks. I don't know, there's an interesting realization journey.
+The elements I think work: picking the stories, eventually realizing I should prioritize impact more highly, then realizing that story points and tech debt matter because tasks will start failing. There's an interesting realization journey.
 
-I'm not sure how legible it is to someone outside of tech. It's pretty jargon heavy. 
+I'm not sure how legible the game is to someone outside of tech. It's pretty jargon heavy. 
 
 I had fun making it, and exploring. Genuinely, it gave me something to look forward to in a way that a game sometimes does not? It helps that I got to write this post to accompany it, and that's fun in its own way too. It's weird what things we might find fun! Satisfactory, for example, is sometimes fun and sometimes Too Much Like Work for me.
 
@@ -202,7 +197,7 @@ remember to catch up with whatever it had done.
 
 ### The Meta
 
-I don't know exactly how I feel about this now that I've done it. It is fun to make games, and it takes real artistry to make a game, most of which I've sidestepped. I think as AI takes a larger role in what we do, it also means that we have to be better collaborators and wear a more critical hat when providing feedback. Tastemaking becomes significantly more important if we're doing less of the active contribtuion. Telling it what we want or don't want for example.
+I don't know exactly how I feel about this now that I've done it. It is fun to make games, and it takes real artistry to make a game, most of which I've sidestepped. As AI takes a larger role in what we do, we have to be better collaborators and wear a more critical hat when providing feedback. Tastemaking becomes significantly more important if we're doing less of the active contribution.
 
 I've described our role in the AI space as basically being an editor. I think there's something to that. 
 
