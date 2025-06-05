@@ -9,9 +9,9 @@ tags:
 - meta
 ---
 
-I spent $20 on Cursor to build a game and now I'm not sure what to think about it.
-
 I hurt my toe and had to rest over the weekend. With unexpected freetime, I played games on the first day. On the second day, I felt bored and decided to try making a game instead.
+
+The interesting part: building it was more fun than playing most games.
 
 While I am a professional software engineer, I'm not a game developer. As a kid, I made custom maps in the Starcraft and Warcraft III editors but never finished my own.
 
@@ -174,16 +174,16 @@ The elements I think work: picking the stories, eventually realizing I should pr
 
 I'm not sure how legible the game is to someone outside of tech. It's pretty jargon heavy. 
 
-I had fun making it and exploring. Genuinely, it gave me something to look forward to in a way that playing games sometimes doesn't. Writing this post was fun too. It's weird what we find fun! Satisfactory, for example, is sometimes enjoyable and sometimes Too Much Like Work.
+I had fun making it and exploring. Writing this post was fun too.
 
 ### Stats for this exercise
 
 ![Cursor stats](/assets/ai-game/cursor-stats.png)
 *Cursor stats*
 
-Over the course of all the prompting, it used about 150 "premium requests" out of 500. It also generated about 57K lines of code during our iterations. Diffs, attempted fixes, additional logic, animations, etc. I tossed out a good chunk, but the final repo is still pretty big. 
+Over the course of all the prompting, I used about 150 "premium requests" and generated about 57K lines of code during iterations. Diffs, attempted fixes, additional logic, animations, etc. I tossed out a good chunk, but the final repo is still pretty big. 
 
-As dev went on, the feedback loop got longer (sound familiar?). It took longer
+As dev went on, the feedback loop slowed down (sound familiar?). It took longer
 to propagate changes, context switching became a challenge, and I'd need to
 remember to catch up with whatever it had done.
 
