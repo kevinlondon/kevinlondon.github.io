@@ -14,14 +14,14 @@ I spent $20 on Cursor to build a game and realized the actual game was the gamep
 A few days ago, I inexplicably hurt my toe (probably from cycling) and had to rest over the weekend. With all this unexpected freetime, I played games on the first day. On the second day, I felt bored and decided try making a game instead of playing one.
 
 While I am a professional software engineer, I'm not a game developer. As a kid,
-I made custom maps in the Starcraft and Warcraft III editors and I'd often
-provide feedback to friends making their own games. But never finished my own.
+I made custom maps in the Starcraft and Warcraft III editors and I
+provided feedback to friends on theirs. But never finished my own.
 
 In the past, how I'd approach making a game has been:
 1. Choose a game engine based on what people seem to like at the time
 2. Read through tutorials
-3. Make a tutorial game over the course of a week or so
-3. Completely lose interest in the original thing I wanted to make by the time I had finished the tutorial
+3. Make a tutorial game over the course of a week
+3. Completely lose interest in the original thing I wanted to make
 
 With that in mind, I decided to try a different way and build it in
 collaboration with AI.  Claude 4 has gotten better at operating with minimal
@@ -31,18 +31,17 @@ better partner for building a game.
 ### Coming up with ideas
 
 I didn't know exactly what I wanted to make initially, so AI collaboration
-kicked off at the start, with my clueless ass trying to figure out what to
-build:
+kicked off at the start, trying to figure out what to build with Claude:
 
 ![ideation](/assets/ai-game/ideation-1.png)
-*Some initial ideas*
+*Initial ideas with a side of sycophancy*
 
 ![more bad ideas](/assets/ai-game/ideation-2.png)
 *Still figuring it out*
 
-I settled on making a game that replicated part of the software development process. Specifically, figuring out what tasks to take on in a two week period called a sprint (write what you know etc). 
+I settled on making a game that replicated part of the software development process. Specifically, figuring out what tasks to take on in a two week period called a sprint (they say you should write what you know). 
 
-I landed on a basic concept. You're playing as an software engineer,
+Basic concept: You're playing as an software engineer,
 trying to meet deadlines. You have tasks on a sprint board that can succeed
 or not. There's things to research, and choices to make between priorities. A decent place to start.
 Now, how to make it? And how to make it fun?
@@ -51,7 +50,7 @@ Now, how to make it? And how to make it fun?
 
 I still needed to choose a game engine, so I picked [Godot](https://godotengine.org/), based on my scientific criteria of what people seem to currently like, and that it's not Unity.
 
-At first, I tried making something very basic in Godot and was not getting very far, so I started considering going through the tutorials for Godot again. Instead, I engaged my AI collaborator. 
+At first, I tried making something basic in Godot and did not get far, so I considered going through the Godot tutorials again. Instead, I engaged my AI collaborator. 
 
 I've [used Cursor
 before](https://www.kevinlondon.com/2024/11/27/ai-blog-rewrite/), so that was my
@@ -66,7 +65,7 @@ forth to fix things and paste error messages, which added friction.
 I've heard about [Model Context
 Protocol](https://www.anthropic.com/news/model-context-protocol)  (or MCP)
 lately and hadn't messed around with it. I read up on it and learned that
-exposes a programmatic / agentic interface for an Agent to take actions on your behalf,
+exposes a programmatic / agentic interface for an agent to take actions on your behalf,
 essentially exposing an API for apps or websites that may not have one.
 I looked around for an MCP server for Godot. 
 
@@ -78,11 +77,15 @@ It's pretty cool! Here's a little demo:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UbvJDAZHFmk?si=jvxIpqFMVdkK1bmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Here you can see me poking around with the Agent mode, with Cursor booting up the game to see what might be working or not working (more often the case).
+Here you can see me poking around with the Agent mode, with Cursor booting up the game via MCP calls to see what might be working or not working (more often the case).
 
-With engine and collaborator figured out, I could skip much of the tutorial into boredom death spiral and get to the part of setting up the game itself.
+With engine and collaborator figured out, I could skip much of the tutorial-into-disinterest death spiral and get to the part of making the game itself.
 
-<early example>
+<TODO: An early prompt>
+*Initial prompting*
+
+![early game](/assets/ai-game/early-game.png)
+*An early iteration*
 
 This process went back and forth for a while over much of the day.
 In the end, after iterating with it for a lot of the day (over ~80-90 prompts),
@@ -91,46 +94,48 @@ step back. For example, I'd get it to split the game into two swim lanes to
 represent a sprint, but then the swim lanes would clip, or going between cards
 wouldn't work.
 
-![early game](/assets/ai-game/early-game.png)
 
 At one point, I spent probably 20 prompts just trying to get task cards to properly move between "Available" and "Selected" containers. The AI would implement drag-and-drop that looked right but broke the selection logic. Or it would fix the selection but break the visual feedback. Whack-a-mole debugging with a debugging partner that sometimes forgets what it implemented three prompts ago.
 
 For example, here's a few iterations on this:
 
 ![early game with button](/assets/ai-game/early-game-with-button.png)
-Note that a "Continue" button has inexplicably appeared in the top left, never to leave again.
+*Note that a "Continue" button has inexplicably appeared in the top left, never to leave again.*
 
 ![early game without tasks](/assets/ai-game/early-game-no-tasks.png)
-Or now, there's no cards!
+*Or now, there's no cards!*
 
-
-Also, interestingly, it had no idea how to structure the code, so it tried to make God objects and jam 2K lines of code in there. After I asked it to refactor, it did, though it was an on-goign battle.
+Also, interestingly, it had no idea how to structure the code, so it tried to make God objects and jam 2K lines of code in there. After I asked it to refactor, it did, though it was an on-going battle to maintain some sense of order.
 
 ### Javascript Breakthrough
 
-After poking at the Godot implementation for a day, I slept on it and, in the
-morning had a bit of a realization. The Godot complexity was getting too
-complex. I was dealing with .tscn scene files, GDScript syntax, and UI layout
-issues that felt way more complicated than they needed to be for what was
-essentially a card-based board game. I thought "wait,
-this is just moving divs around".
+After playing with the Godot implementation for the day, I went to sleep. In the
+morning had a bit of a realization. The Godot complexity was getting to be too
+much.  I was dealing with `.tscn` scene files, GDScript syntax, and UI layout
+issues that felt more complicated than they needed to be for what was
+essentially a card-based board game. I thought it might be easier to build it as
+a HTML / CSS / JS game instead. 
 
 So I re-wrote it as a Javascript game **in a single prompt**. It just... worked? Without even a JS structure. I know it's simple, but still? 
 
 ![Converting to JS](/assets/ai-game/convert-to-js.png)
+*Conversion prompting*
 
 <rewritten image demo>
+*Ta-da!*
 
-Granted, it generated it in three large-ish files. But still impressive for a one-shot conversion! It was instantly better.
+Granted, it initially generated it in three large-ish files without a discrete
+recommendation. But still impressive for a one-shot conversion! Instantly better.
 
-A second prompt converted it to Vue and generates all the components, wiring, package.json, etc. 
-
+In an attempt to build something more maintainable, a second prompt converted it
+to Vue and generated all the components, wiring, package.json, etc. 
 
 ![Converting to JS](/assets/ai-game/convert-to-vue.png)
+*To Vue*
 
 So, I probably should've started there.
 
-For JS dev, I added a browser MCP Server as well, but, for me, it didn't want to use it as much. Ultimately, that's OK, I'm happy just leaving it as it is. 
+I tried using a browser MCP, though it played less of an important role for the LLM (it rarely called via the MCP).
 
 After swapping to JS, it ran much more quickly and iteration went more smoothly. 
 
