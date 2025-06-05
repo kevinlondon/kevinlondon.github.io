@@ -1,6 +1,6 @@
 ---
 title: "I made a game with AI and I don't know how to feel about it"
-description: "What happens when the $20 you spend on Cursor becomes like buying a game where the gameplay is building the game itself? Exploring the meta-loop of AI-assisted game development."
+description: "I spent $20 on Cursor to build a game and realized the actual game was the gameplay of building the game itself."
 pubDatetime: 2025-06-02T18:00:00-8:00
 tags:
 - gamedev
@@ -212,7 +212,7 @@ But wouldn't this normally have required a team of people? Probably? It's a litt
 
 Bret Victor talked in [Inventing in Principle](https://www.youtube.com/watch?v=PUv66718DII) about this idea of building something that llows for rapid prototyping, perhaps even in realtime, and that could be a kind of game or entertainment itself. I think we're living in that reality now. From his talk:
 
-> Creators need an immediate connection to what they create. And what I mean by that is when you’re making something, if you make a change, or you make a decision, you need to see the effect of that immediately. There can’t be a delay, and there can’t be anything hidden. Creators have to be able to see what they’re doing. 
+> Creators need an immediate connection to what they create. And what I mean by that is when you're making something, if you make a change, or you make a decision, you need to see the effect of that immediately. There can't be a delay, and there can't be anything hidden. Creators have to be able to see what they're doing. 
 
 We're at least getting closer to it. I'm curious to see how it feels in a few years when it _can_ be instant, and I don't need to step away to make a cup of tea while I wait for an agent to do something. What would it be like to not even need to batch my suggestions? To see the results immediately? It doesn't feel like we're far from that. Will this still be fun? Will humans even be doing it?
 
