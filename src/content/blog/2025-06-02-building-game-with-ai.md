@@ -9,24 +9,23 @@ tags:
 - meta
 ---
 
-I spent $20 on Cursor to build a game and realized the actual game was the gameplay of building the game itself.
+I spent $20 on Cursor to build a game and now I'm not sure what to think about it.
 
 I hurt my toe and had to rest over the weekend. With unexpected freetime, I played games on the first day. On the second day, I felt bored and decided to try making a game instead.
 
 While I am a professional software engineer, I'm not a game developer. As a kid, I made custom maps in the Starcraft and Warcraft III editors but never finished my own.
 
-In the past, how I'd approach making a game has been:
+My usual game development cycle:
 1. Choose a game engine based on what people seem to like at the time
 2. Read through tutorials
 3. Make a tutorial game over the course of a week
-3. Completely lose interest in the original thing I wanted to make
+4. Completely lose interest in the original thing I wanted to make
 
-With that in mind, I decided to try a different way and build it in collaboration with AI. 
+This time, I decided to build it in collaboration with AI instead. 
 
 ### Coming up with ideas
 
-I didn't know exactly what I wanted to make initially, so AI collaboration
-kicked off at the start, trying to figure out what to build with Claude:
+I didn't know exactly what I wanted to make, so I started by brainstorming with Claude:
 
 ![ideation](/assets/ai-game/ideation-1.png)
 *Initial ideas with a side of sycophancy*
@@ -34,7 +33,7 @@ kicked off at the start, trying to figure out what to build with Claude:
 ![more bad ideas](/assets/ai-game/ideation-2.png)
 *Still figuring it out*
 
-I settled on making a game that replicated part of the software development process. Specifically, figuring out what tasks to take on in a two week period called a sprint (they say you should write what you know). 
+I settled on making a game that replicated the software development process. Specifically, figuring out what tasks to take on in a two-week sprint (write what you know). 
 
 Basic concept: You're playing as a software engineer trying to meet deadlines. You have tasks on a sprint board that can succeed or fail. There's research to do, and choices to make between priorities. A decent place to start. Now, how to make it? And how to make it fun?
 
@@ -56,8 +55,7 @@ it didn't launch the game or know when things worked. I'd run the game in Godot,
 I've heard about [Model Context
 Protocol](https://www.anthropic.com/news/model-context-protocol)  (or MCP)
 lately and hadn't messed around with it. I learned that it
-exposes a programmatic / agentic interface for an agent to take actions on your behalf,
-essentially exposing an API for apps or websites that may not have one.
+exposes a programmatic interface for agents to take actions on your behalf. Essentially, it creates an API for apps that don't have one.
 I looked around for an MCP server for Godot and found two options. The first worked great in Claude Desktop but not at all in Cursor. Then I found [godot-mcp](https://github.com/Coding-Solo/godot-mcp).
 
 `godot-mcp` knows how to start and stop the game, collect debug info, and a few other additional functions. Getting the debug info on its own is helpful, and prevents needing to go between tools and copy/paste error traces and metadata. It gives the agent enough info to act without requiring me in the loop as much. 
@@ -144,7 +142,7 @@ Or, if you prefer a short video, here is an agent chunking through another promp
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i5QqmshGwAY?si=ZVby4ORmMI0wVisX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-As with my memory of game dev (and, well, normal dev), there's two main parts to the project - the first 90% and the second 90%. I spent a lot of time (a _lot_) trying to get the loop tuned, tweaking balance between task types and research, adjusting UI elements, and ... 
+As with my memory of game dev (and, well, normal dev), there's two main parts to the project: the first 90% and the second 90%. I spent a lot of time (a _lot_) trying to get the loop tuned, tweaking balance between task types and research, adjusting UI elements, and ... 
 
 ![Tweaking gameplay and UI](/assets/ai-game/more-tweaks.png)
 *Indecisive tweaks*
@@ -162,14 +160,12 @@ As I neared the end of the project (or so I thought!) I decided to revise the UI
 ![Prompting to change UI](/assets/ai-game/ui-rewrite.png)
 *Prompts to change the UI. Not shown: many follow-up prompts.*
 
-<TODO: Replace below image>
-
 ![New UI](/assets/ai-game/old-ui.png)
 *After. (Yes, it's the same image - the "after" shot didn't turn out as dramatic as hoped.)*
 
 I've still been poking at it and playing it, but here we go, this is where I wound up:
 
-https://kevinlondon.itch.io/velocity
+<https://velocity-umber-six.vercel.app/>
 
 ### But is it fun?
 
@@ -179,17 +175,14 @@ The elements I think work: picking the stories, eventually realizing I should pr
 
 I'm not sure how legible the game is to someone outside of tech. It's pretty jargon heavy. 
 
-I had fun making it, and exploring. Genuinely, it gave me something to look forward to in a way that a game sometimes does not? It helps that I got to write this post to accompany it, and that's fun in its own way too. It's weird what things we might find fun! Satisfactory, for example, is sometimes fun and sometimes Too Much Like Work for me.
+I had fun making it and exploring. Genuinely, it gave me something to look forward to in a way that playing games sometimes doesn't. Writing this post was fun too. It's weird what we find fun! Satisfactory, for example, is sometimes enjoyable and sometimes Too Much Like Work.
 
 ### Stats for this exercise
 
 ![Cursor stats](/assets/ai-game/cursor-stats.png)
 *Cursor stats*
 
-Over the course of all the prompting, it used about 120 "premium requests" out
-of 500. It also generated about 57K lines of code during our iterations,
-consisting of diffs, attempted fixes, additional logic, animations, etc. A good
-chunk of it I tossed out or edited out. But the final repo is pretty big. 
+Over the course of all the prompting, it used about 150 "premium requests" out of 500. It also generated about 57K lines of code during our iterations. Diffs, attempted fixes, additional logic, animations, etc. I tossed out a good chunk, but the final repo is still pretty big. 
 
 As dev went on, the feedback loop got longer (sound familiar?). It took longer
 to propagate changes, context switching became a challenge, and I'd need to
@@ -197,13 +190,13 @@ remember to catch up with whatever it had done.
 
 ### The Meta
 
-I don't know exactly how I feel about this now that I've done it. It is fun to make games, and it takes real artistry to make a game, most of which I've sidestepped. As AI takes a larger role in what we do, we have to be better collaborators and wear a more critical hat when providing feedback. Tastemaking becomes significantly more important if we're doing less of the active contribution.
+I don't know exactly how I feel about this now that I've done it. It is fun to make games, and it takes real artistry to make a game, most of which I've sidestepped. 
 
-I've described our role in the AI space as basically being an editor. I think there's something to that. 
+As AI takes a larger role in what we do, we have to be better collaborators and wear a more critical hat when providing feedback. Tastemaking becomes significantly more important if we're doing less of the active contribution. I've described our role in the AI space as basically being an editor. I think there's something to that. 
 
-If I think about how this might affect the industry moving forward, I'm not sure. I can imagine these things getting better, to the point where it doesnt even need to run locally and can be agentic through some central UI (indeed, Gemini claims you can make a game directly in the UI, and so does Claude). 
+If I think about how this might affect the industry moving forward, I'm not sure. I can imagine these things getting better, to the point where it doesn't even need to run locally and can be agentic through some central UI (Gemini and Claude both claim you can make games directly in their interfaces). 
 
-But wouldn't this normally have required a small team of people? ...possibly? It's a little unsettling to think about for more than a few moments, again as someone in the industry. This probably would've taken me much, much longer to build on my own without an AI collaborator.
+This probably would've taken me much, much longer to build on my own without an AI collaborator. It's a little unsettling to think about for more than a few moments, again as someone in the industry. 
 
 Bret Victor talked in [Inventing in Principle](https://www.youtube.com/watch?v=PUv66718DII) about an idea of building something that allows for rapid prototyping, perhaps even in realtime, and that could be a kind of game or entertainment itself. I think we're living in that reality now. From his talk:
 
@@ -211,8 +204,10 @@ Bret Victor talked in [Inventing in Principle](https://www.youtube.com/watch?v=P
 
 We're getting closer to it. I'm curious to see how it feels in a few years when
 it _can_ be instant, and I don't need to step away to make a cup of tea while I
-wait for an agent to do something. What would it be like to not even need to
-batch my suggestions? To see the results immediately? It doesn't feel like we're
+wait for an agent to do something. 
+
+What would it be like to not even need to batch my suggestions? To see the
+results immediately? It doesn't feel like we're
 far from that. Will this still be fun? Will humans even be doing it?
 
 The line between playing games and building games is blurring. When the tools
