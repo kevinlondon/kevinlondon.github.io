@@ -11,11 +11,9 @@ tags:
 
 I spent $20 on Cursor to build a game and realized the actual game was the gameplay of building the game itself.
 
-A few days ago, I inexplicably hurt my toe (probably from cycling) and had to rest over the weekend. With all this unexpected freetime, I played games on the first day. On the second day, I felt bored and decided try making a game instead of playing one.
+I hurt my toe and had to rest over the weekend. With unexpected freetime, I played games on the first day. On the second day, I felt bored and decided to try making a game instead.
 
-While I am a professional software engineer, I'm not a game developer. As a kid,
-I made custom maps in the Starcraft and Warcraft III editors and I
-provided feedback to friends on theirs. But never finished my own.
+While I am a professional software engineer, I'm not a game developer. As a kid, I made custom maps in the Starcraft and Warcraft III editors but never finished my own.
 
 In the past, how I'd approach making a game has been:
 1. Choose a game engine based on what people seem to like at the time
@@ -23,10 +21,7 @@ In the past, how I'd approach making a game has been:
 3. Make a tutorial game over the course of a week
 3. Completely lose interest in the original thing I wanted to make
 
-With that in mind, I decided to try a different way and build it in
-collaboration with AI.  Claude 4 has gotten better at operating with minimal
-supervision than Claude 3 series. So with its new-found autonomy, it makes a
-better partner for building a game. 
+With that in mind, I decided to try a different way and build it in collaboration with AI. 
 
 ### Coming up with ideas
 
@@ -48,54 +43,53 @@ Now, how to make it? And how to make it fun?
 
 ### The Godot Phase
 
-I still needed to choose a game engine, so I picked [Godot](https://godotengine.org/), based on my scientific criteria of what people seem to currently like, and that it's not Unity.
+I still needed to choose a game engine, so I picked [Godot](https://godotengine.org/), based on my scientific criteria of what's popular and not Unity.
 
-At first, I tried making something basic in Godot and did not get far, so I considered going through the Godot tutorials again. Instead, I engaged my AI collaborator. 
-
+At first, I tried making something basic in Godot and did not get far, so I considered going through the Godot tutorials again. Instead, I engaged my AI collaborator.
 
 I've [used Cursor
 before](https://www.kevinlondon.com/2024/11/27/ai-blog-rewrite/), so that was my
-next choice.
+next collaborator.
 Cursor, in agent mode on the auto-selected model, was at best *ok* at helping me
-get the game dev done. Auto mode was not cutting it, though it was free. Also,
-it didn't launch the game or know when things worked. I needed to go back and
-forth to fix things and paste error messages, which added friction.
+make the game. Auto mode was not cutting it, though it was free. Also,
+it didn't launch the game or know when things worked. I'd run the game in Godot, see an error, copy it, and paste it back into the editor, which added friction.
 
 #### MCP
 
 I've heard about [Model Context
 Protocol](https://www.anthropic.com/news/model-context-protocol)  (or MCP)
-lately and hadn't messed around with it. I read up on it and learned that
+lately and hadn't messed around with it. I learned that it
 exposes a programmatic / agentic interface for an agent to take actions on your behalf,
 essentially exposing an API for apps or websites that may not have one.
 I looked around for an MCP server for Godot. 
 
 Initially, I found two different MCP servers for Godot. The first one worked great in Claude Desktop but not at all in Cursor. Then I found [godot-mcp](https://github.com/Coding-Solo/godot-mcp).
 
-The Godot MCP knows how to start and stop the game, ask for debug info, and a few other additional functions. Getting the debug info on its own is helpful, and prevents needing to go between tools and copy/paste error traces and metadata. It gives the agent enough info to act without requiring me in the loop as much. 
+`godot-mcp` knows how to start and stop the game, collect debug info, and a few other additional functions. Getting the debug info on its own is helpful, and prevents needing to go between tools and copy/paste error traces and metadata. It gives the agent enough info to act without requiring me in the loop as much. 
 
 It's pretty cool! Here's a little demo:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UbvJDAZHFmk?si=jvxIpqFMVdkK1bmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Here you can see me poking around with the Agent mode, with Cursor booting up the game via MCP calls to see what might be working or not working (more often the case).
+Here you can see Cursor in Agent mode, booting up the game via MCP calls to see what might be working or not working (more often the case).
 
-With engine and collaborator figured out, I could skip much of the tutorial-into-disinterest death spiral and get to the part of making the game itself.
+With engine and collaborator figured out, I could skip much of the tutorial-into-disinterest death spiral and get to making the game itself.
 
 ![Game start](/assets/ai-game/game-start.png)
 *First compiling version*
 
-This process went back and forth for a while over much of the day.
-In the end, after iterating with it for a lot of the day (over ~80-90 prompts),
-I was pretty happy with where it was, though it was a lot of 2 steps forward 1
-step back. For example, I'd get it to split the game into two swim lanes to
-represent a sprint, but then the swim lanes would clip, or going between cards
-wouldn't work.
+I went through the prompt-to-agent-to-feedback loop many times.  After iterating
+with it over ~80-90 prompts, I felt happy with where it was, though I had many
+instances of 2 steps forward 1 step back. 
+
+For example, I had it split the
+sprint board into two swim lanes with tasks, but then the swim lanes would
+clip into each other, or selecting the tasks suddenly wouldn't work at all.
 
 ![early game](/assets/ai-game/early-game.png)
-*An early iteration*
+*An early iteration with card clippage*
 
-At one point, I spent probably 20 prompts just trying to get task cards to properly move between "Available" and "Selected" containers. The AI would implement drag-and-drop that looked right but broke the selection logic. Or it would fix the selection but break the visual feedback. Whack-a-mole debugging with a debugging partner that sometimes forgets what it implemented three prompts ago.
+At one point, I spent probably 20 prompts just trying to get task cards to properly move between "Available" and "Selected" containers. The AI would implement drag-and-drop that _looked_ right but broke something. 
 
 For example, here's a few iterations on this:
 
@@ -105,17 +99,16 @@ For example, here's a few iterations on this:
 ![early game without tasks](/assets/ai-game/early-game-no-tasks.png)
 *Or now, there's no cards!*
 
-Also, interestingly, it had no idea how to structure the code, so it tried to make God objects and jam 2K lines of code in there. After I asked it to refactor, it did, though it was an on-going battle to maintain some sense of order.
+Also, interestingly to me, my AI collaborator had no idea how to structure the code, so it tried to make God objects and jam 2K lines of code in there. After I asked it to refactor, it did, though it was an on-going battle to maintain some sense of order.
 
 ### Javascript Breakthrough
 
 After messing with the Godot implementation for the day, I went to sleep and, in the morning, 
-had a realization. Godot felt too complex for this game, and I didn't need its feature set.
- I wrangled `.tscn` scene files, GDScript syntax, and UI layout
+had a realization. Godot felt too complex for this game, and I didn't need its features
 for what was essentially a card-based board game. I thought it might be easier to build it as
 a HTML / CSS / JS game instead. 
 
-So I re-wrote it as a Javascript game **in a single prompt**. It just... worked? Without even a JS structure. I know it's simple, but still? 
+So I re-wrote it as a Javascript game **in a single prompt**.
 
 ![Converting to JS](/assets/ai-game/convert-to-js.png)
 *Conversion prompting*
@@ -129,11 +122,13 @@ So I re-wrote it as a Javascript game **in a single prompt**. It just... worked?
 ![Sprint board](/assets/ai-game/rewrite-3.png)
 *Sprint board*
 
+It just... worked? Without even a JS structure. I know it's simple, but still? 
+
 Granted, it initially generated it in three large-ish files without a discrete
-recommendation. But still impressive for a one-shot conversion! Instantly better.
+recommendation. But still impressive for a one-shot conversion! And instantly better.
 
 In an attempt to build something more maintainable, a second prompt converted it
-to Vue and generated all the components, wiring, package.json, etc. 
+to [Vue.js](https://vuejs.org/) and generated all the components, wiring, package.json, etc. 
 
 ![Converting to JS](/assets/ai-game/convert-to-vue.png)
 *To Vue*
@@ -142,7 +137,7 @@ After swapping to JS, it ran much more quickly and iteration went more smoothly.
 
 ### Development Loop
 
-I liked to make changes multiple areas in one prompt, as Cursor is quite good at working with Claude 4 to sequence a collection of changes in Agent mode (and Cursor bills per prompt, so combining them is a nice way to get more out of a single request). For example, here's a prompt I used, which jammed a bunch of somewhat unrelated ideas together:
+I liked to make changes to multiple areas in one prompt, as Cursor is quite good at working with Claude 4 to sequence a collection of changes in Agent mode. For example, here's a prompt I used, which jammed a bunch of somewhat unrelated ideas together:
 
 ![Game development prompt with multiple feedback points](/assets/ai-game/game-prompt.png)
 *Prompt with multiple directives*
@@ -154,24 +149,28 @@ Or, if you prefer a short video, here is an agent chunking through another promp
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i5QqmshGwAY?si=ZVby4ORmMI0wVisX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-As with my memory of game dev (and, well, normal dev), there's two main parts to the project - the first 90% and the second 90%. I spent a lot of time (a _lot_) trying to get the loop tuned, tweaking balance between task types and research, adjusting UI elements, and ... yeah. A lot of that.
+As with my memory of game dev (and, well, normal dev), there's two main parts to the project - the first 90% and the second 90%. I spent a lot of time (a _lot_) trying to get the loop tuned, tweaking balance between task types and research, adjusting UI elements, and ... 
 
 ![Tweaking gameplay and UI](/assets/ai-game/more-tweaks.png)
 *Indecisive tweaks*
 
+... yeah. A lot of that.
+
 ### UI rewrite
 
-As I neared the end of the project (or so I thought!) I wanted to re-think how we did the UI to be more like a mockup style UI with sticky notes - basically using some of the setup for a normal dev process.
+As I neared the end of the project (or so I thought!) I decided to revise the UI to be more like a mockup style UI with sticky notes - basically using some of the setup for a normal dev process.
 
 
 ![Old UI](/assets/ai-game/old-ui.png)
-Before
+*Before*
 
 ![Prompting to change UI](/assets/ai-game/ui-rewrite.png)
-Some prompts to change the UI
+*Prompts to change the UI. Not shown: many follow-up prompts.*
+
+<TODO: Replace below image>
 
 ![New UI](/assets/ai-game/old-ui.png)
-After.
+*After.*
 
 I've still been poking at it and playing it, but here we go, this is where I wound up:
 
@@ -179,26 +178,27 @@ https://kevinlondon.itch.io/velocity
 
 ### But is it fun?
 
-I think it's for the viewer to decide. There's something satisfyingly puzzle-ish about it. I have a hard time playing Satisfactory or Factorio, but they scratch a somewhat similar itch maybe? Maybe that's too self-aggrandizing. Anyway, I think it's kind of an interesting puzzle, we'll leave it at that. And what makes something fun? 
+That's for the viewer to decide! There's something satisfyingly puzzle-ish about it. I have a hard time playing Satisfactory or Factorio, but they scratch a somewhat similar itch maybe? Maybe that's too self-aggrandizing. Anyway, I think it's kind of an interesting puzzle, we'll leave it at that. And what makes something fun? 
 
 The elements I think work are picking the stories, and eventually realizing that actually, I should be prioritizing impact more highly. Then realizing that the story points and tech debt matter, because it will start failing tasks. I don't know, there's an interesting realization journey.
 
-I'm not sure how legibile it is to someone outside of tech, it is a little tech jargon heavy. But as they say, write what you know.
+I'm not sure how legible it is to someone outside of tech. It's pretty jargon heavy. 
 
+I had fun making it, and exploring. Genuinely, it gave me something to look forward to in a way that a game sometimes does not? It helps that I got to write this post to accompany it, and that's fun in its own way too. It's weird what things we might find fun! Satisfactory, for example, is sometimes fun and sometimes Too Much Like Work for me.
 
-### Usage stats for this exercise
+### Stats for this exercise
 
-Thought I'd collect some basic stats about usage on Cursor for this exercise.
+![Cursor stats](/assets/ai-game/cursor-stats.png)
+*Cursor stats*
+
 Over the course of all the prompting, it used about 120 "premium requests" out
-of 500. It also generated (lol) about 57K lines of code during our iterations,
+of 500. It also generated about 57K lines of code during our iterations,
 consisting of diffs, attempted fixes, additional logic, animations, etc. A good
 chunk of it I tossed out or edited out. But the final repo is pretty big. 
 
 As dev went on, the feedback loop got longer (sound familiar?). It took longer
 to propagate changes, context switching became a challenge, and I'd need to
 remember to catch up with whatever it had done.
-
-Eventually, I would queue up multiple agents to run at one time on the codebase.
 
 ### The Meta
 
@@ -208,12 +208,19 @@ I've described our role in the AI space as basically being an editor. I think th
 
 If I think about how this might affect the industry moving forward, I'm not sure. I can imagine these things getting better, to the point where it doesnt even need to run locally and can be agentic through some central UI (indeed, Gemini claims you can make a game directly in the UI, and so does Claude). 
 
-But wouldn't this normally have required a team of people? Probably? It's a little unsettling to think about for more than a few moments, again as someone in the industry.
+But wouldn't this normally have required a small team of people? ...possibly? It's a little unsettling to think about for more than a few moments, again as someone in the industry. This probably would've taken me much, much longer to build on my own without an AI collaborator.
 
-Bret Victor talked in [Inventing in Principle](https://www.youtube.com/watch?v=PUv66718DII) about this idea of building something that llows for rapid prototyping, perhaps even in realtime, and that could be a kind of game or entertainment itself. I think we're living in that reality now. From his talk:
+Bret Victor talked in [Inventing in Principle](https://www.youtube.com/watch?v=PUv66718DII) about an idea of building something that allows for rapid prototyping, perhaps even in realtime, and that could be a kind of game or entertainment itself. I think we're living in that reality now. From his talk:
 
 > Creators need an immediate connection to what they create. And what I mean by that is when you're making something, if you make a change, or you make a decision, you need to see the effect of that immediately. There can't be a delay, and there can't be anything hidden. Creators have to be able to see what they're doing. 
 
-We're at least getting closer to it. I'm curious to see how it feels in a few years when it _can_ be instant, and I don't need to step away to make a cup of tea while I wait for an agent to do something. What would it be like to not even need to batch my suggestions? To see the results immediately? It doesn't feel like we're far from that. Will this still be fun? Will humans even be doing it?
+We're getting closer to it. I'm curious to see how it feels in a few years when
+it _can_ be instant, and I don't need to step away to make a cup of tea while I
+wait for an agent to do something. What would it be like to not even need to
+batch my suggestions? To see the results immediately? It doesn't feel like we're
+far from that. Will this still be fun? Will humans even be doing it?
 
-The line between playing games and building games is blurring. When the tools become the game, what does that mean for both developers and players?
+The line between playing games and building games is blurring. When the tools
+become the game, what does that mean for both developers and players? 
+
+I'm still not sure.
