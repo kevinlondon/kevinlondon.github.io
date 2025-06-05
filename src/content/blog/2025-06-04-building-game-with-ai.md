@@ -1,6 +1,6 @@
 ---
 title: "I made a game with AI and I don't know how to feel about it"
-description: "I spent $20 on Cursor to build a game and realized the actual game was the gameplay of building the game itself."
+description: "I spent $20 on Cursor to build a game and realized the actual game was building the game itself."
 pubDatetime: 2025-06-04T22:00:00-8:00
 tags:
 - gamedev
