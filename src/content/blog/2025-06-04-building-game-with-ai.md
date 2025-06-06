@@ -161,12 +161,12 @@ As I neared the end of the project (or so I thought!), I decided to revise the U
 ![Prompting to change UI](/assets/ai-game/ui-rewrite.jpg)
 *Prompts to change the UI. Not shown: many follow-up prompts.*
 
-![New UI](/assets/ai-game/old-ui.png)
-*After. (Yes, it's the same image - the "after" shot didn't turn out as dramatic as hoped.)*
+![New UI](/assets/ai-game/after-prompt.png)
+*After.*
 
 I've still been poking at it and playing it, but here we go, this is where I wound up:
 
-<https://velocity-umber-six.vercel.app/>
+<https://velocity.kevinlondon.com/>
 
 ### But is it fun?
 
