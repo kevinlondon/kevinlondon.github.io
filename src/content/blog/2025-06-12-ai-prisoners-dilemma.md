@@ -1,6 +1,6 @@
 ---
 title: "The AI Prisoner's Dilemma"
-description: "Individual logical choices about AI adoption might be leading us toward outcomes none of us actually want. Here's why we might be trapped in a collective dilemma."
+description: "Two years ago I wrote 90-100% of my code by hand. Today it's maybe 30%. We might all be trapped in what I'm calling the AI prisoner's dilemma."
 pubDatetime: 2025-06-12T20:44:00-8:00
 tags:
 - ai
