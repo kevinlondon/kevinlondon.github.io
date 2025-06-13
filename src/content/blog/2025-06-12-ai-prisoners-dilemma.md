@@ -13,7 +13,7 @@ tags:
 I've been thinking about this thing I'm calling the AI prisoner's dilemma. The
 tech industry can't make up its mind about AI: one month AI's going to save us
 all, the next it's going to destroy everything. Beneath all the hot takes,
-there's this weird structural problem: we might be racing toward something none
+there's a weird structural problem: we might be racing toward something none
 of us actually want.
 
 Here's the dilemma: If we _avoid_ using AI, we might miss out on productivity
@@ -32,7 +32,7 @@ dilemmas, we can't easily work together to avoid this.
 
 ## The AI Ratchet
 
-The progression feels unavoidable once you're on it. A year ago, I wrote 90-100%
+Once you're on this path, it feels unavoidable. A year ago, I wrote 90-100%
 of my code by hand. Then GitHub Copilot arrived in my life, and suddenly I wrote
 maybe 70-80%, while the AI handled boilerplate and common patterns. Six months later,
 with VSCode and agent selection, I was down to 50-60% human contribution. Today,
@@ -86,14 +86,14 @@ Which brings us to the central question: Do we actually have meaningful choice
 in how this plays out?
 
 Individual developers, companies, even entire industries keep choosing to adopt
-AI tools. Each choice seems reasonable on its own. But these small decisions
+AI tools. Each choice seems reasonable on its own. Yet these small decisions
 add up to big outcomes that no one controls or really wants. Coordinating
 across a whole industry feels nearly impossible. 
 
-The prisoner's dilemma framework suggests our options are more limited than we'd
-like to believe. Even if we could coordinate globally to slow AI adoption, the
-incentives for breaking rank and using AI would be enormous. The first movers
-gain such advantages that abstaining becomes irrational.
+I suspect our options are more limited than we'd like to believe. Even if we 
+could somehow coordinate to slow AI adoption, the incentives for breaking rank 
+would be huge. The people who adopt AI first may get such significant advantages that 
+staying out starts to feel impossible.
 
 ## Three Potential Futures
 
@@ -101,14 +101,14 @@ I'm not sure where this all goes, and I'm not great at predictions! That said,
 here are a few possible futures I could see:
 
 **Soft Landing:** AI becomes a powerful collaborative tool and doesn't fully
-replace human cognitive work. We find a new equilibrium where humans and AI
+replace human cognitive work. We find a new state where humans and AI
 work together, similar to how spreadsheets made certain calculations trivial
 and created new types of analysis work.
 
-**Hard Transition:** Displacement happens quickly, and economic and social
-systems adapt. Universal basic income, shorter work weeks, or new economic
-models emerge. History suggests humans are adaptable to technological change,
-even when it's initially disruptive.
+**Hard Transition:** Displacement happens quickly, but we figure it out. Maybe
+universal basic income, shorter work weeks, or new economic models emerge. 
+Humans have adapted to big technological changes before, even when they felt 
+overwhelming at the time.
 
 **Overshoot:** We automate faster than we can adapt. Social and economic systems
 strain under the change. The benefits of AI are captured by a small number of
@@ -120,15 +120,14 @@ be built.
 The honest answer is that I don't know which future we're heading toward, and
 I'm not sure how much individual choices can impact the direction. The AI
 prisoner's dilemma suggests we're all making locally rational decisions that
-push us toward broadly uncertain results.
+push us toward uncertain results.
 
-Recognizing the dilemma doesn't mean we're powerless. Understanding the forces
+Recognizing the dilemma doesn't mean we're powerless! Understanding the forces
 might help us make better individual choices and better collective ones. If
-we're going to race toward AI adoption, we might as well race toward versions
-that serve human flourishing rather than efficiency metrics.
+we're going to race toward AI adoption, we might as well do it intentionally.
 
 I don't have answers about what comes next. What I do know is that the choices
-we make now—whether to embrace AI, resist it, or just try to keep up—are shaping
+we make now, including whether to embrace AI, resist it, or just try to keep up, are shaping
 the future in ways we can't really see yet. Maybe that's not such a bad thing.
 Some of the best innovations have come from periods of uncertainty, when we had
 to figure things out as we went along.
