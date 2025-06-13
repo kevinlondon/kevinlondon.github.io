@@ -16,20 +16,18 @@ all, the next it's going to destroy everything. Beneath all the hot takes,
 there's this weird structural problem: we might be racing toward something none
 of us actually want.
 
-Here's the dilemma: If we _avoid_ using AI, we keep things as they are for now,
-but risk getting left behind. Those who adopt AI could gain such a big advantage
-that those who don't become less relevant.
+Here's the dilemma: If we _avoid_ using AI, we might miss out on productivity
+gains and fall behind those who do adopt it. If we _embrace_ AI, we get those
+benefits, but we might also be accelerating toward outcomes we can't fully predict. 
+Maybe it's a future where many jobs change significantly, as [Dario Amodei recently
+suggested](https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic).
+Maybe it's something we haven't even considered yet.
 
-If we _embrace_ AI, we benefit from a brief spike in productivity, and we
-accelerate towards a possible future where, as [Dario Amodei recently
-suggested](https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic),
-half of all entry-level white-collar jobs could disappear, potentially
-increasing unemployment to up to 10-20%. 
-
-The question that keeps nagging at me: by using tools built to replace our craft, what happens to the craft itself?
+The question that keeps nagging at me: by using tools built to replace our
+craft, what happens to the craft itself?
 
 The trap is that what makes sense for each person (using AI to stay competitive)
-leads to bad outcomes for everyone (mass job loss). Unlike other prisoner's
+might lead to outcomes that none of us actually want. Unlike other prisoner's
 dilemmas, we can't easily work together to avoid this. 
 
 ## The AI Ratchet
