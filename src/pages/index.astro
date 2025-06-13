@@ -7,7 +7,7 @@ import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
-import PopularPosts from "@components/PopularPosts.astro";
+
 import getSortedPosts from "@utils/getSortedPosts";
 import { SITE, SOCIALS } from "@config";
 import { formatPostPath } from "@utils/formatPostPath";
@@ -64,8 +64,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
-    <Hr />
-    <PopularPosts />
+
 
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">

@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Card from "@components/Card";
+import { formatPostPath } from "@utils/formatPostPath";
+
+const posts = await getCollection("blog");
+
+// Get all popular posts, sorted by date
+const popularPosts = posts
+  .filter(post => post.data.tags?.includes('popular'))
+  .sort((a, b) => new Date(b.data.pubDatetime).getTime() - new Date(a.data.pubDatetime).getTime());
+---
+
+<Layout title="Popular Posts">
+  <Header activeNav="popular" />
+  <main id="main-content">
+    <section id="popular-posts">
+      <h1>Popular Posts</h1>
+      <p>The posts that have resonated most with readers over the years.</p>
+      
+      {popularPosts.length > 0 ? (
+        <ul>
+          {popularPosts.map(post => (
+            <Card
+              href={formatPostPath(post.slug)}
+              frontmatter={post.data}
+              secHeading={false}
+            />
+          ))}
+        </ul>
+      ) : (
+        <p>No popular posts found.</p>
+      )}
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  #popular-posts {
+    @apply pb-6 pt-12;
+  }
+  #popular-posts h1 {
+    @apply text-3xl font-bold tracking-wide mb-4;
+  }
+  #popular-posts > p {
+    @apply text-lg mb-8 opacity-80;
+  }
+</style>

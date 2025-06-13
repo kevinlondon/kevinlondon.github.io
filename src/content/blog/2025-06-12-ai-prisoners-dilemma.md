@@ -47,7 +47,7 @@ This isn't unique to me. The major tools are all moving toward an
 agent orchestration model: [OpenAI's
 Codex](https://openai.com/index/introducing-codex/), [Claude Code with a Claude
 Code MCP](https://docs.anthropic.com/en/docs/claude-code/mcp), [Cursor's
-BugBot](https://docs.cursor.com/bugbot). The writing is on the wall, and it's
+Background Agents](https://docs.cursor.com/background-agent). The writing is on the wall, and it's
 written in code I didn't write.
 
 ## The Sports Gear Analogy—And Why It Breaks Down
