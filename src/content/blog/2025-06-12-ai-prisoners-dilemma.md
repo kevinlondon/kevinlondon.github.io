@@ -12,7 +12,7 @@ tags:
 
 Two years ago, I wrote 90-100% of my code by hand. Today, it's maybe 30%. Each step felt reasonable, but I think we might all be trapped in what I'm calling the AI prisoner's dilemma.
 
-In the classic [prisoner's dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), individual rational choices lead to outcomes that are worse for everyone than if they'd just cooperated.
+It's like the classic coordination problem where everyone makes sensible individual choices that add up to something nobody wants.
 
 If we _avoid_ using AI, we might miss out on productivity gains and fall behind 
 those who do adopt it. If we _embrace_ AI, we get those benefits, but we might 
@@ -23,11 +23,11 @@ Maybe it's something we haven't even considered yet.
 The question that keeps nagging at me: by using tools built to replace our
 craft, what happens to the craft itself?
 
-We're all making sensible decisions that add up to something nobody wants. And unlike other coordination problems, we can't easily organize to avoid it. 
+We're all making sensible decisions that add up to outcomes we can't control. And unlike other coordination problems, we can't easily organize to avoid it. 
 
 ## The AI Ratchet
 
-Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my life, and suddenly I was writing maybe 70-80% while AI handled boilerplate and common patterns. A year later, with VSCode and agent selection, I was down to 50-60% human contribution. Now I'm at around 30%. I know this sounds hard to believe! I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code. I'm still valuable as an editor for AI, and my role in the relationship is changing from musician to conductor.
+Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my life, and suddenly I was writing maybe 70-80% of my code while AI handled boilerplate and common patterns. A year later, with VSCode and agent selection, I was down to 50-60% human contribution. Now I'm at around 30%. I know this sounds hard to believe! I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code. I'm still valuable as an editor for AI, and my role in the relationship is changing from musician to conductor.
 
 The cumulative effect is significant: I can see a near future (perhaps 1-2 years away) where I'm not writing code in an editor at all, and rather managing teams of AI agents that implement what I describe.
 
@@ -70,7 +70,7 @@ in how this plays out?
 
 Individual developers, companies, even entire industries keep choosing to adopt
 AI tools. Each choice seems reasonable on its own. Yet these small decisions
-add up to big outcomes that no one controls or really wants. Coordinating
+add up to big outcomes that no one controls. Coordinating
 across a whole industry feels nearly impossible. 
 
 I suspect our options are more limited than we'd like to believe. Even if we 
