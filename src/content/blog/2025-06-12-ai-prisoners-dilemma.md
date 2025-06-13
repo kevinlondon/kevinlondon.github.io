@@ -27,13 +27,7 @@ We're all making sensible decisions that add up to something nobody wants. And u
 
 ## The AI Ratchet
 
-Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my
-life, and suddenly I wrote maybe 70-80% while AI handled boilerplate and common
-patterns. A year later, with VSCode and agent selection, I was down to 50-60%
-human contribution. Today, I'm at around 30%. I know this sounds hard to
-believe! I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code. I'm
-still valuable as an editor for AI, and my role in the relationship is changing
-from musician to conductor.
+Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my life, and suddenly I was writing maybe 70-80% while AI handled boilerplate and common patterns. A year later, with VSCode and agent selection, I was down to 50-60% human contribution. Now I'm at around 30%. I know this sounds hard to believe! I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code. I'm still valuable as an editor for AI, and my role in the relationship is changing from musician to conductor.
 
 The cumulative effect is significant: I can see a near future (perhaps 1-2 years away) where I'm not writing code in an editor at all, and rather managing teams of AI agents that implement what I describe.
 
