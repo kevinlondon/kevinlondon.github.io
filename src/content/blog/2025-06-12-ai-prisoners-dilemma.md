@@ -15,7 +15,7 @@ tech industry can't make up its mind about AI: one month AI's going to save us
 all, the next it's going to destroy everything. Beneath all the hot takes,
 there's a weird structural problem.
 
-The dilemma: If we _avoid_ using AI, we might miss out on productivity gains and fall behind 
+If we _avoid_ using AI, we might miss out on productivity gains and fall behind 
 those who do adopt it. If we _embrace_ AI, we get those benefits, but we might 
 also be accelerating toward outcomes we can't fully predict. Maybe it's a future 
 where many jobs change significantly, as [Dario Amodei recently suggested](https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic).
@@ -57,7 +57,7 @@ really want to play baseball in 1930s gear? Or basketball in what they wore in
 the 70s?" He pointed out that ultramarathons had to be made harder over time
 because gear improvements made the original courses too easy.
 
-I get the analogy, and I think it misses how big this change feels. This isn't
+I get the analogy, but I think it misses how big this change feels. This isn't
 about incrementally better equipment, it's about category shifts happening at
 a rapid pace.
 
@@ -131,5 +131,4 @@ Some of the best innovations have come from periods of uncertainty, when we had
 to figure things out as we went along.
 
 Magic hour doesn't last forever, and neither does the uncertainty. Eventually,
-we'll find our footing in whatever comes next. 
-Night can be beautiful too, and I think we'll find our light.
+we'll find our footing in whatever comes next. Night can be beautiful too.
