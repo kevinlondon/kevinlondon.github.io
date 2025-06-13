@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+
+// Get all blog posts and filter for popular ones
+const allPosts = await getCollection('blog');
+const popularPosts = allPosts
+  .filter(post => post.data.tags?.includes('popular'))
+  .sort((a, b) => new Date(b.data.pubDatetime).getTime() - new Date(a.data.pubDatetime).getTime())
+  .slice(0, 4);
+---
+
+<section id="popular-posts">
+  <h2>Popular Posts</h2>
+  <ul>
+    {popularPosts.map(post => (
+      <li class="my-6">
+        <a
+          href={`/posts/${post.slug}`}
+          class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+        >
+          <h3 class="text-lg font-medium decoration-dashed hover:underline">{post.data.title}</h3>
+        </a>
+        <p>{post.data.description}</p>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  #popular-posts {
+    @apply pb-6 pt-12;
+  }
+  #popular-posts h2 {
+    @apply text-2xl font-semibold tracking-wide;
+  }
+</style> 

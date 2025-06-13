@@ -1,11 +1,12 @@
 ---
 title: "DevOps from Scratch, Part 1: Vagrant & Ansible"
 pubDatetime: 2016-09-19T12:32:00-07:00
-description: "A comprehensive guide to setting up development environments with Vagrant and Ansible automation"
+description: "Learn to automate your infrastructure from scratch using Vagrant and Ansible. We'll build and deploy a Python web application to Amazon, step by step."
 tags:
   - devops
   - vagrant
   - ansible
+  - popular
 ---
 
 Let's say you're at a startup and everything is going great. Your app is
@@ -502,7 +503,7 @@ The next step should be to do one final check and make sure
 we don't need any of the manual configuration we did along the way.
 
 The next step for us with our tiny app is actually to deploy it into the wild!
-We’re going to deploy to Amazon Web Service’s EC2 service. Other options include
+We're going to deploy to Amazon Web Service's EC2 service. Other options include
 Digital Ocean, Linode, Heroku, etc.
 
 One more time, let's run a `vagrant destroy`, `vagrant up` to make sure it all works.

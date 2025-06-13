@@ -2,6 +2,8 @@
 title: "Jekyll to Astro: an AI-assisted migration"
 description: "How I used AI tools to migrate 43 blog posts to Astro, with real examples and lessons from both successful and failed approaches"
 pubDatetime: 2024-11-28T11:00:00-7:00
+tags:
+  - popular
 ---
 
 **TL;DR**: I used AI tools to move my blog from Jekyll to Astro. Cursor helped me finish in about 3-4 hours (half the usual time), and I spent $10 testing out Aider. The site's faster and easier to maintain now.

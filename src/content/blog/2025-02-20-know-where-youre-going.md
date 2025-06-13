@@ -1,12 +1,10 @@
 ---
-title: "Know where you're going (and be open to change)" 
-description: "How having clear direction—while remaining open to change—shaped my journey from film school to software engineering, and why both focus and flexibility matter in any career."
-pubDatetime: 2025-02-20T22:30:00-8:00 
-isDraft: false
+title: "Know where you're going (and be open to change)"
+description: "A reflection on career planning, staying flexible, and finding the balance between having direction and remaining open to unexpected opportunities."
+pubDatetime: 2025-02-20T11:00:00-8:00
 tags:
-- film 
-- career 
-- software
+  - career
+  - popular
 ---
 
 I have had a bit of a strange career history. Looking back, I think it's a story about the importance of having clear direction and being willing to change course when something better comes along.
@@ -15,7 +13,7 @@ I have had a bit of a strange career history. Looking back, I think it's a story
 
 In community college, I studied computer science and photography before getting
 hooked on visual storytelling. I decided I wanted to be a cinematographer. When
-my film school applications didn’t work out, I took
+my film school applications didn't work out, I took
 an alternate route: I moved to LA and tried to make it in the film industry
 anyway.
 

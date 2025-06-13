@@ -3,10 +3,10 @@ title: "I made a game with AI and I don't know how to feel about it"
 description: "I spent $20 on Cursor to build a game and realized the actual game was building the game itself."
 pubDatetime: 2025-06-04T22:00:00-8:00
 tags:
-- gamedev
 - ai
+- gamedev
 - cursor
-- meta
+- popular
 ---
 
 I hurt my toe and had to rest over the weekend. With unexpected freetime, I played games on the first day. On the second day, I felt bored and decided to try making a game instead.

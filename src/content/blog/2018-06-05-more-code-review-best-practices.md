@@ -1,7 +1,7 @@
 ---
-title:  "More Code Review Best Practices"
+title: "More Code Review Best Practices"
 pubDatetime: 2018-06-05T20:54:08
-description: "A few more code review best practices"
+description: "Additional insights on code reviews: handling disagreements, managing review fatigue, and creating a positive review culture on your team."
 tags:
   - code reviews
   - process

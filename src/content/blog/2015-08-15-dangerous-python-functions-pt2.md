@@ -1,7 +1,7 @@
 ---
-title:  "Dangerous Python Functions, Part 2"
+title: "Dangerous Python Functions, Part 2"
 pubDatetime: 2015-08-15T15:22:08
-description: "A discussion of dangerous Python functions and how to avoid them"
+description: "More Python functions that can introduce security vulnerabilities, including pickle, PyYAML, and SQL injection risks. Learn how to use them safely."
 tags:
   - python
   - security

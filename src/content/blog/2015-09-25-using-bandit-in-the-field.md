@@ -1,10 +1,11 @@
 ---
-title: Using Bandit in the Field
+title: "Using Bandit in the Field"
 pubDatetime: 2015-09-25T22:17:10
-description: "A discussion of using Bandit to find vulnerabilities in Python code"
+description: "Real-world experience using Bandit to scan Python codebases for security vulnerabilities. What works, what doesn't, and how to integrate it into your workflow."
 tags:
   - python
   - security
+  - bandit
 ---
 
 > Late 2019 Note: This is a post I had sitting in my draft folder since 2015.
