@@ -29,7 +29,7 @@ We're all making rational decisions that add up to outcomes we can't control. An
 
 Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my life, and suddenly I was writing maybe 70-80% of my code while AI handled boilerplate and common patterns. A year later, with VSCode and agent selection, I was down to 50-60% human contribution. Now I'm at around 30%. I know this sounds hard to believe! I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code. I'm still valuable as an editor for AI, and my role in the relationship is changing from musician to conductor.
 
-The cumulative effect is significant: I can see a near future (perhaps 1-2 years away) where I'm not writing code in an editor at all, and rather managing teams of AI agents that implement what I describe.
+I can see a near future (perhaps 1-2 years away) where I'm not writing code in an editor at all, and rather managing teams of AI agents that implement what I describe.
 
 This isn't unique to me. The major tools are all moving toward an
 agent orchestration model: [OpenAI's
