@@ -4,7 +4,6 @@ import Posts from "@layouts/Posts.astro";
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import getSortedPosts from "@utils/getSortedPosts";
-import { slugifyStr } from "@utils/slugify";
 
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
