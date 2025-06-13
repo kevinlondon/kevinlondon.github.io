@@ -1,6 +1,6 @@
 ---
 title: "The AI Prisoner's Dilemma"
-description: "Individual rational choices about AI adoption might be leading us toward outcomes none of us actually want. Here's why we might be trapped in a collective dilemma."
+description: "Individual logical choices about AI adoption might be leading us toward outcomes none of us actually want. Here's why we might be trapped in a collective dilemma."
 pubDatetime: 2025-06-12T20:44:00-8:00
 tags:
 - ai
@@ -14,6 +14,8 @@ I've been thinking about this thing I'm calling the AI prisoner's dilemma. The
 tech industry can't make up its mind about AI: one month AI's going to save us
 all, the next it's going to destroy everything. Beneath all the hot takes,
 there's a weird structural problem.
+
+In the classic [prisoner's dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), individual rational choices lead to outcomes that are worse for everyone than if they'd just cooperated.
 
 If we _avoid_ using AI, we might miss out on productivity gains and fall behind 
 those who do adopt it. If we _embrace_ AI, we get those benefits, but we might 
@@ -30,12 +32,14 @@ Unlike other prisoner's dilemmas, we can't easily coordinate to avoid this.
 
 ## The AI Ratchet
 
-Once you're on this path, it feels unavoidable. A year ago, I wrote 90-100%
+Once you're on the AI path, it feels inevitable. Two years ago, I wrote 90-100%
 of my code by hand. Then GitHub Copilot arrived in my life, and suddenly I wrote
-maybe 70-80%, while the AI handled boilerplate and common patterns. Six months later,
+maybe 70-80%, while AI handled boilerplate and common patterns. A year later,
 with VSCode and agent selection, I was down to 50-60% human contribution. Today,
-I'm writing maybe 20-30% of my code directly. I'm still valuable as an editor
-for AI (I think!), and my role in the relationship has changed from musician to
+I'm writing maybe 30% of my code directly. I know this sounds hard to believe! I 
+wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) 
+where I barely wrote any code. I'm still valuable as an editor
+for AI, and my role in the relationship is changing from musician to
 conductor.
 
 Each step felt like a reasonable optimization. Why write repetitive code when AI
@@ -69,13 +73,15 @@ type of athlete.
 ## Magic Hour
 
 There's a moment in photography called magic hour. That brief period after
-sunset when the sky is still light and night is approaching. The light is
-beautiful, and you know it's temporary.
+sunset when the sky is still light. It's beautiful and very short-lived.
+
+![Magic hour at Pike Place Market](/assets/ai-prisoners/2020-06-02.jpg)
+_Magic hour at Pike Place Market_
 
 I think that's where we are with AI and knowledge work. We're in this golden
 hour where AI multiplies our capabilities rather than replacing them. I'm more
 productive than I've ever been. The work is often more interesting because the
-tedious parts are automated away. Night is coming, and I genuinely don't know
+tedious parts are automated away. Something new is coming, and I genuinely don't know
 what's on the other side of it.
 
 ## The Illusion of Agency
@@ -92,6 +98,21 @@ I suspect our options are more limited than we'd like to believe. Even if we
 could somehow coordinate to slow AI adoption, the incentives for breaking rank 
 would be huge. The people who adopt AI first may get such significant advantages that 
 staying out starts to feel impossible.
+
+## What We Can and Can't Control
+
+When I feel overwhelmed by all this, I try to focus on what's actually in my control 
+versus what isn't. 
+
+**Out of my control:** Industry direction, macro economic changes, whether AI development 
+slows down or speeds up, what other companies or developers choose to do.
+
+**In my control:** My curiosity about these tools, willingness to learn how to use 
+them effectively, staying informed, and how I adapt to changes.
+
+I can't control whether we're heading toward a soft landing or something more disruptive. 
+But I can control whether I'm learning and staying curious rather than just reacting 
+with fear or avoidance.
 
 ## Three Potential Futures
 
@@ -125,10 +146,9 @@ might help us make better individual choices and better collective ones. If
 we're going to race toward AI adoption, we might as well do it intentionally.
 
 I don't have answers about what comes next. What I do know is that the choices
-we make now, including whether to embrace AI, resist it, or just try to keep up, are shaping
-the future in ways we can't really see yet. Maybe that's not such a bad thing.
+we make now are shaping the future in ways we can't really see yet. Maybe that's not such a bad thing.
 Some of the best innovations have come from periods of uncertainty, when we had
 to figure things out as we went along.
 
 Magic hour doesn't last forever, and neither does the uncertainty. Eventually,
-we'll find our footing in whatever comes next. Night can be beautiful too.
+we'll find our footing in whatever comes next. Dawn can be beautiful too.
