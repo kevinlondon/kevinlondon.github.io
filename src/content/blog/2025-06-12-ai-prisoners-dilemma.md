@@ -10,11 +10,7 @@ tags:
 - meta
 ---
 
-Two years ago I wrote 90-100% of my code by hand. Today it's maybe 30%. Each step felt reasonable, but I think we might all be trapped in what I'm calling the AI prisoner's dilemma.
-
-The tech industry can't make up its mind about AI: one month it's going to save us
-all, the next it's going to destroy everything. Beneath all the takes,
-there's a weird structural problem.
+Two years ago, I wrote 90-100% of my code by hand. Today, it's maybe 30%. Each step felt reasonable, but I think we might all be trapped in what I'm calling the AI prisoner's dilemma.
 
 In the classic [prisoner's dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), individual rational choices lead to outcomes that are worse for everyone than if they'd just cooperated.
 
