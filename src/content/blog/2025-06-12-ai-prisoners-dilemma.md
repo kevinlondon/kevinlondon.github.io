@@ -145,6 +145,8 @@ Recognizing the dilemma doesn't mean we're powerless! Understanding the forces
 might help us make better individual choices and better collective ones. If
 we're going to race toward AI adoption, we might as well do it intentionally.
 
+Maybe it's because we're expecting our first child any day now, but I find myself thinking less about what this means for my career and more about what world we're creating for him. What will work look like when he's my age?
+
 I don't have answers about what comes next. What I do know is that the choices
 we make now are shaping the future in ways we can't really see yet. Maybe that's not such a bad thing.
 Some of the best innovations have come from periods of uncertainty, when we had
