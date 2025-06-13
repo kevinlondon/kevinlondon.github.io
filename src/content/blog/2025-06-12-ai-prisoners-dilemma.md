@@ -26,7 +26,7 @@ Maybe it's something we haven't even considered yet.
 The question that keeps nagging at me: by using tools built to replace our
 craft, what happens to the craft itself?
 
-Here's what makes this tricky: we're all making sensible decisions that add up to something nobody wants. And unlike other coordination problems, we can't easily organize to avoid it. 
+We're all making sensible decisions that add up to something nobody wants. And unlike other coordination problems, we can't easily organize to avoid it. 
 
 ## The AI Ratchet
 
