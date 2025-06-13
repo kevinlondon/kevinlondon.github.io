@@ -1,7 +1,6 @@
 ---
 title: "The AI Prisoner's Dilemma"
 description: "Individual rational choices about AI adoption might be leading us toward outcomes none of us actually want. Here's why we might be trapped in a collective dilemma."
-isDraft: true
 pubDatetime: 2025-06-12T21:44:00-8:00
 tags:
 - ai
