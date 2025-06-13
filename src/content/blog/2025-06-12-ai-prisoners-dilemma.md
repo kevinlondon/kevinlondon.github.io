@@ -1,20 +1,21 @@
 ---
 title: "The AI Prisoner's Dilemma"
-description: ""
+description: "Individual rational choices about AI adoption might be leading us toward outcomes none of us actually want. Here's why we might be trapped in a collective dilemma."
 isDraft: true
-pubDatetime: 2025-06-08T22:00:00-8:00
+pubDatetime: 2025-06-12T21:44:00-8:00
 tags:
-- gamedev
 - ai
-- cursor
+- technology
+- productivity
+- future
 - meta
 ---
 
 I've been thinking about this thing I'm calling the AI prisoner's dilemma. The
-tech industry can't seem to make up its mind about AI - one month it's going to
-save us all, the next it's going to destroy everything. But beneath all the hot
-takes, there's this weird structural problem: we might be racing toward
-something none of us actually want.
+tech industry can't make up its mind about AI: one month AI's going to save us
+all, the next it's going to destroy everything. Beneath all the hot takes,
+there's this weird structural problem: we might be racing toward something none
+of us actually want.
 
 Here's the dilemma: If we _avoid_ using AI, we keep things as they are for now,
 but risk getting left behind. Those who adopt AI could gain such a big advantage
@@ -56,15 +57,14 @@ written in code I didn't write.
 
 ## The Sports Gear Analogy—And Why It Breaks Down
 
-A friend recently compared AI adoption to how sports equipment has evolved: "Do
-you really want to play baseball in 1930s gear? Or basketball in what they wore
-in the 70s?" He pointed out that ultramarathons had to be made more
-difficult over time because gear improvements made the original courses too
-easy.
+A friend recently compared AI adoption to sports equipment evolution: "Do you
+really want to play baseball in 1930s gear? Or basketball in what they wore in
+the 70s?" He pointed out that ultramarathons had to be made harder over time
+because gear improvements made the original courses too easy.
 
-The analogy is compelling, and I think it misses the magnitude of change we're
-experiencing. This isn't about incrementally better equipment, and it's about
-category shifts happening at a rapid pace.
+I get the analogy, and I think it misses how big this change feels. This isn't
+about incrementally better equipment, it's about category shifts happening at
+a rapid pace.
 
 Imagine if cycling went from Tour de France bicycles to e-bikes with
 race-lasting batteries, then to motorcycles, all within five years. At some
@@ -90,7 +90,7 @@ in how this plays out?
 
 Individual developers, companies, even entire industries keep choosing to adopt
 AI tools. Each choice seems reasonable on its own. But these small decisions
-add up to big outcomes that no one controls or may really wants. Coordinating
+add up to big outcomes that no one controls or really wants. Coordinating
 across a whole industry feels nearly impossible. 
 
 The prisoner's dilemma framework suggests our options are more limited than we'd
