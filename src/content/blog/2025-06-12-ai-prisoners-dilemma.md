@@ -12,7 +12,7 @@ tags:
 
 I've been thinking about this thing I'm calling the AI prisoner's dilemma. The
 tech industry can't make up its mind about AI: one month AI's going to save us
-all, the next it's going to destroy everything. Beneath all the hot takes,
+all, the next it's going to destroy everything. Beneath all the takes,
 there's a weird structural problem.
 
 In the classic [prisoner's dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), individual rational choices lead to outcomes that are worse for everyone than if they'd just cooperated.
@@ -26,9 +26,7 @@ Maybe it's something we haven't even considered yet.
 The question that keeps nagging at me: by using tools built to replace our
 craft, what happens to the craft itself?
 
-What makes this tricky is that individual rational choices (using AI to stay 
-competitive) might lead to collective outcomes that none of us actually want. 
-Unlike other prisoner's dilemmas, we can't easily coordinate to avoid this. 
+Here's what makes this tricky: we're all making sensible decisions that add up to something nobody wants. And unlike other coordination problems, we can't easily organize to avoid it. 
 
 ## The AI Ratchet
 
@@ -65,21 +63,16 @@ I get the analogy, but I think it misses how big this change feels. This isn't
 about incrementally better equipment, it's about category shifts happening at
 a rapid pace.
 
-Imagine if cycling went from Tour de France bicycles to e-bikes with
-race-lasting batteries, then to motorcycles, all within five years. At some
-point, you're not playing the same sport anymore, and you're not even the same
-type of athlete.
+Imagine if cycling went from Tour de France bicycles to e-bikes to motorcycles, all within five years. At some point, you're not cycling anymore. 
 
 ## Magic Hour
 
-There's a moment in photography called magic hour. That brief period after
-sunset when the sky is still light. It's beautiful and very short-lived.
+There's a moment in photography called magic hour. It's that brief, beautiful period after sunset when the sky is still light.
 
 ![Magic hour at Pike Place Market](/assets/ai-prisoners/2020-06-02.jpg)
 _Magic hour at Pike Place Market_
 
-I think that's where we are with AI and knowledge work. We're in this golden
-hour where AI multiplies our capabilities rather than replacing them. I'm more
+That's where we are with AI and knowledge work: a golden hour where AI multiplies our capabilities over replacing them. I'm more
 productive than I've ever been. The work is often more interesting because the
 tedious parts are automated away. Something new is coming, and I genuinely don't know
 what's on the other side of it.
@@ -111,13 +104,12 @@ slows down or speeds up, what other companies or developers choose to do.
 them effectively, staying informed, and how I adapt to changes.
 
 I can't control whether we're heading toward a soft landing or something more disruptive. 
-But I can control whether I'm learning and staying curious rather than just reacting 
-with fear or avoidance.
+But I can control whether I'm learning and staying curious rather than reacting 
+from fear or avoidance.
 
 ## Three Potential Futures
 
-I'm not sure where this all goes, and I'm not great at predictions! That said,
-here are a few possible futures I could see:
+I'm not sure where this all goes. That said, here are a few possible futures:
 
 **Soft Landing:** AI becomes a powerful collaborative tool and doesn't fully
 replace human cognitive work. We find a new state where humans and AI
@@ -142,7 +134,7 @@ prisoner's dilemma suggests we're all making locally rational decisions that
 push us toward uncertain results.
 
 Recognizing the dilemma doesn't mean we're powerless! Understanding the forces
-might help us make better individual choices and better collective ones. If
+might help us make better individual choices _and_ better collective ones. If
 we're going to race toward AI adoption, we might as well do it intentionally.
 
 Maybe it's because we're expecting our first child any day now, but I find myself thinking less about what this means for my career and more about what world we're creating for him. What will work look like when he's my age?
