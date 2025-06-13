@@ -52,7 +52,7 @@ Code MCP](https://docs.anthropic.com/en/docs/claude-code/mcp), [Cursor's
 Background Agents](https://docs.cursor.com/background-agent). The writing is on the wall, and it's
 written in code I didn't write.
 
-## The Sports Gear Analogy—And Why It Breaks Down
+## The Sports Gear Analogy
 
 A friend recently compared AI adoption to sports equipment evolution: "Do you
 really want to play baseball in 1930s gear? Or basketball in what they wore in
@@ -77,7 +77,7 @@ productive than I've ever been. The work is often more interesting because the
 tedious parts are automated away. Something new is coming, and I genuinely don't know
 what's on the other side of it.
 
-## The Illusion of Agency
+## Do we actually have a choice?
 
 Which brings us to the central question: Do we actually have meaningful choice
 in how this plays out?
@@ -92,7 +92,7 @@ could somehow coordinate to slow AI adoption, the incentives for breaking rank
 would be huge. The people who adopt AI first may get such significant advantages that 
 staying out starts to feel impossible.
 
-## What We Can and Can't Control
+## What's actually in our control
 
 When I feel overwhelmed by all this, I try to focus on what's actually in my control 
 versus what isn't. 
@@ -107,7 +107,7 @@ I can't control whether we're heading toward a soft landing or something more di
 But I can control whether I'm learning and staying curious rather than reacting 
 from fear or avoidance.
 
-## Three Potential Futures
+## Where this might go
 
 I'm not sure where this all goes. That said, here are a few possible futures:
 
@@ -126,7 +126,7 @@ strain under the change. The benefits of AI are captured by a small number of
 entities while the effects ripple through society faster than safety nets can
 be built.
 
-## Living in the Question
+## Living in the question
 
 The honest answer is that I don't know which future we're heading toward, and
 I'm not sure how much individual choices can impact the direction. The AI
