@@ -92,7 +92,7 @@ could somehow coordinate to slow AI adoption, the incentives for breaking rank
 would be huge. The people who adopt AI first may get such significant advantages that 
 staying out starts to feel impossible.
 
-## What's actually in our control
+## What's in our control
 
 When I feel overwhelmed by all this, I try to focus on what's actually in my control 
 versus what isn't. 
