@@ -1,7 +1,7 @@
 ---
 title:  "Answers to Django Security Questions"
 pubDatetime: 2015-10-16T13:56:04
-description: "Answers to Django security questions"
+description: "Answers to the Django security questions I get asked most often: CSRF protection, SQL injection prevention, secure sessions, and authentication gotchas."
 tags:
   - django
   - security

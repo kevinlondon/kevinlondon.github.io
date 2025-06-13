@@ -1,7 +1,7 @@
 ---
 title: Giving Feedback When You're New
 pubDatetime: 2022-02-12T21:53:01
-description: "A discussion of how to give feedback when you're new to a team"
+description: "How to give effective feedback as a new team member: building trust, asking good questions, and providing constructive input without overstepping boundaries."
 tags:
   - feedback
   - onboarding

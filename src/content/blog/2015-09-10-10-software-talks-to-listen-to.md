@@ -1,7 +1,7 @@
 ---
 title: 10 Software Talks to Listen to on Your Way to Work
 pubDatetime: 2015-09-10T22:17:10
-description: "A list of software talks that I've found useful"
+description: "Software talks that changed how I think about code. Rich Hickey on simplicity, Bret Victor on the future of programming, and eight others worth your time."
 tags:
   - software
   - talks

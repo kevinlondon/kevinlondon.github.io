@@ -1,7 +1,7 @@
 ---
 title:  "Dangerous Python Functions, Part 1"
 pubDatetime: 2015-07-26T19:54:08
-description: A discussion of dangerous Python functions and how to avoid them
+description: "Python functions like eval(), exec(), and input() can create serious security vulnerabilities. Here's how to identify and avoid these dangerous patterns in your code."
 tags:
   - python
   - security

@@ -1,7 +1,7 @@
 ---
 title: Backfill Considerations
 pubDatetime: 2022-12-06T11:20:00
-description: "A discussion of considerations for running a backfill"
+description: "Planning a data backfill? Here are the key considerations: impact assessment, rollback strategies, monitoring, and how to avoid common pitfalls that can bring down production systems."
 tags:
   - process
 ---

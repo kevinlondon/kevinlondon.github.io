@@ -1,7 +1,7 @@
 ---
 title:  "Finding Vulnerabilities with Bandit Talk"
 pubDatetime: 2015-09-24T13:23:08
-description: "A talk about using Bandit to find vulnerabilities in Python code"
+description: "How to use Bandit to automatically scan Python codebases for security vulnerabilities: setup, configuration, and integrating security checks into your development workflow."
 tags:
   - python
   - security

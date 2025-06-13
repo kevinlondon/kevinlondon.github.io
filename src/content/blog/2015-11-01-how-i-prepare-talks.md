@@ -1,7 +1,7 @@
 ---
 title:  "How to Prepare for Talks"
 pubDatetime: 2015-11-01T22:09:00
-description: "A process for preparing for talks"
+description: "My step-by-step process for preparing technical talks: from initial brainstorming and outline creation to practice sessions and handling Q&A."
 tags:
   - talks
   - process

@@ -1,7 +1,7 @@
 ---
 title:  "Intro to Code Reviews talk"
 pubDatetime: 2015-06-25T15:54:08
-description: A talk introducing code reviews, their benefits, and how to get started with them on your team
+description: "Getting started with code reviews: why they matter, how to implement them effectively on your team, and common pitfalls to avoid when establishing a review culture."
 tags:
   - talks
   - code reviews

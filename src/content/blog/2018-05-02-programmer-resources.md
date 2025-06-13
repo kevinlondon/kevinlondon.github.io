@@ -1,7 +1,7 @@
 ---
 title: Programmer Resources
 pubDatetime: 2018-05-02T22:50:08
-description: "A list of resources that have helped me grow as a software engineer"
+description: "The books, blogs, and tools that have helped me grow as a software engineer. From Clean Code to system design resources, here's what I keep coming back to."
 tags:
   - resources
   - software

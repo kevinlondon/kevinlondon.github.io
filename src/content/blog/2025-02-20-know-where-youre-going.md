@@ -1,7 +1,7 @@
 ---
 title: "Know where you're going (and be open to change)"
-description: "A reflection on career planning, staying flexible, and finding the balance between having direction and remaining open to unexpected opportunities."
-pubDatetime: 2025-02-20T11:00:00-8:00
+description: "How having clear direction while remaining open to change shaped my journey from film school to software engineering, and why both focus and flexibility matter in any career."
+pubDatetime: 2025-02-20T22:30:00-8:00
 tags:
   - career
   - popular
@@ -19,7 +19,7 @@ anyway.
 
 I arrived in LA with restaurant-job savings as my safety net. Like many film
 hopefuls, I applied to unpaid Craigslist gigs. My first real break was as a
-production assistant on a feature film. It paid $75 a week — barely enough for
+production assistant on a feature film. It paid $75 a week, barely enough for
 gas. During my first week on set, I connected with the lighting crew and asked
 to shadow them. The Best Boy Electric took me under his wing, and suddenly I
 found my niche.
@@ -61,11 +61,11 @@ allow yourself to pivot. I'm not a cinematographer. What happened?
 My senior year, I interned at Light Iron, a post-production startup specializing
 in color correction. I told them I wanted to become a colorist, who partners
 with a cinematographer to polish the film's finished look. They started training
-me on the standard path—first becoming a Conform Artist (essentially a
+me on the standard path, first becoming a Conform Artist (essentially a
 colorist's assistant who assembles the pieces for color work).
 
-As I started training, I hit a snag: I found it boring. It's challenging work –
-like an intricate puzzle – but it just didn't click for me. Meanwhile, I'd been
+As I started training, I hit a snag: I found it boring. It's challenging work,
+like an intricate puzzle, but it just didn't click for me. Meanwhile, I'd been
 helping their CTO with network racks, computer fixes, and firmware flashing. I
 found myself drawn to those tasks. Around this time, I'd been reading Hacker
 News and getting increasingly interested in tech. 
@@ -79,7 +79,7 @@ work with him, he agreed and his mentorship helped set me on my current path.
 
 ## Learning to Embrace Change
 
-Know what you want — it gives you direction and focus — but stay open to
+Know what you want. It gives you direction and focus, but stay open to
 changing your mind as you grow. Sometimes the path you start on leads somewhere
 unexpected but more fulfilling. It's okay to change direction, especially when
 you find yourself genuinely excited about a new opportunity.
@@ -87,7 +87,7 @@ you find yourself genuinely excited about a new opportunity.
 The key is intentionality: whether you're sticking with your current path or
 shifting to something new, make it a conscious choice rather than letting
 circumstances or others decide for you. My journey from cinematography to
-software engineering wasn't a failure of my original plan — I made a deliberate
+software engineering wasn't a failure of my original plan. I made a deliberate
 choice to pursue a growing curiosity about technology.
 
 Nothing is wasted, even when the path changes completely.  My film background

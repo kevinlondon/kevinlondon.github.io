@@ -1,7 +1,7 @@
 ---
 title:  "Two Trains Talk"
 pubDatetime: 2016-08-29T15:54:08
-description: "A talk about the dangers of technical debt"
+description: "Why technical debt is like two trains heading toward each other: the longer you wait to address it, the more catastrophic the collision becomes."
 tags:
   - talks
   - legacy code

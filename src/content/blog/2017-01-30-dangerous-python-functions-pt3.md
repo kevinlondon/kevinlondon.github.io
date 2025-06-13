@@ -1,7 +1,7 @@
 ---
 title:  "Dangerous Python Functions, Part 3"
 pubDatetime: 2017-01-30T17:30:08
-description: "A brief update to the earlier posts about insecure Python functions"
+description: "Updates on Python security: new vulnerabilities discovered in PyYAML and other libraries, plus community feedback on dangerous function usage."
 tags:
   - python
   - security

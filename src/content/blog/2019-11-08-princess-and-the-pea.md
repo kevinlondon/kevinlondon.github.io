@@ -1,7 +1,7 @@
 ---
 title: The Princess and the Pea
 pubDatetime: 2019-11-08T17:35:08
-description: "A discussion of how to be sensitive to pain"
+description: "Like the princess who could feel a pea through twenty mattresses, sometimes being sensitive to small problems is exactly what teams need to prevent bigger issues."
 tags:
   - psychology
   - analogies

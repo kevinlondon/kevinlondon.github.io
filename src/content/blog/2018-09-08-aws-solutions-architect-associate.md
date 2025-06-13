@@ -1,7 +1,7 @@
 ---
 title: AWS Certified Solutions Architect - Associate Notes
 pubDatetime: 2018-09-08T16:23:08
-description: "Notes on preparing for the AWS Certified Solutions Architect - Associate certification"
+description: "Study guide for the AWS Solutions Architect Associate exam: key services to master, hands-on labs to complete, and practical tips for passing on your first attempt."
 tags:
   - aws
   - certifications
