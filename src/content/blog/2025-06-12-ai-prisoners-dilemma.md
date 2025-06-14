@@ -16,11 +16,11 @@ It's like the classic coordination problem where everyone makes sensible individ
 
 If we _avoid_ using AI, we might miss out on productivity gains and fall behind 
 those who do adopt it. If we _embrace_ AI, we get those benefits, but we might 
-also be accelerating toward outcomes we can't fully predict. Perhaps it's a future 
-where many jobs change significantly, as [Dario Amodei recently suggested](https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic).
-Or something we haven't even considered yet.
+also be accelerating toward outcomes we can't fully predict. It could be a future 
+where many jobs change significantly, as [Dario Amodei recently suggested](https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic),
+or something we haven't even considered yet.
 
-The question that keeps nagging at me: what happens to our craft when we use tools built to replace it?
+There's one question, maybe among many, that's nagging at me: what happens to our craft when we use tools built to replace it?
 
 We're all making rational decisions that add up to outcomes we can't control. And unlike other coordination problems, we can't easily organize to avoid it. 
 
