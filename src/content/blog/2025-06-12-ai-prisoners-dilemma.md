@@ -39,7 +39,7 @@ This isn't unique to me. The major tools are all moving toward an
 agent orchestration model: [OpenAI's
 Codex](https://openai.com/index/introducing-codex/), [Claude Code with a Claude
 Code MCP](https://docs.anthropic.com/en/docs/claude-code/mcp), [Cursor's
-Background Agents](https://docs.cursor.com/background-agent). The direction seems clear.
+Background Agents](https://docs.cursor.com/background-agent). The direction seems clear to me.
 
 ## The Sports Gear Analogy
 
@@ -48,7 +48,7 @@ really want to play baseball in 1930s gear? Or basketball in what they wore in
 the 70s?" He pointed out that ultramarathons had to be made harder over time
 because gear improvements made the original courses too easy.
 
-I get the analogy, but I think it misses how big this change feels. This isn't
+I get the analogy, though it misses how big this change feels. This isn't
 about incrementally better equipment, it's about category shifts happening at
 a rapid pace.
 
@@ -90,7 +90,7 @@ replace human cognitive work. We find a new state where humans and AI
 work together, similar to how spreadsheets made certain calculations trivial
 and created new types of analysis work.
 
-**Hard Transition:** Displacement happens quickly, but we figure it out. Maybe
+**Hard Transition:** Displacement happens quickly, and we figure it out. Maybe
 universal basic income, shorter work weeks, or new economic models emerge. 
 Humans have adapted to big technological changes before, even when they felt 
 overwhelming at the time.
@@ -124,7 +124,7 @@ I'm not sure how much our individual choices matter. We're all making decisions
 that make sense for us personally, but I'm not sure any of us really knows where 
 it goes.
 
-But recognizing this pattern doesn't mean we're stuck with it. If we're going to 
+Recognizing this pattern doesn't mean we're stuck with it. If we're going to 
 keep adopting AI tools anyway, we might as well do it intentionally rather than 
 just drifting into whatever happens next.
 
