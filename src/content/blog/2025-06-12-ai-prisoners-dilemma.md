@@ -48,11 +48,7 @@ really want to play baseball in 1930s gear? Or basketball in what they wore in
 the 70s?" He pointed out that ultramarathons had to be made harder over time
 because gear improvements made the original courses too easy.
 
-I get the analogy, though it misses how big this change feels. This isn't
-about incrementally better equipment, it's about category shifts happening at
-a rapid pace.
-
-Imagine if cycling went from Tour de France bicycles to e-bikes to motorcycles, all within five years. At some point, you're not cycling anymore. 
+The analogy misses how big this change _feels_. Imagine if cycling went from Tour de France bicycles to e-bikes to motorcycles, all within five years. At some point, you're not cycling anymore. 
 
 ## Magic Hour
 
