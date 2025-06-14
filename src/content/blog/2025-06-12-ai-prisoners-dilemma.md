@@ -120,23 +120,22 @@ from fear or avoidance.
 ## Living in the question
 
 The honest answer is that I don't know which future we're heading toward, and
-I'm not sure how much individual choices can impact the direction. The AI
-prisoner's dilemma suggests we're all making locally rational decisions that
-push us toward uncertain results.
+I'm not sure how much our individual choices matter. We're all making decisions 
+that make sense for us personally, but I'm not sure any of us really knows where 
+it goes.
 
-Recognizing the dilemma doesn't mean we're powerless! Understanding the forces
-might help us make better individual choices _and_ better collective ones. If
-we're going to race toward AI adoption, we might as well do it intentionally.
+But recognizing this pattern doesn't mean we're stuck with it. If we're going to 
+keep adopting AI tools anyway, we might as well do it intentionally rather than 
+just drifting into whatever happens next.
 
 Maybe it's because we're expecting our first child any day now, but I find myself thinking less about what this means for me and more about what world we're creating for him. What will work and life look like when he's my age?
 
 I don't have answers about what comes next. What I do know is that the choices
-we make now are shaping the future in ways we can't really see yet. Maybe that's not such a bad thing.
-Some of the best innovations have come from periods of uncertainty, when we had
+we make now are shaping the future in ways we can't really see yet. Some of the best innovations have come from periods of uncertainty, when we had
 to figure things out as we went along.
 
 Magic hour doesn't last forever, and neither does the uncertainty. Eventually,
-we'll find our footing in whatever comes next. Dawn can be beautiful too.
+we'll find our footing in whatever comes next.
 
 ---
 
