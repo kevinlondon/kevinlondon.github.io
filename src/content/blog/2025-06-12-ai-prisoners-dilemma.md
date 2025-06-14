@@ -20,14 +20,13 @@ also be accelerating toward outcomes we can't fully predict. Perhaps it's a futu
 where many jobs change significantly, as [Dario Amodei recently suggested](https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic).
 Or something we haven't even considered yet.
 
-The question that keeps nagging at me: by using tools built to replace our
-craft, what happens to the craft itself?
+The question that keeps nagging at me: what happens to our craft when we use tools built to replace it?
 
 We're all making rational decisions that add up to outcomes we can't control. And unlike other coordination problems, we can't easily organize to avoid it. 
 
 ## The AI Ratchet
 
-Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my life, and suddenly I was writing maybe 70-80% of my code while AI handled boilerplate and common patterns. A year later, with VSCode and agent selection, I was down to 50-60% human contribution. Now I'm at around 30%.
+Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my life, and suddenly I wrote maybe 70-80% of my code while AI handled boilerplate and common patterns. A year later, with VSCode and agent selection, I was down to 50-60% human contribution. Now I'm at around 30%.
 
 I still read, review, and own every line, but I'm not the one typing most of it anymore. The 30% I do write is higher-leverage: architecture, tricky logic, and directing. Basically, the parts that benefit from taste and experience. (And I argue with the LLM until the other 70% meets my quality bar.)
 
@@ -35,7 +34,7 @@ My role is changing from musician to conductor. I wrote about [building a game w
 
 I can see a near future (perhaps 1-2 years away) where I'm not writing code in an editor at all, and rather managing teams of AI agents that implement what I describe.
 
-This isn't unique to me. The major tools are all moving toward an
+The major tools are all moving toward an
 agent orchestration model: [OpenAI's
 Codex](https://openai.com/index/introducing-codex/), [Claude Code with a Claude
 Code MCP](https://docs.anthropic.com/en/docs/claude-code/mcp), [Cursor's
@@ -45,7 +44,7 @@ Background Agents](https://docs.cursor.com/background-agent). The direction seem
 
 A friend recently compared AI adoption to sports equipment evolution: "Do you
 really want to play baseball in 1930s gear? Or basketball in what they wore in
-the 70s?" He pointed out that ultramarathons had to be made harder over time
+the 70s?" He mentioned that ultramarathons had to be made harder over time
 because gear improvements made the original courses too easy.
 
 The analogy misses how big this change _feels_. Imagine if cycling went from Tour de France bicycles to e-bikes to motorcycles, all within five years. At some point, you're not cycling anymore. 
@@ -64,39 +63,31 @@ what's on the other side of it.
 
 ## Do we actually have a choice?
 
-Which brings us to the central question: Do we actually have meaningful choice
-in how this plays out?
-
 Individual developers, companies, even entire industries keep choosing to adopt
 AI tools. Each choice seems reasonable on its own. Yet these small decisions
 add up to big outcomes that no one controls. Coordinating
 across a whole industry feels nearly impossible. 
 
-I suspect our options are more limited than we'd like to believe. Even if we 
-could somehow coordinate to slow AI adoption, the incentives for breaking rank 
-would be huge. The people who adopt AI first may get such significant advantages that 
-staying out starts to feel impossible.
+Even if we could somehow coordinate to slow AI adoption, the incentives for breaking rank would be huge. The people who adopt AI first may get such significant advantages that staying out starts to feel impossible.
 
 ## Where this might go
 
 I'm not sure where this all goes. That said, here are a few possible futures:
 
-**Soft Landing:** AI becomes a powerful collaborative tool and doesn't fully
+**Soft Landing:** AI becomes a powerful collaborator and doesn't fully
 replace human cognitive work. We find a new state where humans and AI
-work together, similar to how spreadsheets made certain calculations trivial
+work together, similar to how spreadsheets made calculations easier
 and created new types of analysis work.
 
 **Hard Transition:** Displacement happens quickly, and we figure it out. Maybe
 universal basic income, shorter work weeks, or new economic models emerge. 
-Humans have adapted to big technological changes before, even when they felt 
+Humans have adapted to big changes before, even when they felt 
 overwhelming at the time.
 
-**Post-Hype Crash:** AI hits practical limits faster than expected. The technology plateaus, investment dries up, and we're left with useful but incremental tools rather than significant change. The dilemma resolves itself as adoption naturally slows.
+**Post-Hype Crash:** AI hits limits faster than expected. The technology plateaus, investment dries up, and we're left with useful but incremental tools rather than significant change. The dilemma resolves itself as adoption naturally slows.
 
 **Overshoot:** We automate faster than we can adapt. Social and economic systems
-strain under the change. The benefits of AI are captured by a small number of
-entities while the effects ripple through society faster than safety nets can
-be built.
+strain under the change. The benefits of AI are captured by a small group while the effects spread through society faster than we can build safety nets.
 
 ## What's in our control
 
@@ -110,7 +101,7 @@ slows down or speeds up, what other companies or developers choose to do.
 them effectively, staying informed, and how I adapt to changes.
 
 I can't control whether we're heading toward a soft landing or something more disruptive. 
-But I can control whether I'm learning and staying curious rather than reacting 
+But I _can_ control whether I'm learning and staying curious rather than reacting 
 from fear or avoidance.
 
 ## Living in the question
@@ -122,13 +113,11 @@ it goes.
 
 Recognizing this pattern doesn't mean we're stuck with it. If we're going to 
 keep adopting AI tools anyway, we might as well do it intentionally rather than 
-just drifting into whatever happens next.
+ drifting into whatever happens next.
 
-Maybe it's because we're expecting our first child any day now, but I find myself thinking less about what this means for me and more about what world we're creating for him. What will work and life look like when he's my age?
+Maybe it's because we're expecting our first child any day now, but I find myself thinking less about what this means for me and more about what world we're creating for him. What will work and life look like when he's my age? And what will it be like to grow up in this age?
 
-I don't have answers about what comes next. What I do know is that the choices
-we make now are shaping the future in ways we can't really see yet. Some of the best innovations have come from periods of uncertainty, when we had
-to figure things out as we went along.
+The choices we make now are shaping the future in ways we can't really see yet. What gives me hope is that some of the best innovations have come from periods of uncertainty, when we had to figure things out as we went along.
 
 Magic hour doesn't last forever, and neither does the uncertainty. Eventually,
 we'll find our footing in whatever comes next.
