@@ -78,21 +78,6 @@ could somehow coordinate to slow AI adoption, the incentives for breaking rank
 would be huge. The people who adopt AI first may get such significant advantages that 
 staying out starts to feel impossible.
 
-## What's in our control
-
-When I feel overwhelmed by all this, I try to focus on what's actually in my control 
-versus what isn't. 
-
-**Out of my control:** Industry direction, macro economic changes, whether AI development 
-slows down or speeds up, what other companies or developers choose to do.
-
-**In my control:** My curiosity about these tools, willingness to learn how to use 
-them effectively, staying informed, and how I adapt to changes.
-
-I can't control whether we're heading toward a soft landing or something more disruptive. 
-But I can control whether I'm learning and staying curious rather than reacting 
-from fear or avoidance.
-
 ## Where this might go
 
 I'm not sure where this all goes. That said, here are a few possible futures:
@@ -107,10 +92,27 @@ universal basic income, shorter work weeks, or new economic models emerge.
 Humans have adapted to big technological changes before, even when they felt 
 overwhelming at the time.
 
+**Post-Hype Crash:** AI hits practical limits faster than expected. The technology plateaus, investment dries up, and we're left with useful but incremental tools rather than significant change. The dilemma resolves itself as adoption naturally slows.
+
 **Overshoot:** We automate faster than we can adapt. Social and economic systems
 strain under the change. The benefits of AI are captured by a small number of
 entities while the effects ripple through society faster than safety nets can
 be built.
+
+## What's in our control
+
+When I feel overwhelmed by all this, I try to focus on what's actually in my control 
+versus what isn't. 
+
+**Out of my control:** Industry direction, macro economic changes, whether AI development 
+slows down or speeds up, what other companies or developers choose to do.
+
+**In my control:** My curiosity about these tools, willingness to learn how to use 
+them effectively, staying informed, and how I adapt to changes.
+
+I can't control whether we're heading toward a soft landing or something more disruptive. 
+But I can control whether I'm learning and staying curious rather than reacting 
+from fear or avoidance.
 
 ## Living in the question
 
@@ -132,3 +134,7 @@ to figure things out as we went along.
 
 Magic hour doesn't last forever, and neither does the uncertainty. Eventually,
 we'll find our footing in whatever comes next. Dawn can be beautiful too.
+
+---
+
+_Thanks to Brian Sandoval and Noam Katz for their feedback._
