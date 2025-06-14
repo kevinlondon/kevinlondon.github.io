@@ -31,7 +31,7 @@ Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my li
 
 I still read, review, and own every line, but I'm not the one typing most of it anymore. The 30% I do write is higher-leverage: architectural decisions, tricky logic, and directing. Basically, the parts that benefit from taste and experience. (And I argue with the LLM until the other 70% meets my quality bar.)
 
-I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code. My role is changing from musician to conductor.
+My role is changing from musician to conductor. I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code.
 
 I can see a near future (perhaps 1-2 years away) where I'm not writing code in an editor at all, and rather managing teams of AI agents that implement what I describe.
 
