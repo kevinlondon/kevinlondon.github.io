@@ -16,9 +16,9 @@ It's like the classic coordination problem where everyone makes sensible individ
 
 If we _avoid_ using AI, we might miss out on productivity gains and fall behind 
 those who do adopt it. If we _embrace_ AI, we get those benefits, but we might 
-also be accelerating toward outcomes we can't fully predict. Maybe it's a future 
+also be accelerating toward outcomes we can't fully predict. Perhaps it's a future 
 where many jobs change significantly, as [Dario Amodei recently suggested](https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic).
-Maybe it's something we haven't even considered yet.
+Or something we haven't even considered yet.
 
 The question that keeps nagging at me: by using tools built to replace our
 craft, what happens to the craft itself?
@@ -27,7 +27,11 @@ We're all making rational decisions that add up to outcomes we can't control. An
 
 ## The AI Ratchet
 
-Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my life, and suddenly I was writing maybe 70-80% of my code while AI handled boilerplate and common patterns. A year later, with VSCode and agent selection, I was down to 50-60% human contribution. Now I'm at around 30%. I know this sounds hard to believe! I still read, review, and own every line, but I'm not the one typing most of it anymore. I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code. My role is changing from musician to conductor.
+Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my life, and suddenly I was writing maybe 70-80% of my code while AI handled boilerplate and common patterns. A year later, with VSCode and agent selection, I was down to 50-60% human contribution. Now I'm at around 30%.
+
+I still read, review, and own every line, but I'm not the one typing most of it anymore. The 30% I do write is higher-leverage: architectural decisions, tricky logic, and directing. Basically, the parts that benefit from taste and experience. (And I argue with the LLM until the other 70% meets my quality bar.)
+
+I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code. My role is changing from musician to conductor.
 
 I can see a near future (perhaps 1-2 years away) where I'm not writing code in an editor at all, and rather managing teams of AI agents that implement what I describe.
 
@@ -35,8 +39,7 @@ This isn't unique to me. The major tools are all moving toward an
 agent orchestration model: [OpenAI's
 Codex](https://openai.com/index/introducing-codex/), [Claude Code with a Claude
 Code MCP](https://docs.anthropic.com/en/docs/claude-code/mcp), [Cursor's
-Background Agents](https://docs.cursor.com/background-agent). The writing is on the wall, and it's
-written in code I didn't write.
+Background Agents](https://docs.cursor.com/background-agent). The direction seems clear.
 
 ## The Sports Gear Analogy
 
@@ -58,7 +61,7 @@ There's a moment in photography called magic hour. It's that brief, beautiful pe
 ![Magic hour at Pike Place Market](/assets/ai-prisoners/2020-06-02.jpg)
 _Magic hour at Pike Place Market_
 
-That's where we are with AI and knowledge work: a golden hour where AI multiplies our capabilities over replacing them. I'm more
+That's where we are with AI and knowledge work: a golden hour where AI multiplies our capabilities rather than replacing them. I'm more
 productive than I've ever been. The work is often more interesting because the
 tedious parts are automated away. Something new is coming, and I genuinely don't know
 what's on the other side of it.
