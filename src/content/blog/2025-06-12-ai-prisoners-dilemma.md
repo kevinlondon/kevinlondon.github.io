@@ -100,20 +100,18 @@ slows down or speeds up, what other companies or developers choose to do.
 **In my control:** My curiosity about these tools, willingness to learn how to use 
 them effectively, staying informed, and how I adapt to changes.
 
-I can't control whether we're heading toward a soft landing or something more disruptive. 
-But I _can_ control whether I'm learning and staying curious rather than reacting 
-from fear or avoidance.
+Even with that perspective, the bigger question remains.
 
 ## Living in the question
 
 The honest answer is that I don't know which future we're heading toward, and
 I'm not sure how much our individual choices matter. We're all making decisions 
-that make sense for us personally, but I'm not sure any of us really knows where 
+that make sense for us personally, though I'm not sure any of us really knows where 
 it goes.
 
 Recognizing this pattern doesn't mean we're stuck with it. If we're going to 
 keep adopting AI tools anyway, we might as well do it intentionally rather than 
- drifting into whatever happens next.
+drifting into whatever happens next.
 
 Maybe it's because we're expecting our first child any day now, but I find myself thinking less about what this means for me and more about what world we're creating for him. What will work and life look like when he's my age? And what will it be like to grow up in this age?
 
