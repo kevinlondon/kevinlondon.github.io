@@ -29,7 +29,7 @@ We're all making rational decisions that add up to outcomes we can't control. An
 
 Once you're on the AI path, it feels inevitable. GitHub Copilot arrived in my life, and suddenly I was writing maybe 70-80% of my code while AI handled boilerplate and common patterns. A year later, with VSCode and agent selection, I was down to 50-60% human contribution. Now I'm at around 30%.
 
-I still read, review, and own every line, but I'm not the one typing most of it anymore. The 30% I do write is higher-leverage: architectural decisions, tricky logic, and directing. Basically, the parts that benefit from taste and experience. (And I argue with the LLM until the other 70% meets my quality bar.)
+I still read, review, and own every line, but I'm not the one typing most of it anymore. The 30% I do write is higher-leverage: architecture, tricky logic, and directing. Basically, the parts that benefit from taste and experience. (And I argue with the LLM until the other 70% meets my quality bar.)
 
 My role is changing from musician to conductor. I wrote about [building a game with AI recently](/2025/06/04/building-game-with-ai/) where I barely wrote any code.
 
